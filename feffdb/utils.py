@@ -104,9 +104,63 @@ def parse_cif(ciffile):
             if 'space_group' in key and 'H-M' in key:
                 sgroup_name = val
 
+    source_db = ''
+    amcsd_id = dat.get('_database_code_amcsd', None)
+    if amcsd_id is not None:
+        source_db = 'amcsd'
+        source_id = amcsd_id
+
     return {'text': ciftext, 'filename': ciffile,
             'formula': formula, 'compound': compound,
-            'space_group': sgroup_name}
+            'space_group': sgroup_name,
+            'source_db': source_db, 'source_id': source_id}
+
+
+def parse_feffinp(feffinp):
+    """parse feff.inp just enough for FeffDB"""
+    if len(feffinp) < 255 and Path(feffinp).exists():
+        feffip = Path(feffinp).absolute().resolve().as_posix()
+        text = read_textfile(feffinp)
+    else:
+        text = feffinp
+        feffinp = '<unknown>'
+
+    edge = ''
+    absorber = 0
+    ipots = []
+    natoms = 0
+    mode = None
+    for line in text.split('\n'):
+        line = line.strip()
+        if line.startswith('*') or line.startswith('#'):
+            continue
+
+        if line.lower().startswith('edge'):
+            words = line.split(' ')
+            edge = words[1].upper()
+        elif line.lower().startswith('potent'):\
+            mode = 'pot'
+        elif line.lower().startswith('atoms'):
+            mode = 'atoms'
+        elif line.lower().startswith('end'):
+            mode = None
+        elif mode == 'pot':
+            if line.startswith('0'):
+                words = line.strip().split()
+                absorber = int(words[1])
+            elif len(line) > 6:
+                words = line.strip().split()
+                ipots.append(int(words[1]))
+        elif mode == 'atoms':
+            try:
+                words = line.strip().split()
+                w = [float(x) for x in words[:4]]
+                natoms += 1
+            except (ValueError, TypeError):
+                pass
+
+    return {'text': text, 'filename': feffinp, 'absorber': absorber,
+            'edge': edge, 'scatterers': json.dumps(ipots), 'natoms': natoms}
 
 
 def parse_feffdat(feffdatfile):
@@ -156,7 +210,7 @@ def parse_feffdat(feffdatfile):
             rmt = float(words[3])
             rnm = float(words[5])
             if re.match(r'^Abs\b', line):
-                shell = words[6]
+                edge = words[6]
             potentials.append((ipot, iz, rmt, rnm))
         elif mode == 'header' and re.match(r'^Gam_ch\s*=', line):
             pass
@@ -167,7 +221,7 @@ def parse_feffdat(feffdatfile):
             if pcounter == 1:
                 w = [float(x) for x in line.split()[:5]]
                 nleg = int(w.pop(0))
-                degen, reff, rnorman, edge = w
+                degen, reff, rnorman, e_edge = w
             elif pcounter > 2:
                 words = line.split()
                 xyz = [float(x) for x in words[:3]]
@@ -193,7 +247,8 @@ def parse_feffdat(feffdatfile):
 
     return {'text': fefftext, 'filename': feffdatfile,
             'absorber': absorber, 'scatterer': scatterer,
-            'reff': reff,  'geom': json.dumps(geom)}
+            'reff': reff,  'degen': degen, 'nleg': nleg,
+            'edge': edge, 'geom': json.dumps(geom)}
 
 
 
