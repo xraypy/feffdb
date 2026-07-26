@@ -130,7 +130,7 @@ class SimpleDB(object):
         with Session(self.engine) as session, session.begin():
             session.flush()
 
-    def execute(self, query, set_modify_date=False):
+    def execute(self, query, set_modify_time=False):
         """
         general execute of query, optionally setting 'modify date'
         and committing
@@ -138,8 +138,8 @@ class SimpleDB(object):
         result = None
         with Session(self.engine) as session, session.begin():
             result = session.execute(query)
-            if set_modify_date:
-                q = self.set_info('modify_date', isotime(), do_execute=False)
+            if set_modify_time:
+                q = self.set_info('modify_time', isotime(), do_execute=False)
                 if q is not None:
                     session.execute(q)
             session.flush()
@@ -161,7 +161,7 @@ class SimpleDB(object):
         else:
             query = tab.update().where(tab.c.key==key).values(**ivals)
         if do_execute:
-            self.execute(query, set_modify_date=True)
+            self.execute(query, set_modify_time=True)
             return
         return query
 
@@ -218,17 +218,17 @@ class SimpleDB(object):
         return out
 
     def set_modify_time(self):
-        """set modify_date in info table"""
-        self.set_info('modify_date', isotime(), do_execute=True)
+        """set modify_time in info table"""
+        self.set_info('modify_time', isotime(), do_execute=True)
 
     def add_row(self, tablename, **kws):
         """add row to a table with keyword/value pairs  == insert()"""
-        self.insert(tablename, **kws)
+        return self.insert(tablename, **kws)
 
     def insert(self, tablename, **kws):
         """insert to a table with keyword/value pairs"""
         tab = self.tables[tablename]
-        self.execute(tab.insert().values(**kws), set_modify_date=True)
+        return self.execute(tab.insert().values(**kws), set_modify_time=True)
 
     def table_error(self, message, tablename, funcname):
         raise ValueError(f"{message} for table '{tablename}' in {funcname}()")
@@ -347,7 +347,7 @@ class SimpleDB(object):
             self.table_error("no table found", tablename, 'update')
 
         where = self.handle_where(tablename, where=where, funcname='update')
-        self.execute(tab.update().where(where).values(**kws), set_modify_date=True)
+        self.execute(tab.update().where(where).values(**kws), set_modify_time=True)
 
 
     def delete_rows(self, tablename, where):
@@ -364,4 +364,4 @@ class SimpleDB(object):
             self.table_error("no table found", tablename, 'delete')
 
         where = self.handle_where(tablename, where=where, funcname='delete')
-        self.execute(tab.delete().where(where), set_modify_date=True)
+        self.execute(tab.delete().where(where), set_modify_time=True)
