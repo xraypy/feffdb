@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "feffdb/version.py"
+version_scheme = "post-release"
+
+[tool.setuptools.packages.find]
+include = ["feffdb"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[project]
+name = "feffdb"
+dynamic = ["version"]
+requires-python = ">= 3.11"
+description = "Sqlite Database for Feff.dat files, especially for 1st shell EXAFS"
+readme = "README.md"
+authors = [
+  {name = "Matthew Newville", email = "matt.newville@gmail.com"}
+  ]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["Feff", "EXAFS"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14"
+    ]
+
+dependencies = [
+   "xraydb",
+   "numpy>=2.2",
+   "charset_normalizer",
+   "sqlalchemy>=2",
+   "pymatgen>=2025.6.14",
+   "pyshortcuts>=1.9.8",
+   "tabulate",
+   ]
+
+
+[project.scripts]
+feffdb = "feffdb.apps:feffdb_cli"
+
+[project.urls]
+Homepage = "https://github.com/xraypy/feffdb"
+Documentation = "https://xraypy.github.io/feffdb"
+Tracker = "https://github.com/xraypy/feffdb/issues"
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+doc = ["sphinx",
+       "sphinx-copybutton",
+       "sphinx-design",
+       "sphinxcontrib-video",
+       "jupyter_sphinx",
+       "nbsphinx"]
+
+test = ["pytest", "pytest-cov", "coverage"]
+all = ["feffdb[dev, doc, test]"]
