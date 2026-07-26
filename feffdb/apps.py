@@ -6,7 +6,7 @@ from pyshortcuts import uname, make_shortcut, ico_ext
 import tabulate
 
 from .utils import DBNAME_DEFAULT
-from .feffdb import create_feffdb
+from .feffdb import create_feffdb, FeffDatabase
 def feffdb_cli():
     """
     feffdb command-line app
@@ -31,7 +31,7 @@ def feffdb_cli():
     if not Path(dbname).exists():
         if args.create:
             print("will create db ", dbname)
-            create_feffb(name=dbname)
+            create_feffdb(name=dbname)
         else:
             print(f"database {dbname} does not exist, use '-c' to create")
             return
@@ -39,5 +39,4 @@ def feffdb_cli():
     feffdb = FeffDatabase(dbname)
 
     print(f"{feffdb=}")
-    print(dbname, Path(dbname).exists())
     print(f'{args=}')
