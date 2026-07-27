@@ -80,7 +80,7 @@ def parse_cif(ciffile):
                 parsed_formula = chemparse(dat[formname])
                 formula = dat[formname].replace(' ', '')
             except:
-                print("Could not parse ", dat[formmame])
+                print("Could not parse ", dat[formname])
 
     if formula is None and '_atom_site_type_symbol' in dat:
         comps = {}
@@ -111,6 +111,7 @@ def parse_cif(ciffile):
                 sgroup_name = val
 
     source_db = ''
+    source_id = -1
     amcsd_id = dat.get('_database_code_amcsd', None)
     if amcsd_id is not None:
         source_db = 'amcsd'
@@ -140,7 +141,7 @@ def parse_feffinp(feffinp):
         if line.lower().startswith('edge'):
             words = line.split(' ')
             edge = words[1].upper()
-        elif line.lower().startswith('potent'):\
+        elif line.lower().startswith('potent'):
             mode = 'pot'
         elif line.lower().startswith('atoms'):
             mode = 'atoms'
