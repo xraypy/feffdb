@@ -3,7 +3,7 @@ from argparse import ArgumentParser
 
 from pathlib import Path
 from pyshortcuts import uname, make_shortcut, ico_ext
-import tabulate
+from tabulate import tabulate
 
 from .utils import DBNAME_DEFAULT
 from .feffdb import create_feffdb, FeffDatabase
@@ -38,5 +38,15 @@ def feffdb_cli():
 
     feffdb = FeffDatabase(dbname)
 
-    print(f"{feffdb=}")
-    print(f'{args=}')
+
+    out = []
+    if args.list:
+        rows = feffdb.list_feffdat(absorber=args.absorber, scatterer=args.scatterer,
+                                rmin=float(args.rmin), rmax=float(args.rmax))
+        for row in rows:
+            row.pop('geometry')
+            out.append(row)
+        print(tabulate(out, headers='keys', tablefmt='psql'))
+    else:
+
+        print(f'{args=}')
