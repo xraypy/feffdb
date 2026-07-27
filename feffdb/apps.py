@@ -16,9 +16,9 @@ def feffdb_cli():
                        default=None, help=f"database to use [{DBNAME_DEFAULT}]" )
     parser.add_argument('-c', '--create', action='store_true', default=False,
                             help="create new database")
-    parser.add_argument('--rmin', action='store_true', default=0,
+    parser.add_argument('--rmin',  default=0,
                         help='minimum distance (Ang)')
-    parser.add_argument('--rmax', action='store_true', default=10,
+    parser.add_argument('--rmax',  default=10,
                         help='maximum distance (Ang)')
     parser.add_argument('--list', action='store_true', default=False,
                         help='list all absorbing atoms')
