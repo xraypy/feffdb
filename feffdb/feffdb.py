@@ -6,7 +6,7 @@ import sqlite3
 import json
 from pathlib import Path
 
-from xraydb import XrayDB
+from xraydb import XrayDB, atomic_number, atomic_symbol
 
 from .simpledb import SimpleDB
 from .utils import DBNAME_DEFAULT, parse_cif, parse_feffinp, parse_feffdat
@@ -187,9 +187,9 @@ class FeffDatabase(SimpleDB):
         """
         wargs = {}
         if absorber is not None:
-            wargs['absorber'] = absorber.title()
+            wargs['absorber'] = atomic_number(absorber.title())
         if scatterer is not None:
-            wargs['scatterer'] = scatterer.title()
+            wargs['scatterer'] = atomic_number(scatterer.title())
         if edge is not None:
             wargs['edge'] = edge.title()
 
@@ -197,6 +197,19 @@ class FeffDatabase(SimpleDB):
         out = []
         for row in rows:
             if row.reff > rmin and row.reff < rmax:
-                out.append((row.id, row.absorber, row.scatterer, row.edge,
-                           row.reff, row.nleg, row.degen, json.loads(row.geometry)))
+                formula, structure = '?', '?'
+                finp = self.get_rows('feffinp', where={'id': row.feffinp_id},
+                                     limit_one=True, none_if_empty=True)
+                if finp is not None and finp.cif_id > 0:
+                    cif = self.get_rows('cif', where={'id': finp.cif_id},
+                                     limit_one=True, none_if_empty=True)
+                    if cif is not None:
+                        formula  = cif.formula
+                        compound = cif.compound.lower()
+
+                out.append({'id': row.id, 'absorber': atomic_symbol(row.absorber),
+                            'scatterer': atomic_symbol(row.scatterer), 'edge': row.edge,
+                            'reff': row.reff, 'degen': row.degen,
+                            'formula': formula, 'compound': compound,
+                            'geometry': json.loads(row.geometry)})
         return out
