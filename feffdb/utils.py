@@ -50,14 +50,20 @@ def read_textfile(filename):
     return text.replace('\r\n', '\n').replace('\r', '\n')
 
 
+def get_filename_and_text(fname):
+    if isinstance(fname, Path):
+        fname = fname.absolute().resolve().as_posix()
+        text = read_textfile(fname)
+    elif isinstance(fname, str) and len(fname) < 255:
+        fname = Path(fname).absolute().resolve().as_posix()
+        text = read_textfile(fname)
+    else:
+        text = fname
+        fname = '<unknown>'
+    return fname, text
 
 def parse_cif(ciffile):
-    if len(ciffile) < 255 and Path(ciffile).exists():
-        ciffile = Path(ciffile).absolute().resolve().as_posix()
-        ciftext = read_textfile(ciffile)
-    else:
-        ciftext = ciffile
-        ciffile = '<unknown>'
+    ciffile, ciftext = get_filename_and_text(ciffile)
 
     try:
         cif = CifParser.from_str(ciftext, occupancy_tolerance=10, site_tolerance=0.005)
@@ -118,12 +124,8 @@ def parse_cif(ciffile):
 
 def parse_feffinp(feffinp):
     """parse feff.inp just enough for FeffDB"""
-    if len(feffinp) < 255 and Path(feffinp).exists():
-        feffip = Path(feffinp).absolute().resolve().as_posix()
-        text = read_textfile(feffinp)
-    else:
-        text = feffinp
-        feffinp = '<unknown>'
+
+    feffinp, text = get_filename_and_text(feffinp)
 
     edge = ''
     absorber = 0
@@ -165,12 +167,7 @@ def parse_feffinp(feffinp):
 
 def parse_feffdat(feffdatfile):
     """parse feffdat just enough for FeffDB"""
-    if len(feffdatfile) < 255 and Path(feffdatfile).exists():
-        feffdatfile = Path(feffdatfile).absolute().resolve().as_posix()
-        fefftext = read_textfile(feffdatfile)
-    else:
-        fefftext = feffdatfile
-        feffdatfile = '<unknown>'
+    feffdatfile, fefftext = get_filename_and_text(feffdatfile)
 
     mode = 'header'
     potentials, geom, data = [], [],[]
@@ -248,7 +245,7 @@ def parse_feffdat(feffdatfile):
     return {'text': fefftext, 'filename': feffdatfile,
             'absorber': absorber, 'scatterer': scatterer,
             'reff': reff,  'degen': degen, 'nleg': nleg,
-            'edge': edge, 'geom': json.dumps(geom)}
+            'edge': edge, 'geometry': json.dumps(geom)}
 
 
 
