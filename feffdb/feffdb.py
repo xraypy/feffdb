@@ -3,7 +3,7 @@
 This script creates an SQLite3 database for Feff Data
 '''
 import sqlite3
-
+import json
 from pathlib import Path
 
 from xraydb import XrayDB
@@ -28,7 +28,7 @@ create table feffdat (id integer primary key autoincrement, absorber integer,
                       feffinp_id integer, feffdat text);
 """
 
-VERSIONS = [(1, 'alpha1', '2026-July-22', 'pre-release')]
+VERSIONS = [(1, 'alpha1', '2026-July-26', 'pre-release')]
 
 def create_feffdb(name=DBNAME_DEFAULT):
     """create FeffData.DB"""
@@ -63,7 +63,7 @@ class FeffDatabase(SimpleDB):
         return f"FeffDatabase('{self.dbname}')"
 
 
-    def __addrow(table, data):
+    def __addrow(self, table, data):
         """add row to tablle, or return existing row with data"""
         # first look if this already exists
         row = self.get_rows(table, where=data,
@@ -88,7 +88,7 @@ class FeffDatabase(SimpleDB):
 
         text = out.pop('text')
         fname = out.pop('filename')
-        dbargs = {k:v for k, v in finp.items()}
+        dbargs = {k:v for k, v in out.items()}
         dbargs['ciftext'] = text
         if dbargs['source_db'] is None and fname is not None:
             dbargs['source_db'] = fname
@@ -96,7 +96,7 @@ class FeffDatabase(SimpleDB):
         this_id = self.__addrow('cif', dbargs)
         if this_id is None:
             raise ValueError(f'could not add CIF: {cif_file}')
-        return ths_id
+        return this_id
 
 
     def add_feffinp(self, feff_inp, cif_file=None):
@@ -111,6 +111,7 @@ class FeffDatabase(SimpleDB):
             raise ValueError(f'error parsing feffinp : {feff_inp}')
 
         text = finp.pop('text')
+        fnam = finp.pop('filename')
         dbargs = {k:v for k, v in finp.items()}
         dbargs['inpfile'] = text
         dbargs['cif_id'] = cif_id
@@ -118,8 +119,7 @@ class FeffDatabase(SimpleDB):
         this_id = self.__addrow('feffinp', dbargs)
         if this_id is None:
             raise ValueError(f'could not add feffinp : {feff_inp}')
-        return ths_id
-
+        return this_id
 
     def add_feffdat(self, feffdat, feff_inp, cif_file=None):
         """add a Feff.dat file to the database"""
@@ -132,21 +132,21 @@ class FeffDatabase(SimpleDB):
             raise ValueError(f'error parsing feff.dat file: {feffdat}')
 
         text = dat.pop('text')
+        fname = dat.pop('filename')
         dbargs = {k:v for k, v in dat.items()}
         dbargs['feffdat'] = text
-        dbargs['feffinp_idt'] = finp_id
+        dbargs['feffinp_id'] = finp_id
 
         this_id = self.__addrow('feffdat', dbargs)
         if this_id is None:
             raise ValueError(f'could not add feff data: {feffdat}')
-        return ths_id
+        return this_id
 
     def get_feffdat(self, feffid):
         "get text of feff.dat by id in feffdat table"
         row = self.get_rows('feffdat', where={'id': feffid},
                             limit_one=True, none_if_empty=True)
-        if row is None:
-            return None
+        if row is not None:
             return row.feffdat
 
     def get_feffinp(self, feffinp_id):
@@ -188,9 +188,9 @@ class FeffDatabase(SimpleDB):
         wargs = {}
         if absorber is not None:
             wargs['absorber'] = absorber.title()
-        if scatterer not None:
+        if scatterer is not None:
             wargs['scatterer'] = scatterer.title()
-        if edge not None:
+        if edge is not None:
             wargs['edge'] = edge.title()
 
         rows = self.get_rows('feffdat', where=wargs, limit_one=False)
@@ -198,5 +198,5 @@ class FeffDatabase(SimpleDB):
         for row in rows:
             if row.reff > rmin and row.reff < rmax:
                 out.append((row.id, row.absorber, row.scatterer, row.edge,
-                           row.reff, row.nleg, row.degen, json.loads(row.geom)))
+                           row.reff, row.nleg, row.degen, json.loads(row.geometry)))
         return out
