@@ -28,6 +28,10 @@ def feffdb_cli():
     args = parser.parse_args()
 
     dbname = args.dbname or DBNAME_DEFAULT
+
+    if Path(dbname).exists() and args.create:
+        print(f"database {dbname} already exists!")
+
     if not Path(dbname).exists():
         if args.create:
             print("will create db ", dbname)
