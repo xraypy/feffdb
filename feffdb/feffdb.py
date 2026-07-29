@@ -25,6 +25,7 @@ create table feffinp (id integer primary key autoincrement,
 create table feffdat (id integer primary key autoincrement, absorber integer,
                       scatterer integer, nleg integer, reff float,
                       degen integer, geometry text, edge text,
+                      label text, description text,
                       feffinp_id integer, feffdat text);
 """
 
@@ -121,7 +122,8 @@ class FeffDatabase(SimpleDB):
             raise ValueError(f'could not add feffinp : {feff_inp}')
         return this_id
 
-    def add_feffdat(self, feffdat, feff_inp, cif_file=None):
+    def add_feffdat(self, feffdat, feff_inp, cif_file=None,
+                    label=None, description=None):
         """add a Feff.dat file to the database"""
 
         finp_id = self.add_feffinp(feff_inp, cif_file=cif_file)
@@ -133,9 +135,23 @@ class FeffDatabase(SimpleDB):
 
         text = dat.pop('text')
         fname = dat.pop('filename')
+        print(dat.keys())
+        if description is None:
+            # default description is filenamae and a few parent folders
+            words = Path(fname).parts
+            n = min(len(words), 4)
+            description = Path(*words[-n:]).as_posix()
+        if label is None:
+            # default label combines absorber, scatterer, reff
+            words = [atomic_symbol(dat['absorber']),
+                     atomic_symbol(dat['scatterer']),
+                     str(round(100*dat['reff']))]
+            label = ''.join(words)
         dbargs = {k:v for k, v in dat.items()}
         dbargs['feffdat'] = text
         dbargs['feffinp_id'] = finp_id
+        dbargs['label'] = label
+        dbargs['description'] = description
 
         this_id = self.__addrow('feffdat', dbargs)
         if this_id is None:
@@ -211,5 +227,7 @@ class FeffDatabase(SimpleDB):
                             'scatterer': atomic_symbol(row.scatterer), 'edge': row.edge,
                             'reff': row.reff, 'degen': row.degen,
                             'formula': formula, 'compound': compound,
-                            'geometry': json.loads(row.geometry)})
+                            'geometry': json.loads(row.geometry),
+                            'label': row.label, 'description': row.description})
+
         return out
