@@ -36,12 +36,12 @@ def feffdb_cli():
         if args.create:
             print("will create db ", dbname)
             create_feffdb(name=dbname)
+            return
         else:
             print(f"database {dbname} does not exist, use '-c' to create")
             return
 
     feffdb = FeffDatabase(dbname)
-
 
     absorber = args.absorber
     scatterer = args.scatterer

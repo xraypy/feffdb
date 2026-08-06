@@ -19,7 +19,5 @@ for pair in listdir(top_folder):
                 feffdat = Path(fpathd, run, 'feff0001.dat')
                 cif_file = Path(cpath, drange, f'{run}.cif')
                 if feffdat.exists() and cif_file.exists():
-                    print(feffdat, cif_file)
-
                     feffdb.add_feffdat(feffdat, feffinp, cif_file=cif_file)
                     print('added ', feffdat)
