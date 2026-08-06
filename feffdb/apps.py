@@ -20,10 +20,10 @@ def feffdb_cli():
                         help='minimum distance (Ang)')
     parser.add_argument('--rmax',  default=10,
                         help='maximum distance (Ang)')
-    parser.add_argument('--list', action='store_true', default=False,
-                        help='list all absorbing atoms')
-    parser.add_argument('absorber', nargs='?',  help='symbol for absorbing element')
-    parser.add_argument('scatterer', nargs='?',  help='symbol for scattering element')
+    parser.add_argument('absorber', nargs='?',
+                        help='symbol for absorbing element (use All for all absorbers)')
+    parser.add_argument('scatterer', nargs='?',
+                        help='symbol for scattering element (use All for all scatterers')
 
     args = parser.parse_args()
 
@@ -43,14 +43,20 @@ def feffdb_cli():
     feffdb = FeffDatabase(dbname)
 
 
+    absorber = args.absorber
+    scatterer = args.scatterer
     out = []
-    if args.list:
-        rows = feffdb.list_feffdat(absorber=args.absorber, scatterer=args.scatterer,
-                                rmin=float(args.rmin), rmax=float(args.rmax))
+    if absorber is not None or scatterer is not None:
+        if scatterer in ('All', 'all', 'None', 'none'):
+            scatterer = None
+        if absorber in ('All', 'all', 'None', 'none'):
+            absorber = None
+        rows = feffdb.list_feffdat(absorber=absorber, scatterer=scatterer,
+                                   rmin=float(args.rmin), rmax=float(args.rmax))
         for row in rows:
             row.pop('geometry')
             out.append(row)
+    if len(out) > 0:
         print(tabulate(out, headers='keys', tablefmt='psql'))
     else:
-
-        print(f'{args=}')
+        parser.print_usage()
