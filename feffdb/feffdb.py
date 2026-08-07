@@ -13,23 +13,83 @@ from .utils import DBNAME_DEFAULT, parse_cif, parse_feffinp, parse_feffdat
 
 schema = """
 PRAGMA journal_mode=WAL;
+PRAGMA foreign_keys=ON;
 PRAGMA page_size=8192;
-create table version (id integer primary key, tag text, date text,  notes text);
-create table info   (key text, value text);
-create table element (z integer primary key, symbol text, name text, mass float);
-create table cif (id integer primary key, ciftext text, formula text,
-                  compound text, space_group text, source_db text, source_id text);
+
+create table version (id integer primary key,
+                      tag text not null,
+                      date text not null,
+                      notes text);
+
+create table info (key text primary key not null, value text not null);
+
+create table element (z integer primary key not null, symbol text not null,
+                      name text not null, mass float not null);
+
+create table cif (id integer primary key autoincrement,
+                  ciftext text not null,
+                  space_group text not null,
+                  formula text,
+                  compound text,
+                  source_db text,
+                  source_id text);
+
 create table feffinp (id integer primary key autoincrement,
-                      absorber integer, edge text, scatterers integer,
-                      natoms integer, cif_id integer, inpfile text);
-create table feffdat (id integer primary key autoincrement, absorber integer,
-                      scatterer integer, nleg integer, reff float,
-                      degen integer, geometry text, edge text,
-                      label text, description text,
-                      feffinp_id integer, feffdat text);
+                      absorber integer not null,
+                      edge text not null,
+                      scatterers text not null,
+                      natoms integer not null,
+                      cif_id integer,
+                      inpfile text not null,
+                      foreign key(cif_id) references cif(id),
+                      foreign key(absorber) references element(z) );
+
+
+create table person (id integer primary key autoincrement,
+                     email text not null unique,
+                     name text);
+
+insert into person (email, name) values ('feffdb@local', 'feffdb library');
+
+create table feffdat (id integer primary key autoincrement,
+                      absorber integer not null,
+                      scatterer integer not null,
+                      nleg integer not null,
+                      reff float not null,
+                      edge text not null,
+                      degen integer not null,
+                      geometry text not null,
+                      label text,
+                      description text,
+                      feffinp_id integer,
+                      feffdat text not null,
+                      donator_id integer default 1,
+                      foreign key(feffinp_id) references feffinp(id),
+                      foreign key(absorber) references element(z),
+                      foreign key(scatterer) references element(z),
+                      foreign key(donator_id) references person(id) );
+
+create table rating_enum (scoreval integer primary key not null, notes text);
+
+insert into rating_enum (scoreval) values (1);
+insert into rating_enum (scoreval) values (2);
+insert into rating_enum (scoreval) values (3);
+insert into rating_enum (scoreval) values (4);
+insert into rating_enum (scoreval) values (5);
+
+
+create table feffdat_rating (id integer primary key autoincrement,
+                             score integer not null,
+                             review text,
+                             feffdat_id integer not null,
+                             person_id integer not null,
+                             foreign key(score) references rating_enum(scoreval),
+                             foreign key(feffdat_id) references feffdat(id),
+                             foreign key(person_id) references person(id) );
+
 """
 
-VERSIONS = [(1, 'alpha1', '2026-July-26', 'pre-release')]
+VERSIONS = [(1, 'alpha1', '2026-August-6', 'pre-release')]
 
 def create_feffdb(name=DBNAME_DEFAULT):
     """create FeffData.DB"""
@@ -135,7 +195,6 @@ class FeffDatabase(SimpleDB):
 
         text = dat.pop('text')
         fname = dat.pop('filename')
-        print(dat.keys())
         if description is None:
             # default description is filenamae and a few parent folders
             words = Path(fname).parts
@@ -231,3 +290,39 @@ class FeffDatabase(SimpleDB):
                             'label': row.label, 'description': row.description})
 
         return out
+
+
+    def add_person(self, email, name=None):
+        """add a person (email, optional name) to feffdat table:
+         used for ratings and to identify added feff.dat files
+        """
+        dbargs = {'email': email}
+        row = self.get_rows('person', where=dbargs,
+                            limit_one=True, none_if_empty=True)
+        if row is not None:
+            if name is not None and name != row.name:
+                self.update('person', where=dbargs, name=name)
+            else:
+                print(f"warning person {email} already exisis")
+        else:
+            if name is not None:
+                dbargs = {'name': name}
+            self.__addrow('person', dbargs)
+
+    def get_person(self, email):
+        """get person by email"""
+        return self.get_rows('person', where={'email': email},
+                            limit_one=True, none_if_empty=True)
+
+    def get_feffdat_ratings(self, feffdat_id=None, email=None):
+        """get all ratings for feff.dat file either by feffdat_id or by email
+        """
+        args = {}
+        if feffdat_id is not None:
+            args['feffdat_id'] = feffdat_id
+        if email is not None:
+            person_row = self.get_person(email)
+            if person_row is not None:
+                args['person_row'] = person_row.id
+
+        return self.get_rows('feffdat_ratings', where=args)
