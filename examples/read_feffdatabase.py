@@ -11,6 +11,8 @@ feffdat_stub = 'FEFF_paths(output)_'
 for pair in listdir(top_folder):
     fpath = Path(top_folder, pair, f'{feffdat_stub}{pair}')
     cpath = Path(top_folder, pair, cif_folder)
+    if not fpath.exists():
+        continue
     for drange in listdir(fpath):
         fpathd = Path(fpath, drange)
         if fpathd.is_dir():
@@ -20,4 +22,4 @@ for pair in listdir(top_folder):
                 cif_file = Path(cpath, drange, f'{run}.cif')
                 if feffdat.exists() and cif_file.exists():
                     feffdb.add_feffdat(feffdat, feffinp, cif_file=cif_file)
-                    print('added ', feffdat)
+                    print(f'added {feffdat}, {pair=} {drange=} {run=}')
