@@ -4,6 +4,7 @@ This script creates an SQLite3 database for Feff Data
 '''
 import sqlite3
 import json
+import lzma
 from pathlib import Path
 
 from xraydb import XrayDB, atomic_number, atomic_symbol
@@ -27,7 +28,7 @@ create table element (z integer primary key not null, symbol text not null,
                       name text not null, mass float not null);
 
 create table cif (id integer primary key autoincrement,
-                  ciftext text not null,
+                  ciftext blob not null,
                   space_group text not null,
                   formula text,
                   compound text,
@@ -40,7 +41,7 @@ create table feffinp (id integer primary key autoincrement,
                       scatterers text not null,
                       natoms integer not null,
                       cif_id integer,
-                      inpfile text not null,
+                      inpfile blob not null,
                       foreign key(cif_id) references cif(id),
                       foreign key(absorber) references element(z) );
 
@@ -62,7 +63,7 @@ create table feffdat (id integer primary key autoincrement,
                       label text,
                       description text,
                       feffinp_id integer,
-                      feffdat text not null,
+                      feffdat blob not null,
                       donator_id integer default 1,
                       foreign key(feffinp_id) references feffinp(id),
                       foreign key(absorber) references element(z),
@@ -112,6 +113,11 @@ def create_feffdb(name=DBNAME_DEFAULT):
                  (row.atomic_number, row.element, row.name, row.molar_mass))
     conn.commit()
 
+def compress(val):
+    return lzma.compress(val.encode('utf-8'))
+
+def decompress(val):
+    return lzma.decompress(val).decode('utf-8')
 
 class FeffDatabase(SimpleDB):
     def __init__(self, dbname=DBNAME_DEFAULT):
@@ -147,7 +153,7 @@ class FeffDatabase(SimpleDB):
             print(f"error parsing {cif_file}")
             return None
 
-        text = out.pop('text')
+        text = compress(out.pop('text'))
         fname = out.pop('filename')
         dbargs = {k:v for k, v in out.items()}
         dbargs['ciftext'] = text
@@ -171,7 +177,7 @@ class FeffDatabase(SimpleDB):
         except ValueError:
             raise ValueError(f'error parsing feffinp : {feff_inp}')
 
-        text = finp.pop('text')
+        text =compress(finp.pop('text'))
         fnam = finp.pop('filename')
         dbargs = {k:v for k, v in finp.items()}
         dbargs['inpfile'] = text
@@ -193,7 +199,7 @@ class FeffDatabase(SimpleDB):
         except ValueError:
             raise ValueError(f'error parsing feff.dat file: {feffdat}')
 
-        text = dat.pop('text')
+        text = compress(dat.pop('text'))
         fname = dat.pop('filename')
         if description is None:
             # default description is filenamae and a few parent folders
@@ -222,14 +228,14 @@ class FeffDatabase(SimpleDB):
         row = self.get_rows('feffdat', where={'id': feffid},
                             limit_one=True, none_if_empty=True)
         if row is not None:
-            return row.feffdat
+            return decompress(row.feffdat)
 
     def get_feffinp(self, feffinp_id):
         "get text of feff.inp by id in feffinp table"
         row = self.get_rows('feffinp', where={'id': feffinp_id},
                             limit_one=True, none_if_empty=True)
         if row is not None:
-            return row.inpfile
+            return decompress(row.inpfile)
 
     def get_feffinp_for_feffdat(self, feffdat_id):
         "get text of feff.inp for a Feff.dat file"
@@ -239,7 +245,7 @@ class FeffDatabase(SimpleDB):
             trow = self.get_rows('feffinp', where={'id': row.feffinp_id},
                                  limit_one=True, none_if_empty=True)
             if trow is not None:
-                return trow.inpfile
+                return decompress(trow.inpfile)
 
     def get_cifinp_for_feffinp(self, feffinp_id):
         "get text of CIF for a feff.inp file"
@@ -249,7 +255,7 @@ class FeffDatabase(SimpleDB):
             trow = self.get_rows('cif', where={'id': row.cif_id},
                                  limit_one=True, none_if_empty=True)
             if trow is not None:
-                return trow.ciftext
+                return decompress(trow.ciftext)
 
     def list_feffdat(self, absorber=None, scatterer=None, edge=None,
                      rmin=0., rmax=20.0):
