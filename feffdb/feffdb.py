@@ -78,7 +78,6 @@ insert into rating_enum (scoreval) values (3);
 insert into rating_enum (scoreval) values (4);
 insert into rating_enum (scoreval) values (5);
 
-
 create table feffdat_rating (id integer primary key autoincrement,
                              score integer not null,
                              review text,
@@ -224,8 +223,15 @@ class FeffDatabase(SimpleDB):
         return this_id
 
     def get_feffdat(self, feffid):
-        "get text of feff.dat by id in feffdat table"
-        row = self.get_rows('feffdat', where={'id': feffid},
+        """get text of feff.dat, either by table 'id' or
+        or by 'label' in feffdat table
+        """
+        try:
+            where = {'id': int(feffid)}
+        except ValueError:
+            where = {'label': feffid}
+
+        row = self.get_rows('feffdat', where=where,
                             limit_one=True, none_if_empty=True)
         if row is not None:
             return decompress(row.feffdat)
@@ -288,12 +294,17 @@ class FeffDatabase(SimpleDB):
                         formula  = cif.formula
                         compound = cif.compound.lower()
 
-                out.append({'id': row.id, 'absorber': atomic_symbol(row.absorber),
-                            'scatterer': atomic_symbol(row.scatterer), 'edge': row.edge,
-                            'reff': row.reff, 'degen': row.degen,
-                            'formula': formula, 'compound': compound,
+                out.append({'id': row.id,
+                            'label': row.label,
+                            'absorber': atomic_symbol(row.absorber),
+                            'scatterer': atomic_symbol(row.scatterer),
+                            'edge': row.edge,
+                            'reff': row.reff,
+                            'degen': row.degen,
+                            'formula': formula,
+                            'compound': compound,
                             'geometry': json.loads(row.geometry),
-                            'label': row.label, 'description': row.description})
+                            'description': row.description})
 
         return out
 
