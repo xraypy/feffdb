@@ -10,7 +10,8 @@ from pathlib import Path
 from xraydb import XrayDB, atomic_number, atomic_symbol
 
 from .simpledb import SimpleDB
-from .utils import DBNAME_DEFAULT, parse_cif, parse_feffinp, parse_feffdat
+from .utils import (parse_cif, parse_feffinp, parse_feffdat,
+                    get_feffdb_path)
 
 schema = """
 PRAGMA journal_mode=WAL;
@@ -89,14 +90,20 @@ create table feffdat_rating (id integer primary key autoincrement,
 
 """
 
-VERSIONS = [(1, 'alpha1', '2026-August-6', 'pre-release')]
+VERSIONS = [(1, 'beta1', '2026-August-30', 'pre-release')]
 
-def create_feffdb(name=DBNAME_DEFAULT):
+def create_feffdb(dbname=None):
     """create FeffData.DB"""
-    if Path(name).exists():
-        raise IOError(f"file {name} already exists")
+    if dbname is None:
+        path = get_feffdb_path()
+    else:
+        path = Path(dbname)
+        if path.exists():
+            raise IOError(f"file {dbname} already exists")
+        path.parent.mkdir(parents=True, mode=0o755, exist_ok=True)
 
-    conn = sqlite3.connect(name)
+
+    conn = sqlite3.connect(path)
     c = conn.cursor()
     for t in schema.split(';'):
         c.execute(t)
@@ -118,12 +125,19 @@ def compress(val):
 def decompress(val):
     return lzma.decompress(val).decode('utf-8')
 
-class FeffDatabase(SimpleDB):
-    def __init__(self, dbname=DBNAME_DEFAULT):
-        if not Path(dbname).exists():
-            create_feffdb(name=dbname)
 
-        SimpleDB.__init__(self, dbname=dbname, server='sqlite')
+class FeffDatabase(SimpleDB):
+    def __init__(self, dbname=None):
+        if dbname is not None:
+            path = Path(dbname)
+        else:
+            path = get_feffdb_path()
+
+        self.dbname = path.absolute().as_posix()
+        if not path.exists():
+            create_feffdb(name=self.dbname)
+
+        SimpleDB.__init__(self, dbname=self.dbname, server='sqlite')
 
     def __repr__(self):
         return f"FeffDatabase('{self.dbname}')"
