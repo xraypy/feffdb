@@ -265,12 +265,19 @@ class FeffDatabase(SimpleDB):
 
     def list_feffdat(self, absorber=None, scatterer=None, edge=None,
                      rmin=0., rmax=20.0):
-        """get lit of feff.dat files matching
-        absorber   (None for all)
-        scatterer  (None for all)
-        edge       (None for all)
-        rmin       0.0
-        rmax      20.0
+        """get a list of feff.dat files matching on one or more criteria:
+
+        Arguments
+        ------------
+        absorber   (None or str) symbol for absorber [None for all]
+        scatterer  (None or str) symbol for scatterer [None for all]
+        edge       (None or str) string for absorption edge [None for all]
+        rmin       float  minimum R value  [0.0]
+        rmax       float  maximum R value  [20.0]
+
+        Returns
+        --------
+        list of path dictionaries
         """
         wargs = {}
         if absorber is not None:
