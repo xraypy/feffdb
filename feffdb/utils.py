@@ -2,6 +2,7 @@
 """
 very simple interface to CIF file for Feff DB
 """
+import os
 import json
 import re
 from pathlib import Path
@@ -13,10 +14,33 @@ from xraydb.chemparser import chemparse
 
 from pymatgen.io.cif import CifParser
 
-from pyshortcuts import get_homedir
+FEFFDB_NAME  = 'feffdat.db'
+FEFFDB_ENV_VAR    = 'FEFF_DB'
+LARCHDIR_ENV_VAR  = 'LARCHDIR ' # used for xraypy items
+LARCHDIR_DEFAULT  = '.larch'
 
-USER_FOLDER = Path(get_homedir(), '.larch').absolute().as_posix()
-DBNAME_DEFAULT = Path(USER_FOLDER, 'feffdat.db').absolute().as_posix()
+#USER_FOLDER = Path(, '.larch').absolute().as_posix()
+DBNAME_DEFAULT = Path(Path.home(), LARCHDIR_DEFAULT, FEFFDB_NAME).absolute().as_posix()
+
+def get_feffdb_path():
+    """get Path to FEFF DB file
+    The default is Path('$HOME/.larch/feffdat.db')
+
+    but can be changed with 2 environmental variables:
+
+    1. if LARCHDIR is set, that will be used as the parent folder,
+       (with the default '$HOME/.larch'). The database file will be
+           LARCHDIR / 'feffdat.db'
+
+    2. if FEFF_DB is set, and the file exists) that will be used.
+    """
+    dbname = os.environ.get(FEFFDB_ENV_VAR, None)
+    if dbname is not None and Path(dbname).exists():
+        return Path(dbname)
+
+    parent = Path.home() / os.environ.get(LARCHDIR_ENV_VAR, LARCHDIR_DEFAULT)
+    parent.mkdir(mode=0o755, exist_ok=True)
+    return parent / FEFFDB_NAME
 
 def read_textfile(filename):
     """read text from a file as string
