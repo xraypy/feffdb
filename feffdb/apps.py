@@ -5,15 +5,17 @@ from pathlib import Path
 from pyshortcuts import uname, make_shortcut, ico_ext
 from tabulate import tabulate
 
-from .utils import DBNAME_DEFAULT
+from .utils import get_feffdb_path
 from .feffdb import create_feffdb, FeffDatabase
+
 def feffdb_cli():
     """
     feffdb command-line app
     """
+    dbname_default = get_feffdb_path().absolute().as_posix()
     parser = ArgumentParser(description='Feff Database')
-    parser.add_argument('-d', '--dname', dest='dbname',
-                       default=None, help=f"database to use [{DBNAME_DEFAULT}]" )
+    parser.add_argument('-n', '--name', dest='dbname',
+                       default=None, help=f"database to use [{dbname_default}]" )
     parser.add_argument('-c', '--create', action='store_true', default=False,
                             help="create new database")
     parser.add_argument('--rmin',  default=0,
@@ -21,13 +23,13 @@ def feffdb_cli():
     parser.add_argument('--rmax',  default=10,
                         help='maximum distance (Ang)')
     parser.add_argument('absorber', nargs='?',
-                        help='symbol for absorbing element (use All for all absorbers)')
+                        help='symbol for absorbing element (use "all" for all absorbers)')
     parser.add_argument('scatterer', nargs='?',
-                        help='symbol for scattering element (use All for all scatterers')
+                        help='symbol for scattering element')
 
     args = parser.parse_args()
 
-    dbname = args.dbname or DBNAME_DEFAULT
+    dbname = args.dbname or dbname_default
 
     if Path(dbname).exists() and args.create:
         print(f"database {dbname} already exists!")
