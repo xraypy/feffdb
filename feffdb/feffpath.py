@@ -1,0 +1,566 @@
+"""
+feffpath provides a simple function to read and use the Feff data
+results in FeffDB.  This is a slightly simplified version of the code
+to work with Feff data files in X-ray Larch, and is included here to
+give a standalone for to use the data in FeffDB.
+
+
+  path1 = read_feffdat('feffNNNN.dat')
+
+"""
+import re
+from dataclasses import dataclass
+from pathlib import Path
+import numpy as np
+from copy import deepcopy
+
+
+import hashlib
+from base64 import b64encode
+from scipy import constants as consts
+from scipy.interpolate import UnivariateSpline
+
+from xraydb import atomic_mass, atomic_symbol
+from pyshortcuts import fix_varname, read_textfile, gformat
+
+from .feffdb import FeffDatabase
+
+KTOE = 1.e20*consts.hbar**2 / (2*consts.m_e * consts.e)
+ETOK = 1.0/KTOE
+
+SMALL_ENERGY = 1.e-6
+
+
+FDAT_ARRS = ('real_phc', 'mag_feff', 'pha_feff', 'red_fact',
+             'lam', 'rep', 'pha', 'amp', 'k')
+
+# values that will be available in calculations of Path Parameter values
+FEFFDAT_VALUES = ('reff', 'nleg', 'degen', 'rmass', 'rnorman',
+                  'gam_ch', 'rs_int', 'vint', 'vmu', 'vfermi')
+
+FEFF_DB = None
+
+@dataclass
+class Group:
+    """Class for keeping track of an item in inventory."""
+    name: str
+    unit_price: float
+    quantity_on_hand: int = 0
+
+    def total_cost(self) -> float:
+        return self.unit_price * self.quantity_on_hand
+
+def gfmt(x, n=10):
+    return gformat(x, length=n)
+
+def etok(energy):
+    """convert photo-electron energy to wavenumber"""
+    if energy < 0: return 0
+    return np.sqrt(energy*ETOK)
+
+def ktoe(k):
+    """convert photo-electron wavenumber to energy"""
+    return k*k*KTOE
+
+def b64hash(val):
+    """return a base32 hash of a string"""
+    _hash = hashlib.sha256()
+    _hash.update(val.encode('utf-8'))
+    return b64encode(_hash.digest()).decode('utf-8')
+
+
+def pathname_valid(fname):
+    if fname in ('', None):
+        return False
+    return (Path(fname).exists()  or
+            (fname.startswith('feffdb[') and fname.endswith(']')))
+
+
+class FeffDatFile:
+    def __init__(self, filename=None):
+        self.filename = filename
+        self.__reff__ = 0
+        self.__nleg__ = 0
+        self.__rmass = None
+        self.__geometry = None
+        if pathname_valid(filename):
+            self._read(filename)
+
+    def __repr__(self):
+        if self.filename is not None:
+            return f'FeffDatFile({self.filename})'
+        return 'FeffDatFile()'
+
+    def __copy__(self):
+        return FeffDatFile(filename=self.filename)
+
+    def __deepcopy__(self, memo):
+        return FeffDatFile(filename=self.filename)
+
+    @property
+    def reff(self):
+        return self.__reff__
+
+    @reff.setter
+    def reff(self, val):
+        pass
+
+    @property
+    def nleg(self):
+        return self.__nleg__
+
+    @nleg.setter
+    def nleg(self, val):
+        pass
+
+    @property
+    def rmass(self):
+        """reduced mass for a path"""
+        if self.__rmass is None and hasattr(self, 'geom'):
+            rmass = 0
+            for atsym, iz, ipot, amass, x, y, z in self.geom:
+                rmass += 1.0/max(1., amass)
+            self.__rmass = 1./rmass
+        return self.__rmass
+
+    @rmass.setter
+    def rmass(self, val):
+        pass
+
+    @property
+    def geometry(self):
+        """path geometry -- more complete than 'geom', closing matching `geometry`
+           from feffutils and get_feff_pathinfo, except without 'eta'
+        """
+        if not hasattr(self, '_geometry'):
+            self.__geometry = None
+        if not hasattr(self, 'geom'):
+            return None
+        if self.__geometry is None:
+            self.__geometry = []
+            pts, atoms = [], []
+            for atsym, iz, ipot, amass, x, y, z in self.geom:
+                pts.append(np.array([float(x), float(y), float(z)]))
+                atoms.append([atsym, ipot, float(x), float(y), float(z)])
+            pts.append(pts[0])
+            pts.append(pts[1])
+            atoms.append(atoms[0])
+            atoms.append(atoms[1])
+
+        for i in range(1, len(pts)-1):
+            p0 = pts[i-1]
+            p1 = pts[i+0]
+            p2 = pts[i+1]
+            a = p1 - p0
+            b = p2 - p1
+            dist = float(np.linalg.norm(pts[i]-pts[i-1]))
+            beta = float(np.acos(np.dot(a, b) / np.sqrt((np.dot(a, a) * np.dot(b, b))))*180/np.pi)
+            sym, ipot, x, y, z = atoms[i]
+            self.__geometry.append((sym, ipot, dist, x, y, z, beta, 0.0))
+        return self.__geometry
+
+    @geometry.setter
+    def geometry(self, val):
+        pass
+
+    def _set_from_dict(self, **kws):
+        self.__rmass = None
+        self.__geometry = None
+        for key, val in kws.items():
+            if key  == 'rmass':
+                continue
+            elif key == 'reff':
+                key = '__reff__'
+            elif key == 'nleg':
+                key = '__nleg__'
+            elif key in FDAT_ARRS:
+                val = np.array(val)
+            setattr(self, key, val)
+
+    def __setstate__(self, state):
+        (self.filename, self.title, self.version, self.shell,
+         self.absorber, self.degen, self.__reff__, self.__nleg__,
+         self.rnorman, self.edge, self.gam_ch, self.exch, self.vmu, self.vfermi,
+         self.vint, self.rs_int, self.potentials, self.geom, self.__rmass,
+         self.k, self.real_phc, self.mag_feff, self.pha_feff,
+         self.red_fact, self.lam, self.rep, self.pha, self.amp) = state
+        self.k = np.array(self.k)
+        self.real_phc = np.array(self.real_phc)
+        self.mag_feff = np.array(self.mag_feff)
+        self.pha_feff = np.array(self.pha_feff)
+        self.red_fact = np.array(self.red_fact)
+        self.lam = np.array(self.lam)
+        self.rep = np.array(self.rep)
+        self.pha = np.array(self.pha)
+        self.amp = np.array(self.amp)
+
+    def __getstate__(self):
+        return (self.filename, self.title, self.version, self.shell,
+                self.absorber, self.degen, self.__reff__, self.__nleg__,
+                self.rnorman, self.edge, self.gam_ch, self.exch, self.vmu,
+                self.vfermi, self.vint, self.rs_int, self.potentials,
+                self.geom, self.__rmass, self.k.tolist(),
+                self.real_phc.tolist(), self.mag_feff.tolist(),
+                self.pha_feff.tolist(), self.red_fact.tolist(),
+                self.lam.tolist(), self.rep.tolist(), self.pha.tolist(),
+                self.amp.tolist())
+
+
+    def _read(self, filename):
+        if Path(filename).exists():
+            fefftext = read_textfile(filename)
+        elif (filename.startswith('feffdb[') and filename.endswith(']')):
+            global FEFF_DB
+            if FEFF_DB is None and FeffDatabase is not None:
+                FEFF_DB = FeffDatabase()
+            try:
+                fefftext = FEFF_DB.get_feffdat(filename[7:-1])
+            except Exception:
+                print(f"Error reading Feff Database '{filename}'")
+                return
+            if fefftext is None:
+                print(f"could not find entry in Feff Database '{filename}'")
+                return
+
+
+        self.filename = filename
+        mode = 'header'
+        self.potentials, self.geom = [], []
+        data = []
+        pcounter = 0
+        iline = 0
+        for line in fefftext.split('\n'):
+            iline += 1
+            line = line.strip()
+            if line.startswith('#'): line = line[1:]
+            line = line.strip()
+            if iline == 1:
+                self.title = line[:64].strip()
+                self.version = line[64:].strip()
+                continue
+            if line.startswith('k') and line.endswith('real[p]@#'):
+                mode = 'arrays'
+                continue
+            elif '----' in line[2:10]:
+                mode = 'path'
+                continue
+            #
+            if (mode == 'header' and
+                (re.match(r'^Abs\b', line) or re.match(r'^Pot\s+\d+\b', line)) and
+                re.search(r'\bZ\s*=', line)):
+                words = line.replace('=', ' ').split()
+                ipot, z, rmt, rnm = (0, 0, 0, 0)
+                words.pop(0)
+                if re.match(r'^Pot\s+\d+\b', line):
+                    ipot = int(words.pop(0))
+                iz = int(words[1])
+                rmt = float(words[3])
+                rnm = float(words[5])
+                if re.match(r'^Abs\b', line):
+                    self.shell = words[6]
+                self.potentials.append((ipot, iz, rmt, rnm))
+            elif mode == 'header' and re.match(r'^Gam_ch\s*=', line):
+                words  = line.replace('=', ' ').split(None, 2)
+                self.gam_ch = float(words[1])
+                self.exch   = words[2]
+            elif mode == 'header' and re.match(r'^Mu\s*=', line):
+                words  = line.replace('=', ' ').replace('eV', ' ').split()
+                self.vmu = float(words[1])
+                self.vfermi = ktoe(float(words[3]))
+                self.vint = float(words[5])
+                self.rs_int= float(words[7])
+            elif mode == 'path':
+                pcounter += 1
+                if pcounter == 1:
+                    w = [float(x) for x in line.split()[:5]]
+                    self.__nleg__ = int(w.pop(0))
+                    self.degen, self.__reff__, self.rnorman, self.edge = w
+                elif pcounter > 2:
+                    words = line.split()
+                    xyz = ["%8.5f" % float(x) for x in words[:3]]
+                    ipot = int(words[3])
+                    iz   = int(words[4])
+                    if len(words) > 5:
+                        lab = words[5]
+                    else:
+                        lab = atomic_symbol(iz)
+                    amass = atomic_mass(iz)
+                    geom = [lab, iz, ipot, amass] + xyz
+                    if len(self.geom) == 0:
+                        self.absorber = lab
+                    self.geom.append(tuple(geom))
+            elif mode == 'arrays':
+                d = np.array([float(x) for x in line.split()])
+                if len(d) == 7:
+                    data.append(d)
+        data = np.array(data).transpose()
+        self.k        = data[0]
+        self.real_phc = data[1]
+        self.mag_feff = data[2]
+        self.pha_feff = data[3]
+        self.red_fact = data[4]
+        self.lam = data[5]
+        self.rep = data[6]
+        self.pha = data[1] + data[3]
+        self.amp = data[2] * data[4]
+        self.__rmass = None  # reduced mass of path
+        self.__geometry = None  # path geometry list [atom, dist, angle]
+
+
+
+class FeffPath():
+    """FeffPath object
+    has a FeffDatFile and can calculate EXAFS with its `calc_chi` method.
+    """
+    def __init__(self, filename=None, label='', feffrun='', s02=None, degen=None,
+                 e0=None, ei=None, deltar=None, sigma2=None, third=None,
+                 fourth=None):
+        self.filename = filename
+        self.feffrun = feffrun
+        self.label = label
+        self.params = None
+        self.spline_coefs = None
+        self.geom  = []
+        self.shell = 'K'
+        self.absorber = None
+        self.dataset = None
+        self.hashkey = None
+        self.k = None
+        self.chi = None
+        self.use = True
+
+        self.degen =  1.0 if degen  is None else degen
+        self.s02    = 1.0 if s02    is None else s02
+        self.e0     = 0.0 if e0     is None else e0
+        self.ei     = 0.0 if ei     is None else ei
+        self.deltar = 0.0 if deltar is None else deltar
+        self.sigma2 = 0.0 if sigma2 is None else sigma2
+        self.third  = 0.0 if third  is None else third
+        self.fourth = 0.0 if fourth is None else fourth
+
+        self._feffdat = None
+        if filename is not None:
+            self._get_feffdat(filename)
+
+    def _get_feffdat(self, filename):
+        if filename not in ('', None):
+            self._feffdat = FeffDatFile(filename=filename)
+            xpath = Path(filename).absolute()
+            self.filename = xpath.as_posix()
+            self.feffrun = xpath.parent.as_posix()
+
+            self.create_spline_coefs()
+            self.geom  = self._feffdat.geom
+            self.shell = self._feffdat.shell
+            self.absorber = self._feffdat.absorber
+
+            self.hashkey = self.__geom2label()
+            if self.label in ('', None):
+                self.label = self.hashkey
+
+
+    def __repr__(self):
+        if self.filename is not None:
+            return 'feffpath((no_file)'
+        return f'feffpath({self.filename})'
+
+    def __getstate__(self):
+        _feffdat_state = self._feffdat.__getstate__()
+        return (self.filename, self.label, self.feffrun, self.degen,
+                self.s02, self.e0, self.ei, self.deltar, self.sigma2,
+                self.third, self.fourth, self.use, _feffdat_state)
+
+
+    def __setstate__(self, state):
+        self.params = self.spline_coefs = self.k = self.chi = None
+
+        (self.filename, self.label, self.feffrun, self.degen,
+         self.s02, self.e0, self.ei, self.deltar, self.sigma2,
+         self.third, self.fourth, self.use, _feffdat_state) = state
+
+        self._feffdat = FeffDatFile()
+        self._feffdat.__setstate__(_feffdat_state)
+        self.filename = Path(self.filename).absolute().as_posix()
+
+        self.create_spline_coefs()
+
+        self.geom  = self._feffdat.geom
+        self.shell = self._feffdat.shell
+        self.absorber = self._feffdat.absorber
+        def_degen  = self._feffdat.degen
+
+        self.hashkey = self.__geom2label()
+        if self.label in ('', None):
+            self.label = self.hashkey
+
+
+    def __geom2label(self):
+        """generate label by hashing full filename and path geometry"""
+        rep = [self._feffdat.degen, self._feffdat.shell, self.filename]
+        for atom in self.geom:
+            rep.extend(atom)
+            rep.append("%7.4f" % self._feffdat.reff)
+            s = "|".join([str(i) for i in rep])
+        return "p%s" % (b64hash(s)[:8])
+
+    def pathpar_name(self, parname):
+        """
+        get internal name of lmfit Parameter for a path paramter,
+        using Path's hashkey
+        """
+        return f'{parname}_{self.dataset}_{self.hashkey}'
+
+    def __copy__(self):
+        newpath = FeffPath()
+        newpath.__setstate__(self.__getstate__())
+        return newpath
+
+    def __deepcopy__(self, memo):
+        newpath = FeffPath()
+        newpath.__setstate__(self.__getstate__())
+        return newpath
+
+    @property
+    def reff(self): return self._feffdat.reff
+
+    @reff.setter
+    def reff(self, val):  pass
+
+    @property
+    def nleg(self): return self._feffdat.nleg
+
+    @nleg.setter
+    def nleg(self, val):     pass
+
+    @property
+    def rmass(self): return self._feffdat.rmass
+
+    @rmass.setter
+    def rmass(self, val):  pass
+
+
+    @property
+    def geometry(self):
+        return self._feffdat.geometry
+
+    @geometry.setter
+    def geometry(self, val):
+        pass
+
+    def __repr__(self):
+        return f"FeffPath(label='{self.label}', filename='{self.filename}')"
+
+    def create_spline_coefs(self):
+        """pre-calculate spline coefficients for feff data"""
+        self.spline_coefs = {}
+        fdat = self._feffdat
+        self.spline_coefs['pha'] = UnivariateSpline(fdat.k, fdat.pha, s=0)
+        self.spline_coefs['amp'] = UnivariateSpline(fdat.k, fdat.amp, s=0)
+        self.spline_coefs['rep'] = UnivariateSpline(fdat.k, fdat.rep, s=0)
+        self.spline_coefs['lam'] = UnivariateSpline(fdat.k, fdat.lam, s=0)
+
+    def calc_chi(self, k=None, kmax=None, kstep=None, degen=None, s02=None,
+                 e0=None, ei=None, deltar=None, sigma2=None,
+                 third=None, fourth=None, interp='cubic', **kws):
+        """calculate chi(k) with values provided for path parameters
+
+
+        """
+        fdat = self._feffdat
+
+        if degen  is None: degen  = self.degen
+        if s02    is None: s02    = self.s02
+        if e0     is None: e0     = self.e0
+        if ei     is None: ei     = self.ei
+        if deltar is None: deltar = self.deltar
+        if sigma2 is None: sigma2 = self.sigma2
+        if third  is None: third  = self.third
+        if fourth is None: fourth = self.fourth
+
+        if fdat.reff < 0.05:
+            print('reff is too small to calculate chi(k)')
+            return
+        # make sure we have a k array
+        if k is None:
+            if kmax is None:
+                kmax = 30.0
+                kmax = min(max(fdat.k), kmax)
+            if kstep is None:
+                kstep = 0.05
+            k = kstep * np.arange(int(1.01 + kmax/kstep), dtype='float64')
+
+        reff = fdat.reff
+        # get values for all the path parameters
+
+        # create e0-shifted energy and k, careful to look for |e0| ~= 0.
+        en = k*k - e0*ETOK
+        if min(abs(en)) < SMALL_ENERGY:
+            try:
+                en[np.where(abs(en) < 1.5*SMALL_ENERGY)] = SMALL_ENERGY
+            except ValueError:
+                pass
+            # q is the e0-shifted wavenumber
+        q = np.sign(en)*np.sqrt(abs(en))
+
+        # lookup Feff.dat values (pha, amp, rep, lam)
+        if interp.startswith('lin'):
+            pha = np.interp(q, fdat.k, fdat.pha)
+            amp = np.interp(q, fdat.k, fdat.amp)
+            rep = np.interp(q, fdat.k, fdat.rep)
+            lam = np.interp(q, fdat.k, fdat.lam)
+        else:
+            pha = self.spline_coefs['pha'](q)
+            amp = self.spline_coefs['amp'](q)
+            rep = self.spline_coefs['rep'](q)
+            lam = self.spline_coefs['lam'](q)
+
+        # p = complex wavenumber, and its square:
+        pp   = (rep + 1j/lam)**2 + 1j * ei * ETOK
+        p    = np.sqrt(pp)
+
+        # the xafs equation:
+        cchi = np.exp(-2*reff*p.imag - 2*pp*(sigma2 - pp*fourth/3) +
+                      1j*(2*q*reff + pha +
+                          2*p*(deltar - 2*sigma2/reff - 2*pp*third/3) ))
+
+        cchi = self.degen * s02 * amp * cchi / (q*(reff + deltar)**2)
+        cchi[0] = 2*cchi[1] - cchi[2]
+        # outputs:
+        self.k = k
+        self.p = p
+        self.chi = cchi.imag
+        self.chi_imag = -cchi.real
+
+
+
+def feffpath(filename='', label='', feffrun='', s02=None, degen=None,
+             e0=None,ei=None, deltar=None, sigma2=None, third=None,
+             fourth=None, **kws):
+    """create a Feff Path Group from a *feffNNNN.dat* file.
+
+    Parameters:
+    -----------
+      filename:  name (full path of) *feffNNNN.dat* file
+      label:     label for path   [file name]
+      degen:     path degeneracy, N [taken from file]
+      s02:       S_0^2    value or parameter [1.0]
+      e0:        E_0      value or parameter [0.0]
+      deltar:    delta_R  value or parameter [0.0]
+      sigma2:    sigma^2  value or parameter [0.0]
+      third:     c_3      value or parameter [0.0]
+      fourth:    c_4      value or parameter [0.0]
+      ei:        E_i      value or parameter [0.0]
+
+    For all the options described as **value or parameter** either a
+    numerical value or a Parameter (as created by param()) can be given.
+
+    Returns:
+    ---------
+        a FeffPath object.
+    """
+    if not pathname_valid(filename):
+        raise ValueError(f"Feff Path file '{filename:s}' not found")
+
+    return FeffPath(filename=filename, label=label, feffrun=feffrun,
+                    s02=s02, degen=degen, e0=e0, ei=ei, deltar=deltar,
+                    sigma2=sigma2, third=third, fourth=fourth)
