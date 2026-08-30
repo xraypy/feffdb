@@ -19,8 +19,6 @@ FEFFDB_ENV_VAR    = 'FEFF_DB'
 LARCHDIR_ENV_VAR  = 'LARCHDIR ' # used for xraypy items
 LARCHDIR_DEFAULT  = '.larch'
 
-#USER_FOLDER = Path(, '.larch').absolute().as_posix()
-DBNAME_DEFAULT = Path(Path.home(), LARCHDIR_DEFAULT, FEFFDB_NAME).absolute().as_posix()
 
 def get_feffdb_path():
     """get Path to FEFF DB file
