@@ -19,7 +19,7 @@ browsed and re-used without having to setup and run Feff. An important
 use-case for this is semi-automated analysis of EXAFS data.
 
 FeffDB is still in active, pre-release development, and has been
-developed by
+developed by;
 
   - Samantha Liao, Cornell University,   https://orcid.org/0009-0006-7803-4106
   - Juanjuan Huang, Argonne National Laboratory, https://orcid.org/0000-0002-5801-9754
