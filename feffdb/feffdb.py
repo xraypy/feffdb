@@ -49,7 +49,7 @@ create table feffinp (id integer primary key autoincrement,
 
 create table person (id integer primary key autoincrement,
                      email text not null unique,
-                     name text);
+                     name text, password text);
 
 insert into person (email, name) values ('feffdb@local', 'feffdb library');
 
