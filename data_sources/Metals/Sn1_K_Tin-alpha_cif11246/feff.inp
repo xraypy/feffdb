@@ -1,0 +1,117 @@
+* FEFF8 input file generated 2026-09-13 20:48:35
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Sn
+TITLE SpaceGroup: Fd-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11246
+TITLE Mineral Name: tin-alpha
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=6.4912, b=6.4912, c=6.4912, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 273.51100
+TITLE Crystal Density (gr/cm^3): 5.766
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     8a   Sn   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for ___auto___
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for ___auto___
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    50    Sn      -1     -1       0.01
+     1    50    Sn      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Sn    0.00000  * Sn_1        0
+   -1.62280   -1.62280    1.62280  1   Sn    2.81077  * Sn_1        1
+   -1.62280    1.62280   -1.62280  1   Sn    2.81077  * Sn_1        2
+    1.62280   -1.62280   -1.62280  1   Sn    2.81077  * Sn_1        3
+    1.62280    1.62280    1.62280  1   Sn    2.81077  * Sn_1        4
+   -3.24560   -3.24560   -0.00000  1   Sn    4.58997  * Sn_1        5
+   -3.24560    0.00000   -3.24560  1   Sn    4.58997  * Sn_1        6
+   -3.24560    3.24560    0.00000  1   Sn    4.58997  * Sn_1        7
+   -3.24560    0.00000    3.24560  1   Sn    4.58997  * Sn_1        8
+    0.00000   -3.24560   -3.24560  1   Sn    4.58997  * Sn_1        9
+    3.24560   -3.24560    0.00000  1   Sn    4.58997  * Sn_1       10
+    0.00000   -3.24560    3.24560  1   Sn    4.58997  * Sn_1       11
+    3.24560    0.00000   -3.24560  1   Sn    4.58997  * Sn_1       12
+   -0.00000    3.24560   -3.24560  1   Sn    4.58997  * Sn_1       13
+    3.24560    3.24560    0.00000  1   Sn    4.58997  * Sn_1       14
+    3.24560    0.00000    3.24560  1   Sn    4.58997  * Sn_1       15
+   -0.00000    3.24560    3.24560  1   Sn    4.58997  * Sn_1       16
+   -4.86840   -1.62280   -1.62280  1   Sn    5.38222  * Sn_1       17
+   -1.62280   -4.86840   -1.62280  1   Sn    5.38222  * Sn_1       18
+   -1.62280   -1.62280   -4.86840  1   Sn    5.38222  * Sn_1       19
+   -4.86840    1.62280    1.62280  1   Sn    5.38222  * Sn_1       20
+   -1.62280    1.62280    4.86840  1   Sn    5.38222  * Sn_1       21
+   -1.62280    4.86840    1.62280  1   Sn    5.38222  * Sn_1       22
+    1.62280   -4.86840    1.62280  1   Sn    5.38222  * Sn_1       23
+    1.62280   -1.62280    4.86840  1   Sn    5.38222  * Sn_1       24
+    4.86840   -1.62280    1.62280  1   Sn    5.38222  * Sn_1       25
+    1.62280    1.62280   -4.86840  1   Sn    5.38222  * Sn_1       26
+    1.62280    4.86840   -1.62280  1   Sn    5.38222  * Sn_1       27
+    4.86840    1.62280   -1.62280  1   Sn    5.38222  * Sn_1       28
+   -6.49120    0.00000   -0.00000  1   Sn    6.49120  * Sn_1       29
+    0.00000   -6.49120   -0.00000  1   Sn    6.49120  * Sn_1       30
+    0.00000    0.00000   -6.49120  1   Sn    6.49120  * Sn_1       31
+    6.49120    0.00000    0.00000  1   Sn    6.49120  * Sn_1       32
+   -0.00000    6.49120    0.00000  1   Sn    6.49120  * Sn_1       33
+    0.00000    0.00000    6.49120  1   Sn    6.49120  * Sn_1       34
+
+* END

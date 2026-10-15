@@ -1,0 +1,24 @@
+ Formula: Pb                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: Fm-3m
+ CIF Source: Am Min Crystal Structure Database ID 11154
+ Mineral Name: lead
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=4.9505, b=4.9505, c=4.9505, alpha=90.0, beta=90
+ Cell Volume (A^3): 121.32400
+ Crystal Density (gr/cm^3): 11.344
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=82 Rmt= 1.877 Rnm= 1.930 L3 shell
+ Pot 1 Z=82 Rmt= 1.874 Rnm= 1.927
+ Gam_ch=5.778E+00 H-L exch
+ Mu=-2.268E+00 kf=1.430E+00 Vint=-1.006E+01 Rs_int= 2.536
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000    12.000     2   3.5005
+ feff0002.dat 0.00000    19.800     6.000     2   4.9505
+ feff0003.dat 0.00000     7.458    48.000     3   5.2508
+ feff0004.dat 0.00000     4.341    48.000     3   5.9758
+ feff0005.dat 0.00000    42.650    24.000     2   6.0631
+ feff0006.dat 0.00000    17.060    96.000     3   6.5321

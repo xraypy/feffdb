@@ -1,0 +1,37 @@
+ Formula: Cd                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: P6_3/mmc
+ CIF Source: Am Min Crystal Structure Database ID 11167
+ Mineral Name: cadmium
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=2.97887, b=2.97887, c=5.61765, alpha=90.0, beta
+ Cell Volume (A^3): 43.17100
+ Crystal Density (gr/cm^3): 8.648
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=48 Rmt= 1.695 Rnm= 1.762 K  shell
+ Pot 1 Z=48 Rmt= 1.632 Rnm= 1.693
+ Gam_ch=8.978E+00 H-L exch
+ Mu=-2.688E+00 kf=1.595E+00 Vint=-1.238E+01 Rs_int= 2.274
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.9789
+ feff0002.dat 0.00000    75.270     6.000     2   3.2935
+ feff0003.dat 0.00000    30.140     6.000     2   4.4408
+ feff0004.dat 0.00000     4.004    12.000     3   4.4683
+ feff0005.dat 0.00000     4.614    24.000     3   4.7830
+ feff0006.dat 0.00000     3.627    12.000     3   4.7830
+ feff0007.dat 0.00000    18.220     6.000     2   5.1595
+ feff0008.dat 0.00000    32.210    12.000     2   5.3474
+ feff0009.dat 0.00000     4.429    24.000     3   5.5586
+ feff0010.dat 0.00000     4.518     2.000     2   5.6176
+ feff0012.dat 0.00000    11.010     6.000     2   5.9577
+ feff0013.dat 0.00000     4.586     6.000     3   5.9577
+ feff0014.dat 0.00000    43.120    12.000     3   5.9577
+ feff0015.dat 0.00000     8.208     6.000     4   5.9577
+ feff0016.dat 0.00000    45.580     6.000     4   5.9577
+ feff0017.dat 0.00000    17.450    12.000     2   6.3586
+ feff0019.dat 0.00000    11.130    24.000     3   6.4728
+ feff0020.dat 0.00000     6.818     6.000     2   6.8075
+ feff0021.dat 0.00000     6.818     6.000     2   6.8075

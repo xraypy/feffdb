@@ -1,0 +1,161 @@
+* FEFF8 input file generated 2026-09-14 06:42:24
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Au
+TITLE SpaceGroup: Fm-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11140
+TITLE Mineral Name: gold
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=4.07825, b=4.07825, c=4.07825, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 67.83000
+TITLE Crystal Density (gr/cm^3): 19.288
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     4a   Au   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    79    Au      -1     -1       0.01
+     1    79    Au      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Au    0.00000  * Au_1        0
+   -2.03912   -2.03912   -0.00000  1   Au    2.88376  * Au_1        1
+   -2.03912    0.00000   -2.03912  1   Au    2.88376  * Au_1        2
+   -2.03912    2.03912    0.00000  1   Au    2.88376  * Au_1        3
+   -2.03912    0.00000    2.03912  1   Au    2.88376  * Au_1        4
+    0.00000   -2.03912   -2.03912  1   Au    2.88376  * Au_1        5
+    2.03912   -2.03912    0.00000  1   Au    2.88376  * Au_1        6
+    0.00000   -2.03912    2.03912  1   Au    2.88376  * Au_1        7
+    2.03912    0.00000   -2.03912  1   Au    2.88376  * Au_1        8
+   -0.00000    2.03912   -2.03912  1   Au    2.88376  * Au_1        9
+    2.03912    2.03912    0.00000  1   Au    2.88376  * Au_1       10
+    2.03912    0.00000    2.03912  1   Au    2.88376  * Au_1       11
+   -0.00000    2.03912    2.03912  1   Au    2.88376  * Au_1       12
+   -4.07825    0.00000   -0.00000  1   Au    4.07825  * Au_1       13
+    0.00000   -4.07825   -0.00000  1   Au    4.07825  * Au_1       14
+    0.00000    0.00000   -4.07825  1   Au    4.07825  * Au_1       15
+    4.07825    0.00000    0.00000  1   Au    4.07825  * Au_1       16
+   -0.00000    4.07825    0.00000  1   Au    4.07825  * Au_1       17
+    0.00000    0.00000    4.07825  1   Au    4.07825  * Au_1       18
+   -2.03912   -2.03912   -4.07825  1   Au    4.99482  * Au_1       19
+   -2.03912   -4.07825   -2.03913  1   Au    4.99482  * Au_1       20
+   -2.03912   -2.03912    4.07825  1   Au    4.99482  * Au_1       21
+   -2.03912   -4.07825    2.03912  1   Au    4.99482  * Au_1       22
+   -4.07825   -2.03912    2.03912  1   Au    4.99482  * Au_1       23
+   -2.03912    2.03912   -4.07825  1   Au    4.99482  * Au_1       24
+   -2.03912    2.03912    4.07825  1   Au    4.99482  * Au_1       25
+    2.03912   -2.03912   -4.07825  1   Au    4.99482  * Au_1       26
+    2.03912   -2.03912    4.07825  1   Au    4.99482  * Au_1       27
+    2.03912    4.07825   -2.03912  1   Au    4.99482  * Au_1       28
+    2.03912    2.03912   -4.07825  1   Au    4.99482  * Au_1       29
+    4.07825    2.03912   -2.03912  1   Au    4.99482  * Au_1       30
+    2.03912    4.07825    2.03913  1   Au    4.99482  * Au_1       31
+    2.03912    2.03912    4.07825  1   Au    4.99482  * Au_1       32
+   -4.07825   -2.03912   -2.03913  1   Au    4.99482  * Au_1       33
+   -2.03913    4.07825   -2.03912  1   Au    4.99482  * Au_1       34
+   -4.07825    2.03912   -2.03912  1   Au    4.99482  * Au_1       35
+   -2.03913    4.07825    2.03912  1   Au    4.99482  * Au_1       36
+   -4.07825    2.03912    2.03912  1   Au    4.99482  * Au_1       37
+    2.03913   -4.07825   -2.03912  1   Au    4.99482  * Au_1       38
+    4.07825   -2.03912   -2.03912  1   Au    4.99482  * Au_1       39
+    2.03913   -4.07825    2.03912  1   Au    4.99482  * Au_1       40
+    4.07825   -2.03912    2.03912  1   Au    4.99482  * Au_1       41
+    4.07825    2.03912    2.03913  1   Au    4.99482  * Au_1       42
+   -4.07825   -4.07825   -0.00000  1   Au    5.76752  * Au_1       43
+   -4.07825    0.00000   -4.07825  1   Au    5.76752  * Au_1       44
+   -4.07825    4.07825    0.00000  1   Au    5.76752  * Au_1       45
+   -4.07825    0.00000    4.07825  1   Au    5.76752  * Au_1       46
+    0.00000   -4.07825   -4.07825  1   Au    5.76752  * Au_1       47
+    4.07825   -4.07825    0.00000  1   Au    5.76752  * Au_1       48
+    0.00000   -4.07825    4.07825  1   Au    5.76752  * Au_1       49
+    4.07825    0.00000   -4.07825  1   Au    5.76752  * Au_1       50
+   -0.00000    4.07825   -4.07825  1   Au    5.76752  * Au_1       51
+    4.07825    4.07825    0.00000  1   Au    5.76752  * Au_1       52
+    4.07825    0.00000    4.07825  1   Au    5.76752  * Au_1       53
+   -0.00000    4.07825    4.07825  1   Au    5.76752  * Au_1       54
+   -2.03912   -6.11737   -0.00000  1   Au    6.44828  * Au_1       55
+   -6.11737   -2.03912   -0.00000  1   Au    6.44828  * Au_1       56
+   -2.03912    0.00000   -6.11738  1   Au    6.44828  * Au_1       57
+   -6.11737    0.00000   -2.03913  1   Au    6.44828  * Au_1       58
+   -2.03913    6.11737    0.00000  1   Au    6.44828  * Au_1       59
+   -2.03912    0.00000    6.11737  1   Au    6.44828  * Au_1       60
+   -6.11737    2.03912   -0.00000  1   Au    6.44828  * Au_1       61
+   -6.11737    0.00000    2.03912  1   Au    6.44828  * Au_1       62
+    0.00000   -2.03912   -6.11738  1   Au    6.44828  * Au_1       63
+    0.00000   -6.11737   -2.03913  1   Au    6.44828  * Au_1       64
+    6.11737   -2.03912    0.00000  1   Au    6.44828  * Au_1       65
+    2.03913   -6.11737   -0.00000  1   Au    6.44828  * Au_1       66
+    0.00000   -2.03912    6.11737  1   Au    6.44828  * Au_1       67
+    0.00000   -6.11737    2.03912  1   Au    6.44828  * Au_1       68
+    6.11737    0.00000   -2.03912  1   Au    6.44828  * Au_1       69
+    2.03912    0.00000   -6.11737  1   Au    6.44828  * Au_1       70
+   -0.00000    6.11737   -2.03912  1   Au    6.44828  * Au_1       71
+   -0.00000    2.03912   -6.11737  1   Au    6.44828  * Au_1       72
+    6.11737    2.03912    0.00000  1   Au    6.44828  * Au_1       73
+    6.11737    0.00000    2.03913  1   Au    6.44828  * Au_1       74
+    2.03912    6.11737    0.00000  1   Au    6.44828  * Au_1       75
+    2.03912    0.00000    6.11738  1   Au    6.44828  * Au_1       76
+   -0.00000    6.11737    2.03913  1   Au    6.44828  * Au_1       77
+   -0.00000    2.03912    6.11738  1   Au    6.44828  * Au_1       78
+
+* END

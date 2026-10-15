@@ -1,0 +1,195 @@
+* FEFF8 input file generated 2026-09-13 19:57:17
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Cr
+TITLE SpaceGroup: Im-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11209
+TITLE Mineral Name: chromium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=2.8839, b=2.8839, c=2.8839, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 23.98500
+TITLE Crystal Density (gr/cm^3): 7.2
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     2a   Cr   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    24    Cr      -1     -1       0.01
+     1    24    Cr      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Cr    0.00000  * Cr_1        0
+   -1.44195   -1.44195    1.44195  1   Cr    2.49753  * Cr_1        1
+   -1.44195    1.44195   -1.44195  1   Cr    2.49753  * Cr_1        2
+   -1.44195    1.44195    1.44195  1   Cr    2.49753  * Cr_1        3
+    1.44195   -1.44195   -1.44195  1   Cr    2.49753  * Cr_1        4
+    1.44195   -1.44195    1.44195  1   Cr    2.49753  * Cr_1        5
+    1.44195    1.44195   -1.44195  1   Cr    2.49753  * Cr_1        6
+   -1.44195   -1.44195   -1.44195  1   Cr    2.49753  * Cr_1        7
+    1.44195    1.44195    1.44195  1   Cr    2.49753  * Cr_1        8
+   -2.88390    0.00000   -0.00000  1   Cr    2.88390  * Cr_1        9
+    0.00000   -2.88390   -0.00000  1   Cr    2.88390  * Cr_1       10
+    0.00000    0.00000   -2.88390  1   Cr    2.88390  * Cr_1       11
+    2.88390    0.00000    0.00000  1   Cr    2.88390  * Cr_1       12
+   -0.00000    2.88390    0.00000  1   Cr    2.88390  * Cr_1       13
+    0.00000    0.00000    2.88390  1   Cr    2.88390  * Cr_1       14
+   -2.88390   -2.88390   -0.00000  1   Cr    4.07845  * Cr_1       15
+   -2.88390    0.00000   -2.88390  1   Cr    4.07845  * Cr_1       16
+   -2.88390    2.88390    0.00000  1   Cr    4.07845  * Cr_1       17
+   -2.88390    0.00000    2.88390  1   Cr    4.07845  * Cr_1       18
+    0.00000   -2.88390   -2.88390  1   Cr    4.07845  * Cr_1       19
+    2.88390   -2.88390    0.00000  1   Cr    4.07845  * Cr_1       20
+    0.00000   -2.88390    2.88390  1   Cr    4.07845  * Cr_1       21
+    2.88390    0.00000   -2.88390  1   Cr    4.07845  * Cr_1       22
+   -0.00000    2.88390   -2.88390  1   Cr    4.07845  * Cr_1       23
+    2.88390    2.88390    0.00000  1   Cr    4.07845  * Cr_1       24
+    2.88390    0.00000    2.88390  1   Cr    4.07845  * Cr_1       25
+   -0.00000    2.88390    2.88390  1   Cr    4.07845  * Cr_1       26
+   -1.44195   -4.32585    1.44195  1   Cr    4.78241  * Cr_1       27
+   -4.32585   -1.44195    1.44195  1   Cr    4.78241  * Cr_1       28
+   -1.44195    4.32585   -1.44195  1   Cr    4.78241  * Cr_1       29
+   -4.32585    1.44195   -1.44195  1   Cr    4.78241  * Cr_1       30
+   -1.44195    4.32585    1.44195  1   Cr    4.78241  * Cr_1       31
+   -4.32585    1.44195    1.44195  1   Cr    4.78241  * Cr_1       32
+    4.32585   -1.44195   -1.44195  1   Cr    4.78241  * Cr_1       33
+    1.44195   -4.32585   -1.44195  1   Cr    4.78241  * Cr_1       34
+    4.32585   -1.44195    1.44195  1   Cr    4.78241  * Cr_1       35
+    1.44195   -4.32585    1.44195  1   Cr    4.78241  * Cr_1       36
+    4.32585    1.44195   -1.44195  1   Cr    4.78241  * Cr_1       37
+    1.44195    4.32585   -1.44195  1   Cr    4.78241  * Cr_1       38
+   -1.44195   -1.44195   -4.32585  1   Cr    4.78241  * Cr_1       39
+   -1.44195   -4.32585   -1.44195  1   Cr    4.78241  * Cr_1       40
+   -4.32585   -1.44195   -1.44195  1   Cr    4.78241  * Cr_1       41
+   -1.44195   -1.44195    4.32585  1   Cr    4.78241  * Cr_1       42
+   -1.44195    1.44195   -4.32585  1   Cr    4.78241  * Cr_1       43
+   -1.44195    1.44195    4.32585  1   Cr    4.78241  * Cr_1       44
+    1.44195   -1.44195   -4.32585  1   Cr    4.78241  * Cr_1       45
+    1.44195   -1.44195    4.32585  1   Cr    4.78241  * Cr_1       46
+    1.44195    1.44195   -4.32585  1   Cr    4.78241  * Cr_1       47
+    4.32585    1.44195    1.44195  1   Cr    4.78241  * Cr_1       48
+    1.44195    4.32585    1.44195  1   Cr    4.78241  * Cr_1       49
+    1.44195    1.44195    4.32585  1   Cr    4.78241  * Cr_1       50
+   -2.88390   -2.88390    2.88390  1   Cr    4.99506  * Cr_1       51
+   -2.88390    2.88390   -2.88390  1   Cr    4.99506  * Cr_1       52
+   -2.88390    2.88390    2.88390  1   Cr    4.99506  * Cr_1       53
+    2.88390   -2.88390   -2.88390  1   Cr    4.99506  * Cr_1       54
+    2.88390   -2.88390    2.88390  1   Cr    4.99506  * Cr_1       55
+    2.88390    2.88390   -2.88390  1   Cr    4.99506  * Cr_1       56
+   -2.88390   -2.88390   -2.88390  1   Cr    4.99506  * Cr_1       57
+    2.88390    2.88390    2.88390  1   Cr    4.99506  * Cr_1       58
+   -5.76780    0.00000   -0.00000  1   Cr    5.76780  * Cr_1       59
+    0.00000   -5.76780   -0.00000  1   Cr    5.76780  * Cr_1       60
+    0.00000    0.00000   -5.76780  1   Cr    5.76780  * Cr_1       61
+    5.76780    0.00000    0.00000  1   Cr    5.76780  * Cr_1       62
+   -0.00000    5.76780    0.00000  1   Cr    5.76780  * Cr_1       63
+    0.00000    0.00000    5.76780  1   Cr    5.76780  * Cr_1       64
+   -4.32585   -4.32585   -1.44195  1   Cr    6.28531  * Cr_1       65
+   -1.44195   -4.32585    4.32585  1   Cr    6.28531  * Cr_1       66
+   -4.32585   -1.44195    4.32585  1   Cr    6.28531  * Cr_1       67
+   -4.32585   -4.32585    1.44195  1   Cr    6.28531  * Cr_1       68
+   -1.44195    4.32585   -4.32585  1   Cr    6.28531  * Cr_1       69
+   -4.32585    4.32585   -1.44195  1   Cr    6.28531  * Cr_1       70
+   -4.32585    1.44195   -4.32585  1   Cr    6.28531  * Cr_1       71
+   -1.44195    4.32585    4.32585  1   Cr    6.28531  * Cr_1       72
+   -4.32585    4.32585    1.44195  1   Cr    6.28531  * Cr_1       73
+   -4.32585    1.44195    4.32585  1   Cr    6.28531  * Cr_1       74
+    4.32585   -1.44195   -4.32585  1   Cr    6.28531  * Cr_1       75
+    4.32585   -4.32585   -1.44195  1   Cr    6.28531  * Cr_1       76
+    1.44195   -4.32585   -4.32585  1   Cr    6.28531  * Cr_1       77
+    4.32585   -1.44195    4.32585  1   Cr    6.28531  * Cr_1       78
+    4.32585   -4.32585    1.44195  1   Cr    6.28531  * Cr_1       79
+    1.44195   -4.32585    4.32585  1   Cr    6.28531  * Cr_1       80
+    4.32585    4.32585   -1.44195  1   Cr    6.28531  * Cr_1       81
+    4.32585    1.44195   -4.32585  1   Cr    6.28531  * Cr_1       82
+    1.44195    4.32585   -4.32585  1   Cr    6.28531  * Cr_1       83
+    4.32585    4.32585    1.44195  1   Cr    6.28531  * Cr_1       84
+   -1.44195   -4.32585   -4.32585  1   Cr    6.28531  * Cr_1       85
+   -4.32585   -1.44195   -4.32585  1   Cr    6.28531  * Cr_1       86
+    4.32585    1.44195    4.32585  1   Cr    6.28531  * Cr_1       87
+    1.44195    4.32585    4.32585  1   Cr    6.28531  * Cr_1       88
+   -2.88390   -5.76780   -0.00000  1   Cr    6.44860  * Cr_1       89
+   -5.76780    0.00000    2.88390  1   Cr    6.44860  * Cr_1       90
+    0.00000   -5.76780    2.88390  1   Cr    6.44860  * Cr_1       91
+    5.76780    0.00000   -2.88390  1   Cr    6.44860  * Cr_1       92
+   -0.00000    5.76780   -2.88390  1   Cr    6.44860  * Cr_1       93
+    2.88390    5.76780    0.00000  1   Cr    6.44860  * Cr_1       94
+   -5.76780   -2.88390   -0.00000  1   Cr    6.44860  * Cr_1       95
+   -2.88390    0.00000   -5.76780  1   Cr    6.44860  * Cr_1       96
+   -5.76780    0.00000   -2.88390  1   Cr    6.44860  * Cr_1       97
+   -2.88390    5.76780    0.00000  1   Cr    6.44860  * Cr_1       98
+   -2.88390    0.00000    5.76780  1   Cr    6.44860  * Cr_1       99
+   -5.76780    2.88390   -0.00000  1   Cr    6.44860  * Cr_1      100
+    0.00000   -2.88390   -5.76780  1   Cr    6.44860  * Cr_1      101
+    0.00000   -5.76780   -2.88390  1   Cr    6.44860  * Cr_1      102
+    5.76780   -2.88390    0.00000  1   Cr    6.44860  * Cr_1      103
+    2.88390   -5.76780   -0.00000  1   Cr    6.44860  * Cr_1      104
+    0.00000   -2.88390    5.76780  1   Cr    6.44860  * Cr_1      105
+    2.88390    0.00000   -5.76780  1   Cr    6.44860  * Cr_1      106
+   -0.00000    2.88390   -5.76780  1   Cr    6.44860  * Cr_1      107
+    5.76780    2.88390    0.00000  1   Cr    6.44860  * Cr_1      108
+    5.76780    0.00000    2.88390  1   Cr    6.44860  * Cr_1      109
+    2.88390    0.00000    5.76780  1   Cr    6.44860  * Cr_1      110
+   -0.00000    5.76780    2.88390  1   Cr    6.44860  * Cr_1      111
+   -0.00000    2.88390    5.76780  1   Cr    6.44860  * Cr_1      112
+
+* END

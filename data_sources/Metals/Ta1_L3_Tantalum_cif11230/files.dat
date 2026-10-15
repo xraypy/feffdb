@@ -1,0 +1,49 @@
+ Formula: Ta                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: Im-3m
+ CIF Source: Am Min Crystal Structure Database ID 11230
+ Mineral Name: tantalum
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=3.3058, b=3.3058, c=3.3058, alpha=90.0, beta=90
+ Cell Volume (A^3): 36.12700
+ Crystal Density (gr/cm^3): 16.634
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=73 Rmt= 1.550 Rnm= 1.604 L3 shell
+ Pot 1 Z=73 Rmt= 1.562 Rnm= 1.617
+ Gam_ch=4.640E+00 H-L exch
+ Mu=-4.777E+00 kf=1.978E+00 Vint=-1.969E+01 Rs_int= 1.833
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     8.000     2   2.8629
+ feff0002.dat 0.00000    58.640     6.000     2   3.3058
+ feff0003.dat 0.00000     9.208    24.000     3   4.5158
+ feff0004.dat 0.00000    15.000    48.000     3   4.5158
+ feff0005.dat 0.00000    52.890    12.000     2   4.6751
+ feff0006.dat 0.00000    23.440    48.000     3   5.2005
+ feff0007.dat 0.00000    67.790    24.000     2   5.4820
+ feff0008.dat 0.00000     5.635    48.000     3   5.6434
+ feff0009.dat 0.00000    19.880     8.000     2   5.7258
+ feff0010.dat 0.00000     9.016     8.000     3   5.7258
+ feff0011.dat 0.00000    89.440    16.000     3   5.7258
+ feff0012.dat 0.00000    18.720     8.000     4   5.7258
+ feff0013.dat 0.00000     4.300     8.000     4   5.7258
+ feff0014.dat 0.00000    99.900     8.000     4   5.7258
+ feff0015.dat 0.00000     4.011    24.000     4   5.7258
+ feff0016.dat 0.00000    12.810    48.000     3   5.8254
+ feff0017.dat 0.00000    25.910    48.000     3   5.8254
+ feff0018.dat 0.00000    27.080    48.000     3   5.8254
+ feff0019.dat 0.00000     8.009    48.000     4   6.1687
+ feff0020.dat 0.00000     6.720    24.000     4   6.1687
+ feff0021.dat 0.00000     7.431    24.000     4   6.1687
+ feff0022.dat 0.00000     4.296    48.000     4   6.1687
+ feff0023.dat 0.00000     4.089    96.000     3   6.5100
+ feff0024.dat 0.00000     8.162    96.000     3   6.5100
+ feff0025.dat 0.00000     9.599     6.000     2   6.6116
+ feff0026.dat 0.00000     3.938     6.000     3   6.6116
+ feff0027.dat 0.00000    40.210    12.000     3   6.6116
+ feff0028.dat 0.00000     7.366     6.000     4   6.6116
+ feff0029.dat 0.00000    41.880     6.000     4   6.6116
+ feff0030.dat 0.00000     7.343    48.000     4   6.8534
+ feff0031.dat 0.00000     6.637    48.000     4   6.8534

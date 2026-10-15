@@ -1,0 +1,175 @@
+* FEFF8 input file generated 2026-09-14 06:40:31
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Re
+TITLE SpaceGroup: P6_3/mmc
+TITLE CIF Source: Am Min Crystal Structure Database ID 11190
+TITLE Mineral Name: rhenium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=2.7608, b=2.7608, c=4.4582, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 29.42800
+TITLE Crystal Density (gr/cm^3): 21.014
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.33333 0.66667 0.25000     2c   Re   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    75    Re      -1     -1       0.01
+     1    75    Re      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Re    0.00000  * Re_1        0
+   -1.38040   -0.79697   -2.22910  1   Re    2.74036  * Re_1        1
+   -1.38040   -0.79697    2.22910  1   Re    2.74036  * Re_1        2
+    1.38040   -0.79697   -2.22910  1   Re    2.74036  * Re_1        3
+    1.38040   -0.79697    2.22910  1   Re    2.74036  * Re_1        4
+    0.00000    1.59395   -2.22910  1   Re    2.74036  * Re_1        5
+    0.00000    1.59395    2.22910  1   Re    2.74036  * Re_1        6
+   -1.38040    2.39092    0.00000  1   Re    2.76080  * Re_1        7
+   -2.76080    0.00000   -0.00000  1   Re    2.76080  * Re_1        8
+    1.38040   -2.39092   -0.00000  1   Re    2.76080  * Re_1        9
+    2.76080    0.00000    0.00000  1   Re    2.76080  * Re_1       10
+   -1.38040   -2.39092   -0.00000  1   Re    2.76080  * Re_1       11
+    1.38040    2.39092    0.00000  1   Re    2.76080  * Re_1       12
+   -2.76080    1.59395   -2.22910  1   Re    3.88993  * Re_1       13
+   -2.76080    1.59395    2.22910  1   Re    3.88993  * Re_1       14
+    0.00000   -3.18790   -2.22910  1   Re    3.88993  * Re_1       15
+    0.00000   -3.18790    2.22910  1   Re    3.88993  * Re_1       16
+    2.76080    1.59395   -2.22910  1   Re    3.88993  * Re_1       17
+    2.76080    1.59395    2.22910  1   Re    3.88993  * Re_1       18
+    0.00000    0.00000   -4.45820  1   Re    4.45820  * Re_1       19
+    0.00000    0.00000    4.45820  1   Re    4.45820  * Re_1       20
+   -4.14120   -0.79697    2.22910  1   Re    4.77007  * Re_1       21
+   -4.14120   -0.79697   -2.22910  1   Re    4.77007  * Re_1       22
+   -2.76080   -3.18790    2.22910  1   Re    4.77007  * Re_1       23
+    4.14120   -0.79697   -2.22910  1   Re    4.77007  * Re_1       24
+    2.76080   -3.18790   -2.22910  1   Re    4.77007  * Re_1       25
+    4.14120   -0.79697    2.22910  1   Re    4.77007  * Re_1       26
+    2.76080   -3.18790    2.22910  1   Re    4.77007  * Re_1       27
+   -2.76080   -3.18790   -2.22910  1   Re    4.77007  * Re_1       28
+   -1.38040    3.98487   -2.22910  1   Re    4.77007  * Re_1       29
+   -1.38040    3.98487    2.22910  1   Re    4.77007  * Re_1       30
+    1.38040    3.98487   -2.22910  1   Re    4.77007  * Re_1       31
+    1.38040    3.98487    2.22910  1   Re    4.77007  * Re_1       32
+   -4.14120    2.39092    0.00000  1   Re    4.78185  * Re_1       33
+   -4.14120   -2.39092   -0.00000  1   Re    4.78185  * Re_1       34
+    4.14120   -2.39092    0.00000  1   Re    4.78185  * Re_1       35
+   -0.00000   -4.78185   -0.00000  1   Re    4.78185  * Re_1       36
+    4.14120    2.39092    0.00000  1   Re    4.78185  * Re_1       37
+    0.00000    4.78185    0.00000  1   Re    4.78185  * Re_1       38
+   -1.38040   -2.39092    4.45820  1   Re    5.24381  * Re_1       39
+   -2.76080    0.00000    4.45820  1   Re    5.24381  * Re_1       40
+    1.38040   -2.39092    4.45820  1   Re    5.24381  * Re_1       41
+   -1.38040   -2.39092   -4.45820  1   Re    5.24381  * Re_1       42
+   -1.38040    2.39092   -4.45820  1   Re    5.24381  * Re_1       43
+   -2.76080    0.00000   -4.45820  1   Re    5.24381  * Re_1       44
+   -1.38040    2.39092    4.45820  1   Re    5.24381  * Re_1       45
+    1.38040   -2.39092   -4.45820  1   Re    5.24381  * Re_1       46
+    1.38040    2.39092   -4.45820  1   Re    5.24381  * Re_1       47
+    2.76080    0.00000   -4.45820  1   Re    5.24381  * Re_1       48
+    1.38040    2.39092    4.45820  1   Re    5.24381  * Re_1       49
+    2.76080    0.00000    4.45820  1   Re    5.24381  * Re_1       50
+   -2.76080    4.78185    0.00000  1   Re    5.52160  * Re_1       51
+   -5.52160    0.00000   -0.00000  1   Re    5.52160  * Re_1       52
+   -2.76080   -4.78185   -0.00000  1   Re    5.52160  * Re_1       53
+    2.76080   -4.78185   -0.00000  1   Re    5.52160  * Re_1       54
+    2.76080    4.78185    0.00000  1   Re    5.52160  * Re_1       55
+    5.52160    0.00000    0.00000  1   Re    5.52160  * Re_1       56
+   -5.52160    1.59395   -2.22910  1   Re    6.16422  * Re_1       57
+   -5.52160    1.59395    2.22910  1   Re    6.16422  * Re_1       58
+   -1.38040   -5.57882   -2.22910  1   Re    6.16422  * Re_1       59
+   -1.38040   -5.57882    2.22910  1   Re    6.16422  * Re_1       60
+   -4.14120    3.98487   -2.22910  1   Re    6.16422  * Re_1       61
+   -4.14120    3.98487    2.22910  1   Re    6.16422  * Re_1       62
+    1.38040   -5.57882   -2.22910  1   Re    6.16422  * Re_1       63
+    1.38040   -5.57882    2.22910  1   Re    6.16422  * Re_1       64
+    5.52160    1.59395   -2.22910  1   Re    6.16422  * Re_1       65
+    5.52160    1.59395    2.22910  1   Re    6.16422  * Re_1       66
+    4.14120    3.98487   -2.22910  1   Re    6.16422  * Re_1       67
+    4.14120    3.98487    2.22910  1   Re    6.16422  * Re_1       68
+   -4.14120   -2.39092    4.45820  1   Re    6.53771  * Re_1       69
+   -4.14120    2.39092   -4.45820  1   Re    6.53771  * Re_1       70
+   -4.14120    2.39092    4.45820  1   Re    6.53771  * Re_1       71
+    4.14120   -2.39092   -4.45820  1   Re    6.53771  * Re_1       72
+    4.14120   -2.39092    4.45820  1   Re    6.53771  * Re_1       73
+   -0.00000   -4.78185    4.45820  1   Re    6.53771  * Re_1       74
+    4.14120    2.39092   -4.45820  1   Re    6.53771  * Re_1       75
+    0.00000    4.78185   -4.45820  1   Re    6.53771  * Re_1       76
+   -4.14120   -2.39092   -4.45820  1   Re    6.53771  * Re_1       77
+   -0.00000   -4.78185   -4.45820  1   Re    6.53771  * Re_1       78
+    4.14120    2.39092    4.45820  1   Re    6.53771  * Re_1       79
+    0.00000    4.78185    4.45820  1   Re    6.53771  * Re_1       80
+   -5.52160   -3.18790    2.22910  1   Re    6.75423  * Re_1       81
+   -5.52160   -3.18790   -2.22910  1   Re    6.75423  * Re_1       82
+    5.52160   -3.18790   -2.22910  1   Re    6.75423  * Re_1       83
+    5.52160   -3.18790    2.22910  1   Re    6.75423  * Re_1       84
+    0.00000    6.37579   -2.22910  1   Re    6.75423  * Re_1       85
+    0.00000    6.37579    2.22910  1   Re    6.75423  * Re_1       86
+   -1.38040   -0.79697   -6.68730  1   Re    6.87464  * Re_1       87
+   -1.38040   -0.79697    6.68730  1   Re    6.87464  * Re_1       88
+    1.38040   -0.79697   -6.68730  1   Re    6.87464  * Re_1       89
+    1.38040   -0.79697    6.68730  1   Re    6.87464  * Re_1       90
+    0.00000    1.59395   -6.68730  1   Re    6.87464  * Re_1       91
+    0.00000    1.59395    6.68730  1   Re    6.87464  * Re_1       92
+
+* END

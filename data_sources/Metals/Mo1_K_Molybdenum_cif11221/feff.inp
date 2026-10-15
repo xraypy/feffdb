@@ -1,0 +1,171 @@
+* FEFF8 input file generated 2026-09-13 20:42:23
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Mo
+TITLE SpaceGroup: Im-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11221
+TITLE Mineral Name: molybdenum
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=3.1473, b=3.1473, c=3.1473, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 31.17600
+TITLE Crystal Density (gr/cm^3): 10.22
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     2a   Mo   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for ___auto___
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for ___auto___
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    42    Mo      -1     -1       0.01
+     1    42    Mo      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Mo    0.00000  * Mo_1        0
+   -1.57365   -1.57365    1.57365  1   Mo    2.72564  * Mo_1        1
+   -1.57365    1.57365   -1.57365  1   Mo    2.72564  * Mo_1        2
+   -1.57365    1.57365    1.57365  1   Mo    2.72564  * Mo_1        3
+    1.57365   -1.57365   -1.57365  1   Mo    2.72564  * Mo_1        4
+    1.57365   -1.57365    1.57365  1   Mo    2.72564  * Mo_1        5
+    1.57365    1.57365   -1.57365  1   Mo    2.72564  * Mo_1        6
+   -1.57365   -1.57365   -1.57365  1   Mo    2.72564  * Mo_1        7
+    1.57365    1.57365    1.57365  1   Mo    2.72564  * Mo_1        8
+   -3.14730    0.00000   -0.00000  1   Mo    3.14730  * Mo_1        9
+    0.00000   -3.14730   -0.00000  1   Mo    3.14730  * Mo_1       10
+    0.00000    0.00000   -3.14730  1   Mo    3.14730  * Mo_1       11
+    3.14730    0.00000    0.00000  1   Mo    3.14730  * Mo_1       12
+   -0.00000    3.14730    0.00000  1   Mo    3.14730  * Mo_1       13
+    0.00000    0.00000    3.14730  1   Mo    3.14730  * Mo_1       14
+   -3.14730   -3.14730   -0.00000  1   Mo    4.45095  * Mo_1       15
+   -3.14730    0.00000   -3.14730  1   Mo    4.45095  * Mo_1       16
+   -3.14730    3.14730    0.00000  1   Mo    4.45095  * Mo_1       17
+   -3.14730    0.00000    3.14730  1   Mo    4.45095  * Mo_1       18
+    0.00000   -3.14730   -3.14730  1   Mo    4.45095  * Mo_1       19
+    3.14730   -3.14730    0.00000  1   Mo    4.45095  * Mo_1       20
+    0.00000   -3.14730    3.14730  1   Mo    4.45095  * Mo_1       21
+    3.14730    0.00000   -3.14730  1   Mo    4.45095  * Mo_1       22
+   -0.00000    3.14730   -3.14730  1   Mo    4.45095  * Mo_1       23
+    3.14730    3.14730    0.00000  1   Mo    4.45095  * Mo_1       24
+    3.14730    0.00000    3.14730  1   Mo    4.45095  * Mo_1       25
+   -0.00000    3.14730    3.14730  1   Mo    4.45095  * Mo_1       26
+   -1.57365   -1.57365   -4.72095  1   Mo    5.21921  * Mo_1       27
+   -1.57365   -4.72095   -1.57365  1   Mo    5.21921  * Mo_1       28
+   -4.72095   -1.57365   -1.57365  1   Mo    5.21921  * Mo_1       29
+   -1.57365   -1.57365    4.72095  1   Mo    5.21921  * Mo_1       30
+   -1.57365   -4.72095    1.57365  1   Mo    5.21921  * Mo_1       31
+   -4.72095   -1.57365    1.57365  1   Mo    5.21921  * Mo_1       32
+   -1.57365    4.72095   -1.57365  1   Mo    5.21921  * Mo_1       33
+   -1.57365    1.57365   -4.72095  1   Mo    5.21921  * Mo_1       34
+   -4.72095    1.57365   -1.57365  1   Mo    5.21921  * Mo_1       35
+   -1.57365    4.72095    1.57365  1   Mo    5.21921  * Mo_1       36
+   -1.57365    1.57365    4.72095  1   Mo    5.21921  * Mo_1       37
+   -4.72095    1.57365    1.57365  1   Mo    5.21921  * Mo_1       38
+    4.72095   -1.57365   -1.57365  1   Mo    5.21921  * Mo_1       39
+    1.57365   -1.57365   -4.72095  1   Mo    5.21921  * Mo_1       40
+    1.57365   -4.72095   -1.57365  1   Mo    5.21921  * Mo_1       41
+    4.72095   -1.57365    1.57365  1   Mo    5.21921  * Mo_1       42
+    1.57365   -1.57365    4.72095  1   Mo    5.21921  * Mo_1       43
+    1.57365   -4.72095    1.57365  1   Mo    5.21921  * Mo_1       44
+    4.72095    1.57365   -1.57365  1   Mo    5.21921  * Mo_1       45
+    1.57365    4.72095   -1.57365  1   Mo    5.21921  * Mo_1       46
+    1.57365    1.57365   -4.72095  1   Mo    5.21921  * Mo_1       47
+    4.72095    1.57365    1.57365  1   Mo    5.21921  * Mo_1       48
+    1.57365    4.72095    1.57365  1   Mo    5.21921  * Mo_1       49
+    1.57365    1.57365    4.72095  1   Mo    5.21921  * Mo_1       50
+   -3.14730   -3.14730    3.14730  1   Mo    5.45128  * Mo_1       51
+   -3.14730    3.14730   -3.14730  1   Mo    5.45128  * Mo_1       52
+   -3.14730    3.14730    3.14730  1   Mo    5.45128  * Mo_1       53
+    3.14730   -3.14730   -3.14730  1   Mo    5.45128  * Mo_1       54
+    3.14730   -3.14730    3.14730  1   Mo    5.45128  * Mo_1       55
+    3.14730    3.14730   -3.14730  1   Mo    5.45128  * Mo_1       56
+   -3.14730   -3.14730   -3.14730  1   Mo    5.45128  * Mo_1       57
+    3.14730    3.14730    3.14730  1   Mo    5.45128  * Mo_1       58
+   -6.29460    0.00000   -0.00000  1   Mo    6.29460  * Mo_1       59
+    0.00000   -6.29460   -0.00000  1   Mo    6.29460  * Mo_1       60
+    0.00000    0.00000   -6.29460  1   Mo    6.29460  * Mo_1       61
+    6.29460    0.00000    0.00000  1   Mo    6.29460  * Mo_1       62
+   -0.00000    6.29460    0.00000  1   Mo    6.29460  * Mo_1       63
+    0.00000    0.00000    6.29460  1   Mo    6.29460  * Mo_1       64
+   -1.57365   -4.72095    4.72095  1   Mo    6.85938  * Mo_1       65
+   -4.72095   -1.57365    4.72095  1   Mo    6.85938  * Mo_1       66
+    4.72095    1.57365   -4.72095  1   Mo    6.85938  * Mo_1       67
+    1.57365    4.72095   -4.72095  1   Mo    6.85938  * Mo_1       68
+   -1.57365   -4.72095   -4.72095  1   Mo    6.85938  * Mo_1       69
+   -4.72095   -1.57365   -4.72095  1   Mo    6.85938  * Mo_1       70
+   -4.72095   -4.72095   -1.57365  1   Mo    6.85938  * Mo_1       71
+   -4.72095   -4.72095    1.57365  1   Mo    6.85938  * Mo_1       72
+   -1.57365    4.72095   -4.72095  1   Mo    6.85938  * Mo_1       73
+   -4.72095    4.72095   -1.57365  1   Mo    6.85938  * Mo_1       74
+   -4.72095    1.57365   -4.72095  1   Mo    6.85938  * Mo_1       75
+   -1.57365    4.72095    4.72095  1   Mo    6.85938  * Mo_1       76
+   -4.72095    4.72095    1.57365  1   Mo    6.85938  * Mo_1       77
+   -4.72095    1.57365    4.72095  1   Mo    6.85938  * Mo_1       78
+    4.72095   -1.57365   -4.72095  1   Mo    6.85938  * Mo_1       79
+    4.72095   -4.72095   -1.57365  1   Mo    6.85938  * Mo_1       80
+    1.57365   -4.72095   -4.72095  1   Mo    6.85938  * Mo_1       81
+    4.72095   -1.57365    4.72095  1   Mo    6.85938  * Mo_1       82
+    4.72095   -4.72095    1.57365  1   Mo    6.85938  * Mo_1       83
+    1.57365   -4.72095    4.72095  1   Mo    6.85938  * Mo_1       84
+    4.72095    4.72095   -1.57365  1   Mo    6.85938  * Mo_1       85
+    4.72095    4.72095    1.57365  1   Mo    6.85938  * Mo_1       86
+    4.72095    1.57365    4.72095  1   Mo    6.85938  * Mo_1       87
+    1.57365    4.72095    4.72095  1   Mo    6.85938  * Mo_1       88
+
+* END
