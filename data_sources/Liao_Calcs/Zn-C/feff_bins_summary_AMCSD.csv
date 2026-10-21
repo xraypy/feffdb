@@ -1,0 +1,2 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+1.9-2.0,1.9-2.0,AMCSD_17013_R1.96,K2Zn(CN)4,Fd-3m,cubic,1.955,1.955,1,1.955,6.0,1.955,4.0,False,ok,,FEFF_paths_AMCSD/1.9-2.0/AMCSD_17013_R1.96/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_17013_R1.96.cif

@@ -1,0 +1,52 @@
+data_global
+_chemical_name_mineral 'Kryzhanovskite'
+loop_
+_publ_author_name
+'Moore P B'
+_journal_name_full 'American Mineralogist'
+_journal_volume 56
+_journal_year 1971
+_journal_page_first 1
+_journal_page_last 17
+_publ_section_title
+;
+ The Fe3(H2O)n(PO4)2 homologous series: Crystal-chemical relationships and
+ oxidized equivalents
+;
+_database_code_amcsd 219
+_chemical_formula_sum 'Fe3 P2 (O11 H3)'
+_cell_length_a 9.404
+_cell_length_b 9.973
+_cell_length_c 8.536
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 800.558
+_exptl_crystal_density_diffrn  3.389
+_symmetry_space_group_name_H-M 'P b n a'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '-x,1/2+y,z'
+  'x,1/2-y,-z'
+  '1/2+x,y,1/2-z'
+  '1/2-x,-y,1/2+z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Fe1   0.0  0.0  0.0  0.00773
+Fe2   0.448  -0.1115  0.1367  0.01089
+P   0.7097  0.1032  0.2106  0.00532
+O-H1   0.4314  0.25  0.0  0.02153
+O2   0.2141  0.2532  0.3273  0.00963
+O3   0.1114  0.0336  0.4092  0.01203
+O4   0.1573  0.0839  0.1142  0.0114
+O5   0.3581  0.0446  0.3027  0.01127
+O-H6   0.47  0.3385  0.3631  0.01532
+

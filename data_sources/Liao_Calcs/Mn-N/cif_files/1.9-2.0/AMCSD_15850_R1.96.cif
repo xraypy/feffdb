@@ -1,0 +1,71 @@
+data_global
+_amcsd_formula_title 'Ce2 Mn N3'
+loop_
+_publ_author_name
+'Niewa R'
+'Vajenine G'
+'DiSalvo F'
+'Haihua L'
+'Yelon W'
+_journal_name_full 'Zeitschrift fur Naturforschung'
+_journal_volume B53
+_journal_year 1998
+_journal_page_first 63
+_journal_page_last 74
+_publ_section_title
+;
+ Unusual Bonding in ternary nitrides: Preparation, structure and
+ properties of Ce2 Mn N3
+ _cod_database_code 1005058
+;
+_database_code_amcsd 15850
+_chemical_formula_sum 'Ce2 Mn N3'
+_cell_length_a 3.74994
+_cell_length_b 3.4445
+_cell_length_c 12.4601
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 160.943
+_exptl_crystal_density_diffrn  7.783
+_symmetry_space_group_name_H-M 'I m m m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'x,-y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '-x,y,-z'
+  '1/2-x,1/2+y,1/2-z'
+  '-x,y,z'
+  '1/2-x,1/2+y,1/2+z'
+  'x,-y,-z'
+  '1/2+x,1/2-y,1/2-z'
+  'x,y,-z'
+  '1/2+x,1/2+y,1/2-z'
+  '-x,-y,z'
+  '1/2-x,1/2-y,1/2+z'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ce1   0.0  0.0  0.35332
+Mn1   0.0  0.0  0.0
+N1   0.0  0.5  0.5
+N2   0.0  0.0  0.1638
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Ce1   0.0191  0.0256  0.0269  0.0  0.0  0.0
+Mn1   0.022  0.027  0.034  0.0  0.0  0.0
+N1   0.023  0.028  0.013  0.0  0.0  0.0
+N2   0.013  0.016  0.028  0.0  0.0  0.0
+

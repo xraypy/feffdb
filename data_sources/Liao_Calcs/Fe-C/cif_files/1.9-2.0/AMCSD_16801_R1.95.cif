@@ -1,0 +1,49 @@
+data_global
+_amcsd_formula_title 'Fe7C3'
+loop_
+_publ_author_name
+'Bouchard J'
+_journal_name_full 'Annales de Chimie'
+_journal_volume 1967
+_journal_year 1967
+_journal_page_first 353
+_journal_page_last 366
+_publ_section_title
+;
+ Etude structurale des carbures de manganese
+ _cod_database_code 1008937
+;
+_database_code_amcsd 16801
+_chemical_formula_sum 'Fe7 C3'
+_cell_length_a 4.537
+_cell_length_b 6.892
+_cell_length_c 11.913
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 372.508
+_exptl_crystal_density_diffrn  7.613
+_symmetry_space_group_name_H-M 'P n m a'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,1/2-y,z'
+  '-x,1/2+y,-z'
+  '1/2-x,1/2+y,1/2+z'
+  '1/2+x,1/2-y,1/2-z'
+  '1/2+x,y,1/2-z'
+  '1/2-x,-y,1/2+z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Fe1   0.25  0.07  0.02
+Fe2   0.0  0.07  0.81
+Fe3   0.24  0.25  0.2
+Fe4   0.25  0.25  0.42
+Fe5   0.0  0.25  0.63
+C1   0.11  0.03  0.35
+C2   0.38  0.25  0.57
+

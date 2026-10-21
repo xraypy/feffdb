@@ -1,0 +1,70 @@
+data_global
+_amcsd_formula_title 'Cu3 N5 Sr6'
+loop_
+_publ_author_name
+'DiSalvo F'
+'Trail S'
+'Yamane H'
+'Brese N'
+_journal_name_full 'Journal of Alloys and Compounds'
+_journal_volume 255
+_journal_year 1997
+_journal_page_first 122
+_journal_page_last 129
+_publ_section_title
+;
+ The crystal structure of Sr6 Cu3 N5 with isolated, bent (Cu(I)2 N3)(7-)
+ anions and the single crystal structural determination of Sr Cu N
+ _cod_database_code 1005039
+;
+_database_code_amcsd 12787
+_chemical_formula_sum 'Sr6 Cu3 N5'
+_cell_length_a 8.657
+_cell_length_b 8.657
+_cell_length_c 7.334
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 549.637
+_exptl_crystal_density_diffrn  4.752
+_symmetry_space_group_name_H-M 'P 42 m c'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '-y,-x,1/2+z'
+  '-y,x,1/2+z'
+  'x,-y,z'
+  '-x,-y,z'
+  'y,x,1/2+z'
+  'y,-x,1/2+z'
+  '-x,y,z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Sr1   0.2664  0.3033  0.2087
+Sr2   0.0  0.5  0.5198
+Sr3   0.0  0.0  -0.0011
+Cu1   0.3586  0.0  0.4347
+Cu2   0.5  0.5  0.4731
+N1   0.285  0.5  0.4851
+N2   0.2178  0.0  0.2429
+N3   0.0  0.5  0.1383
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Sr1   0.008  0.006  0.014  -0.001  0.002  -0.001
+Sr2   0.003  0.01  0.02  0.0  0.0  0.0
+Sr3   0.004  0.006  0.012  0.0  0.0  0.0
+Cu1   0.007  0.007  0.017  0.0  0.0  0.0
+Cu2   0.003  0.005  0.016  0.0  0.0  0.0
+N1   0.016  0.006  0.021  0.0  0.004  0.0
+N2   0.009  0.011  0.021  0.0  -0.006  0.0
+N3   0.01  0.006  0.027  0.0  0.0  0.0
+

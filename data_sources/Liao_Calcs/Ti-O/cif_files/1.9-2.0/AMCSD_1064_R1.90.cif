@@ -1,0 +1,67 @@
+data_global
+_chemical_name_mineral 'Lorenzenite'
+loop_
+_publ_author_name
+'Sundberg M R'
+'Lehtinen M'
+'Kivekas R'
+_journal_name_full 'American Mineralogist'
+_journal_volume 72
+_journal_year 1987
+_journal_page_first 173
+_journal_page_last 177
+_publ_section_title
+;
+ Refinement of the crystal structure of ramsayite (lorenzenite)
+;
+_database_code_amcsd 1064
+_chemical_formula_sum 'Na2 Ti2 Si2 O9'
+_cell_length_a 8.7128
+_cell_length_b 5.2327
+_cell_length_c 14.487
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 660.484
+_exptl_crystal_density_diffrn  3.438
+_symmetry_space_group_name_H-M 'P b c n'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,-y,1/2+z'
+  '-x,y,1/2-z'
+  '1/2-x,1/2+y,z'
+  '1/2+x,1/2-y,-z'
+  '1/2+x,1/2+y,1/2-z'
+  '1/2-x,1/2-y,1/2+z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Na   0.0643  0.645  0.1537
+Ti   0.1513  0.1322  0.3309
+Si   0.3421  0.2961  0.5267
+O1   0.0  0.006  0.25
+O2   0.1817  0.4407  0.2758
+O3   0.3336  0.2967  0.4152
+O4   0.0089  0.2428  0.428
+O5   0.2357  0.0598  0.567
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Na   0.0131  0.0123  0.0142  0.0038  0.0011  -0.0001
+Ti   0.0032  0.0033  0.0065  0.00013  0.00023  0.00061
+Si   0.0049  0.0041  0.0076  -0.0002  -0.0004  0.0001
+O1   0.0084  0.0069  0.0103  0.0  -0.0024  0.0
+O2   0.0079  0.0076  0.0097  -0.0017  -0.0023  0.0013
+O3   0.0067  0.0069  0.0078  -0.0007  -0.0005  0.0009
+O4   0.0058  0.0094  0.013  -0.0006  0.0023  -0.0001
+O5   0.0077  0.0054  0.0099  -0.0023  0.001  0.0003
+

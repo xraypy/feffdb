@@ -1,0 +1,4 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+1.9-2.0,1.9-2.0,AMCSD_15850_R1.96,Ce2MnN3,Immm,orthorhombic,1.875,1.958,2,1.875;2.041,6.0,1.875,2.0,False,ok,regenerated 2026-08-19: POTENTIALS/ATOMS ipot mismatch fixed (old pymatgen bug); deck audits clean via check_decks.py,FEFF_paths_AMCSD/1.9-2.0/AMCSD_15850_R1.96/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_15850_R1.96.cif
+1.9-2.0,1.9-2.0,AMCSD_16901_R1.96,Mn3IrN,Pm-3m,cubic,1.956,1.957,2,1.956;1.957,6.0,1.956,2.0,False,ok,,FEFF_paths_AMCSD/1.9-2.0/AMCSD_16901_R1.96/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_16901_R1.96.cif
+2.0-2.1,2.0-2.1,AMCSD_16911_R2.03,Mn3SnN,Pm-3m,cubic,2.03,2.03,1,2.030,6.0,2.03,2.0,False,ok,,FEFF_paths_AMCSD/2.0-2.1/AMCSD_16911_R2.03/feff0001.dat,cif_files_AMCSD_binned/2.0-2.1/AMCSD_16911_R2.03.cif

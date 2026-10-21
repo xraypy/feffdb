@@ -1,0 +1,17 @@
+ Calculating potentials ...
+    free atom potential and density for atom type    0
+    free atom potential and density for atom type    1
+    free atom potential and density for atom type    2
+    free atom potential and density for atom type    3
+    initial state energy
+    overlapped potential and density for unique potential    0
+    overlapped potential and density for unique potential    1
+    overlapped potential and density for unique potential    2
+    overlapped potential and density for unique potential    3
+    muffin tin radii and interstitial parameters
+ WARNING: NO ATOMS CLOSE ENOUGH TO OVERLAP ATOM    1,  UNIQUE POT    0!!  Rmt set to Rnorman.  May be error in input file.
+ WARNING: NO ATOMS CLOSE ENOUGH TO OVERLAP ATOM   12,  UNIQUE POT    1!!  Rmt set to Rnorman.  May be error in input file.
+ WARNING: NO ATOMS CLOSE ENOUGH TO OVERLAP ATOM    8,  UNIQUE POT    2!!  Rmt set to Rnorman.  May be error in input file.
+ WARNING: NO ATOMS CLOSE ENOUGH TO OVERLAP ATOM   16,  UNIQUE POT    3!!  Rmt set to Rnorman.  May be error in input file.
+ No interstitial density.  Check input file.
+ISTPRM

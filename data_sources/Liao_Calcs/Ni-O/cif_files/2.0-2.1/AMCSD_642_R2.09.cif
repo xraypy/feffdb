@@ -1,0 +1,63 @@
+data_global
+_chemical_name_mineral 'Liebenbergite'
+loop_
+_publ_author_name
+'Lager G A'
+'Meagher E P'
+_journal_name_full 'American Mineralogist'
+_journal_volume 63
+_journal_year 1978
+_journal_page_first 365
+_journal_page_last 377
+_publ_section_title
+;
+ High-temperature structural study of six olivines
+ T = 25 deg C, synthetic Ni2SiO4
+;
+_database_code_amcsd 642
+_chemical_formula_sum 'Ni2 Si O4'
+_cell_length_a 4.726
+_cell_length_b 10.118
+_cell_length_c 5.913
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 282.746
+_exptl_crystal_density_diffrn  4.921
+_symmetry_space_group_name_H-M 'P b n m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,y,1/2-z'
+  '-x,-y,1/2+z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '1/2-x,1/2+y,z'
+  '1/2+x,1/2-y,-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ni1   0.0  0.0  0.0
+Ni2   0.9924  0.2738  0.25
+Si   0.4276  0.0944  0.25
+O1   0.7703  0.0935  0.25
+O2   0.2197  0.4455  0.25
+O3   0.2754  0.1633  0.031
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Ni1   0.00622  0.00311  0.00354  0.0  -0.00028  -0.00091
+Ni2   0.00679  0.00052  0.00567  -0.00024  0.0  0.0
+Si   0.00577  0.00104  0.00443  0.00024  0.0  0.0
+O1   0.00294  0.0057  0.01151  -0.00073  0.0  0.0
+O2   0.00962  0.00156  0.00248  0.0017  0.0  0.0
+O3   0.00826  0.00622  0.00443  -0.00048  0.00142  0.0003
+

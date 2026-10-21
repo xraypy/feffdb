@@ -1,0 +1,60 @@
+data_global
+_amcsd_formula_title 'Ba Er2 Ni O5'
+loop_
+_publ_author_name
+'Alonso J'
+'Amador J'
+'Martinez J'
+'Rasines I'
+'Rodriguez-Carvajal J'
+'Saez-Puche R'
+_journal_name_full 'Solid State Communications'
+_journal_volume 76
+_journal_year 1990
+_journal_page_first 467
+_journal_page_last 474
+_publ_section_title
+;
+ Neutron diffraction study of the magnetic structure of Er2BaNiO5
+ _cod_database_code 1006034
+;
+_database_code_amcsd 15481
+_chemical_formula_sum 'Er2 Ba Ni O5'
+_cell_length_a 3.7472
+_cell_length_b 5.7293
+_cell_length_c 11.2755
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 242.072
+_exptl_crystal_density_diffrn  8.376
+_symmetry_space_group_name_H-M 'I m m m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'x,-y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '-x,y,-z'
+  '1/2-x,1/2+y,1/2-z'
+  '-x,y,z'
+  '1/2-x,1/2+y,1/2+z'
+  'x,-y,-z'
+  '1/2+x,1/2-y,1/2-z'
+  'x,y,-z'
+  '1/2+x,1/2+y,1/2-z'
+  '-x,-y,z'
+  '1/2-x,1/2-y,1/2+z'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Er1   0.0  0.0  0.2027
+Ba1   0.0  0.5  0.0
+Ni1   0.5  0.0  0.0
+O1   0.5  0.2409  0.1483
+O2   0.0  0.0  0.0
+

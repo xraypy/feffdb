@@ -1,0 +1,64 @@
+data_global
+_chemical_name_mineral 'Adamite'
+loop_
+_publ_author_name
+'Hill R J'
+_journal_name_full 'American Mineralogist'
+_journal_volume 61
+_journal_year 1976
+_journal_page_first 979
+_journal_page_last 986
+_publ_section_title
+;
+ The crystal structure and infrared properties of adamite
+;
+_database_code_amcsd 532
+_chemical_formula_sum 'As Zn2 O5 H'
+_cell_length_a 8.306
+_cell_length_b 8.524
+_cell_length_c 6.043
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 427.846
+_exptl_crystal_density_diffrn  4.451
+_symmetry_space_group_name_H-M 'P n n m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '1/2-x,1/2+y,1/2+z'
+  '1/2+x,1/2-y,1/2-z'
+  'x,y,-z'
+  '-x,-y,z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+As   0.25048  0.24394  0.5
+Zn1   0.0  0.0  0.24737
+Zn2   0.13482  0.36423  0.0
+O1   0.076  0.1447  0.5
+O2   0.1079  0.1268  0.0
+O3   0.396  0.1063  0.5
+O4   0.2685  0.3615  0.2778
+H   0.2  0.13  0.0
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+As   0.00633  0.00291  0.00529  -0.0005  0.0  0.0
+Zn1   0.01849  0.00957  0.00575  -0.0057  0.0  0.0
+Zn2   0.00933  0.00471  0.00821  -4e-05  0.0  0.0
+O1   0.01083  0.00773  0.00444  -0.00323  0.0  0.0
+O2   0.01223  0.00405  0.01092  0.00036  0.0  0.0
+O3   0.01153  0.00294  0.02331  -0.00072  0.0  0.0
+O4   0.01433  0.01031  0.00722  -0.00359  -0.00153  0.00287
+

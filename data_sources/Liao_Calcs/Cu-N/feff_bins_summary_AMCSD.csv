@@ -1,0 +1,5 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+1.8-1.9,1.8-1.9,AMCSD_12786_R1.87,SrCuN,Pnma,orthorhombic,1.857,1.867,3,1.857;1.860;1.884,6.0,1.857,1.0,False,ok,,FEFF_paths_AMCSD/1.8-1.9/AMCSD_12786_R1.87/feff0001.dat,cif_files_AMCSD_binned/1.8-1.9/AMCSD_12786_R1.87.cif
+1.8-1.9,1.8-1.9,AMCSD_12787_R1.89,Sr6Cu3N5,P4_2mc,tetragonal,1.861,1.885,3,1.861;1.863;1.931,6.0,1.861,1.0,False,ok,,FEFF_paths_AMCSD/1.8-1.9/AMCSD_12787_R1.89/feff0001.dat,cif_files_AMCSD_binned/1.8-1.9/AMCSD_12787_R1.89.cif
+1.9-2.0,1.9-2.0,AMCSD_17103_R1.90,Cu3N,Pm-3m,cubic,1.903,1.903,1,1.903,6.0,1.903,2.0,False,ok,,FEFF_paths_AMCSD/1.9-2.0/AMCSD_17103_R1.90/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_17103_R1.90.cif
+1.9-2.0,1.9-2.0,AMCSD_17289_R1.91,FeCu(C3N4)2,Fm-3m,cubic,1.909,1.909,2,1.909;1.910,6.0,1.909,6.0,False,ok,,FEFF_paths_AMCSD/1.9-2.0/AMCSD_17289_R1.91/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_17289_R1.91.cif

@@ -1,0 +1,9 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+1.8-1.9,1.8-1.9,AMCSD_7351_R1.85,Cu2O,Pn-3m,cubic,1.849,1.849,1,1.849,6.0,1.849,2.0,False,ok,,FEFF_paths_AMCSD/1.8-1.9/AMCSD_7351_R1.85/feff0001.dat,cif_files_AMCSD_binned/1.8-1.9/AMCSD_7351_R1.85.cif
+1.8-1.9,1.8-1.9,AMCSD_9326_R1.85,Cu2O,Pn-3m,cubic,1.848,1.848,1,1.848,6.0,1.848,2.0,False,ok,,FEFF_paths_AMCSD/1.8-1.9/AMCSD_9326_R1.85/feff0001.dat,cif_files_AMCSD_binned/1.8-1.9/AMCSD_9326_R1.85.cif
+1.9-2.0,1.9-2.0,AMCSD_578_R1.96,Cu5Si4(HO7)2,Pbca,orthorhombic,1.89,1.959,10,1.890;1.895;1.934;1.939;1.950;1.956;1.976;1.978;2.017;2.055,6.0,1.956,2.0,False,ok,,FEFF_paths_AMCSD/1.9-2.0/AMCSD_578_R1.96/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_578_R1.96.cif
+2.0-2.1,2.0-2.1,AMCSD_5080_R2.02,CaCuAsO5,P2_12_12_1,orthorhombic,1.948,2.025,3,1.948;2.039;2.089,6.0,1.948,2.0,False,ok,,FEFF_paths_AMCSD/2.0-2.1/AMCSD_5080_R2.02/feff0001.dat,cif_files_AMCSD_binned/2.0-2.1/AMCSD_5080_R2.02.cif
+2.0-2.1,2.0-2.1,AMCSD_9136_R2.01,Cu2ClO3,Pnma,orthorhombic,1.935,2.01,4,1.935;1.995;2.040;2.071,6.0,1.995,2.0,False,ok,,FEFF_paths_AMCSD/2.0-2.1/AMCSD_9136_R2.01/feff0001.dat,cif_files_AMCSD_binned/2.0-2.1/AMCSD_9136_R2.01.cif
+2.1-2.2,2.1-2.2,AMCSD_12263_R2.13,LiVCuO4,Imma,orthorhombic,2.026,2.134,3,2.026;2.187;2.188,6.0,2.026,4.0,False,ok,,FEFF_paths_AMCSD/2.1-2.2/AMCSD_12263_R2.13/feff0001.dat,cif_files_AMCSD_binned/2.1-2.2/AMCSD_12263_R2.13.cif
+2.1-2.2,2.1-2.2,AMCSD_9908_R2.16,Cu6PbO8,Fm-3m,cubic,2.156,2.156,1,2.156,6.0,2.156,6.0,False,ok,,FEFF_paths_AMCSD/2.1-2.2/AMCSD_9908_R2.16/feff0001.dat,cif_files_AMCSD_binned/2.1-2.2/AMCSD_9908_R2.16.cif
+2.3-2.4,2.3-2.4,AMCSD_76_R2.30,Cu6PbO8,Fm-3m,cubic,2.303,2.303,1,2.303,6.0,2.303,6.0,False,ok,,FEFF_paths_AMCSD/2.3-2.4/AMCSD_76_R2.30/feff0001.dat,cif_files_AMCSD_binned/2.3-2.4/AMCSD_76_R2.30.cif

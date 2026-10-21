@@ -1,0 +1,91 @@
+data_global
+_amcsd_formula_title 'MgCNi3'
+loop_
+_publ_author_name
+'Wei Z'
+'Chen X'
+'Che G'
+'Wang F'
+'Jiang P'
+'Li W'
+'He M'
+_journal_name_full 'Chinese Physics Letters'
+_journal_volume 19
+_journal_year 2002
+_journal_page_first 249
+_journal_page_last 251
+_publ_section_title
+;
+ Debye temperature of the  MgCNi3 superconductor
+ _cod_database_code 1100063
+;
+_database_code_amcsd 18242
+_chemical_formula_sum 'Mg C Ni3'
+_cell_length_a 3.8089
+_cell_length_b 3.8089
+_cell_length_c 3.8089
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 55.258
+_exptl_crystal_density_diffrn  6.382
+_symmetry_space_group_name_H-M 'P m -3 m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'z,-x,y'
+  '-y,z,-x'
+  'x,-y,z'
+  '-z,x,-y'
+  'y,-z,x'
+  '-x,y,-z'
+  'x,-z,-y'
+  '-z,y,x'
+  'y,-x,-z'
+  '-x,z,y'
+  'z,-y,-x'
+  '-y,x,z'
+  'x,z,y'
+  '-z,-y,-x'
+  'y,x,z'
+  '-x,-z,-y'
+  'z,y,x'
+  '-y,-x,-z'
+  'z,x,-y'
+  '-y,-z,x'
+  'x,y,-z'
+  '-z,-x,y'
+  'y,z,-x'
+  '-x,-y,z'
+  '-z,x,y'
+  'y,-z,-x'
+  '-x,y,z'
+  'z,-x,-y'
+  '-y,z,x'
+  'x,-y,-z'
+  '-x,z,-y'
+  'z,-y,x'
+  '-y,x,-z'
+  'x,-z,y'
+  '-z,y,-x'
+  'y,-x,z'
+  '-x,-z,y'
+  'z,y,-x'
+  '-y,-x,z'
+  'x,z,-y'
+  '-z,-y,x'
+  'y,x,-z'
+  '-z,-x,-y'
+  'y,z,x'
+  '-x,-y,-z'
+  'z,x,y'
+  '-y,-z,-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Mg   0.0  0.0  0.0
+C   0.5  0.5  0.5
+Ni   0.0  0.5  0.5
+

@@ -1,0 +1,57 @@
+data_global
+_amcsd_formula_title 'Cu Li O4 V'
+loop_
+_publ_author_name
+'Joubert J'
+'Grenier J'
+'Durif A'
+_journal_name_full 'Comptes Rendus Hebdomadaires des Seances de l'Academie des Sciences'
+_journal_volume 260
+_journal_year 1965
+_journal_page_first 2472
+_journal_page_last 2475
+_publ_section_title
+;
+ Etude cristallographique de l'orthovanadate de lithium-cuivre.
+ _cod_database_code 1007065
+;
+_database_code_amcsd 12263
+_chemical_formula_sum 'V Cu Li O4'
+_cell_length_a 5.652
+_cell_length_b 5.81
+_cell_length_c 8.75
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 287.334
+_exptl_crystal_density_diffrn  4.286
+_symmetry_space_group_name_H-M 'I m m a'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'x,1/2-y,z'
+  '1/2+x,-y,1/2+z'
+  '-x,1/2+y,-z'
+  '1/2-x,+y,1/2-z'
+  '-x,y,z'
+  '1/2-x,1/2+y,1/2+z'
+  'x,-y,-z'
+  '1/2+x,1/2-y,1/2-z'
+  'x,1/2+y,-z'
+  '1/2+x,+y,1/2-z'
+  '-x,1/2-y,z'
+  '1/2-x,-y,1/2+z'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+V1   0.0  0.25  0.375
+Cu1   0.0  0.0  0.0
+Li1   0.25  0.25  0.75
+O1   0.0  0.0  0.25
+O2   0.25  0.25  0.0
+

@@ -1,0 +1,64 @@
+data_global
+_amcsd_formula_title 'CsCoF4'
+loop_
+_publ_author_name
+'Lacorre P'
+'Pannetier J'
+'Fleischer T'
+'Hoppe R'
+'Ferey G'
+_journal_name_full 'Journal of Solid State Chemistry'
+_journal_volume 93
+_journal_year 1991
+_journal_page_first 37
+_journal_page_last 45
+_publ_section_title
+;
+ Ordered magnetic frustration: XVI.Magnetic structure of CsCoF4 at 1.5 K
+ _cod_database_code 1000491
+;
+_database_code_amcsd 13719
+_chemical_formula_sum 'Cs5 Co5 F20'
+_cell_length_a 12.4353
+_cell_length_b 12.4353
+_cell_length_c 12.8612
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 1988.813
+_exptl_crystal_density_diffrn  4.472
+_symmetry_space_group_name_H-M 'I -4 c 2'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'y,x,1/2-z'
+  '1/2+y,1/2+x,-z'
+  'y,-x,-z'
+  '1/2+y,1/2-x,1/2-z'
+  'x,-y,1/2+z'
+  '1/2+x,1/2-y,+z'
+  '-x,-y,z'
+  '1/2-x,1/2-y,1/2+z'
+  '-y,-x,1/2-z'
+  '1/2-y,1/2-x,-z'
+  '-y,x,-z'
+  '1/2-y,1/2+x,1/2-z'
+  '-x,y,1/2+z'
+  '1/2-x,1/2+y,+z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Cs1   0.0  0.0  0.25
+Cs2   0.3433  0.8341  0.6799
+Co1   0.5  0.0  0.0
+Co2   0.7932  0.0749  0.9861
+F1   0.3432  0.0014  0.9899
+F2   0.1412  0.0655  0.9912
+F3   0.0767  0.2094  0.1444
+F4   0.9197  0.7912  0.8632
+F5   0.2208  0.7208  0.5
+F6   0.0  0.5  0.1433
+

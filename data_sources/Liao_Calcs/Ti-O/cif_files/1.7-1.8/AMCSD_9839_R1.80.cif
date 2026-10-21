@@ -1,0 +1,81 @@
+data_global
+_amcsd_formula_title 'KTiOPO4'
+loop_
+_publ_author_name
+'Thomas P A'
+'Glazer A M'
+'Watts B E'
+_journal_name_full 'Acta Crystallographica, Section B'
+_journal_volume 46
+_journal_year 1990
+_journal_page_first 333
+_journal_page_last 343
+_publ_section_title
+;
+ Crystal structure and nonlinear optical properties of KSnOPO4
+ and their comparison with KTiOPO4
+ Note: KTP structure
+;
+_database_code_amcsd 9839
+_chemical_formula_sum 'K Ti P O5'
+_cell_length_a 12.819
+_cell_length_b 6.399
+_cell_length_c 10.584
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 868.193
+_exptl_crystal_density_diffrn  3.029
+_symmetry_space_group_name_H-M 'P n a 21'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2-y,z'
+  '1/2-x,1/2+y,1/2+z'
+  '-x,-y,1/2+z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+K1   0.37807  0.7806  0.688
+K2   0.10526  0.699  0.9332
+Ti1   0.3729  0.5001  0.0004
+Ti2   0.24658  0.2695  0.74836
+P1   0.49808  0.3363  0.7397
+P2   0.18079  0.502  0.4872
+OT1   0.2248  0.9653  0.3561
+OT2   0.2232  0.0413  0.6097
+O1   0.4859  0.4867  0.8497
+O2   0.5103  0.4657  0.617
+O3   0.4004  0.1986  0.7208
+O4   0.5934  0.193  0.7589
+O5   0.1126  0.3106  0.4585
+O6   0.1113  0.6918  0.5117
+O7   0.2525  0.5402  0.3718
+O8   0.2528  0.4619  0.6008
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+K1   0.0246  0.0122  0.0239  0.004  -0.0059  -0.0016
+K2   0.0142  0.0212  0.0282  0.0051  0.0  0.0048
+Ti1   0.0075  0.0061  0.0067  -0.0002  0.0  -0.0009
+Ti2   0.0072  0.0064  0.0062  0.0  -0.0005  0.0002
+P1   0.0061  0.0067  0.0077  -0.0003  0.0005  -0.0005
+P2   0.0085  0.0054  0.0071  -0.0001  -0.001  0.0005
+OT1   0.008  0.008  0.011  -0.002  0.0026  -0.0016
+OT2   0.009  0.011  0.011  0.0  -0.0036  -0.0018
+O1   0.009  0.012  0.012  -0.004  0.002  -0.0037
+O2   0.01  0.012  0.011  0.001  0.001  0.003
+O3   0.01  0.007  0.013  -0.0004  -0.0002  0.0
+O4   0.007  0.01  0.012  0.0003  -0.001  0.001
+O5   0.011  0.006  0.012  -0.002  -0.001  -0.0014
+O6   0.012  0.008  0.014  0.001  0.002  0.001
+O7   0.01  0.009  0.01  0.001  0.0028  0.0025
+O8   0.012  0.012  0.009  -0.004  -0.003  0.0035
+

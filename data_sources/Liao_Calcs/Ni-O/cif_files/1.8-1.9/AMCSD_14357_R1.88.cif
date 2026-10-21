@@ -1,0 +1,59 @@
+data_global
+_amcsd_formula_title 'Ba Ni O5 Y2'
+loop_
+_publ_author_name
+'Benloucif R'
+'Nguyen N'
+'Caignaert V'
+'Raveau B'
+_journal_name_full 'Materials Research Bulletin'
+_journal_volume 26
+_journal_year 1991
+_journal_page_first 213
+_journal_page_last 218
+_publ_section_title
+;
+ The solid solution Nd2-xYxBaNiO5, a progressive transition from a
+ tridimensional to an unidimensional anti-ferromagnetic state
+ _cod_database_code 1001501
+;
+_database_code_amcsd 14357
+_chemical_formula_sum 'Y2 Ba Ni O5'
+_cell_length_a 3.76
+_cell_length_b 5.762
+_cell_length_c 11.339
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 245.661
+_exptl_crystal_density_diffrn  6.135
+_symmetry_space_group_name_H-M 'I m m m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'x,-y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '-x,y,-z'
+  '1/2-x,1/2+y,1/2-z'
+  '-x,y,z'
+  '1/2-x,1/2+y,1/2+z'
+  'x,-y,-z'
+  '1/2+x,1/2-y,1/2-z'
+  'x,y,-z'
+  '1/2+x,1/2+y,1/2-z'
+  '-x,-y,z'
+  '1/2-x,1/2-y,1/2+z'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Y1   0.5  0.0  0.7022
+Ba1   0.0  0.0  0.0
+Ni1   0.5  0.5  0.0
+O1   0.0  0.7599  0.3504
+O2   0.5  0.0  0.5
+

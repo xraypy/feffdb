@@ -1,0 +1,58 @@
+data_global
+_chemical_name_mineral 'Metatorbernite'
+loop_
+_publ_author_name
+'Ross M'
+'Evans H T'
+'Appleman D E'
+_journal_name_full 'American Mineralogist'
+_journal_volume 49
+_journal_year 1964
+_journal_page_first 1603
+_journal_page_last 1621
+_publ_section_title
+;
+ Studies of the torbernite minerals (II): The crystal structure of
+ meta-torbernite
+;
+_database_code_amcsd 133
+_chemical_formula_sum 'P Cu U2 O8 H4'
+_cell_length_a 6.969
+_cell_length_b 6.969
+_cell_length_c 17.306
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 840.5
+_exptl_crystal_density_diffrn  11.105
+_symmetry_space_group_name_H-M 'P 4/n '
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'y,-x,-z'
+  '1/2-y,1/2+x,z'
+  '1/2+x,1/2+y,-z'
+  '-x,-y,z'
+  '-y,x,-z'
+  '1/2+y,1/2-x,z'
+  '1/2-x,1/2-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+P1   0.25  0.75  0.0  0.00127
+P2   0.25  0.75  0.5  0.00127
+Cu   0.25  0.25  0.8099  0.01393
+U1   0.25  0.25  0.051  0.00963
+U2   0.25  0.25  0.5524  0.00798
+O1   0.25  0.25  0.1564  0.02026
+O2   0.25  0.25  0.6563  0.0152
+O3   0.25  0.25  0.9488  0.00887
+O4   0.25  0.25  0.4403  0.019
+O5   0.7834  0.0802  0.4466  0.02026
+O6   0.7038  0.0818  0.9486  0.00507
+Wat7   0.3476  0.9814  0.3105  0.0342
+Wat8   0.2225  0.9768  0.8095  0.03293
+

@@ -1,0 +1,149 @@
+data_global
+_chemical_name_mineral 'Spessartine'
+loop_
+_publ_author_name
+'Rodehorst U'
+'Geiger C A'
+'Armbruster T'
+_journal_name_full 'American Mineralogist'
+_journal_volume 87
+_journal_year 2002
+_journal_page_first 542
+_journal_page_last 549
+_publ_section_title
+;
+ The crystal structures of grossular and spessartine between 100 and 600 K
+ and the crystal chemistry of grossular-spessartine solid solutions
+ Sample: T = 103 K
+;
+_database_code_amcsd 2776
+_chemical_formula_sum 'O12 Mn3 Al2 Si3'
+_cell_length_a 11.604
+_cell_length_b 11.604
+_cell_length_c 11.604
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 1562.511
+_exptl_crystal_density_diffrn  4.209
+_symmetry_space_group_name_H-M 'I a -3 d'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'z,1/2-x,1/2+y'
+  '1/2+z,-x,+y'
+  '-y,1/2+z,1/2-x'
+  '1/2-y,+z,-x'
+  'x,1/2-y,1/2+z'
+  '1/2+x,-y,+z'
+  '-z,1/2+x,1/2-y'
+  '1/2-z,+x,-y'
+  'y,1/2-z,1/2+x'
+  '1/2+y,-z,+x'
+  '-x,1/2+y,1/2-z'
+  '1/2-x,+y,-z'
+  '3/4+x,1/4-z,3/4-y'
+  '1/4+x,3/4-z,1/4-y'
+  '3/4-z,1/4+y,3/4+x'
+  '1/4-z,3/4+y,1/4+x'
+  '3/4+y,1/4-x,3/4-z'
+  '1/4+y,3/4-x,1/4-z'
+  '3/4-x,1/4+z,3/4+y'
+  '1/4-x,3/4+z,1/4+y'
+  '3/4+z,1/4-y,3/4-x'
+  '1/4+z,3/4-y,1/4-x'
+  '3/4-y,1/4+x,3/4+z'
+  '1/4-y,3/4+x,1/4+z'
+  '1/4+x,1/4+z,1/4+y'
+  '3/4+x,3/4+z,3/4+y'
+  '1/4-z,1/4-y,1/4-x'
+  '3/4-z,3/4-y,3/4-x'
+  '1/4+y,1/4+x,1/4+z'
+  '3/4+y,3/4+x,3/4+z'
+  '1/4-x,1/4-z,1/4-y'
+  '3/4-x,3/4-z,3/4-y'
+  '1/4+z,1/4+y,1/4+x'
+  '3/4+z,3/4+y,3/4+x'
+  '1/4-y,1/4-x,1/4-z'
+  '3/4-y,3/4-x,3/4-z'
+  '1/2+z,x,1/2-y'
+  '+z,1/2+x,-y'
+  '1/2-y,-z,1/2+x'
+  '-y,1/2-z,+x'
+  '1/2+x,y,1/2-z'
+  '+x,1/2+y,-z'
+  '1/2-z,-x,1/2+y'
+  '-z,1/2-x,+y'
+  '1/2+y,z,1/2-x'
+  '+y,1/2+z,-x'
+  '1/2-x,-y,1/2+z'
+  '-x,1/2-y,+z'
+  '1/2-z,1/2+x,y'
+  '-z,+x,1/2+y'
+  '1/2+y,1/2-z,-x'
+  '+y,-z,1/2-x'
+  '1/2-x,1/2+y,z'
+  '-x,+y,1/2+z'
+  '1/2+z,1/2-x,-y'
+  '+z,-x,1/2-y'
+  '1/2-y,1/2+z,x'
+  '-y,+z,1/2+x'
+  '1/2+x,1/2-y,-z'
+  '+x,-y,1/2-z'
+  '3/4-x,3/4+z,1/4-y'
+  '1/4-x,1/4+z,3/4-y'
+  '3/4+z,3/4-y,1/4+x'
+  '1/4+z,1/4-y,3/4+x'
+  '3/4-y,3/4+x,1/4-z'
+  '1/4-y,1/4+x,3/4-z'
+  '3/4+x,3/4-z,1/4+y'
+  '1/4+x,1/4-z,3/4+y'
+  '3/4-z,3/4+y,1/4-x'
+  '1/4-z,1/4+y,3/4-x'
+  '3/4+y,3/4-x,1/4+z'
+  '1/4+y,1/4-x,3/4+z'
+  '1/4-x,3/4-z,3/4+y'
+  '3/4-x,1/4-z,1/4+y'
+  '1/4+z,3/4+y,3/4-x'
+  '3/4+z,1/4+y,1/4-x'
+  '1/4-y,3/4-x,3/4+z'
+  '3/4-y,1/4-x,1/4+z'
+  '1/4+x,3/4+z,3/4-y'
+  '3/4+x,1/4+z,1/4-y'
+  '1/4-z,3/4-y,3/4+x'
+  '3/4-z,1/4-y,1/4+x'
+  '1/4+y,3/4+x,3/4-z'
+  '3/4+y,1/4+x,1/4-z'
+  '-z,-x,-y'
+  '1/2-z,1/2-x,1/2-y'
+  'y,z,x'
+  '1/2+y,1/2+z,1/2+x'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+  'z,x,y'
+  '1/2+z,1/2+x,1/2+y'
+  '-y,-z,-x'
+  '1/2-y,1/2-z,1/2-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+O   0.03492  0.04798  0.65236
+Mn   0.0  0.25  0.125
+Al   0.0  0.0  0.0
+Si   0.375  0.0  0.25
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+O   0.0037  0.0037  0.0028  0.0002  -0.0007  0.0002
+Mn   0.0039  0.0039  0.0023  0.0006  0.0  0.0
+Al   0.0024  0.0024  0.0024  0.0001  0.0001  0.0001
+Si   0.0024  0.0021  0.0021  0.0  0.0  0.0
+

@@ -1,0 +1,90 @@
+data_global
+_amcsd_formula_title 'Ir Mn3 N'
+loop_
+_publ_author_name
+'Nardin M'
+'Lorthioir C'
+'Barberon M'
+'Madar R'
+'Fruchart E'
+'Fruchart R'
+_journal_name_full 'Comptes Rendus Hebdomadaires des Seances de l'Academie des Sciences'
+_journal_volume 274
+_journal_year 1972
+_journal_page_first 2168
+_journal_page_last 2171
+_publ_section_title
+;
+ Etude de cinq nouveaus nitrures M Cr3 N de type perovskite
+ _cod_database_code 1009040
+;
+_database_code_amcsd 16901
+_chemical_formula_sum 'Ir Mn3 N'
+_cell_length_a 3.913
+_cell_length_b 3.913
+_cell_length_c 3.913
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 59.914
+_exptl_crystal_density_diffrn  10.284
+_symmetry_space_group_name_H-M 'P m 3 m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'z,-x,y'
+  '-y,z,-x'
+  'x,-y,z'
+  '-z,x,-y'
+  'y,-z,x'
+  '-x,y,-z'
+  'x,-z,-y'
+  '-z,y,x'
+  'y,-x,-z'
+  '-x,z,y'
+  'z,-y,-x'
+  '-y,x,z'
+  'x,z,y'
+  '-z,-y,-x'
+  'y,x,z'
+  '-x,-z,-y'
+  'z,y,x'
+  '-y,-x,-z'
+  'z,x,-y'
+  '-y,-z,x'
+  'x,y,-z'
+  '-z,-x,y'
+  'y,z,-x'
+  '-x,-y,z'
+  '-z,x,y'
+  'y,-z,-x'
+  '-x,y,z'
+  'z,-x,-y'
+  '-y,z,x'
+  'x,-y,-z'
+  '-x,z,-y'
+  'z,-y,x'
+  '-y,x,-z'
+  'x,-z,y'
+  '-z,y,-x'
+  'y,-x,z'
+  '-x,-z,y'
+  'z,y,-x'
+  '-y,-x,z'
+  'x,z,-y'
+  '-z,-y,x'
+  'y,x,-z'
+  '-z,-x,-y'
+  'y,z,x'
+  '-x,-y,-z'
+  'z,x,y'
+  '-y,-z,-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ir1   0.0  0.0  0.0
+Mn1   0.0  0.5  0.5
+N1   0.5  0.5  0.5
+

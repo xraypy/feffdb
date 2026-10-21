@@ -1,0 +1,60 @@
+data_global
+_chemical_name_mineral 'Ulvospinel'
+loop_
+_publ_author_name
+'Yamanaka T'
+'Kyono A'
+'Nakamoto Y'
+'Meng Y'
+'Kharlamova S'
+'Struzhkin V V'
+'Mao H'
+_journal_name_full 'American Mineralogist'
+_journal_volume 98
+_journal_year 2013
+_journal_page_first 736
+_journal_page_last 744
+_publ_section_title
+;
+ High-pressure phase transitions of Fe3-xTixO4 solid solution
+ up to 60 GPa correlated with electronic spin transition
+ Note: P = 61 GPa
+;
+_database_code_amcsd 19933
+_chemical_compound_source 'Synthetic'
+_chemical_formula_sum 'Fe2 Ti O4'
+_cell_length_a 9.059
+_cell_length_b 2.659
+_cell_length_c 9.166
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 220.79
+_exptl_crystal_density_diffrn  6.726
+_symmetry_space_group_name_H-M 'P m m a'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,-y,z'
+  '-x,y,-z'
+  '1/2-x,y,z'
+  '1/2+x,-y,-z'
+  '1/2+x,y,-z'
+  '1/2-x,-y,z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Fe1   0.25  0.0  0.392
+Fe2   0.25  0.5  0.899
+Fe3   0.09  0.0  0.136
+Ti   0.057  0.5  0.61
+O11   0.0  0.0  0.5
+O12   0.0  0.5  0.0
+O21   0.25  0.5  0.561
+O22   0.25  0.0  0.051
+O31   0.4  0.5  0.272
+O32   0.418  0.0  0.783
+

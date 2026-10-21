@@ -1,0 +1,56 @@
+data_global
+_chemical_name_mineral 'Phosphoferrite'
+loop_
+_publ_author_name
+'Eversheim P'
+'Kleber W'
+_journal_name_full 'Acta Crystallographica'
+_journal_volume 6
+_journal_year 1953
+_journal_page_first 215
+_journal_page_last 216
+_publ_section_title
+;
+ Morphologie und struktur des reddingits, P2O5*3FeO*3H2O
+ Note: z(FeII) adjusted to match symmetry constraint
+;
+_database_code_amcsd 9153
+_chemical_formula_sum 'Fe3 P2 O11 H6'
+_cell_length_a 8.73
+_cell_length_b 10.152
+_cell_length_c 9.57
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 848.16
+_exptl_crystal_density_diffrn  3.223
+_symmetry_space_group_name_H-M 'P c m b'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,1/2+y,1/2-z'
+  '-x,1/2-y,1/2+z'
+  '-x,y,1/2+z'
+  'x,-y,1/2-z'
+  'x,1/2-y,z'
+  '-x,1/2+y,-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+FeI   0.22  0.25  0.5
+FeIIA   0.025  0.0  0.25
+FeIIB   0.525  0.0  0.25
+P1   0.18  0.25  0.16
+P2   0.68  0.25  0.16
+OIA   0.057  0.25  0.32
+OIB   0.557  0.25  0.32
+OIIA   0.34  0.25  0.275
+OIIB   0.84  0.25  0.275
+OIIIA   0.2  0.125  0.115
+OIIIB   0.7  0.125  0.115
+Wat7   0.17  0.1  0.45
+Wat8   0.5  0.25  0.5
+

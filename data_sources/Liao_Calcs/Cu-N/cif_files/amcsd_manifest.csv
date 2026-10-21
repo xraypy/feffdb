@@ -1,0 +1,9 @@
+bin,n_kept,ids,n_skipped_partial,n_skipped_too_many_types,n_skipped_wrong_symmetry,n_skipped_out_of_range
+1.7-1.8,0,,0,0,0,0
+1.8-1.9,2,12786;12787,0,0,0,0
+1.9-2.0,2,17103;17289,0,0,0,0
+2.0-2.1,0,,0,0,0,0
+2.1-2.2,0,,0,0,0,0
+2.2-2.3,0,,0,0,0,0
+2.3-2.4,0,,0,0,0,0
+TOTAL,4,,0,13,5,7

@@ -1,0 +1,60 @@
+data_global
+_amcsd_formula_title 'Co3 O8 V2'
+loop_
+_publ_author_name
+'Fuess H'
+'Bertaut E'
+'Pauthenet R'
+'Durif A'
+_journal_name_full 'Acta Crystallographica, Section B'
+_journal_volume 26
+_journal_year 1970
+_journal_page_first 2036
+_journal_page_last 2046
+_publ_section_title
+;
+ Structure aux Rayons X, Neutrons et Proprietes Magnetiques des
+ Orthovanadates de Nickel et de Cobalt
+ _cod_database_code 1007074
+;
+_database_code_amcsd 9384
+_chemical_formula_sum 'Co3 V2 O8'
+_cell_length_a 8.3
+_cell_length_b 11.5
+_cell_length_c 6.03
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 575.563
+_exptl_crystal_density_diffrn  4.693
+_symmetry_space_group_name_H-M 'A c a m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,1/2+y,1/2+z'
+  '1/2+x,1/2-y,z'
+  '1/2+x,-y,1/2+z'
+  '1/2-x,1/2+y,-z'
+  '1/2-x,+y,1/2-z'
+  'x,y,-z'
+  'x,1/2+y,1/2-z'
+  '-x,-y,z'
+  '-x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,z'
+  '1/2-x,+y,1/2+z'
+  '1/2+x,1/2-y,-z'
+  '1/2+x,-y,1/2-z'
+  '-x,-y,-z'
+  '-x,1/2-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Co1   0.0  0.0  0.0
+Co2   0.25  0.131  0.25
+V1   0.128  0.379  0.0
+O1   0.255  0.238  0.0
+O2   0.246  -0.005  0.0
+O3   0.003  0.107  0.27
+

@@ -1,0 +1,137 @@
+data_global
+_amcsd_formula_title 'SnCo4(CO)16'
+loop_
+_publ_author_name
+'Leigh J S'
+'Whitmire K H'
+_journal_name_full 'Acta Crystallographica, Section C'
+_journal_volume 46
+_journal_year 1990
+_journal_page_first 732
+_journal_page_last 736
+_publ_section_title
+;
+ The structures of [Sn{Co(CO4)4}4] and [Pb{Co(CO)4}4]
+;
+_database_code_amcsd 10126
+_chemical_formula_sum 'Sn Co4 O16 C16'
+_cell_length_a 17.255
+_cell_length_b 17.255
+_cell_length_c 17.255
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 5137.417
+_exptl_crystal_density_diffrn  2.075
+_symmetry_space_group_name_H-M 'F -4 3 c'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,1/2+y,1/2+z'
+  '1/2+x,y,1/2+z'
+  '1/2+x,1/2+y,z'
+  '-z,x,-y'
+  '-z,1/2+x,1/2-y'
+  '1/2-z,x,1/2-y'
+  '1/2-z,1/2+x,-y'
+  '-y,z,-x'
+  '-y,1/2+z,1/2-x'
+  '1/2-y,z,1/2-x'
+  '1/2-y,1/2+z,-x'
+  '-x,y,-z'
+  '-x,1/2+y,1/2-z'
+  '1/2-x,y,1/2-z'
+  '1/2-x,1/2+y,-z'
+  'x,-z,1/2-y'
+  'x,1/2-z,-y'
+  '1/2+x,-z,-y'
+  '1/2+x,1/2-z,1/2-y'
+  'z,-y,1/2-x'
+  'z,1/2-y,-x'
+  '1/2+z,-y,-x'
+  '1/2+z,1/2-y,1/2-x'
+  'y,-x,1/2-z'
+  'y,1/2-x,-z'
+  '1/2+y,-x,-z'
+  '1/2+y,1/2-x,1/2-z'
+  'x,z,1/2+y'
+  'x,1/2+z,+y'
+  '1/2+x,z,+y'
+  '1/2+x,1/2+z,1/2+y'
+  'z,y,1/2+x'
+  'z,1/2+y,+x'
+  '1/2+z,y,+x'
+  '1/2+z,1/2+y,1/2+x'
+  'y,x,1/2+z'
+  'y,1/2+x,+z'
+  '1/2+y,x,+z'
+  '1/2+y,1/2+x,1/2+z'
+  '-z,-x,y'
+  '-z,1/2-x,1/2+y'
+  '1/2-z,-x,1/2+y'
+  '1/2-z,1/2-x,y'
+  '-y,-z,x'
+  '-y,1/2-z,1/2+x'
+  '1/2-y,-z,1/2+x'
+  '1/2-y,1/2-z,x'
+  '-x,-y,z'
+  '-x,1/2-y,1/2+z'
+  '1/2-x,-y,1/2+z'
+  '1/2-x,1/2-y,z'
+  'z,-x,-y'
+  'z,1/2-x,1/2-y'
+  '1/2+z,-x,1/2-y'
+  '1/2+z,1/2-x,-y'
+  'y,-z,-x'
+  'y,1/2-z,1/2-x'
+  '1/2+y,-z,1/2-x'
+  '1/2+y,1/2-z,-x'
+  'x,-y,-z'
+  'x,1/2-y,1/2-z'
+  '1/2+x,-y,1/2-z'
+  '1/2+x,1/2-y,-z'
+  '-x,z,1/2-y'
+  '-x,1/2+z,-y'
+  '1/2-x,z,-y'
+  '1/2-x,1/2+z,1/2-y'
+  '-z,y,1/2-x'
+  '-z,1/2+y,-x'
+  '1/2-z,y,-x'
+  '1/2-z,1/2+y,1/2-x'
+  '-y,x,1/2-z'
+  '-y,1/2+x,-z'
+  '1/2-y,x,-z'
+  '1/2-y,1/2+x,1/2-z'
+  '-x,-z,1/2+y'
+  '-x,1/2-z,+y'
+  '1/2-x,-z,+y'
+  '1/2-x,1/2-z,1/2+y'
+  '-z,-y,1/2+x'
+  '-z,1/2-y,+x'
+  '1/2-z,-y,+x'
+  '1/2-z,1/2-y,1/2+x'
+  '-y,-x,1/2+z'
+  '-y,1/2-x,+z'
+  '1/2-y,-x,+z'
+  '1/2-y,1/2-x,1/2+z'
+  'z,x,y'
+  'z,1/2+x,1/2+y'
+  '1/2+z,x,1/2+y'
+  '1/2+z,1/2+x,y'
+  'y,z,x'
+  'y,1/2+z,1/2+x'
+  '1/2+y,z,1/2+x'
+  '1/2+y,1/2+z,x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Sn   0.0  0.0  0.0  0.02749
+Co   -0.08932  -0.0893  -0.0893  0.03732
+O1   -0.1863  -0.1863  -0.1863  0.11848
+O2   -0.1928  0.0427  -0.109  0.07599
+C1   -0.1499  -0.1499  -0.1499  0.06424
+C2   -0.1507  -0.0073  -0.0991  0.04813
+

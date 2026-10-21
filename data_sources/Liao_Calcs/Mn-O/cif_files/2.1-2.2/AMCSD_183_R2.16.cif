@@ -1,0 +1,51 @@
+data_global
+_chemical_name_mineral 'Eveite'
+loop_
+_publ_author_name
+'Moore P B'
+'Smyth J R'
+_journal_name_full 'American Mineralogist'
+_journal_volume 53
+_journal_year 1968
+_journal_page_first 1841
+_journal_page_last 1845
+_publ_section_title
+;
+ Crystal chemistry of the basic manganese arsenates: III. The crystal structure
+ of eveite, Mn2(OH)(AsO4)
+;
+_database_code_amcsd 183
+_chemical_formula_sum 'Mn2 As (O5 H)'
+_cell_length_a 8.57
+_cell_length_b 8.77
+_cell_length_c 6.27
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 471.246
+_exptl_crystal_density_diffrn  3.746
+_symmetry_space_group_name_H-M 'P n n m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '1/2-x,1/2+y,1/2+z'
+  '1/2+x,1/2-y,1/2-z'
+  'x,y,-z'
+  '-x,-y,z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Mn1   0.0  0.0  0.2464  0.01241
+Mn2   0.3571  0.1348  0.5  0.01532
+As   0.2417  0.2568  0.0  0.00418
+O-H1   0.3859  0.3722  0.5  0.00583
+O2   0.4158  0.3574  0.0  0.00836
+O3   0.1079  0.3927  0.0  0.0209
+O4   0.2204  0.1464  0.2205  0.01153
+

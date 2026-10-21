@@ -1,0 +1,54 @@
+data_global
+_amcsd_formula_title 'Mn5 Si'
+loop_
+_publ_author_name
+'Spinat P'
+'Fruchart R'
+'Kabbani M'
+'Herpin P'
+_journal_name_full 'Bulletin de la Societe Francaise de Mineralogie et de Cristallographie'
+_journal_volume 93
+_journal_year 1970
+_journal_page_first 171
+_journal_page_last 184
+_publ_section_title
+;
+ Structure de Mn5 Si C
+ _cod_database_code 1008107
+;
+_database_code_amcsd 16049
+_chemical_formula_sum 'Mn5 Si C'
+_cell_length_a 10.198
+_cell_length_b 8.035
+_cell_length_c 7.63
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 625.209
+_exptl_crystal_density_diffrn  6.689
+_symmetry_space_group_name_H-M 'C m c 21'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,z'
+  'x,-y,1/2+z'
+  '1/2+x,1/2-y,1/2+z'
+  '-x,y,z'
+  '1/2-x,1/2+y,z'
+  '-x,-y,1/2+z'
+  '1/2-x,1/2-y,1/2+z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Mn1   0.1478  0.3352  0.381
+Mn2   0.0  0.4546  0.6769
+Mn3   0.0  0.1386  0.1861
+Mn4   0.1252  0.0056  0.4389
+Mn5   0.1211  0.1796  0.6894
+Mn6   0.1469  0.3408  0.0
+Si1   0.252  0.0782  0.1869
+C1   0.0  0.188  0.47
+C2   0.0  0.188  0.906
+

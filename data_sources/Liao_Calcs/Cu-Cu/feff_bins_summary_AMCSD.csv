@@ -1,0 +1,2 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+2.5-2.6,2.5-2.6,Cu_fcc,Cu,Fm-3m,cubic,2.556,2.556,1,2.556,6.0,2.556,12.0,False,ok,,FEFF_paths_AMCSD/2.5-2.6/Cu_fcc/feff0001.dat,cif_files_AMCSD_binned/2.5-2.6/Cu_fcc.cif

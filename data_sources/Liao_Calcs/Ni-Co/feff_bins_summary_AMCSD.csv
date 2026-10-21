@@ -1,0 +1,2 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+2.4-2.5,2.4-2.5,NiCo_fccSS,Co3Ni,Pm-3m,cubic,2.499,2.499,1,2.499,6.0,2.499,12.0,False,ok,,FEFF_paths_AMCSD/2.4-2.5/NiCo_fccSS/feff0001.dat,cif_files_AMCSD_binned/2.4-2.5/NiCo_fccSS.cif

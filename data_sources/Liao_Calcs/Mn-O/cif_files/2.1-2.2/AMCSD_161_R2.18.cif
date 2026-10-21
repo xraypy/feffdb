@@ -1,0 +1,48 @@
+data_global
+_chemical_name_mineral 'Retzian'
+loop_
+_publ_author_name
+'Moore P B'
+_journal_name_full 'American Mineralogist'
+_journal_volume 52
+_journal_year 1967
+_journal_page_first 1603
+_journal_page_last 1613
+_publ_section_title
+;
+ Crystal chemistry of the basic manganese arsenate minerals 1. The crystal
+ structures of flinkite, Mn2Mn(OH)4(AsO4) and retzian, Mn2Y(OH)4(AsO4)
+;
+_database_code_amcsd 161
+_chemical_formula_sum 'Y As Mn2 O8 H4'
+_cell_length_a 5.67
+_cell_length_b 12.03
+_cell_length_c 4.863
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 331.706
+_exptl_crystal_density_diffrn  4.062
+_symmetry_space_group_name_H-M 'P b a n '
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,-y,z'
+  '1/2-x,y,-z'
+  '-x,1/2+y,z'
+  'x,1/2-y,-z'
+  '1/2+x,1/2+y,-z'
+  '1/2-x,1/2-y,z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Y   0.25  0.25  0.0  0.00076
+As   0.75  0.25  0.5  0.00557
+Mn   0.25  0.5548  0.0  0.01026
+O   0.5769  0.3198  0.3045  0.01381
+O-H   0.5783  0.577  0.201  0.01368
+

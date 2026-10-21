@@ -1,0 +1,70 @@
+data_global
+_amcsd_formula_title 'Ca2 N2 Zn'
+loop_
+_publ_author_name
+'Chern M'
+'DiSalvo F'
+_journal_name_full 'Journal of Solid State Chemistry'
+_journal_volume 88
+_journal_year 1990
+_journal_page_first 528
+_journal_page_last 533
+_publ_section_title
+;
+ Synthesis, structure and properties of Ca2ZnN2
+ _cod_database_code 1005002
+;
+_database_code_amcsd 13683
+_chemical_formula_sum 'Zn Ca2 N2'
+_cell_length_a 3.5835
+_cell_length_b 3.5835
+_cell_length_c 12.6583
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 162.551
+_exptl_crystal_density_diffrn  3.546
+_symmetry_space_group_name_H-M 'I 4/m m m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  '-y,-x,z'
+  '1/2-y,1/2-x,1/2+z'
+  'y,x,-z'
+  '1/2+y,1/2+x,1/2-z'
+  'y,-x,-z'
+  '1/2+y,1/2-x,1/2-z'
+  '-y,x,z'
+  '1/2-y,1/2+x,1/2+z'
+  'x,-y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '-x,y,-z'
+  '1/2-x,1/2+y,1/2-z'
+  'x,y,-z'
+  '1/2+x,1/2+y,1/2-z'
+  '-x,-y,z'
+  '1/2-x,1/2-y,1/2+z'
+  'y,x,z'
+  '1/2+y,1/2+x,1/2+z'
+  '-y,-x,-z'
+  '1/2-y,1/2-x,1/2-z'
+  '-y,x,-z'
+  '1/2-y,1/2+x,1/2-z'
+  'y,-x,z'
+  '1/2+y,1/2-x,1/2+z'
+  '-x,y,z'
+  '1/2-x,1/2+y,1/2+z'
+  'x,-y,-z'
+  '1/2+x,1/2-y,1/2-z'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Zn1   0.0  0.0  0.0
+Ca1   0.0  0.0  0.336
+N1   0.0  0.0  0.1455
+

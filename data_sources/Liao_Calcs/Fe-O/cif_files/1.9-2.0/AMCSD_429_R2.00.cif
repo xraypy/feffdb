@@ -1,0 +1,72 @@
+data_global
+_chemical_name_mineral 'Gillespite'
+loop_
+_publ_author_name
+'Hazen R M'
+'Burnham C W'
+_journal_name_full 'American Mineralogist'
+_journal_volume 59
+_journal_year 1974
+_journal_page_first 1166
+_journal_page_last 1176
+_publ_section_title
+;
+ The crystal structures of gillespite I and II: A structure determination at
+ high pressure
+ P = 1 atm
+;
+_database_code_amcsd 429
+_chemical_formula_sum 'Ba Fe Si4 O10'
+_cell_length_a 7.5164
+_cell_length_b 7.5164
+_cell_length_c 16.0768
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 908.279
+_exptl_crystal_density_diffrn  3.404
+_symmetry_space_group_name_H-M 'P 4/n c c '
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2-y,1/2-x,1/2+z'
+  'y,x,1/2-z'
+  'y,-x,-z'
+  '1/2-y,1/2+x,z'
+  'x,-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '1/2+x,1/2+y,-z'
+  '-x,-y,z'
+  '1/2+y,1/2+x,1/2+z'
+  '-y,-x,1/2-z'
+  '-y,x,-z'
+  '1/2+y,1/2-x,z'
+  '-x,y,1/2+z'
+  '1/2+x,1/2-y,1/2-z'
+  '1/2-x,1/2-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ba   0.0  0.0  0.0
+Fe   0.0  0.5  0.092
+Si   0.2691  0.1854  0.1548
+O1   0.2242  0.2242  0.25
+O2   0.4723  0.2475  0.1377
+O3   0.1415  0.2754  0.09
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Ba   0.01245  0.01245  0.00812  0.0  0.0  0.0
+Fe   0.0057  0.0057  0.0165  0.0  0.0  0.0
+Si   0.00567  0.00515  0.01113  0.0  0.00122  -0.00122
+O1   0.0332  0.0332  0.02213  -0.01059  0.01224  -0.01224
+O2   0.00744  0.02662  0.01846  -0.00172  -0.00122  0.00673
+O3   0.01603  0.00544  0.04007  0.00572  -0.01286  -0.00429
+

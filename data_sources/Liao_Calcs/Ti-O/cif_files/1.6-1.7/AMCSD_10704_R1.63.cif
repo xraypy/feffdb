@@ -1,0 +1,52 @@
+data_global
+_chemical_name_mineral 'Fresnoite'
+loop_
+_publ_author_name
+'Moore P B'
+'Louisnathan S J'
+_journal_name_full 'Zeitschrift fur Kristallographie'
+_journal_volume 130
+_journal_year 1969
+_journal_page_first 438
+_journal_page_last 448
+_publ_section_title
+;
+ The crystal structure of fresnoite, Ba2(TiO)Si2O7
+ Positive polarity
+;
+_database_code_amcsd 10704
+_chemical_compound_source 'sanbornite deposits of eastern Fresno County, California, USA'
+_chemical_formula_sum 'Ba2 Ti Si2 O8'
+_cell_length_a 8.518
+_cell_length_b 8.518
+_cell_length_c 5.211
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 378.091
+_exptl_crystal_density_diffrn  4.451
+_symmetry_space_group_name_H-M 'P 4 b m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2-y,1/2-x,z'
+  '-y,x,z'
+  '1/2+x,1/2-y,z'
+  '-x,-y,z'
+  '1/2+y,1/2+x,z'
+  'y,-x,z'
+  '1/2-x,1/2+y,z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Ba   0.3272  0.8272  0.0  0.01127
+Ti   0.0  0.0  0.5414  0.00215
+Si   0.1282  0.6282  0.5207  0.00469
+O1   0.0  0.5  0.6183  0.0228
+O2   0.1236  0.6236  0.2125  0.00646
+O3   0.2896  0.5762  0.6584  0.01634
+O4   0.0  0.0  0.2278  0.01191
+

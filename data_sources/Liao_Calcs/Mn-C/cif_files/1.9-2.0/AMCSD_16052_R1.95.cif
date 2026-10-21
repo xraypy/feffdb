@@ -1,0 +1,90 @@
+data_global
+_amcsd_formula_title 'Ga Mn3'
+loop_
+_publ_author_name
+'Fruchart D'
+'Bertaut E'
+'Sayetat F'
+'Nasr Eddine M'
+'Fruchart R'
+'Senateur J'
+_journal_name_full 'Solid State Communications'
+_journal_volume 8
+_journal_year 1970
+_journal_page_first 91
+_journal_page_last 99
+_publ_section_title
+;
+ Structure Magnetique de Mn3 Ga C
+ _cod_database_code 1008110
+;
+_database_code_amcsd 16052
+_chemical_formula_sum 'Ga Mn3 C'
+_cell_length_a 3.896
+_cell_length_b 3.896
+_cell_length_c 3.896
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 59.137
+_exptl_crystal_density_diffrn  6.923
+_symmetry_space_group_name_H-M 'P m 3 m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'z,-x,y'
+  '-y,z,-x'
+  'x,-y,z'
+  '-z,x,-y'
+  'y,-z,x'
+  '-x,y,-z'
+  'x,-z,-y'
+  '-z,y,x'
+  'y,-x,-z'
+  '-x,z,y'
+  'z,-y,-x'
+  '-y,x,z'
+  'x,z,y'
+  '-z,-y,-x'
+  'y,x,z'
+  '-x,-z,-y'
+  'z,y,x'
+  '-y,-x,-z'
+  'z,x,-y'
+  '-y,-z,x'
+  'x,y,-z'
+  '-z,-x,y'
+  'y,z,-x'
+  '-x,-y,z'
+  '-z,x,y'
+  'y,-z,-x'
+  '-x,y,z'
+  'z,-x,-y'
+  '-y,z,x'
+  'x,-y,-z'
+  '-x,z,-y'
+  'z,-y,x'
+  '-y,x,-z'
+  'x,-z,y'
+  '-z,y,-x'
+  'y,-x,z'
+  '-x,-z,y'
+  'z,y,-x'
+  '-y,-x,z'
+  'x,z,-y'
+  '-z,-y,x'
+  'y,x,-z'
+  '-z,-x,-y'
+  'y,z,x'
+  '-x,-y,-z'
+  'z,x,y'
+  '-y,-z,-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ga1   0.0  0.0  0.0
+Mn1   0.0  0.5  0.5
+C1   0.5  0.5  0.5
+

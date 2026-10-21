@@ -1,0 +1,63 @@
+data_global
+_amcsd_formula_title 'Ba F4 O Ti'
+loop_
+_publ_author_name
+'Crosnier M'
+'Fourquet J'
+_journal_name_full 'European Journal of Solid State and Inorganic Chemistry'
+_journal_volume 29
+_journal_year 1992
+_journal_page_first 199
+_journal_page_last 206
+_publ_section_title
+;
+ Synthesis and crystal structure of BaTiOF4
+ _cod_database_code 1000332
+;
+_database_code_amcsd 12550
+_chemical_formula_sum 'Ba Ti F4 O'
+_cell_length_a 5.1719
+_cell_length_b 13.7555
+_cell_length_c 5.5178
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 392.548
+_exptl_crystal_density_diffrn  4.69
+_symmetry_space_group_name_H-M 'P b c m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,1/2-y,1/2+z'
+  '-x,1/2+y,1/2-z'
+  '-x,1/2+y,z'
+  'x,1/2-y,-z'
+  'x,y,1/2-z'
+  '-x,-y,1/2+z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ba1   0.243  0.0939  0.25
+Ti1   0.1887  0.8234  0.25
+F1   0.6812  0.419  0.4869
+F2   0.4888  0.2652  0.25
+F3   0.1006  0.4122  0.25
+O1   -0.0504  0.25  0.0
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Ba1   0.0122  0.0094  0.0104  0.0009  0.0  0.0
+Ti1   0.0087  0.0067  0.0064  0.0002  0.0  0.0
+F1   0.0215  0.0115  0.0135  0.0013  0.0061  -0.0022
+F2   0.0104  0.0182  0.0179  -0.0037  0.0  0.0
+F3   0.0134  0.0117  0.0156  -0.0042  0.0  0.0
+O1   0.0115  0.0125  0.0086  0.0  0.0  -0.0018
+

@@ -1,0 +1,59 @@
+data_global
+_amcsd_formula_title 'Nd2 Ni O4'
+loop_
+_publ_author_name
+'Rodriguez-Carvajal J'
+'Fernandez-Diaz M'
+'Martinez J'
+'Fernandez F'
+'Saez-Puche R'
+_journal_name_full 'Europhysics Letters'
+_journal_volume 11
+_journal_year 1990
+_journal_page_first 261
+_journal_page_last 268
+_publ_section_title
+;
+ Structural phase transitions and three-dimensional magnetic ordering in
+ the Nd2NiO4 oxide
+ _cod_database_code 1006026
+;
+_database_code_amcsd 12640
+_chemical_formula_sum 'Ni Nd2 O4'
+_cell_length_a 5.37325
+_cell_length_b 5.5913
+_cell_length_c 12.0976
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 363.454
+_exptl_crystal_density_diffrn  7.514
+_symmetry_space_group_name_H-M 'B m a b'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,y,1/2+z'
+  'x,1/2+y,1/2-z'
+  '1/2+x,1/2+y,-z'
+  '-x,1/2-y,1/2+z'
+  '1/2-x,1/2-y,+z'
+  '-x,y,z'
+  '1/2-x,y,1/2+z'
+  'x,-y,-z'
+  '1/2+x,-y,1/2-z'
+  'x,1/2-y,1/2+z'
+  '1/2+x,1/2-y,+z'
+  '-x,1/2+y,1/2-z'
+  '1/2-x,1/2+y,-z'
+  '-x,-y,-z'
+  '1/2-x,-y,1/2-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ni1   0.0  0.0  0.0
+Nd1   0.0  -0.0173  0.363
+O1   0.25  0.25  -0.0177
+O2   0.0  0.0652  0.1806
+

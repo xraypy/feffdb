@@ -1,0 +1,85 @@
+data_global
+_amcsd_formula_title 'Cu3 N'
+loop_
+_publ_author_name
+'Juza R'
+'Hahn H'
+_journal_name_full 'Zeitschrift fur Anorganische und Allgemeine Chemie'
+_journal_volume 239
+_journal_year 1938
+_journal_page_first 282
+_journal_page_last 287
+_publ_section_title
+;
+ Ueber die Kristallstrukturen von Cu3 N, Ga N und In N
+ _cod_database_code 1010167
+;
+_database_code_amcsd 17103
+_chemical_formula_sum 'Cu3 N'
+_cell_length_a 3.807
+_cell_length_b 3.807
+_cell_length_c 3.807
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 55.176
+_exptl_crystal_density_diffrn  6.159
+_symmetry_space_group_name_H-M 'P m 3 m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'z,-x,y'
+  '-y,z,-x'
+  'x,-y,z'
+  '-z,x,-y'
+  'y,-z,x'
+  '-x,y,-z'
+  'x,-z,-y'
+  '-z,y,x'
+  'y,-x,-z'
+  '-x,z,y'
+  'z,-y,-x'
+  '-y,x,z'
+  'x,z,y'
+  '-z,-y,-x'
+  'y,x,z'
+  '-x,-z,-y'
+  'z,y,x'
+  '-y,-x,-z'
+  'z,x,-y'
+  '-y,-z,x'
+  'x,y,-z'
+  '-z,-x,y'
+  'y,z,-x'
+  '-x,-y,z'
+  '-z,x,y'
+  'y,-z,-x'
+  '-x,y,z'
+  'z,-x,-y'
+  '-y,z,x'
+  'x,-y,-z'
+  '-x,z,-y'
+  'z,-y,x'
+  '-y,x,-z'
+  'x,-z,y'
+  '-z,y,-x'
+  'y,-x,z'
+  '-x,-z,y'
+  'z,y,-x'
+  '-y,-x,z'
+  'x,z,-y'
+  '-z,-y,x'
+  'y,x,-z'
+  '-z,-x,-y'
+  'y,z,x'
+  '-x,-y,-z'
+  'z,x,y'
+  '-y,-z,-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Cu1   0.5  0.0  0.0
+N1   0.0  0.0  0.0
+

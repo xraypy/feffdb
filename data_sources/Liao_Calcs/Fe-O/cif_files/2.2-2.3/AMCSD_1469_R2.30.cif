@@ -1,0 +1,149 @@
+data_global
+_chemical_name_mineral 'Almandine'
+loop_
+_publ_author_name
+'Armbruster T'
+'Geiger C A'
+'Lager G A'
+_journal_name_full 'American Mineralogist'
+_journal_volume 77
+_journal_year 1992
+_journal_page_first 512
+_journal_page_last 521
+_publ_section_title
+;
+ Single-crystal X-ray structure study of synthetic pyrope almandine garnets at
+ 100 and 293 K
+ Py0-Alm100 at T = 293 K, Pyrope - Almandine join
+;
+_database_code_amcsd 1469
+_chemical_formula_sum 'Fe3 Al2 Si3 O12'
+_cell_length_a 11.525
+_cell_length_b 11.525
+_cell_length_c 11.525
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 1530.815
+_exptl_crystal_density_diffrn  4.319
+_symmetry_space_group_name_H-M 'I a -3 d'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'z,1/2-x,1/2+y'
+  '1/2+z,-x,+y'
+  '-y,1/2+z,1/2-x'
+  '1/2-y,+z,-x'
+  'x,1/2-y,1/2+z'
+  '1/2+x,-y,+z'
+  '-z,1/2+x,1/2-y'
+  '1/2-z,+x,-y'
+  'y,1/2-z,1/2+x'
+  '1/2+y,-z,+x'
+  '-x,1/2+y,1/2-z'
+  '1/2-x,+y,-z'
+  '3/4+x,1/4-z,3/4-y'
+  '1/4+x,3/4-z,1/4-y'
+  '3/4-z,1/4+y,3/4+x'
+  '1/4-z,3/4+y,1/4+x'
+  '3/4+y,1/4-x,3/4-z'
+  '1/4+y,3/4-x,1/4-z'
+  '3/4-x,1/4+z,3/4+y'
+  '1/4-x,3/4+z,1/4+y'
+  '3/4+z,1/4-y,3/4-x'
+  '1/4+z,3/4-y,1/4-x'
+  '3/4-y,1/4+x,3/4+z'
+  '1/4-y,3/4+x,1/4+z'
+  '1/4+x,1/4+z,1/4+y'
+  '3/4+x,3/4+z,3/4+y'
+  '1/4-z,1/4-y,1/4-x'
+  '3/4-z,3/4-y,3/4-x'
+  '1/4+y,1/4+x,1/4+z'
+  '3/4+y,3/4+x,3/4+z'
+  '1/4-x,1/4-z,1/4-y'
+  '3/4-x,3/4-z,3/4-y'
+  '1/4+z,1/4+y,1/4+x'
+  '3/4+z,3/4+y,3/4+x'
+  '1/4-y,1/4-x,1/4-z'
+  '3/4-y,3/4-x,3/4-z'
+  '1/2+z,x,1/2-y'
+  '+z,1/2+x,-y'
+  '1/2-y,-z,1/2+x'
+  '-y,1/2-z,+x'
+  '1/2+x,y,1/2-z'
+  '+x,1/2+y,-z'
+  '1/2-z,-x,1/2+y'
+  '-z,1/2-x,+y'
+  '1/2+y,z,1/2-x'
+  '+y,1/2+z,-x'
+  '1/2-x,-y,1/2+z'
+  '-x,1/2-y,+z'
+  '1/2-z,1/2+x,y'
+  '-z,+x,1/2+y'
+  '1/2+y,1/2-z,-x'
+  '+y,-z,1/2-x'
+  '1/2-x,1/2+y,z'
+  '-x,+y,1/2+z'
+  '1/2+z,1/2-x,-y'
+  '+z,-x,1/2-y'
+  '1/2-y,1/2+z,x'
+  '-y,+z,1/2+x'
+  '1/2+x,1/2-y,-z'
+  '+x,-y,1/2-z'
+  '3/4-x,3/4+z,1/4-y'
+  '1/4-x,1/4+z,3/4-y'
+  '3/4+z,3/4-y,1/4+x'
+  '1/4+z,1/4-y,3/4+x'
+  '3/4-y,3/4+x,1/4-z'
+  '1/4-y,1/4+x,3/4-z'
+  '3/4+x,3/4-z,1/4+y'
+  '1/4+x,1/4-z,3/4+y'
+  '3/4-z,3/4+y,1/4-x'
+  '1/4-z,1/4+y,3/4-x'
+  '3/4+y,3/4-x,1/4+z'
+  '1/4+y,1/4-x,3/4+z'
+  '1/4-x,3/4-z,3/4+y'
+  '3/4-x,1/4-z,1/4+y'
+  '1/4+z,3/4+y,3/4-x'
+  '3/4+z,1/4+y,1/4-x'
+  '1/4-y,3/4-x,3/4+z'
+  '3/4-y,1/4-x,1/4+z'
+  '1/4+x,3/4+z,3/4-y'
+  '3/4+x,1/4+z,1/4-y'
+  '1/4-z,3/4-y,3/4+x'
+  '3/4-z,1/4-y,1/4+x'
+  '1/4+y,3/4+x,3/4-z'
+  '3/4+y,1/4+x,1/4-z'
+  '-z,-x,-y'
+  '1/2-z,1/2-x,1/2-y'
+  'y,z,x'
+  '1/2+y,1/2+z,1/2+x'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+  'z,x,y'
+  '1/2+z,1/2+x,1/2+y'
+  '-y,-z,-x'
+  '1/2-y,1/2-z,1/2-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+FeX   0.0  0.25  0.125
+AlY   0.0  0.0  0.0
+SiZ   0.375  0.0  0.25
+O   0.03401  0.04901  0.65278
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+FeX   0.00747  0.00747  0.00261  0.00088  0.0  0.0
+AlY   0.00267  0.00267  0.00267  0.0001  0.0001  0.0001
+SiZ   0.0017  0.0024  0.0024  0.0  0.0  0.0
+O   0.0042  0.0057  0.0033  0.0013  -0.0013  -0.0004
+

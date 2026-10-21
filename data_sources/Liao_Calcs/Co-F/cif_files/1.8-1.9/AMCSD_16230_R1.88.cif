@@ -1,0 +1,138 @@
+data_global
+_amcsd_formula_title 'Co2 F12 Li3 Na3'
+loop_
+_publ_author_name
+'de Pape R'
+'Portier J'
+'Gauthier G'
+'Hagenmuller P'
+_journal_name_full 'Comptes Rendus Hebdomadaires des Seances de l'Academie des Sciences'
+_journal_volume 265
+_journal_year 1967
+_journal_page_first 1244
+_journal_page_last 1246
+_publ_section_title
+;
+ Les grenats fluores des elements de transition Na3 Li3 M2 F12
+ Note: garnet structure
+ _cod_database_code 1008315
+;
+_database_code_amcsd 16230
+_chemical_formula_sum 'Co2 Na3 Li3 F12'
+_cell_length_a 12.326
+_cell_length_b 12.326
+_cell_length_c 12.326
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 1872.693
+_exptl_crystal_density_diffrn  3.09
+_symmetry_space_group_name_H-M 'I a 3 d'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2+y,1/2+z'
+  'z,1/2-x,1/2+y'
+  '1/2+z,-x,+y'
+  '-y,1/2+z,1/2-x'
+  '1/2-y,+z,-x'
+  'x,1/2-y,1/2+z'
+  '1/2+x,-y,+z'
+  '-z,1/2+x,1/2-y'
+  '1/2-z,+x,-y'
+  'y,1/2-z,1/2+x'
+  '1/2+y,-z,+x'
+  '-x,1/2+y,1/2-z'
+  '1/2-x,+y,-z'
+  '3/4+x,1/4-z,3/4-y'
+  '1/4+x,3/4-z,1/4-y'
+  '3/4-z,1/4+y,3/4+x'
+  '1/4-z,3/4+y,1/4+x'
+  '3/4+y,1/4-x,3/4-z'
+  '1/4+y,3/4-x,1/4-z'
+  '3/4-x,1/4+z,3/4+y'
+  '1/4-x,3/4+z,1/4+y'
+  '3/4+z,1/4-y,3/4-x'
+  '1/4+z,3/4-y,1/4-x'
+  '3/4-y,1/4+x,3/4+z'
+  '1/4-y,3/4+x,1/4+z'
+  '1/4+x,1/4+z,1/4+y'
+  '3/4+x,3/4+z,3/4+y'
+  '1/4-z,1/4-y,1/4-x'
+  '3/4-z,3/4-y,3/4-x'
+  '1/4+y,1/4+x,1/4+z'
+  '3/4+y,3/4+x,3/4+z'
+  '1/4-x,1/4-z,1/4-y'
+  '3/4-x,3/4-z,3/4-y'
+  '1/4+z,1/4+y,1/4+x'
+  '3/4+z,3/4+y,3/4+x'
+  '1/4-y,1/4-x,1/4-z'
+  '3/4-y,3/4-x,3/4-z'
+  '1/2+z,x,1/2-y'
+  '+z,1/2+x,-y'
+  '1/2-y,-z,1/2+x'
+  '-y,1/2-z,+x'
+  '1/2+x,y,1/2-z'
+  '+x,1/2+y,-z'
+  '1/2-z,-x,1/2+y'
+  '-z,1/2-x,+y'
+  '1/2+y,z,1/2-x'
+  '+y,1/2+z,-x'
+  '1/2-x,-y,1/2+z'
+  '-x,1/2-y,+z'
+  '1/2-z,1/2+x,y'
+  '-z,+x,1/2+y'
+  '1/2+y,1/2-z,-x'
+  '+y,-z,1/2-x'
+  '1/2-x,1/2+y,z'
+  '-x,+y,1/2+z'
+  '1/2+z,1/2-x,-y'
+  '+z,-x,1/2-y'
+  '1/2-y,1/2+z,x'
+  '-y,+z,1/2+x'
+  '1/2+x,1/2-y,-z'
+  '+x,-y,1/2-z'
+  '3/4-x,3/4+z,1/4-y'
+  '1/4-x,1/4+z,3/4-y'
+  '3/4+z,3/4-y,1/4+x'
+  '1/4+z,1/4-y,3/4+x'
+  '3/4-y,3/4+x,1/4-z'
+  '1/4-y,1/4+x,3/4-z'
+  '3/4+x,3/4-z,1/4+y'
+  '1/4+x,1/4-z,3/4+y'
+  '3/4-z,3/4+y,1/4-x'
+  '1/4-z,1/4+y,3/4-x'
+  '3/4+y,3/4-x,1/4+z'
+  '1/4+y,1/4-x,3/4+z'
+  '1/4-x,3/4-z,3/4+y'
+  '3/4-x,1/4-z,1/4+y'
+  '1/4+z,3/4+y,3/4-x'
+  '3/4+z,1/4+y,1/4-x'
+  '1/4-y,3/4-x,3/4+z'
+  '3/4-y,1/4-x,1/4+z'
+  '1/4+x,3/4+z,3/4-y'
+  '3/4+x,1/4+z,1/4-y'
+  '1/4-z,3/4-y,3/4+x'
+  '3/4-z,1/4-y,1/4+x'
+  '1/4+y,3/4+x,3/4-z'
+  '3/4+y,1/4+x,1/4-z'
+  '-z,-x,-y'
+  '1/2-z,1/2-x,1/2-y'
+  'y,z,x'
+  '1/2+y,1/2+z,1/2+x'
+  '-x,-y,-z'
+  '1/2-x,1/2-y,1/2-z'
+  'z,x,y'
+  '1/2+z,1/2+x,1/2+y'
+  '-y,-z,-x'
+  '1/2-y,1/2-z,1/2-x'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Co1   0.0  0.0  0.0
+Na1   0.25  0.125  0.0
+Li1   0.25  0.375  0.0
+F1   -0.035  0.05  0.14
+

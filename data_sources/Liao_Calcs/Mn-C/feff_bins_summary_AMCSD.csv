@@ -1,0 +1,4 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+1.9-2.0,1.9-2.0,AMCSD_16052_R1.95,Mn3GaC,Pm-3m,cubic,1.948,1.948,1,1.948,6.0,1.948,2.0,False,ok,,FEFF_paths_AMCSD/1.9-2.0/AMCSD_16052_R1.95/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_16052_R1.95.cif
+1.9-2.0,1.9-2.0,AMCSD_16800_R1.96,Mn7C3,Pnma,orthorhombic,1.858,1.956,7,1.858;1.871;1.891;1.964;1.983;2.026;2.099,6.0,2.244,1.0,False,ok,12 non-direct C contact(s) dropped (absorber nearest neighbor 1.858 A),FEFF_paths_AMCSD/1.9-2.0/AMCSD_16800_R1.96/feff0001.dat,cif_files_AMCSD_binned/1.9-2.0/AMCSD_16800_R1.96.cif
+2.0-2.1,2.0-2.1,AMCSD_16049_R2.08,Mn5SiC,Cmc2_1,orthorhombic,1.958,2.076,8,1.958;2.028;2.033;2.064;2.065;2.081;2.174;2.202,6.0,2.033,1.0,False,ok,,FEFF_paths_AMCSD/2.0-2.1/AMCSD_16049_R2.08/feff0001.dat,cif_files_AMCSD_binned/2.0-2.1/AMCSD_16049_R2.08.cif

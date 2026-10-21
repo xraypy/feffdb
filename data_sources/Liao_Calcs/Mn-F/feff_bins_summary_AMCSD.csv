@@ -1,0 +1,4 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+2.0-2.1,2.0-2.1,AMCSD_10310_R2.09,K2Mn2Be3F12,P2_13,cubic,2.074,2.094,4,2.074;2.093;2.101;2.107,6.0,2.075,3.0,False,ok,,FEFF_paths_AMCSD/2.0-2.1/AMCSD_10310_R2.09/feff0001.dat,cif_files_AMCSD_binned/2.0-2.1/AMCSD_10310_R2.09.cif
+2.1-2.2,2.1-2.2,AMCSD_11755_R2.12,MnF2,P4_2/mnm,tetragonal,2.102,2.117,2,2.102;2.132,6.0,2.102,2.0,False,ok,,FEFF_paths_AMCSD/2.1-2.2/AMCSD_11755_R2.12/feff0001.dat,cif_files_AMCSD_binned/2.1-2.2/AMCSD_11755_R2.12.cif
+2.1-2.2,2.1-2.2,AMCSD_9408_R2.12,MnF2,P4_2/mnm,tetragonal,2.104,2.117,2,2.104;2.131,6.0,2.104,2.0,False,ok,,FEFF_paths_AMCSD/2.1-2.2/AMCSD_9408_R2.12/feff0001.dat,cif_files_AMCSD_binned/2.1-2.2/AMCSD_9408_R2.12.cif

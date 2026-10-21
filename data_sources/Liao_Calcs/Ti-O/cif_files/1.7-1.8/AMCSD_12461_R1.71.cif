@@ -1,0 +1,72 @@
+data_global
+_chemical_name_mineral 'Natisite'
+loop_
+_publ_author_name
+'Egorov-Tismenko Y K'
+'Simonov M A'
+'Belov N V'
+_journal_name_full 'Doklady Akademii Nauk SSSR'
+_journal_volume 240
+_journal_year 1978
+_journal_page_first 78
+_journal_page_last 80
+_publ_section_title
+;
+ The refinement of the crystal structure of the synthetic sodium titanosilicate
+ Na2(TiO)[SiO4]
+ Note: B11(Na) corrected
+;
+_database_code_amcsd 12461
+_chemical_formula_sum 'Na2 Ti Si O5'
+_cell_length_a 6.485
+_cell_length_b 6.485
+_cell_length_c 5.0987
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 214.427
+_exptl_crystal_density_diffrn  3.128
+_symmetry_space_group_name_H-M 'P 4/n m m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2-y,1/2-x,z'
+  'y,x,-z'
+  'y,-x,-z'
+  '1/2-y,1/2+x,z'
+  'x,-y,z'
+  '1/2-x,1/2+y,-z'
+  '1/2+x,1/2+y,-z'
+  '-x,-y,z'
+  '1/2+y,1/2+x,z'
+  '-y,-x,-z'
+  '-y,x,-z'
+  '1/2+y,1/2-x,z'
+  '-x,y,z'
+  '1/2+x,1/2-y,-z'
+  '1/2-x,1/2-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Na   0.25  0.25  0.5  0.01305
+Ti   0.5  0.0  0.9345  0.00253
+Si   0.0  0.0  0.0  0.00291
+O1   0.206  0.0  0.8168  0.00659
+O2   0.5  0.0  0.269  0.00925
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Na   0.01342  0.01342  0.01254  0.0019  0.00431  0.00431
+Ti   0.00203  0.00203  0.00355  0.0  0.0  0.0
+Si   0.00177  0.00177  0.00456  0.0  0.0  0.0
+O1   0.00481  0.00646  0.00836  0.0  0.0  0.00038
+O2   0.01241  0.01241  0.00431  0.0  0.0  0.0
+

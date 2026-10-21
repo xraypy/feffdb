@@ -1,0 +1,2 @@
+labeled_bin,mean_bin,id,formula,space_group,crystal_system,min_R,mean_R,n_shell,shell,feff_radius,path_reff,path_degen,disordered,status,screen_note,path_file,cif
+2.4-2.5,2.4-2.5,CoNi_fccSS,CoNi3,Pm-3m,cubic,2.499,2.499,1,2.499,6.0,2.499,12.0,False,ok,regenerated 2026-08-19: POTENTIALS/ATOMS ipot mismatch fixed (old pymatgen bug); deck audits clean via check_decks.py,FEFF_paths_AMCSD/2.4-2.5/CoNi_fccSS/feff0001.dat,cif_files_AMCSD_binned/2.4-2.5/CoNi_fccSS.cif

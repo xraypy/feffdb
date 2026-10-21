@@ -1,0 +1,55 @@
+data_global
+_amcsd_formula_title 'Li2 Mn3 O8 Zn'
+loop_
+_publ_author_name
+'Joubert J'
+'Durif A'
+_journal_name_full 'Comptes Rendus Hebdomadaires des Seances de l'Academie des Sciences'
+_journal_volume 258
+_journal_year 1964
+_journal_page_first 4482
+_journal_page_last 4485
+_publ_section_title
+;
+ Etude de deux types d'ordre dans le spinelle Mn3 Li2 Zn O8
+ _cod_database_code 1007067
+;
+_database_code_amcsd 12262
+_chemical_formula_sum 'Mn3 Li2 Zn O8'
+_cell_length_a 8.192
+_cell_length_b 8.192
+_cell_length_c 8.192
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 549.756
+_exptl_crystal_density_diffrn  4.495
+_symmetry_space_group_name_H-M 'P 21 3'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2-z,-x,1/2+y'
+  '-z,1/2+x,1/2-y'
+  '1/2+z,1/2-x,-y'
+  'z,x,y'
+  '1/2+y,1/2-z,-x'
+  '1/2-y,-z,1/2+x'
+  '-y,1/2+z,1/2-x'
+  'y,z,x'
+  '-x,1/2+y,1/2-z'
+  '1/2+x,1/2-y,-z'
+  '1/2-x,-y,1/2+z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Mn1   0.125  0.375  0.875
+Li1   0.625  0.625  0.625
+Li2   0.25  0.25  0.25
+Zn1   0.0  0.0  0.0
+O1   0.125  0.125  0.375
+O2   0.125  0.875  0.125
+O3   0.375  0.375  0.375
+O4   0.875  0.875  0.875
+

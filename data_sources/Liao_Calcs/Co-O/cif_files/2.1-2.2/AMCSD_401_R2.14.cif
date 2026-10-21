@@ -1,0 +1,65 @@
+data_global
+_amcsd_formula_title 'Co2SiO4'
+loop_
+_publ_author_name
+'Morimoto N'
+'Tokonami M'
+'Watanabe M'
+'Koto K'
+_journal_name_full 'American Mineralogist'
+_journal_volume 59
+_journal_year 1974
+_journal_page_first 475
+_journal_page_last 485
+_publ_section_title
+;
+ Crystal structures of three polymorphs of Co2SiO4
+ olivine
+;
+_database_code_amcsd 401
+_chemical_formula_sum 'Si Co2 O4'
+_cell_length_a 4.782
+_cell_length_b 10.302
+_cell_length_c 6.003
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 295.733
+_exptl_crystal_density_diffrn  4.715
+_symmetry_space_group_name_H-M 'P b n m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,y,1/2-z'
+  '-x,-y,1/2+z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '1/2-x,1/2+y,z'
+  '1/2+x,1/2-y,-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Si   0.4292  0.0951  0.25
+Co1   0.0  0.0  0.0
+Co2   0.9917  0.2765  0.25
+O1   0.7662  0.0924  0.25
+O2   0.2121  0.4504  0.25
+O3   0.2835  0.1639  0.0349
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Si   0.0029  0.00699  0.00602  0.00025  0.0  0.0
+Co1   0.0044  0.00807  0.00621  0.00025  -0.00029  -0.00063
+Co2   0.00544  0.00699  0.00712  0.00025  0.0  0.0
+O1   0.01008  0.00914  0.00748  0.0025  0.0  0.0
+O2   0.00985  0.01075  0.00584  -0.0015  0.0  0.0
+O3   0.00788  0.00914  0.00767  -0.00025  0.00102  -0.00063
+

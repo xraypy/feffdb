@@ -1,0 +1,90 @@
+data_global
+_amcsd_formula_title 'Ba5 Cl Cu4 F17'
+loop_
+_publ_author_name
+'Fompeyrine J'
+'Nazabal V'
+'Darriet J'
+'Courbion G'
+_journal_name_full 'European Journal of Solid State and Inorganic Chemistry'
+_journal_volume 32
+_journal_year 1995
+_journal_page_first 977
+_journal_page_last 995
+_publ_section_title
+;
+ Ba5 Cu4 F17 Cl: a new copper chlorofluoride with chains structure.
+ Structural and magnetic properties
+ _cod_database_code 1000397
+;
+_database_code_amcsd 12600
+_chemical_formula_sum 'Ba5 Cu4 Cl F17'
+_cell_length_a 10.731
+_cell_length_b 10.731
+_cell_length_c 12.803
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 120.0
+_cell_volume 1276.8
+_exptl_crystal_density_diffrn  5.069
+_symmetry_space_group_name_H-M 'P -6 2 m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '-x,-x+y,z'
+  '-x+y,-x,-z'
+  'y,x,-z'
+  '-y,x-y,z'
+  'x-y,-y,z'
+  'x,y,-z'
+  '-x,-x+y,-z'
+  '-x+y,-x,z'
+  'y,x,z'
+  '-y,x-y,-z'
+  'x-y,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ba1   0.7571  0.0  0.0
+Ba2   0.333333  0.666667  0.1623
+Ba3   0.269  0.0  0.6928
+Ba4   0.333333  0.666667  0.5
+Cu1   0.4238  0.0  0.0
+Cu2   0.7582  0.0  0.5
+Cu3   0.5969  0.0  0.2648
+Cl1   0.0  0.0  0.5
+Cl2   0.0  0.0  0.8345
+F1   0.5726  0.1449  0.3358
+F2   0.7589  0.146  0.1884
+F3   0.6322  0.7959  0.5
+F4   0.4322  0.0  0.149
+F5   0.7708  0.0  0.3557
+F6   0.5309  0.3686  0.0
+F7   0.2459  0.0  0.0
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Ba1   0.0084  0.0087  0.0115  0.0044  0.0  0.0
+Ba2   0.0098  0.0098  0.0076  0.0049  0.0  0.0
+Ba3   0.0104  0.0091  0.011  0.0046  -0.0017  0.0
+Ba4   0.0109  0.0109  0.0064  0.0054  0.0  0.0
+Cu1   0.0131  0.0238  0.0058  0.012  0.0  0.0
+Cu2   0.0158  0.009  0.0071  0.0045  0.0  0.0
+Cu3   0.0088  0.0079  0.0088  0.004  0.0007  0.0
+Cl1   0.0129  0.0129  0.0421  0.0064  0.0  0.0
+Cl2   0.0169  0.0169  0.0183  0.0084  0.0  0.0
+F1   0.0202  0.013  0.0162  0.0083  0.0003  -0.0017
+F2   0.0119  0.013  0.0132  0.0057  0.0003  0.0018
+F3   0.0118  0.0107  0.0184  0.0015  0.0  0.0
+F4   0.0207  0.0321  0.0088  0.016  0.0036  0.0
+F5   0.0208  0.021  0.0059  0.0105  -0.0012  0.0
+F6   0.0135  0.015  0.0119  0.0115  0.0  0.0
+F7   0.016  0.0196  0.0221  0.0098  0.0  0.0
+
