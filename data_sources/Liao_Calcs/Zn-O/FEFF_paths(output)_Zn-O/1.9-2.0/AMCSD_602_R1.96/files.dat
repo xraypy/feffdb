@@ -1,0 +1,38 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Zn12 As8 O24
+ Reduced formula:  Zn3(AsO3)2
+ space group: (Pbam), space number:  (55)
+ abc:  6.092000   7.811000  14.407000
+ angles: 90.000000  90.000000  90.000000
+ sites: 44
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=30 Rmt= 1.288 Rnm= 1.417 K  shell
+ Pot 1 Z=33 Rmt= 1.144 Rnm= 1.355
+ Pot 2 Z= 8 Rmt= 0.931 Rnm= 1.058
+ Pot 3 Z=30 Rmt= 1.283 Rnm= 1.404
+ Gam_ch=1.897E+00 H-L exch
+ Mu= 2.934E+00 kf=2.299E+00 Vint=-1.721E+01 Rs_int= 1.577
+ PATH  Rmax= 4.254,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.9335
+ feff0002.dat 0.00000    94.460     2.000     2   1.9833
+ feff0003.dat 0.00000    20.890     1.000     2   2.8974
+ feff0004.dat 0.00000    30.570     2.000     2   3.2989
+ feff0005.dat 0.00000    30.180     2.000     2   3.3024
+ feff0006.dat 0.00000    27.680     2.000     2   3.4219
+ feff0007.dat 0.00000     4.764     4.000     3   3.4320
+ feff0008.dat 0.00000     7.295     4.000     3   3.4903
+ feff0009.dat 0.00000    16.580     4.000     3   3.5033
+ feff0010.dat 0.00000     4.874     2.000     3   3.5231
+ feff0011.dat 0.00000    22.590     2.000     2   3.5753
+ feff0012.dat 0.00000    16.410     4.000     3   3.5792
+ feff0013.dat 0.00000    11.240     4.000     3   3.5992
+ feff0014.dat 0.00000     4.042     2.000     4   3.7041
+ feff0015.dat 0.00000    15.870     4.000     3   3.7145
+ feff0016.dat 0.00000     5.215     2.000     4   3.7365
+ feff0017.dat 0.00000     4.857     2.000     4   3.8670
+ feff0020.dat 0.00000     4.390     2.000     4   3.9666
+ feff0021.dat 0.00000     5.160     4.000     3   4.1050
+ feff0022.dat 0.00000    15.460     2.000     2   4.1309

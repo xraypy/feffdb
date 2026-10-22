@@ -1,0 +1,25 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Mn2 O4
+ Reduced formula:  MnO2
+ space group: (Cmmm), space number:  (65)
+ abc:  2.865000   4.388000   4.388000
+ angles:120.000000  90.000000  90.000000
+ sites: 6
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=25 Rmt= 0.832 Rnm= 1.075 K  shell
+ Pot 1 Z=25 Rmt= 1.108 Rnm= 1.208
+ Pot 2 Z= 8 Rmt= 0.755 Rnm= 0.893
+ Gam_ch=1.193E+00 H-L exch
+ Mu= 3.227E+00 kf=3.031E+00 Vint=-3.178E+01 Rs_int= 1.197
+ PATH  Rmax= 2.915,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.3252
+ feff0002.dat 0.00000    82.000     4.000     2   2.0777
+ feff0003.dat 0.00000    67.480     4.000     2   2.6202
+ feff0004.dat 0.00000    21.590     2.000     3   2.6504
+ feff0005.dat 0.00000    34.890     2.000     4   2.6504
+ feff0006.dat 0.00000    15.660     2.000     4   2.6504
+ feff0007.dat 0.00000    22.720     8.000     3   2.8104
+ feff0008.dat 0.00000    26.970     2.000     2   2.8650

@@ -1,0 +1,31 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Na4 Ti2 Si2 O10
+ Reduced formula:  Na2TiSiO5
+ space group: (P4/nmm), space number:  (129)
+ abc:  5.107000   6.480000   6.480000
+ angles: 90.000000  90.000000  90.000000
+ sites: 18
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=22 Rmt= 1.197 Rnm= 1.372 K  shell
+ Pot 1 Z=11 Rmt= 1.468 Rnm= 1.523
+ Pot 2 Z= 8 Rmt= 0.874 Rnm= 1.103
+ Pot 3 Z=14 Rmt= 0.983 Rnm= 1.208
+ Pot 4 Z=22 Rmt= 1.195 Rnm= 1.440
+ Gam_ch=9.030E-01 H-L exch
+ Mu= 1.520E+00 kf=2.215E+00 Vint=-1.717E+01 Rs_int= 1.637
+ PATH  Rmax= 3.729,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     1.000     2   1.6950
+ feff0002.dat 0.00000   285.600     4.000     2   1.9904
+ feff0003.dat 0.00000    88.740     4.000     2   3.1888
+ feff0004.dat 0.00000    94.800     4.000     2   3.2573
+ feff0005.dat 0.00000    34.370     8.000     3   3.3316
+ feff0006.dat 0.00000    25.600     8.000     3   3.3325
+ feff0007.dat 0.00000    12.540     1.000     4   3.3900
+ feff0008.dat 0.00000    20.640     1.000     2   3.4120
+ feff0009.dat 0.00000    51.720     8.000     3   3.4417
+ feff0010.dat 0.00000    21.710     4.000     4   3.6261
+ feff0011.dat 0.00000    19.460     8.000     4   3.6854
+ feff0012.dat 0.00000    61.080     4.000     2   3.6872

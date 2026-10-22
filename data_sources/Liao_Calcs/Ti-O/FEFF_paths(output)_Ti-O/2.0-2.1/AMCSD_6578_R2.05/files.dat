@@ -1,0 +1,28 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ti2 Mn4 O8
+ Reduced formula:  TiMn2O4
+ space group: (Fd-3m), space number:  (227)
+ abc:  6.136909   6.136909   6.136909
+ angles: 60.000000  60.000000  60.000000
+ sites: 14
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=22 Rmt= 1.360 Rnm= 1.504 K  shell
+ Pot 1 Z=25 Rmt= 1.356 Rnm= 1.439
+ Pot 2 Z= 8 Rmt= 1.020 Rnm= 1.097
+ Pot 3 Z=22 Rmt= 1.370 Rnm= 1.530
+ Gam_ch=9.030E-01 H-L exch
+ Mu=-1.949E+00 kf=2.149E+00 Vint=-1.955E+01 Rs_int= 1.687
+ PATH  Rmax= 4.501,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   2.0459
+ feff0002.dat 0.00000    88.590    12.000     2   3.5981
+ feff0003.dat 0.00000    78.980    12.000     2   3.6308
+ feff0004.dat 0.00000    14.070    12.000     3   3.7164
+ feff0005.dat 0.00000    28.370     4.000     2   3.7581
+ feff0006.dat 0.00000    36.190    24.000     3   3.8609
+ feff0007.dat 0.00000     7.912     4.000     4   4.0918
+ feff0008.dat 0.00000     7.652    12.000     4   4.0918
+ feff0009.dat 0.00000     6.709    12.000     4   4.1238
+ feff0010.dat 0.00000    27.670    48.000     3   4.3756

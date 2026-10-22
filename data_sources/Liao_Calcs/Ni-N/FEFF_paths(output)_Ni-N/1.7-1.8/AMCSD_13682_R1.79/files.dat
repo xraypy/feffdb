@@ -1,0 +1,29 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ca2 Ni2 N2
+ Reduced formula:  CaNiN
+ space group: (P4_2/mmc), space number:  (131)
+ abc:  3.580900   3.580900   7.009600
+ angles: 90.000000  90.000000  90.000000
+ sites: 6
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.134 Rnm= 1.346 K  shell
+ Pot 1 Z=20 Rmt= 1.659 Rnm= 1.715
+ Pot 2 Z= 7 Rmt= 0.990 Rnm= 1.097
+ Pot 3 Z=28 Rmt= 1.138 Rnm= 1.357
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-6.108E+00 kf=2.077E+00 Vint=-2.255E+01 Rs_int= 1.746
+ PATH  Rmax= 3.939,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.7904
+ feff0002.dat 0.00000   148.200     8.000     2   3.0793
+ feff0003.dat 0.00000    22.700     2.000     2   3.5048
+ feff0004.dat 0.00000    43.030     4.000     2   3.5809
+ feff0005.dat 0.00000    19.520     2.000     3   3.5809
+ feff0006.dat 0.00000    67.340     4.000     3   3.5809
+ feff0007.dat 0.00000    10.540     2.000     4   3.5809
+ feff0008.dat 0.00000     7.277     2.000     4   3.5809
+ feff0009.dat 0.00000    53.360     2.000     4   3.5809
+ feff0010.dat 0.00000    22.720    16.000     3   3.6876
+ feff0011.dat 0.00000    30.710     4.000     2   3.9356

@@ -1,0 +1,38 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ca12 Fe8 Si12 O48
+ Reduced formula:  Ca3Fe2(SiO4)3
+ space group: (Ia-3d), space number:  (230)
+ abc: 10.442534  10.442534  10.442534
+ angles:109.471221 109.471221 109.471221
+ sites: 80
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=26 Rmt= 1.317 Rnm= 1.390 K  shell
+ Pot 1 Z=20 Rmt= 1.622 Rnm= 1.684
+ Pot 2 Z=26 Rmt= 1.372 Rnm= 1.523
+ Pot 3 Z= 8 Rmt= 0.967 Rnm= 1.061
+ Pot 4 Z=14 Rmt= 1.007 Rnm= 1.210
+ Gam_ch=1.309E+00 H-L exch
+ Mu=-2.794E-01 kf=2.293E+00 Vint=-2.031E+01 Rs_int= 1.582
+ PATH  Rmax= 4.452,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.0238
+ feff0002.dat 0.00000    38.640     6.000     2   3.3703
+ feff0003.dat 0.00000    30.320     6.000     2   3.3703
+ feff0004.dat 0.00000     7.427    12.000     3   3.4409
+ feff0005.dat 0.00000     7.137    12.000     3   3.4688
+ feff0006.dat 0.00000    22.560    12.000     3   3.5183
+ feff0007.dat 0.00000    10.380     6.000     4   3.6664
+ feff0008.dat 0.00000    24.020     6.000     2   3.6879
+ feff0009.dat 0.00000     5.858    12.000     3   3.8798
+ feff0010.dat 0.00000     4.632    12.000     3   3.9470
+ feff0011.dat 0.00000    15.150     6.000     3   4.0477
+ feff0012.dat 0.00000    12.790     6.000     4   4.0477
+ feff0013.dat 0.00000     4.985     6.000     4   4.0477
+ feff0014.dat 0.00000    17.020     6.000     2   4.2224
+ feff0015.dat 0.00000     5.402    12.000     3   4.2255
+ feff0016.dat 0.00000     4.838    12.000     3   4.2795
+ feff0017.dat 0.00000     8.196    12.000     3   4.3504
+ feff0018.dat 0.00000    15.250     6.000     2   4.4041
+ feff0019.dat 0.00000    14.610    12.000     3   4.4053

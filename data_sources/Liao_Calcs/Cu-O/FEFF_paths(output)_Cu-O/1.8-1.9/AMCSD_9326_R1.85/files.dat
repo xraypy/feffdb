@@ -1,0 +1,25 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Cu4 O2
+ Reduced formula:  Cu2O
+ space group: (Pn-3m), space number:  (224)
+ abc:  4.268500   4.268500   4.268500
+ angles: 90.000000  90.000000  90.000000
+ sites: 6
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=29 Rmt= 1.217 Rnm= 1.420 K  shell
+ Pot 1 Z=29 Rmt= 1.188 Rnm= 1.343
+ Pot 2 Z= 8 Rmt= 0.929 Rnm= 1.060
+ Gam_ch=1.729E+00 H-L exch
+ Mu= 6.893E-01 kf=2.068E+00 Vint=-1.560E+01 Rs_int= 1.754
+ PATH  Rmax= 4.066,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.8483
+ feff0002.dat 0.00000   199.600    12.000     2   3.0183
+ feff0003.dat 0.00000    38.220    12.000     3   3.3575
+ feff0004.dat 0.00000    61.940     6.000     2   3.5393
+ feff0005.dat 0.00000    17.010     2.000     3   3.6966
+ feff0006.dat 0.00000     8.254     2.000     4   3.6966
+ feff0007.dat 0.00000     6.746     2.000     4   3.6966
+ feff0008.dat 0.00000     7.942     6.000     4   3.6966

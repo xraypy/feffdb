@@ -1,0 +1,33 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ti1 C1
+ Reduced formula:  TiC
+ space group: (Fm-3m), space number:  (225)
+ abc:  3.252691   3.252691   3.252691
+ angles: 60.000000  60.000000  60.000000
+ sites: 2
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=22 Rmt= 1.432 Rnm= 1.503 K  shell
+ Pot 1 Z= 6 Rmt= 1.165 Rnm= 1.224
+ Pot 2 Z=22 Rmt= 1.451 Rnm= 1.525
+ Gam_ch=9.030E-01 H-L exch
+ Mu=-5.134E+00 kf=2.059E+00 Vint=-2.129E+01 Rs_int= 1.761
+ PATH  Rmax= 5.060,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.3000
+ feff0002.dat 0.00000   119.200    12.000     2   3.2527
+ feff0003.dat 0.00000    15.470    24.000     3   3.9263
+ feff0004.dat 0.00000    27.180    48.000     3   3.9263
+ feff0005.dat 0.00000    38.310     8.000     2   3.9837
+ feff0006.dat 0.00000    25.230     6.000     2   4.6000
+ feff0007.dat 0.00000    16.050     6.000     3   4.6000
+ feff0008.dat 0.00000    71.610    12.000     3   4.6000
+ feff0009.dat 0.00000    19.670     6.000     4   4.6000
+ feff0010.dat 0.00000     7.045     6.000     4   4.6000
+ feff0011.dat 0.00000    50.340     6.000     4   4.6000
+ feff0012.dat 0.00000    11.310    24.000     4   4.6000
+ feff0014.dat 0.00000    12.290    48.000     3   4.7682
+ feff0015.dat 0.00000    21.630    48.000     3   4.7682
+ feff0016.dat 0.00000    36.860    48.000     3   4.7682
+ feff0017.dat 0.00000    11.230    48.000     3   4.8790

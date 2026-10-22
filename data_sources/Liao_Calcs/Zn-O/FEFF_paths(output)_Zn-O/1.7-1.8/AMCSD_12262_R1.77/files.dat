@@ -1,0 +1,30 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Li8 Mn12 Zn4 O32
+ Reduced formula:  Li2Mn3ZnO8
+ space group: (P2_13), space number:  (198)
+ abc:  8.192000   8.192000   8.192000
+ angles: 90.000000  90.000000  90.000000
+ sites: 56
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=30 Rmt= 1.111 Rnm= 1.282 K  shell
+ Pot 1 Z= 3 Rmt= 1.208 Rnm= 1.253
+ Pot 2 Z=25 Rmt= 1.339 Rnm= 1.413
+ Pot 3 Z= 8 Rmt= 0.987 Rnm= 1.072
+ Pot 4 Z=30 Rmt= 1.191 Rnm= 1.504
+ Gam_ch=1.897E+00 H-L exch
+ Mu=-1.812E+00 kf=2.134E+00 Vint=-1.916E+01 Rs_int= 1.700
+ PATH  Rmax= 3.902,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   1.7736
+ feff0002.dat 0.00000    16.150    12.000     3   3.2218
+ feff0003.dat 0.00000     6.309     3.000     2   3.3962
+ feff0004.dat 0.00000    53.960     9.000     2   3.3962
+ feff0005.dat 0.00000    62.380    12.000     2   3.3962
+ feff0006.dat 0.00000     7.536     4.000     2   3.5472
+ feff0007.dat 0.00000     6.941     4.000     4   3.5472
+ feff0008.dat 0.00000     3.069    12.000     4   3.5472
+ feff0009.dat 0.00000     5.441     6.000     3   3.6089
+ feff0010.dat 0.00000    24.070    18.000     3   3.6089
+ feff0012.dat 0.00000     5.888     9.000     4   3.8216

@@ -1,0 +1,40 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Na4 Fe2 Ni2 F14
+ Reduced formula:  Na2FeNiF7
+ space group: (Imma), space number:  (74)
+ abc:  7.203000   7.284200   7.284200
+ angles: 61.319577  60.368073  60.368073
+ sites: 22
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.215 Rnm= 1.346 K  shell
+ Pot 1 Z= 9 Rmt= 0.995 Rnm= 1.100
+ Pot 2 Z=26 Rmt= 1.255 Rnm= 1.395
+ Pot 3 Z=11 Rmt= 1.486 Rnm= 1.591
+ Pot 4 Z=28 Rmt= 1.220 Rnm= 1.357
+ Gam_ch=1.576E+00 H-L exch
+ Mu= 2.902E-01 kf=1.993E+00 Vint=-1.484E+01 Rs_int= 1.820
+ PATH  Rmax= 4.183,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   1.9015
+ feff0002.dat 0.00000    46.150     2.000     2   1.9684
+ feff0003.dat 0.00000     8.826     8.000     3   3.2366
+ feff0004.dat 0.00000     6.671     8.000     3   3.3671
+ feff0005.dat 0.00000    11.760     2.000     2   3.6015
+ feff0006.dat 0.00000    23.530     4.000     2   3.6421
+ feff0007.dat 0.00000    17.780     4.000     2   3.6421
+ feff0008.dat 0.00000    18.860     4.000     2   3.7128
+ feff0009.dat 0.00000     8.419     2.000     2   3.7145
+ feff0010.dat 0.00000    18.510     8.000     3   3.7545
+ feff0011.dat 0.00000     6.273     4.000     3   3.7691
+ feff0012.dat 0.00000    14.970     4.000     3   3.8031
+ feff0013.dat 0.00000     9.411     4.000     4   3.8031
+ feff0014.dat 0.00000     6.537     4.000     4   3.8031
+ feff0015.dat 0.00000    16.960     4.000     2   3.8627
+ feff0016.dat 0.00000     6.494     4.000     4   3.8668
+ feff0017.dat 0.00000     6.556     2.000     3   3.9368
+ feff0018.dat 0.00000     4.024     2.000     4   3.9368
+ feff0019.dat 0.00000     2.818     2.000     4   3.9368
+ feff0021.dat 0.00000     4.552     8.000     3   4.0626
+ feff0022.dat 0.00000     3.834     8.000     3   4.1805

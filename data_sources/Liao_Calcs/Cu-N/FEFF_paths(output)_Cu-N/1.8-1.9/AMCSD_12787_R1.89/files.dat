@@ -1,0 +1,34 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Sr12 Cu6 N10
+ Reduced formula:  Sr6Cu3N5
+ space group: (P4_2mc), space number:  (105)
+ abc:  7.334000   8.657000   8.657000
+ angles: 90.000000  90.000000  90.000000
+ sites: 28
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=29 Rmt= 1.260 Rnm= 1.408 K  shell
+ Pot 1 Z=29 Rmt= 1.190 Rnm= 1.318
+ Pot 2 Z= 7 Rmt= 1.098 Rnm= 1.181
+ Pot 3 Z=38 Rmt= 1.842 Rnm= 1.910
+ Gam_ch=1.729E+00 H-L exch
+ Mu=-4.027E+00 kf=1.834E+00 Vint=-1.684E+01 Rs_int= 1.978
+ PATH  Rmax= 4.095,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     1.000     2   1.8613
+ feff0002.dat 0.00000    92.300     1.000     2   1.9308
+ feff0003.dat 0.00000    53.310     1.000     2   2.4482
+ feff0004.dat 0.00000    72.680     2.000     2   3.0961
+ feff0005.dat 0.00000    35.290     1.000     2   3.1399
+ feff0006.dat 0.00000     9.023     2.000     3   3.1549
+ feff0007.dat 0.00000    67.550     2.000     2   3.2060
+ feff0008.dat 0.00000    32.170     1.000     2   3.2799
+ feff0009.dat 0.00000     9.539     1.000     4   3.7226
+ feff0010.dat 0.00000    36.420     2.000     3   3.7919
+ feff0011.dat 0.00000    16.880     2.000     4   3.7921
+ feff0012.dat 0.00000     5.339     2.000     3   3.8310
+ feff0013.dat 0.00000     8.205     1.000     4   3.8616
+ feff0014.dat 0.00000    10.900     4.000     3   3.8691
+ feff0015.dat 0.00000    15.960     1.000     2   3.9276
+ feff0016.dat 0.00000     7.394     4.000     3   3.9699

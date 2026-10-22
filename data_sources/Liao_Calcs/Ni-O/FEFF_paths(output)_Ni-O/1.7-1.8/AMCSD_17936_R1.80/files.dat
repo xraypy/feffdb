@@ -1,0 +1,27 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Cr4 Ni2 O8
+ Reduced formula:  Cr2NiO4
+ space group: (Fd-3m), space number:  (227)
+ abc:  5.868279   5.868279   5.868279
+ angles: 60.000000  60.000000  60.000000
+ sites: 14
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.126 Rnm= 1.281 K  shell
+ Pot 1 Z=24 Rmt= 1.357 Rnm= 1.430
+ Pot 2 Z=28 Rmt= 1.131 Rnm= 1.293
+ Pot 3 Z= 8 Rmt= 0.993 Rnm= 1.069
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-1.273E+00 kf=2.293E+00 Vint=-2.131E+01 Rs_int= 1.581
+ PATH  Rmax= 3.953,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   1.7968
+ feff0002.dat 0.00000    16.140    12.000     3   3.2638
+ feff0003.dat 0.00000    75.840    12.000     2   3.4406
+ feff0004.dat 0.00000    64.890    12.000     2   3.4406
+ feff0005.dat 0.00000    21.060     4.000     2   3.5936
+ feff0006.dat 0.00000     5.562     4.000     4   3.5936
+ feff0007.dat 0.00000     5.036    12.000     4   3.5936
+ feff0008.dat 0.00000    27.930    24.000     3   3.6561
+ feff0009.dat 0.00000     6.853    12.000     4   3.8715

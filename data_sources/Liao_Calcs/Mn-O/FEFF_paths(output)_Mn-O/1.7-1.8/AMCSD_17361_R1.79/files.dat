@@ -1,0 +1,32 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Mn4 Ag4 O16
+ Reduced formula:  MnAgO4
+ space group: (Pnma), space number:  (62)
+ abc:  5.665000   7.127000   8.270000
+ angles: 90.000000  90.000000  92.000000
+ sites: 24
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=25 Rmt= 0.911 Rnm= 1.130 K  shell
+ Pot 1 Z=47 Rmt= 1.543 Rnm= 1.613
+ Pot 2 Z=25 Rmt= 0.915 Rnm= 1.138
+ Pot 3 Z= 8 Rmt= 0.741 Rnm= 0.973
+ Gam_ch=1.193E+00 H-L exch
+ Mu= 7.943E+00 kf=2.719E+00 Vint=-2.022E+01 Rs_int= 1.334
+ PATH  Rmax= 3.065,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     1.000     2   1.3930
+ feff0002.dat 0.00000    96.350     1.000     2   1.4206
+ feff0003.dat 0.00000    61.970     1.000     2   1.7736
+ feff0004.dat 0.00000    60.080     1.000     2   1.8003
+ feff0005.dat 0.00000    28.780     2.000     3   2.7098
+ feff0006.dat 0.00000    12.740     1.000     4   2.7860
+ feff0007.dat 0.00000     7.910     2.000     3   2.8061
+ feff0008.dat 0.00000    14.940     2.000     4   2.8136
+ feff0009.dat 0.00000    11.560     1.000     4   2.8413
+ feff0010.dat 0.00000    21.840     1.000     2   2.8437
+ feff0011.dat 0.00000     8.128     2.000     3   2.8583
+ feff0012.dat 0.00000     9.109     2.000     3   2.8919
+ feff0013.dat 0.00000     9.053     2.000     3   2.9237
+ feff0014.dat 0.00000     4.569     2.000     3   3.0532

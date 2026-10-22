@@ -1,0 +1,32 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Na12 Li12 Co8 F48
+ Reduced formula:  Na3Li3Co2F12
+ space group: (Ia-3d), space number:  (230)
+ abc: 10.674629  10.674629  10.674629
+ angles:109.471221 109.471221 109.471221
+ sites: 80
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=27 Rmt= 1.171 Rnm= 1.322 K  shell
+ Pot 1 Z=27 Rmt= 1.216 Rnm= 1.438
+ Pot 2 Z= 9 Rmt= 1.037 Rnm= 1.123
+ Pot 3 Z= 3 Rmt= 1.125 Rnm= 1.250
+ Pot 4 Z=11 Rmt= 1.581 Rnm= 1.628
+ Gam_ch=1.436E+00 H-L exch
+ Mu=-8.286E-01 kf=1.910E+00 Vint=-1.472E+01 Rs_int= 1.899
+ PATH  Rmax= 4.141,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   1.8825
+ feff0002.dat 0.00000     8.977    12.000     3   3.2036
+ feff0003.dat 0.00000     8.556    12.000     3   3.2236
+ feff0004.dat 0.00000    10.480     6.000     2   3.4452
+ feff0005.dat 0.00000    19.930     6.000     2   3.4452
+ feff0006.dat 0.00000    13.000    12.000     3   3.5924
+ feff0007.dat 0.00000     5.154     6.000     4   3.7396
+ feff0008.dat 0.00000    15.490     6.000     3   3.7650
+ feff0009.dat 0.00000     9.698     6.000     4   3.7650
+ feff0010.dat 0.00000     7.163     6.000     4   3.7650
+ feff0011.dat 0.00000    16.610     6.000     2   3.8650
+ feff0012.dat 0.00000     4.875    12.000     3   3.8995
+ feff0013.dat 0.00000     4.649    12.000     3   3.9186

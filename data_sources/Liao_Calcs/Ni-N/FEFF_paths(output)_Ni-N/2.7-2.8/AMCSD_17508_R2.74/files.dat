@@ -1,0 +1,22 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ni1 N8 O6
+ Reduced formula:  Ni(N4O3)2
+ space group: (Fm-3m), space number:  (225)
+ abc:  7.749890   7.749890   7.749890
+ angles: 60.000000  60.000000  60.000000
+ sites: 15
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.733 Rnm= 1.917 K  shell
+ Pot 1 Z= 7 Rmt= 1.489 Rnm= 1.568
+ Pot 2 Z= 8 Rmt= 1.494 Rnm= 1.550
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-1.736E+00 kf=1.106E+00 Vint=-6.399E+00 Rs_int= 3.278
+ PATH  Rmax= 4.793,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.7400
+ feff0002.dat 0.00000    68.390    12.000     2   3.8749
+ feff0003.dat 0.00000    14.210    24.000     3   4.6775
+ feff0004.dat 0.00000    33.910    48.000     3   4.6775
+ feff0005.dat 0.00000    26.510     8.000     2   4.7458

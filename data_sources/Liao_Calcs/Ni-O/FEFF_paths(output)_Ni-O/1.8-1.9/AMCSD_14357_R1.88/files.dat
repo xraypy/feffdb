@@ -1,0 +1,36 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ba1 Y2 Ni1 O5
+ Reduced formula:  BaY2NiO5
+ space group: (Immm), space number:  (71)
+ abc:  3.760000   5.762000   6.631575
+ angles:115.749459 106.468742  90.000000
+ sites: 9
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.270 Rnm= 1.356 K  shell
+ Pot 1 Z=56 Rmt= 2.019 Rnm= 2.066
+ Pot 2 Z=28 Rmt= 1.294 Rnm= 1.394
+ Pot 3 Z= 8 Rmt= 0.998 Rnm= 1.066
+ Pot 4 Z=39 Rmt= 1.582 Rnm= 1.654
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-3.428E+00 kf=2.113E+00 Vint=-2.043E+01 Rs_int= 1.717
+ PATH  Rmax= 4.136,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.8800
+ feff0002.dat 0.00000   141.700     4.000     2   2.1889
+ feff0003.dat 0.00000    85.800     4.000     2   2.9650
+ feff0004.dat 0.00000    85.510     4.000     2   3.4401
+ feff0005.dat 0.00000    26.130    16.000     3   3.4772
+ feff0006.dat 0.00000     9.846     8.000     3   3.5689
+ feff0007.dat 0.00000     6.401     4.000     3   3.5724
+ feff0008.dat 0.00000    20.020     2.000     2   3.7600
+ feff0009.dat 0.00000    16.850     2.000     3   3.7600
+ feff0010.dat 0.00000    57.100     4.000     3   3.7600
+ feff0011.dat 0.00000     9.663     2.000     4   3.7600
+ feff0012.dat 0.00000     6.043     2.000     4   3.7600
+ feff0013.dat 0.00000    41.760     2.000     4   3.7600
+ feff0014.dat 0.00000    11.570    16.000     3   3.7815
+ feff0015.dat 0.00000     4.423     4.000     3   3.8852
+ feff0016.dat 0.00000     2.869    16.000     4   4.0689
+ feff0017.dat 0.00000     9.541     8.000     3   4.1006

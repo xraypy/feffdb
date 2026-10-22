@@ -1,0 +1,27 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ba4 Ti2 Si4 O16
+ Reduced formula:  Ba2Ti(SiO4)2
+ space group: (P4bm), space number:  (100)
+ abc:  5.211000   8.518000   8.518000
+ angles: 90.000000  90.000000  90.000000
+ sites: 26
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=22 Rmt= 1.176 Rnm= 1.357 K  shell
+ Pot 1 Z=56 Rmt= 2.014 Rnm= 2.088
+ Pot 2 Z= 8 Rmt= 0.834 Rnm= 1.082
+ Pot 3 Z=14 Rmt= 0.975 Rnm= 1.196
+ Pot 4 Z=22 Rmt= 1.091 Rnm= 1.497
+ Gam_ch=9.030E-01 H-L exch
+ Mu= 1.470E+00 kf=2.241E+00 Vint=-1.766E+01 Rs_int= 1.619
+ PATH  Rmax= 3.595,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     1.000     2   1.6342
+ feff0002.dat 0.00000   258.500     4.000     2   2.0012
+ feff0003.dat 0.00000    13.770     1.000     4   3.2683
+ feff0004.dat 0.00000    33.000     8.000     3   3.2898
+ feff0005.dat 0.00000    22.710     8.000     3   3.3491
+ feff0006.dat 0.00000    81.680     4.000     2   3.3517
+ feff0007.dat 0.00000    74.280     8.000     3   3.4829
+ feff0008.dat 0.00000    16.830     1.000     2   3.5768

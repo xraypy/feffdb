@@ -1,0 +1,33 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Co1 Ni3
+ Reduced formula:  CoNi3
+ space group: (Pm-3m), space number:  (221)
+ abc:  3.534350   3.534350   3.534350
+ angles: 90.000000  90.000000  90.000000
+ sites: 4
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=27 Rmt= 1.338 Rnm= 1.376 K  shell
+ Pot 1 Z=27 Rmt= 1.355 Rnm= 1.397
+ Pot 2 Z=28 Rmt= 1.338 Rnm= 1.377
+ Gam_ch=1.436E+00 H-L exch
+ Mu=-1.128E+01 kf=2.047E+00 Vint=-2.725E+01 Rs_int= 1.771
+ PATH  Rmax= 5.498,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000    12.000     2   2.4992
+ feff0002.dat 0.00000    23.120     6.000     2   3.5344
+ feff0003.dat 0.00000    10.360    48.000     3   3.7487
+ feff0004.dat 0.00000     9.434    48.000     3   4.2663
+ feff0005.dat 0.00000    55.660    24.000     2   4.3287
+ feff0006.dat 0.00000    10.960    48.000     3   4.6635
+ feff0007.dat 0.00000    21.700    96.000     3   4.6635
+ feff0008.dat 0.00000    19.420    12.000     2   4.9983
+ feff0009.dat 0.00000     8.519    12.000     3   4.9983
+ feff0010.dat 0.00000    48.940    24.000     3   4.9983
+ feff0011.dat 0.00000    10.520    12.000     4   4.9983
+ feff0012.dat 0.00000     4.009    12.000     4   4.9983
+ feff0014.dat 0.00000    39.390    12.000     4   4.9983
+ feff0015.dat 0.00000     2.737    48.000     4   4.9983
+ feff0016.dat 0.00000     3.335    48.000     4   4.9983
+ feff0017.dat 0.00000     5.183    48.000     3   5.1811

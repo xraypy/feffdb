@@ -1,0 +1,31 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Zn2 Br4 N4
+ Reduced formula:  Zn(BrN)2
+ space group: (Imma), space number:  (74)
+ abc:  7.319129   7.319129   7.319129
+ angles:105.995331 109.867684 112.618403
+ sites: 10
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=30 Rmt= 1.287 Rnm= 1.529 K  shell
+ Pot 1 Z=35 Rmt= 1.456 Rnm= 1.737
+ Pot 2 Z= 7 Rmt= 1.183 Rnm= 1.395
+ Pot 3 Z=30 Rmt= 1.315 Rnm= 1.589
+ Gam_ch=1.897E+00 H-L exch
+ Mu=-6.154E-01 kf=1.517E+00 Vint=-9.383E+00 Rs_int= 2.391
+ PATH  Rmax= 4.743,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   2.1559
+ feff0002.dat 0.00000    70.500     2.000     2   2.3803
+ feff0003.dat 0.00000     4.981     2.000     3   3.9423
+ feff0004.dat 0.00000    22.370     2.000     2   4.0705
+ feff0005.dat 0.00000    12.520     8.000     3   4.1084
+ feff0006.dat 0.00000    16.840     2.000     2   4.2160
+ feff0007.dat 0.00000    10.960     2.000     4   4.3118
+ feff0008.dat 0.00000     3.815     2.000     3   4.3483
+ feff0009.dat 0.00000     3.169     8.000     4   4.5363
+ feff0010.dat 0.00000    32.800     4.000     2   4.6222
+ feff0011.dat 0.00000    25.260     4.000     2   4.6480
+ feff0012.dat 0.00000    15.050     2.000     2   4.6832
+ feff0013.dat 0.00000    15.010     2.000     2   4.6878

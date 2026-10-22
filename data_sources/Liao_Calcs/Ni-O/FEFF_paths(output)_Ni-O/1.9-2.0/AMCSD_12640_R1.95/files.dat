@@ -1,0 +1,37 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Nd4 Ni2 O8
+ Reduced formula:  Nd2NiO4
+ space group: (Cmce), space number:  (64)
+ abc:  5.373250   5.591300   6.618605
+ angles: 90.000000 113.948799  90.000000
+ sites: 14
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.259 Rnm= 1.342 K  shell
+ Pot 1 Z=60 Rmt= 1.685 Rnm= 1.765
+ Pot 2 Z=28 Rmt= 1.276 Rnm= 1.376
+ Pot 3 Z= 8 Rmt= 1.026 Rnm= 1.078
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-2.877E+00 kf=2.144E+00 Vint=-2.039E+01 Rs_int= 1.692
+ PATH  Rmax= 4.291,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   1.9505
+ feff0002.dat 0.00000    37.560     2.000     2   2.2150
+ feff0003.dat 0.00000    49.230     4.000     2   3.1582
+ feff0004.dat 0.00000    24.450     2.000     2   3.1672
+ feff0005.dat 0.00000     4.458     4.000     3   3.2938
+ feff0006.dat 0.00000    21.710     2.000     2   3.3336
+ feff0007.dat 0.00000     3.949     4.000     3   3.3646
+ feff0008.dat 0.00000     6.395     8.000     3   3.5513
+ feff0009.dat 0.00000     6.246     8.000     3   3.5655
+ feff0010.dat 0.00000     4.685     8.000     3   3.7914
+ feff0011.dat 0.00000    20.460     4.000     2   3.8773
+ feff0012.dat 0.00000     5.315     8.000     3   3.8791
+ feff0013.dat 0.00000    50.140     8.000     3   3.8891
+ feff0014.dat 0.00000    16.030     4.000     3   3.9009
+ feff0015.dat 0.00000     9.153     4.000     4   3.9009
+ feff0016.dat 0.00000     5.643     4.000     4   3.9009
+ feff0017.dat 0.00000    31.300     4.000     4   3.9009
+ feff0018.dat 0.00000    15.070     4.000     2   4.2310
+ feff0019.dat 0.00000    14.700     4.000     2   4.2709

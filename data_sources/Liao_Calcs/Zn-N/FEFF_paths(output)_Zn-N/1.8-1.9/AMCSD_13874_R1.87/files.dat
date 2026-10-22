@@ -1,0 +1,25 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Sr2 Zn1 N2
+ Reduced formula:  Sr2ZnN2
+ space group: (I4/mmm), space number:  (139)
+ abc:  3.856800   3.856800   7.018975
+ angles:105.946578 105.946578  90.000000
+ sites: 5
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=30 Rmt= 1.186 Rnm= 1.430 K  shell
+ Pot 1 Z= 7 Rmt= 1.090 Rnm= 1.168
+ Pot 2 Z=38 Rmt= 1.832 Rnm= 1.900
+ Pot 3 Z=30 Rmt= 1.192 Rnm= 1.444
+ Gam_ch=1.897E+00 H-L exch
+ Mu=-1.768E+00 kf=1.920E+00 Vint=-1.582E+01 Rs_int= 1.889
+ PATH  Rmax= 4.123,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.8743
+ feff0002.dat 0.00000   119.400     8.000     2   3.4165
+ feff0003.dat 0.00000    18.810     2.000     3   3.7486
+ feff0004.dat 0.00000    15.940     2.000     4   3.7486
+ feff0005.dat 0.00000     9.148     2.000     4   3.7486
+ feff0006.dat 0.00000    38.120     4.000     2   3.8568
+ feff0007.dat 0.00000    18.010    16.000     3   4.0121

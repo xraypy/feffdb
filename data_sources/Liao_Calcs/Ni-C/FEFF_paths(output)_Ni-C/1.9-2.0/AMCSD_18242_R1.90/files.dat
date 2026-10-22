@@ -1,0 +1,32 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Mg1 Ni3 C1
+ Reduced formula:  MgNi3C
+ space group: (Pm-3m), space number:  (221)
+ abc:  3.808900   3.808900   3.808900
+ angles: 90.000000  90.000000  90.000000
+ sites: 5
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.241 Rnm= 1.334 K  shell
+ Pot 1 Z= 6 Rmt= 0.980 Rnm= 1.089
+ Pot 2 Z=12 Rmt= 1.467 Rnm= 1.490
+ Pot 3 Z=28 Rmt= 1.251 Rnm= 1.348
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-7.274E+00 kf=2.190E+00 Vint=-2.555E+01 Rs_int= 1.656
+ PATH  Rmax= 4.190,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.9044
+ feff0002.dat 0.00000    99.320     4.000     2   2.6933
+ feff0003.dat 0.00000   221.600     8.000     2   2.6933
+ feff0004.dat 0.00000    26.610    16.000     3   3.2511
+ feff0005.dat 0.00000    73.050     6.000     2   3.8089
+ feff0006.dat 0.00000    17.570     2.000     3   3.8089
+ feff0007.dat 0.00000    73.370     4.000     3   3.8089
+ feff0008.dat 0.00000    10.220     2.000     4   3.8089
+ feff0009.dat 0.00000     6.322     2.000     4   3.8089
+ feff0010.dat 0.00000    55.690     2.000     4   3.8089
+ feff0011.dat 0.00000    11.320     8.000     4   3.8089
+ feff0012.dat 0.00000    10.480    16.000     3   3.9482
+ feff0013.dat 0.00000    15.060    32.000     3   4.0399
+ feff0014.dat 0.00000     9.655    16.000     3   4.0399

@@ -1,0 +1,20 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Co1 I2 N6
+ Reduced formula:  Co(IN3)2
+ space group: (Fm-3m), space number:  (225)
+ abc:  7.721606   7.721606   7.721606
+ angles: 60.000000  60.000000  60.000000
+ sites: 9
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=27 Rmt= 1.703 Rnm= 1.919 K  shell
+ Pot 1 Z=53 Rmt= 2.527 Rnm= 2.591
+ Pot 2 Z= 7 Rmt= 1.541 Rnm= 1.619
+ Gam_ch=1.436E+00 H-L exch
+ Mu=-2.643E+00 kf=9.241E-01 Vint=-5.897E+00 Rs_int= 3.925
+ PATH  Rmax= 4.776,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.7300
+ feff0002.dat 0.00000    15.620    24.000     3   4.6604
+ feff0003.dat 0.00000    49.980     8.000     2   4.7285

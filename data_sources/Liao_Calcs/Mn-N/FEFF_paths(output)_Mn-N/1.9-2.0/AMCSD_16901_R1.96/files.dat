@@ -1,0 +1,32 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Mn3 Ir1 N1
+ Reduced formula:  Mn3IrN
+ space group: (Pm-3m), space number:  (221)
+ abc:  3.913000   3.913000   3.913000
+ angles: 90.000000  90.000000  90.000000
+ sites: 5
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=25 Rmt= 1.317 Rnm= 1.385 K  shell
+ Pot 1 Z=77 Rmt= 1.517 Rnm= 1.545
+ Pot 2 Z=25 Rmt= 1.330 Rnm= 1.399
+ Pot 3 Z= 7 Rmt= 0.966 Rnm= 1.051
+ Gam_ch=1.193E+00 H-L exch
+ Mu=-5.398E+00 kf=2.243E+00 Vint=-2.456E+01 Rs_int= 1.617
+ PATH  Rmax= 4.304,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.9565
+ feff0002.dat 0.00000   120.700     4.000     2   2.7669
+ feff0003.dat 0.00000   211.400     8.000     2   2.7669
+ feff0004.dat 0.00000    21.060    16.000     3   3.3400
+ feff0005.dat 0.00000    68.860     6.000     2   3.9130
+ feff0006.dat 0.00000    17.350     2.000     3   3.9130
+ feff0007.dat 0.00000    68.180     4.000     3   3.9130
+ feff0008.dat 0.00000    17.750     2.000     4   3.9130
+ feff0009.dat 0.00000     5.872     2.000     4   3.9130
+ feff0010.dat 0.00000    52.500     2.000     4   3.9130
+ feff0011.dat 0.00000    11.390     8.000     4   3.9130
+ feff0012.dat 0.00000    15.900    16.000     3   4.0561
+ feff0013.dat 0.00000    20.880    32.000     3   4.1504
+ feff0014.dat 0.00000    10.520    16.000     3   4.1504

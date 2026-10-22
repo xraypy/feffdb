@@ -1,0 +1,37 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Cs10 Co10 F40
+ Reduced formula:  CsCoF4
+ space group: (I-4c2), space number:  (120)
+ abc: 10.920290  10.920290  10.920290
+ angles:107.414393 110.509321 110.509321
+ sites: 60
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=27 Rmt= 1.191 Rnm= 1.346 K  shell
+ Pot 1 Z=27 Rmt= 1.127 Rnm= 1.308
+ Pot 2 Z=55 Rmt= 2.112 Rnm= 2.187
+ Pot 3 Z= 9 Rmt= 1.055 Rnm= 1.135
+ Gam_ch=1.436E+00 H-L exch
+ Mu=-1.155E+00 kf=1.907E+00 Vint=-1.502E+01 Rs_int= 1.901
+ PATH  Rmax= 4.036,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.8344
+ feff0002.dat 0.00000   170.300     4.000     2   1.9667
+ feff0003.dat 0.00000    16.750     8.000     3   3.2217
+ feff0004.dat 0.00000    14.940     8.000     3   3.2684
+ feff0005.dat 0.00000     6.725     4.000     3   3.3573
+ feff0006.dat 0.00000     6.697     4.000     3   3.3590
+ feff0007.dat 0.00000    16.050     2.000     3   3.6689
+ feff0008.dat 0.00000    10.560     2.000     4   3.6689
+ feff0009.dat 0.00000     7.706     2.000     4   3.6689
+ feff0010.dat 0.00000    66.940     4.000     2   3.6845
+ feff0011.dat 0.00000    38.660     4.000     2   3.7489
+ feff0012.dat 0.00000     3.912     8.000     4   3.8011
+ feff0013.dat 0.00000     3.031     8.000     4   3.8011
+ feff0014.dat 0.00000    55.480     8.000     3   3.8080
+ feff0015.dat 0.00000    15.600     2.000     2   3.8657
+ feff0016.dat 0.00000    25.270     4.000     4   3.8672
+ feff0017.dat 0.00000    24.460     4.000     3   3.9322
+ feff0018.dat 0.00000    15.060     4.000     4   3.9333
+ feff0019.dat 0.00000    11.360     4.000     4   3.9333

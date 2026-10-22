@@ -1,0 +1,27 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Fe1 Ni2 C6 N6
+ Reduced formula:  FeNi2(CN)6
+ space group: (F-43m), space number:  (216)
+ abc:  7.071068   7.071068   7.071068
+ angles: 60.000000  60.000000  60.000000
+ sites: 15
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.224 Rnm= 1.297 K  shell
+ Pot 1 Z= 6 Rmt= 0.766 Rnm= 1.033
+ Pot 2 Z=26 Rmt= 1.237 Rnm= 1.347
+ Pot 3 Z= 7 Rmt= 0.747 Rnm= 1.019
+ Pot 4 Z=28 Rmt= 2.227 Rnm= 2.227
+ Gam_ch=1.576E+00 H-L exch
+ Mu= 9.064E+00 kf=2.691E+00 Vint=-1.853E+01 Rs_int= 1.348
+ PATH  Rmax= 4.180,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   1.9000
+ feff0002.dat 0.00000    30.440     6.000     2   3.1000
+ feff0003.dat 0.00000    96.050    12.000     3   3.1000
+ feff0004.dat 0.00000    76.620     6.000     4   3.1000
+ feff0005.dat 0.00000    13.800    24.000     3   3.2435
+ feff0006.dat 0.00000    15.080     6.000     3   3.8000
+ feff0007.dat 0.00000    11.120     6.000     4   3.8000
+ feff0008.dat 0.00000     4.090     6.000     4   3.8000

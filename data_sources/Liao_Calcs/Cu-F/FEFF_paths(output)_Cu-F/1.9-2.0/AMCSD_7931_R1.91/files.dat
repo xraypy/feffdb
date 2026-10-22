@@ -1,0 +1,35 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  K2 Cu2 F6
+ Reduced formula:  KCuF3
+ space group: (I4/mcm), space number:  (140)
+ abc:  5.708657   5.708657   5.708657
+ angles: 93.087967 118.233466 118.233466
+ sites: 10
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=29 Rmt= 1.211 Rnm= 1.369 K  shell
+ Pot 1 Z=29 Rmt= 1.182 Rnm= 1.313
+ Pot 2 Z= 9 Rmt= 1.055 Rnm= 1.125
+ Pot 3 Z=19 Rmt= 1.927 Rnm= 1.968
+ Gam_ch=1.729E+00 H-L exch
+ Mu=-7.919E-01 kf=1.886E+00 Vint=-1.434E+01 Rs_int= 1.923
+ PATH  Rmax= 4.066,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.8482
+ feff0002.dat 0.00000    86.870     2.000     2   1.9632
+ feff0003.dat 0.00000    59.810     2.000     2   2.2957
+ feff0004.dat 0.00000    15.680     8.000     3   3.2538
+ feff0005.dat 0.00000   106.100     8.000     2   3.5271
+ feff0006.dat 0.00000    10.960     8.000     3   3.5456
+ feff0007.dat 0.00000     9.489     8.000     3   3.6398
+ feff0008.dat 0.00000    15.530     2.000     3   3.6964
+ feff0009.dat 0.00000    11.090     2.000     4   3.6964
+ feff0010.dat 0.00000     7.412     2.000     4   3.6964
+ feff0011.dat 0.00000     4.003     8.000     4   3.8114
+ feff0012.dat 0.00000    17.460     2.000     2   3.9264
+ feff0013.dat 0.00000    12.260     2.000     3   3.9264
+ feff0014.dat 0.00000    46.090     4.000     3   3.9264
+ feff0015.dat 0.00000     8.450     2.000     4   3.9264
+ feff0016.dat 0.00000     5.667     2.000     4   3.9264
+ feff0017.dat 0.00000    30.430     2.000     4   3.9264

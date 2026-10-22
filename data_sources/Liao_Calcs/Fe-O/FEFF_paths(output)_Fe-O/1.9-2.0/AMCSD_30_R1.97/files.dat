@@ -1,0 +1,33 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ba4 Fe4 Si16 O40
+ Reduced formula:  BaFe(Si2O5)2
+ space group: (P4/ncc), space number:  (130)
+ abc:  7.495000   7.495000  16.050000
+ angles: 90.000000  90.000000  90.000000
+ sites: 64
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=26 Rmt= 1.293 Rnm= 1.435 K  shell
+ Pot 1 Z=56 Rmt= 1.994 Rnm= 2.075
+ Pot 2 Z= 8 Rmt= 0.963 Rnm= 1.076
+ Pot 3 Z=14 Rmt= 0.964 Rnm= 1.188
+ Gam_ch=1.309E+00 H-L exch
+ Mu= 2.647E+00 kf=2.410E+00 Vint=-1.948E+01 Rs_int= 1.505
+ PATH  Rmax= 4.327,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   1.9666
+ feff0002.dat 0.00000    31.350     4.000     2   3.3342
+ feff0003.dat 0.00000     7.250     8.000     3   3.3572
+ feff0004.dat 0.00000    26.230     8.000     3   3.4680
+ feff0005.dat 0.00000    11.740     4.000     4   3.6018
+ feff0006.dat 0.00000    22.500     4.000     2   3.7087
+ feff0007.dat 0.00000    15.340     4.000     3   3.9333
+ feff0008.dat 0.00000    14.130     4.000     4   3.9333
+ feff0009.dat 0.00000     4.724     4.000     4   3.9333
+ feff0010.dat 0.00000    34.650     4.000     2   4.0163
+ feff0011.dat 0.00000    17.770     4.000     2   4.0728
+ feff0012.dat 0.00000    17.310     4.000     2   4.1148
+ feff0013.dat 0.00000     5.699     8.000     3   4.1752
+ feff0014.dat 0.00000     7.910     8.000     3   4.3253
+ feff0015.dat 0.00000    10.210     8.000     3   4.3265

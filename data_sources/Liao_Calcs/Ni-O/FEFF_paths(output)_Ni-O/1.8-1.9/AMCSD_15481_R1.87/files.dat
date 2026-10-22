@@ -1,0 +1,35 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Ba1 Er2 Ni1 O5
+ Reduced formula:  BaEr2NiO5
+ space group: (Immm), space number:  (71)
+ abc:  3.747200   5.729300   6.595515
+ angles:115.742860 106.503375  90.000000
+ sites: 9
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=28 Rmt= 1.265 Rnm= 1.349 K  shell
+ Pot 1 Z=56 Rmt= 1.989 Rnm= 2.029
+ Pot 2 Z=68 Rmt= 1.576 Rnm= 1.647
+ Pot 3 Z=28 Rmt= 1.288 Rnm= 1.386
+ Pot 4 Z= 8 Rmt= 0.993 Rnm= 1.062
+ Gam_ch=1.576E+00 H-L exch
+ Mu=-3.446E+00 kf=2.141E+00 Vint=-2.090E+01 Rs_int= 1.694
+ PATH  Rmax= 4.122,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   1.8736
+ feff0002.dat 0.00000   143.800     4.000     2   2.1682
+ feff0003.dat 0.00000    96.180     4.000     2   2.9553
+ feff0004.dat 0.00000    86.530     4.000     2   3.4230
+ feff0005.dat 0.00000    26.250    16.000     3   3.4537
+ feff0006.dat 0.00000     6.409     4.000     3   3.5484
+ feff0007.dat 0.00000    11.800     8.000     3   3.5572
+ feff0008.dat 0.00000    20.060     2.000     2   3.7472
+ feff0009.dat 0.00000    16.820     2.000     3   3.7472
+ feff0010.dat 0.00000    56.870     4.000     3   3.7472
+ feff0011.dat 0.00000    10.260     2.000     4   3.7472
+ feff0012.dat 0.00000     5.853     2.000     4   3.7472
+ feff0013.dat 0.00000    41.200     2.000     4   3.7472
+ feff0014.dat 0.00000    13.640    16.000     3   3.7650
+ feff0015.dat 0.00000     4.468     4.000     3   3.8403
+ feff0017.dat 0.00000     9.680     8.000     3   4.0806

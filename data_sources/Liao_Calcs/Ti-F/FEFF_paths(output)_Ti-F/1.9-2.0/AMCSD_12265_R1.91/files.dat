@@ -1,0 +1,32 @@
+ comment: None given                            Feff8L (EXAFS)       0.1
+ Source:
+ Structure Summary:  Na12 Li12 Ti8 F48
+ Reduced formula:  Na3Li3Ti2F12
+ space group: (Ia-3d), space number:  (230)
+ abc: 10.823585  10.823585  10.823585
+ angles:109.471221 109.471221 109.471221
+ sites: 80
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=22 Rmt= 1.209 Rnm= 1.376 K  shell
+ Pot 1 Z= 9 Rmt= 1.031 Rnm= 1.122
+ Pot 2 Z= 3 Rmt= 1.149 Rnm= 1.268
+ Pot 3 Z=11 Rmt= 1.600 Rnm= 1.643
+ Pot 4 Z=22 Rmt= 1.255 Rnm= 1.499
+ Gam_ch=9.030E-01 H-L exch
+ Mu=-1.188E+00 kf=1.910E+00 Vint=-1.509E+01 Rs_int= 1.899
+ PATH  Rmax= 4.199,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   1.9088
+ feff0002.dat 0.00000     9.106    12.000     3   3.2483
+ feff0003.dat 0.00000     8.681    12.000     3   3.2685
+ feff0004.dat 0.00000    10.770     6.000     2   3.4933
+ feff0005.dat 0.00000    20.140     6.000     2   3.4933
+ feff0006.dat 0.00000    13.310    12.000     3   3.6425
+ feff0007.dat 0.00000     5.212     6.000     4   3.7918
+ feff0008.dat 0.00000    15.980     6.000     3   3.8175
+ feff0009.dat 0.00000    23.500     6.000     4   3.8175
+ feff0010.dat 0.00000     9.354     6.000     4   3.8175
+ feff0013.dat 0.00000    17.330     6.000     2   3.9190
+ feff0014.dat 0.00000     4.850    12.000     3   3.9539
+ feff0015.dat 0.00000     4.630    12.000     3   3.9733
