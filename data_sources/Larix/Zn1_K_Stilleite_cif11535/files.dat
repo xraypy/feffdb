@@ -1,0 +1,42 @@
+ Structure from AMSCIFDB, AMS_ID: 11535         Feff8L (EXAFS)       0.1
+ Mineral Name: Stilleite
+ Journal: Crystal Structures 1, pp. 85-237 (1963)
+ Authors: Wyckoff R W G
+ Title1:  Second edition. Interscience Publishers, New York, New York
+ Title2:  Note: ZnS structure, sphalerite structure
+ Formula:    ZnSe
+ SpaceGroup: F-43m
+ # sites:    2
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=30 Rmt= 1.384 Rnm= 1.531 K  shell
+ Pot 1 Z=34 Rmt= 1.437 Rnm= 1.591
+ Pot 2 Z=30 Rmt= 1.385 Rnm= 1.534
+ Gam_ch=1.897E+00 H-L exch
+ Mu=-1.408E+00 kf=1.778E+00 Vint=-1.345E+01 Rs_int= 2.040
+ PATH  Rmax= 6.500,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   2.4541
+ feff0002.dat 0.00000   100.000    12.000     2   4.0076
+ feff0003.dat 0.00000     9.500    12.000     3   4.4579
+ feff0004.dat 0.00000    41.780    24.000     3   4.4579
+ feff0005.dat 0.00000    65.060    12.000     2   4.6993
+ feff0006.dat 0.00000     4.669     4.000     4   4.9083
+ feff0007.dat 0.00000     7.370    12.000     4   4.9083
+ feff0008.dat 0.00000     5.774    48.000     3   5.5805
+ feff0009.dat 0.00000    19.010    48.000     3   5.5805
+ feff0010.dat 0.00000    10.830    48.000     3   5.5805
+ feff0011.dat 0.00000    19.400     6.000     2   5.6676
+ feff0012.dat 0.00000     5.128    48.000     3   6.0114
+ feff0013.dat 0.00000    31.050    12.000     2   6.1761
+ feff0014.dat 0.00000    14.030    24.000     3   6.3189
+ feff0015.dat 0.00000    36.420    24.000     3   6.3189
+ feff0016.dat 0.00000    14.330    24.000     3   6.3189
+ feff0017.dat 0.00000     6.698    24.000     3   6.4105
+ feff0018.dat 0.00000     6.748    24.000     3   6.4105
+ feff0019.dat 0.00000     4.630    24.000     4   6.4617
+ feff0020.dat 0.00000    10.340    24.000     4   6.4617
+ feff0021.dat 0.00000     2.668    12.000     4   6.4617
+ feff0022.dat 0.00000    16.140    12.000     4   6.4617
+ feff0023.dat 0.00000     4.194    24.000     4   6.4617
+ feff0024.dat 0.00000    10.280    24.000     4   6.4617

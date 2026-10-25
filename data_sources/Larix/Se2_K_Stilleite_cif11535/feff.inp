@@ -1,0 +1,155 @@
+* FEFF8 input file generated 2026-10-25 17:10:26
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: ZnSe
+TITLE SpaceGroup: F-43m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11535
+TITLE Mineral Name: stilleite
+TITLE Publication: Crystal Structures 1 [85:237] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=5.6676, b=5.6676, c=5.6676, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 182.05300
+TITLE Crystal Density (gr/cm^3): 5.267
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     4a   Zn 
+*   2   0.25000 0.25000 0.25000     4c   Se   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    34    Se      -1     -1       0.01
+     1    30    Zn      -1     -1
+     2    34    Se      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Se    0.00000  * Se_2        0
+   -1.41690   -1.41690   -1.41690  1   Zn    2.45414  * Zn_1        1
+   -1.41690    1.41690    1.41690  1   Zn    2.45414  * Zn_1        2
+    1.41690   -1.41690    1.41690  1   Zn    2.45414  * Zn_1        3
+    1.41690    1.41690   -1.41690  1   Zn    2.45414  * Zn_1        4
+   -2.83380   -2.83380   -0.00000  2   Se    4.00760  * Se_2        5
+   -2.83380    0.00000   -2.83380  2   Se    4.00760  * Se_2        6
+   -2.83380    2.83380    0.00000  2   Se    4.00760  * Se_2        7
+   -2.83380    0.00000    2.83380  2   Se    4.00760  * Se_2        8
+    0.00000   -2.83380   -2.83380  2   Se    4.00760  * Se_2        9
+    2.83380   -2.83380    0.00000  2   Se    4.00760  * Se_2       10
+    0.00000   -2.83380    2.83380  2   Se    4.00760  * Se_2       11
+    2.83380    0.00000   -2.83380  2   Se    4.00760  * Se_2       12
+   -0.00000    2.83380   -2.83380  2   Se    4.00760  * Se_2       13
+    2.83380    2.83380    0.00000  2   Se    4.00760  * Se_2       14
+    2.83380    0.00000    2.83380  2   Se    4.00760  * Se_2       15
+   -0.00000    2.83380    2.83380  2   Se    4.00760  * Se_2       16
+   -1.41690   -1.41690    4.25070  1   Zn    4.69933  * Zn_1       17
+   -4.25070   -1.41690    1.41690  1   Zn    4.69933  * Zn_1       18
+   -1.41690   -4.25070    1.41690  1   Zn    4.69933  * Zn_1       19
+   -1.41690    4.25070   -1.41690  1   Zn    4.69933  * Zn_1       20
+   -4.25070    1.41690   -1.41690  1   Zn    4.69933  * Zn_1       21
+   -1.41690    1.41690   -4.25070  1   Zn    4.69933  * Zn_1       22
+    4.25070   -1.41690   -1.41690  1   Zn    4.69933  * Zn_1       23
+    1.41690   -1.41690   -4.25070  1   Zn    4.69933  * Zn_1       24
+    1.41690   -4.25070   -1.41690  1   Zn    4.69933  * Zn_1       25
+    1.41690    4.25070    1.41690  1   Zn    4.69933  * Zn_1       26
+    1.41690    1.41690    4.25070  1   Zn    4.69933  * Zn_1       27
+    4.25070    1.41690    1.41690  1   Zn    4.69933  * Zn_1       28
+   -5.66760    0.00000   -0.00000  2   Se    5.66760  * Se_2       29
+    0.00000   -5.66760   -0.00000  2   Se    5.66760  * Se_2       30
+    0.00000    0.00000   -5.66760  2   Se    5.66760  * Se_2       31
+    5.66760    0.00000    0.00000  2   Se    5.66760  * Se_2       32
+   -0.00000    5.66760    0.00000  2   Se    5.66760  * Se_2       33
+    0.00000    0.00000    5.66760  2   Se    5.66760  * Se_2       34
+   -4.25070   -1.41690   -4.25070  1   Zn    6.17612  * Zn_1       35
+   -4.25070   -4.25070   -1.41690  1   Zn    6.17612  * Zn_1       36
+   -1.41690   -4.25070   -4.25070  1   Zn    6.17612  * Zn_1       37
+   -1.41690    4.25070    4.25070  1   Zn    6.17612  * Zn_1       38
+   -4.25070    4.25070    1.41690  1   Zn    6.17612  * Zn_1       39
+   -4.25070    1.41690    4.25070  1   Zn    6.17612  * Zn_1       40
+    4.25070   -1.41690    4.25070  1   Zn    6.17612  * Zn_1       41
+    1.41690   -4.25070    4.25070  1   Zn    6.17612  * Zn_1       42
+    4.25070   -4.25070    1.41690  1   Zn    6.17612  * Zn_1       43
+    4.25070    4.25070   -1.41690  1   Zn    6.17612  * Zn_1       44
+    1.41690    4.25070   -4.25070  1   Zn    6.17612  * Zn_1       45
+    4.25070    1.41690   -4.25070  1   Zn    6.17612  * Zn_1       46
+   -2.83380   -2.83380   -5.66760  2   Se    6.94136  * Se_2       47
+   -2.83380   -2.83380    5.66760  2   Se    6.94136  * Se_2       48
+   -2.83380    2.83380   -5.66760  2   Se    6.94136  * Se_2       49
+   -2.83380    2.83380    5.66760  2   Se    6.94136  * Se_2       50
+    2.83380   -2.83380   -5.66760  2   Se    6.94136  * Se_2       51
+    2.83380   -2.83380    5.66760  2   Se    6.94136  * Se_2       52
+    5.66760    2.83380   -2.83380  2   Se    6.94136  * Se_2       53
+    2.83380    5.66760   -2.83380  2   Se    6.94136  * Se_2       54
+    2.83380    2.83380   -5.66760  2   Se    6.94136  * Se_2       55
+   -2.83380   -5.66760   -2.83380  2   Se    6.94136  * Se_2       56
+   -5.66760   -2.83380   -2.83380  2   Se    6.94136  * Se_2       57
+   -2.83380   -5.66760    2.83380  2   Se    6.94136  * Se_2       58
+   -5.66760   -2.83380    2.83380  2   Se    6.94136  * Se_2       59
+   -2.83380    5.66760   -2.83380  2   Se    6.94136  * Se_2       60
+   -5.66760    2.83380   -2.83380  2   Se    6.94136  * Se_2       61
+   -2.83380    5.66760    2.83380  2   Se    6.94136  * Se_2       62
+   -5.66760    2.83380    2.83380  2   Se    6.94136  * Se_2       63
+    5.66760   -2.83380   -2.83380  2   Se    6.94136  * Se_2       64
+    2.83380   -5.66760   -2.83380  2   Se    6.94136  * Se_2       65
+    5.66760   -2.83380    2.83380  2   Se    6.94136  * Se_2       66
+    2.83380   -5.66760    2.83380  2   Se    6.94136  * Se_2       67
+    5.66760    2.83380    2.83380  2   Se    6.94136  * Se_2       68
+    2.83380    5.66760    2.83380  2   Se    6.94136  * Se_2       69
+    2.83380    2.83380    5.66760  2   Se    6.94136  * Se_2       70
+
+* END

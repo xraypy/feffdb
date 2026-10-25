@@ -1,0 +1,169 @@
+* FEFF8 input file generated 2026-09-13 20:16:54
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Zn
+TITLE SpaceGroup: P6_3/mmc
+TITLE CIF Source: Am Min Crystal Structure Database ID 11200
+TITLE Mineral Name: zinc
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=2.6648, b=2.6648, c=4.9467, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 30.42100
+TITLE Crystal Density (gr/cm^3): 7.139
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.33333 0.66667 0.25000     2c   Zn   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    30    Zn      -1     -1       0.01
+     1    30    Zn      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Zn    0.00000  * Zn_1        0
+   -1.33240    2.30778    0.00000  1   Zn    2.66480  * Zn_1        1
+   -2.66480    0.00000   -0.00000  1   Zn    2.66480  * Zn_1        2
+    1.33240   -2.30778   -0.00000  1   Zn    2.66480  * Zn_1        3
+    1.33240    2.30778    0.00000  1   Zn    2.66480  * Zn_1        4
+    2.66480    0.00000    0.00000  1   Zn    2.66480  * Zn_1        5
+   -1.33240   -2.30778   -0.00000  1   Zn    2.66480  * Zn_1        6
+   -1.33240   -0.76926   -2.47335  1   Zn    2.91282  * Zn_1        7
+   -1.33240   -0.76926    2.47335  1   Zn    2.91282  * Zn_1        8
+    1.33240   -0.76926   -2.47335  1   Zn    2.91282  * Zn_1        9
+    1.33240   -0.76926    2.47335  1   Zn    2.91282  * Zn_1       10
+    0.00000    1.53852   -2.47335  1   Zn    2.91282  * Zn_1       11
+    0.00000    1.53852    2.47335  1   Zn    2.91282  * Zn_1       12
+   -2.66480    1.53852   -2.47335  1   Zn    3.94787  * Zn_1       13
+   -2.66480    1.53852    2.47335  1   Zn    3.94787  * Zn_1       14
+   -0.00000   -3.07705    2.47335  1   Zn    3.94787  * Zn_1       15
+   -0.00000   -3.07705   -2.47335  1   Zn    3.94787  * Zn_1       16
+    2.66480    1.53852   -2.47335  1   Zn    3.94787  * Zn_1       17
+    2.66480    1.53852    2.47335  1   Zn    3.94787  * Zn_1       18
+   -3.99720   -2.30778   -0.00000  1   Zn    4.61557  * Zn_1       19
+   -3.99720    2.30778    0.00000  1   Zn    4.61557  * Zn_1       20
+    3.99720   -2.30778    0.00000  1   Zn    4.61557  * Zn_1       21
+   -0.00000   -4.61557   -0.00000  1   Zn    4.61557  * Zn_1       22
+    0.00000    4.61557    0.00000  1   Zn    4.61557  * Zn_1       23
+    3.99720    2.30778    0.00000  1   Zn    4.61557  * Zn_1       24
+   -3.99720   -0.76926   -2.47335  1   Zn    4.76307  * Zn_1       25
+   -2.66480   -3.07705   -2.47335  1   Zn    4.76307  * Zn_1       26
+   -3.99720   -0.76926    2.47335  1   Zn    4.76307  * Zn_1       27
+   -2.66480   -3.07705    2.47335  1   Zn    4.76307  * Zn_1       28
+    2.66480   -3.07705   -2.47335  1   Zn    4.76307  * Zn_1       29
+    2.66480   -3.07705    2.47335  1   Zn    4.76307  * Zn_1       30
+   -1.33240    3.84631   -2.47335  1   Zn    4.76307  * Zn_1       31
+   -1.33240    3.84631    2.47335  1   Zn    4.76307  * Zn_1       32
+    3.99720   -0.76926   -2.47335  1   Zn    4.76307  * Zn_1       33
+    3.99720   -0.76926    2.47335  1   Zn    4.76307  * Zn_1       34
+    1.33240    3.84631   -2.47335  1   Zn    4.76307  * Zn_1       35
+    1.33240    3.84631    2.47335  1   Zn    4.76307  * Zn_1       36
+    0.00000    0.00000   -4.94670  1   Zn    4.94670  * Zn_1       37
+    0.00000    0.00000    4.94670  1   Zn    4.94670  * Zn_1       38
+   -2.66480    4.61557    0.00000  1   Zn    5.32960  * Zn_1       39
+   -2.66480   -4.61557   -0.00000  1   Zn    5.32960  * Zn_1       40
+   -5.32960    0.00000   -0.00000  1   Zn    5.32960  * Zn_1       41
+    2.66480   -4.61557   -0.00000  1   Zn    5.32960  * Zn_1       42
+    2.66480    4.61557    0.00000  1   Zn    5.32960  * Zn_1       43
+    5.32960    0.00000    0.00000  1   Zn    5.32960  * Zn_1       44
+   -1.33240   -2.30778   -4.94670  1   Zn    5.61881  * Zn_1       45
+   -1.33240   -2.30778    4.94670  1   Zn    5.61881  * Zn_1       46
+   -1.33240    2.30778   -4.94670  1   Zn    5.61881  * Zn_1       47
+   -2.66480    0.00000   -4.94670  1   Zn    5.61881  * Zn_1       48
+   -1.33240    2.30778    4.94670  1   Zn    5.61881  * Zn_1       49
+   -2.66480    0.00000    4.94670  1   Zn    5.61881  * Zn_1       50
+    1.33240   -2.30778   -4.94670  1   Zn    5.61881  * Zn_1       51
+    1.33240   -2.30778    4.94670  1   Zn    5.61881  * Zn_1       52
+    1.33240    2.30778   -4.94670  1   Zn    5.61881  * Zn_1       53
+    2.66480    0.00000   -4.94670  1   Zn    5.61881  * Zn_1       54
+    2.66480    0.00000    4.94670  1   Zn    5.61881  * Zn_1       55
+    1.33240    2.30778    4.94670  1   Zn    5.61881  * Zn_1       56
+   -1.33240   -5.38483    2.47335  1   Zn    6.07364  * Zn_1       57
+   -5.32960    1.53852   -2.47335  1   Zn    6.07364  * Zn_1       58
+   -5.32960    1.53852    2.47335  1   Zn    6.07364  * Zn_1       59
+    1.33240   -5.38483    2.47335  1   Zn    6.07364  * Zn_1       60
+   -1.33240   -5.38483   -2.47335  1   Zn    6.07364  * Zn_1       61
+   -3.99720    3.84631   -2.47335  1   Zn    6.07364  * Zn_1       62
+   -3.99720    3.84631    2.47335  1   Zn    6.07364  * Zn_1       63
+    1.33240   -5.38483   -2.47335  1   Zn    6.07364  * Zn_1       64
+    3.99720    3.84631   -2.47335  1   Zn    6.07364  * Zn_1       65
+    5.32960    1.53852   -2.47335  1   Zn    6.07364  * Zn_1       66
+    5.32960    1.53852    2.47335  1   Zn    6.07364  * Zn_1       67
+    3.99720    3.84631    2.47335  1   Zn    6.07364  * Zn_1       68
+   -5.32960   -3.07705    2.47335  1   Zn    6.63252  * Zn_1       69
+   -5.32960   -3.07705   -2.47335  1   Zn    6.63252  * Zn_1       70
+    5.32960   -3.07705   -2.47335  1   Zn    6.63252  * Zn_1       71
+    5.32960   -3.07705    2.47335  1   Zn    6.63252  * Zn_1       72
+    0.00000    6.15409   -2.47335  1   Zn    6.63252  * Zn_1       73
+    0.00000    6.15409    2.47335  1   Zn    6.63252  * Zn_1       74
+   -3.99720   -2.30778    4.94670  1   Zn    6.76560  * Zn_1       75
+   -3.99720    2.30778   -4.94670  1   Zn    6.76560  * Zn_1       76
+   -3.99720    2.30778    4.94670  1   Zn    6.76560  * Zn_1       77
+    3.99720   -2.30778   -4.94670  1   Zn    6.76560  * Zn_1       78
+    3.99720   -2.30778    4.94670  1   Zn    6.76560  * Zn_1       79
+   -0.00000   -4.61557    4.94670  1   Zn    6.76560  * Zn_1       80
+    0.00000    4.61557   -4.94670  1   Zn    6.76560  * Zn_1       81
+   -3.99720   -2.30778   -4.94670  1   Zn    6.76560  * Zn_1       82
+   -0.00000   -4.61557   -4.94670  1   Zn    6.76560  * Zn_1       83
+    3.99720    2.30778   -4.94670  1   Zn    6.76560  * Zn_1       84
+    0.00000    4.61557    4.94670  1   Zn    6.76560  * Zn_1       85
+    3.99720    2.30778    4.94670  1   Zn    6.76560  * Zn_1       86
+
+* END
