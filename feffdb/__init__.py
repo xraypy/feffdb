@@ -1,7 +1,7 @@
-from .feffdb import FeffDatabase, create_feffdb
+from .utils import get_feffdb, is_feffdb, create_feffdb
+from .feffdb import FeffDatabase
 from .feffpath import feffpath, FeffDatFile
-from .utils import get_feffdb_path
 from .version import __version__, version_tuple
-__all__ = ['create_feffdb', 'feffpath', 'get_feffdb_path',
-           'FeffDatabase', 'FeffDatFile',
-           '__version__', 'version_tuple']
+
+__all__ = ['get_feffdb', 'is_feffdb', 'create_feffdb', 'feffpath',
+           'FeffDatabase', 'FeffDatFile', '__version__', 'version_tuple']
