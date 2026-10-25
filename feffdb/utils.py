@@ -5,6 +5,7 @@ very simple interface to CIF file for Feff DB
 import os
 import json
 import re
+import sqlite3
 from pathlib import Path
 from io import StringIO, IOBase
 from charset_normalizer import from_bytes
@@ -14,31 +15,89 @@ from xraydb.chemparser import chemparse
 
 from pymatgen.io.cif import CifParser
 
+from .schema import feffdb_schema, VERSIONS
+
 FEFFDB_NAME  = 'feffdat.db'
-FEFFDB_ENV_VAR    = 'FEFF_DB'
-LARCHDIR_ENV_VAR  = 'LARCHDIR ' # used for xraypy items
-LARCHDIR_DEFAULT  = '.larch'
+FEFFDB_ENV   = 'FEFFDAT_DB'
+LARCHDIR_ENV = 'LARCHDIR '
+LARCHDIR_DEF = '.larch'
 
 
-def get_feffdb_path():
-    """get Path to FEFF DB file
-    The default is Path('$HOME/.larch/feffdat.db')
+def is_feffdb(db: str|sqlite3.Connection) -> bool:
+    """test if database file or open connection is a valid Feffdata DB
 
-    but can be changed with 2 environmental variables:
-
-    1. if LARCHDIR is set, that will be used as the parent folder,
-       (with the default '$HOME/.larch'). The database file will be
-           LARCHDIR / 'feffdat.db'
-
-    2. if FEFF_DB is set, and the file exists) that will be used.
+    a valid FEFFDB file has tables 'feffdat', 'feffinp', 'cif', 'element', and 'info'
     """
-    dbname = os.environ.get(FEFFDB_ENV_VAR, None)
-    if dbname is not None and Path(dbname).exists():
+
+    feffdb_tables = ("element", "info", "feffdat", "feffinp", "cif")
+    if isinstance(db, sqlite3.Connection):
+        dbconn = db
+    else:
+        try:
+            dbconn  = sqlite3.connect(db)
+        except Exception:
+            return False
+
+    cursor = dbconn.cursor()
+    cursor.execute("select name from sqlite_master where type='table';")
+    tables = [row[0] for row in cursor.fetchall()]
+    return all([tab in tables for tab in feffdb_tables])
+
+
+def get_feffdb(dbname:str|None=None) -> Path:
+    """return Path to FEFF DB file
+
+    1. if the passed dbname is a valid FeffDB, that will be used.
+    2. if the Environmental Variable FEFFDAT_DB is set (and is a valid FeffDB),
+       that will be used.
+    1. if LARCHDIR is set, that will be used as the parent folder,
+       (with the default '$HOME/.larch').  If the database file
+       LARCHDIR / 'feffdat.db' exists, that will be used.
+
+    If no valid FEFF DB can be found a ValueError will be raised.
+
+    """
+    if dbname is None:
+        dbname = os.environ.get(FEFFDB_ENV, None)
+    if is_feffdb(dbname):
         return Path(dbname)
 
-    parent = Path.home() / os.environ.get(LARCHDIR_ENV_VAR, LARCHDIR_DEFAULT)
+    parent = Path.home() / os.environ.get(LARCHDIR_ENV, LARCHDIR_DEF)
     parent.mkdir(mode=0o755, exist_ok=True)
-    return parent / FEFFDB_NAME
+    dbpath = parent / FEFFDB_NAME
+    if is_feffdb(dbpath):
+        return dbpath
+
+    raise ValueError("cannot find a valid Feff Database")
+
+
+def create_feffdb(dbname=None):
+    """create FeffData.DB"""
+    if dbname is None:
+        dbpath = get_feffdb()
+    else:
+        dbpath = Path(dbname)
+        if dbpath.exists():
+            raise IOError(f"file {dbname} already exists")
+        dppath.parent.mkdir(parents=True, mode=0o755, exist_ok=True)
+
+
+    conn = sqlite3.connect(dbpath)
+    c = conn.cursor()
+    for t in feffdb_schema.split(';'):
+        c.execute(t)
+
+    for version_dat in VERSIONS:
+        c.execute('insert into version values (?, ?, ?, ?)', version_dat)
+
+    xdb = XrayDB()
+    eltab = xdb.tables['elements']
+    q = []
+    for row in xdb.query(eltab).all():
+        c.execute('insert into element values (?, ?, ?, ?)',
+                 (row.atomic_number, row.element, row.name, row.molar_mass))
+    conn.commit()
+
 
 def read_textfile(filename):
     """read text from a file as string
