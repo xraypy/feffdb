@@ -79,7 +79,7 @@ def create_feffdb(dbname=None):
         dbpath = Path(dbname)
         if dbpath.exists():
             raise IOError(f"file {dbname} already exists")
-        dppath.parent.mkdir(parents=True, mode=0o755, exist_ok=True)
+        dbpath.parent.mkdir(parents=True, mode=0o755, exist_ok=True)
 
 
     conn = sqlite3.connect(dbpath)

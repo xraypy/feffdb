@@ -99,7 +99,8 @@ class FeffDatabase(SimpleDB):
         return this_id
 
     def add_feffdat(self, feffdat, feff_inp, cif_file=None,
-                    label=None, description=None):
+                    label=None, description=None,
+                    avoid_duplicates=True, rtoler=0.015):
         """add a Feff.dat file to the database"""
 
         finp_id = self.add_feffinp(feff_inp, cif_file=cif_file)
@@ -111,6 +112,21 @@ class FeffDatabase(SimpleDB):
 
         text = compress(dat.pop('text'))
         fname = dat.pop('filename')
+
+        if avoid_duplicates:
+            nearby = self.list_feffdat(absorber=dat['absorber'],
+                                       scatterer=dat['scatterer'],
+                                       edge=dat['edge'],
+                                       rmin=float(dat['reff'])-rtoler,
+                                       rmax=float(dat['reff'])+rtoler)
+            if len(nearby) > 0:
+                print("Avoiding Duplicate entries:")
+                s = nearby[0]
+                print('This: ', dat['absorber'],  dat['scatterer'],    dat['edge'],  dat['reff'])
+
+                print(s['id'], s['label'], s['absorber'], s['scatterer'], s['edge'], s['reff'])
+
+
         if description is None:
             # default description is filenamae and a few parent folders
             words = Path(fname).parts
@@ -122,16 +138,18 @@ class FeffDatabase(SimpleDB):
                      atomic_symbol(dat['scatterer']),
                      str(round(100*dat['reff']))]
             label = ''.join(words)
+
+
         if label is not None:
             # check fie repeated rows
-            rows = self.get_rows('feffdat', wheree={'label': label},
+            rows = self.get_rows('feffdat', where={'label': label},
                                  none_if_empty=True)
             if rows is not None:
                 olabel, i = label, 0
                 while rows is not None:
                     i += 1
-                    label = f'{olabel_i}'
-                    rows = self.get_rows('feffdat', wheree={'label': label},
+                    label = f'{olabel}_{i}'
+                    rows = self.get_rows('feffdat', where={'label': label},
                                          none_if_empty=True)
 
 
@@ -205,9 +223,13 @@ class FeffDatabase(SimpleDB):
         """
         wargs = {}
         if absorber is not None:
-            wargs['absorber'] = atomic_number(absorber.title())
+            if isinstance(absorber, str):
+                absorber = atomic_number(absorber.title())
+            wargs['absorber'] = absorber
         if scatterer is not None:
-            wargs['scatterer'] = atomic_number(scatterer.title())
+            if isinstance(scatterer, str):
+                scatterer = atomic_number(scatterer.title())
+            wargs['scatterer'] = scatterer
         if edge is not None:
             wargs['edge'] = edge.title()
 
