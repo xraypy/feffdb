@@ -75,7 +75,7 @@ def Add_Liao_Calcs():
 
 
 
-def Add_Metals():
+def Add_LarixCalcs():
     top_folder = 'Larix'
     for calc_dir in listdir(top_folder):
         cpath = Path(top_folder, calc_dir)
@@ -92,6 +92,6 @@ def Add_Metals():
 ##
 if __name__ == '__main__':
     feffdb = FeffDatabase('./feffdat.db', create_ok=True)
+    Add_LarixCalcs()
     Add_Liao_Calcs()
-    Add_Metals()
     feffdb.close()
