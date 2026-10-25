@@ -6,118 +6,13 @@ import sqlite3
 import json
 import lzma
 from pathlib import Path
-
 from xraydb import XrayDB, atomic_number, atomic_symbol
+from pyshortcuts import hash_password, test_password, check_password_rules
+
 
 from .simpledb import SimpleDB
-from .utils import (parse_cif, parse_feffinp, parse_feffdat,
-                    get_feffdb_path)
-
-schema = """
-PRAGMA journal_mode=WAL;
-PRAGMA foreign_keys=ON;
-PRAGMA page_size=8192;
-
-create table version (id integer primary key,
-                      tag text not null,
-                      date text not null,
-                      notes text);
-
-create table info (key text primary key not null, value text not null);
-
-create table element (z integer primary key not null, symbol text not null,
-                      name text not null, mass float not null);
-
-create table cif (id integer primary key autoincrement,
-                  ciftext blob not null,
-                  space_group text not null,
-                  formula text,
-                  compound text,
-                  source_db text,
-                  source_id text);
-
-create table feffinp (id integer primary key autoincrement,
-                      absorber integer not null,
-                      edge text not null,
-                      scatterers text not null,
-                      natoms integer not null,
-                      cif_id integer,
-                      inpfile blob not null,
-                      foreign key(cif_id) references cif(id),
-                      foreign key(absorber) references element(z) );
-
-
-create table person (id integer primary key autoincrement,
-                     email text not null unique,
-                     name text, password text);
-
-insert into person (email, name) values ('feffdb@local', 'feffdb library');
-
-create table feffdat (id integer primary key autoincrement,
-                      absorber integer not null,
-                      scatterer integer not null,
-                      nleg integer not null,
-                      reff float not null,
-                      edge text not null,
-                      degen integer not null,
-                      geometry text not null,
-                      label text,
-                      description text,
-                      feffinp_id integer,
-                      feffdat blob not null,
-                      donator_id integer default 1,
-                      foreign key(feffinp_id) references feffinp(id),
-                      foreign key(absorber) references element(z),
-                      foreign key(scatterer) references element(z),
-                      foreign key(donator_id) references person(id) );
-
-create table rating_enum (scoreval integer primary key not null, notes text);
-
-insert into rating_enum (scoreval) values (1);
-insert into rating_enum (scoreval) values (2);
-insert into rating_enum (scoreval) values (3);
-insert into rating_enum (scoreval) values (4);
-insert into rating_enum (scoreval) values (5);
-
-create table feffdat_rating (id integer primary key autoincrement,
-                             score integer not null,
-                             review text,
-                             feffdat_id integer not null,
-                             person_id integer not null,
-                             foreign key(score) references rating_enum(scoreval),
-                             foreign key(feffdat_id) references feffdat(id),
-                             foreign key(person_id) references person(id) );
-
-"""
-
-VERSIONS = [(1, 'beta1', '2026-August-30', 'pre-release')]
-
-def create_feffdb(dbname=None):
-    """create FeffData.DB"""
-    if dbname is None:
-        path = get_feffdb_path()
-    else:
-        path = Path(dbname)
-        if path.exists():
-            raise IOError(f"file {dbname} already exists")
-        path.parent.mkdir(parents=True, mode=0o755, exist_ok=True)
-
-
-    conn = sqlite3.connect(path)
-    c = conn.cursor()
-    for t in schema.split(';'):
-        c.execute(t)
-
-    for version_dat in VERSIONS:
-        c.execute('insert into version values (?, ?, ?, ?)', version_dat)
-
-    xdb = XrayDB()
-    eltab = xdb.tables['elements']
-    q = []
-    for row in xdb.query(eltab).all():
-        c.execute('insert into element values (?, ?, ?, ?)',
-                 (row.atomic_number, row.element, row.name, row.molar_mass))
-    conn.commit()
+from .utils import (get_feffdb, create_feffdb,
+                    parse_cif, parse_feffinp, parse_feffdat)
 
 def compress(val):
     return lzma.compress(val.encode('utf-8'))
@@ -125,18 +20,20 @@ def compress(val):
 def decompress(val):
     return lzma.decompress(val).decode('utf-8')
 
-
 class FeffDatabase(SimpleDB):
-    def __init__(self, dbname=None):
+    def __init__(self, dbname=None, create_ok=False):
         if dbname is not None:
-            path = Path(dbname)
+           dbpath = Path(dbname)
         else:
-            path = get_feffdb_path()
+            try:
+                dbpath = get_feffdb()
+            except ValueError:
+                dbpath = None
 
-        self.dbname = path.absolute().as_posix()
-        if not path.exists():
-            create_feffdb(name=self.dbname)
+        if (dbpath is None or not dbpath.exists()) and create_ok:
+            create_feffdb(dbname=dbname)
 
+        self.dbname = dbpath.absolute().as_posix()
         SimpleDB.__init__(self, dbname=self.dbname, server='sqlite')
 
     def __repr__(self):
@@ -225,6 +122,19 @@ class FeffDatabase(SimpleDB):
                      atomic_symbol(dat['scatterer']),
                      str(round(100*dat['reff']))]
             label = ''.join(words)
+        if label is not None:
+            # check fie repeated rows
+            rows = self.get_rows('feffdat', wheree={'label': label},
+                                 none_if_empty=True)
+            if rows is not None:
+                olabel, i = label, 0
+                while rows is not None:
+                    i += 1
+                    label = f'{olabel_i}'
+                    rows = self.get_rows('feffdat', wheree={'label': label},
+                                         none_if_empty=True)
+
+
         dbargs = {k:v for k, v in dat.items()}
         dbargs['feffdat'] = text
         dbargs['feffinp_id'] = finp_id
@@ -330,7 +240,7 @@ class FeffDatabase(SimpleDB):
         return out
 
 
-    def add_person(self, email, name=None):
+    def add_person(self, email, name=None, password=''):
         """add a person (email, optional name) to feffdat table:
          used for ratings and to identify added feff.dat files
         """
@@ -345,12 +255,28 @@ class FeffDatabase(SimpleDB):
         else:
             if name is not None:
                 dbargs = {'name': name}
+            if password is None:
+                password = ''
+            if len(password) > 1:
+                password_ok = check_password_rules(pasword)
+                if not password_ok:
+                    raise ValueError(f'Password is invalid')
+                dbargs = {'password': hash_password(password)}
+
+
+
             self.__addrow('person', dbargs)
 
     def get_person(self, email):
         """get person by email"""
         return self.get_rows('person', where={'email': email},
                             limit_one=True, none_if_empty=True)
+
+    def check_person_password(self, email, password):
+        """check validity of a person's password"""
+        person = self.get_rows('person', where={'email': email},
+                               limit_one=True, none_if_empty=True)
+        # if len(person
 
     def get_feffdat_ratings(self, feffdat_id=None, email=None):
         """get all ratings for feff.dat file either by feffdat_id or by email
