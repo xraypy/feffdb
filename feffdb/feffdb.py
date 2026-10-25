@@ -87,10 +87,10 @@ class FeffDatabase(SimpleDB):
         except ValueError:
             raise ValueError(f'error parsing feffinp : {feff_inp}')
 
-        text =compress(finp.pop('text'))
+        text = compress(finp.pop('text'))
         fnam = finp.pop('filename')
         dbargs = {k:v for k, v in finp.items()}
-        dbargs['inpfile'] = text
+        dbargs['inptext'] = text
         dbargs['cif_id'] = cif_id
 
         this_id = self.__addrow('feffinp', dbargs)
@@ -123,14 +123,13 @@ class FeffDatabase(SimpleDB):
                 print("Avoiding Duplicate entries:")
                 s = nearby[0]
                 print('This: ', dat['absorber'],  dat['scatterer'],    dat['edge'],  dat['reff'])
-
                 print(s['id'], s['label'], s['absorber'], s['scatterer'], s['edge'], s['reff'])
-
+                return
 
         if description is None:
             # default description is filenamae and a few parent folders
             words = Path(fname).parts
-            n = min(len(words), 4)
+            n = min(len(words), 2)
             description = Path(*words[-n:]).as_posix()
         if label is None:
             # default label combines absorber, scatterer, reff
@@ -145,12 +144,20 @@ class FeffDatabase(SimpleDB):
             rows = self.get_rows('feffdat', where={'label': label},
                                  none_if_empty=True)
             if rows is not None:
-                olabel, i = label, 0
-                while rows is not None:
-                    i += 1
-                    label = f'{olabel}_{i}'
-                    rows = self.get_rows('feffdat', where={'label': label},
-                                         none_if_empty=True)
+                words = [atomic_symbol(dat['absorber']),
+                         atomic_symbol(dat['scatterer']),
+                         str(round(100*dat['reff'])), '_', dat['edge']]
+                label = ''.join(words)
+                rows = self.get_rows('feffdat', where={'label': label},
+                                 none_if_empty=True)
+
+                if rows is not None:
+                    olabel, i = label, 0
+                    while rows is not None:
+                        i += 1
+                        label = f'{olabel}_{i}'
+                        rows = self.get_rows('feffdat', where={'label': label},
+                                             none_if_empty=True)
 
 
         dbargs = {k:v for k, v in dat.items()}
@@ -183,7 +190,7 @@ class FeffDatabase(SimpleDB):
         row = self.get_rows('feffinp', where={'id': feffinp_id},
                             limit_one=True, none_if_empty=True)
         if row is not None:
-            return decompress(row.inpfile)
+            return decompress(row.inptext)
 
     def get_feffinp_for_feffdat(self, feffdat_id):
         "get text of feff.inp for a Feff.dat file"
@@ -193,7 +200,7 @@ class FeffDatabase(SimpleDB):
             trow = self.get_rows('feffinp', where={'id': row.feffinp_id},
                                  limit_one=True, none_if_empty=True)
             if trow is not None:
-                return decompress(trow.inpfile)
+                return decompress(trow.inptext)
 
     def get_cifinp_for_feffinp(self, feffinp_id):
         "get text of CIF for a feff.inp file"
