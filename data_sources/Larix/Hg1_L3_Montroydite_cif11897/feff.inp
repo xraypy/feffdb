@@ -1,0 +1,169 @@
+* FEFF8 input file generated 2026-10-23 15:45:10
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: HgO
+TITLE SpaceGroup: Pnma
+TITLE CIF Source: Am Min Crystal Structure Database ID 11897
+TITLE Mineral Name: montroydite
+TITLE Publication: Acta Chemica Scandinavica 18 [1305:1306] (1964)
+TITLE Authors: Aurivillius K
+TITLE Cell Parameters (A, degrees): a=6.6129, b=5.5208, c=3.5219, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 128.57900
+TITLE Crystal Density (gr/cm^3): 11.189
+TITLE Compound: Synthetic
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.11360 0.25000 0.24560     4c   Hg   <- absorber
+*   2   0.35920 0.25000 0.59550     4c   O 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    80    Hg      -1     -1       0.01
+     1     8     O      -1     -1
+     2    80    Hg      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Hg    0.00000  * Hg_1        0
+    1.62413    0.00000    1.23231  1   O     2.03872  * O_2         1
+   -1.68232    0.00000   -1.20132  1   O     2.06721  * O_2         2
+    1.62413    0.00000   -2.28959  1   O     2.80713  * O_2         3
+    0.17987    2.76040   -0.52864  1   O     2.81631  * O_2         4
+    0.17987   -2.76040   -0.52864  1   O     2.81631  * O_2         5
+   -1.68232    0.00000    2.32058  1   O     2.86623  * O_2         6
+   -3.30645    0.00000    0.03099  2   Hg    3.30660  * Hg_1        7
+    3.30645    0.00000    0.03099  2   Hg    3.30660  * Hg_1        8
+    0.00000    0.00000   -3.52190  2   Hg    3.52190  * Hg_1        9
+    0.00000    0.00000    3.52190  2   Hg    3.52190  * Hg_1       10
+   -1.50245    2.76040   -1.72996  2   Hg    3.58747  * Hg_1       11
+   -1.50245   -2.76040   -1.72996  2   Hg    3.58747  * Hg_1       12
+   -1.50245   -2.76040    1.79194  2   Hg    3.61777  * Hg_1       13
+   -1.50245    2.76040    1.79194  2   Hg    3.61777  * Hg_1       14
+    1.80400    2.76040   -1.76095  2   Hg    3.73834  * Hg_1       15
+    1.80400   -2.76040   -1.76095  2   Hg    3.73834  * Hg_1       16
+    1.80400   -2.76040    1.76095  2   Hg    3.73834  * Hg_1       17
+    1.80400    2.76040    1.76095  2   Hg    3.73834  * Hg_1       18
+    0.17987   -2.76040    2.99326  1   O     4.07576  * O_2        19
+    0.17987    2.76040    2.99326  1   O     4.07576  * O_2        20
+   -3.12658   -2.76040    0.55963  1   O     4.20815  * O_2        21
+   -3.12658    2.76040    0.55963  1   O     4.20815  * O_2        22
+    3.48632    2.76040    0.55963  1   O     4.48190  * O_2        23
+    3.48632   -2.76040    0.55963  1   O     4.48190  * O_2        24
+   -3.30645    0.00000   -3.49091  2   Hg    4.80823  * Hg_1       25
+    3.30645    0.00000   -3.49091  2   Hg    4.80823  * Hg_1       26
+   -3.30645    0.00000    3.55289  2   Hg    4.85342  * Hg_1       27
+    3.30645    0.00000    3.55289  2   Hg    4.85342  * Hg_1       28
+    0.17987    2.76040   -4.05054  1   O     4.90500  * O_2        29
+    0.17987   -2.76040   -4.05054  1   O     4.90500  * O_2        30
+   -1.68232    0.00000   -4.72322  1   O     5.01388  * O_2        31
+    1.62413    0.00000    4.75421  1   O     5.02398  * O_2        32
+    4.93058    0.00000   -1.20132  1   O     5.07482  * O_2        33
+   -3.12658   -2.76040   -2.96227  1   O     5.11570  * O_2        34
+   -3.12658    2.76040   -2.96227  1   O     5.11570  * O_2        35
+   -4.98877    0.00000    1.23231  1   O     5.13872  * O_2        36
+    3.48632    2.76040   -2.96227  1   O     5.34315  * O_2        37
+    3.48632   -2.76040   -2.96227  1   O     5.34315  * O_2        38
+    4.93058    0.00000    2.32058  1   O     5.44938  * O_2        39
+   -4.98877    0.00000   -2.28959  1   O     5.48908  * O_2        40
+    0.00000   -5.52080   -0.00000  2   Hg    5.52080  * Hg_1       41
+   -0.00000    5.52080    0.00000  2   Hg    5.52080  * Hg_1       42
+   -4.80890   -2.76040   -1.76095  2   Hg    5.81776  * Hg_1       43
+   -4.80890   -2.76040    1.76095  2   Hg    5.81776  * Hg_1       44
+   -4.80890    2.76040   -1.76095  2   Hg    5.81776  * Hg_1       45
+   -4.80890    2.76040    1.76095  2   Hg    5.81776  * Hg_1       46
+   -3.12658   -2.76040    4.08153  1   O     5.83560  * O_2        47
+   -3.12658    2.76040    4.08153  1   O     5.83560  * O_2        48
+    1.62413   -5.52080    1.23231  1   O     5.88520  * O_2        49
+    1.62413    5.52080    1.23231  1   O     5.88520  * O_2        50
+   -1.68232   -5.52080   -1.20132  1   O     5.89513  * O_2        51
+   -1.68232    5.52080   -1.20132  1   O     5.89513  * O_2        52
+    1.62413    0.00000   -5.81149  1   O     6.03417  * O_2        53
+    3.48632   -2.76040    4.08153  1   O     6.03599  * O_2        54
+    3.48632    2.76040    4.08153  1   O     6.03599  * O_2        55
+    5.11045   -2.76040   -1.72996  2   Hg    6.06047  * Hg_1       56
+    5.11045    2.76040   -1.72996  2   Hg    6.06047  * Hg_1       57
+    5.11045   -2.76040    1.79194  2   Hg    6.07845  * Hg_1       58
+    5.11045    2.76040    1.79194  2   Hg    6.07845  * Hg_1       59
+   -1.68232    0.00000    5.84248  1   O     6.07987  * O_2        60
+   -1.50245   -2.76040   -5.25186  2   Hg    6.12039  * Hg_1       61
+   -1.50245    2.76040   -5.25186  2   Hg    6.12039  * Hg_1       62
+   -1.50245   -2.76040    5.31384  2   Hg    6.17366  * Hg_1       63
+   -1.50245    2.76040    5.31384  2   Hg    6.17366  * Hg_1       64
+    1.62413   -5.52080   -2.28959  1   O     6.19348  * O_2        65
+    1.62413    5.52080   -2.28959  1   O     6.19348  * O_2        66
+   -1.68232   -5.52080    2.32058  1   O     6.22049  * O_2        67
+   -1.68232    5.52080    2.32058  1   O     6.22049  * O_2        68
+    1.80400    2.76040   -5.28285  2   Hg    6.22758  * Hg_1       69
+    1.80400    2.76040    5.28285  2   Hg    6.22758  * Hg_1       70
+    1.80400   -2.76040   -5.28285  2   Hg    6.22758  * Hg_1       71
+    1.80400   -2.76040    5.28285  2   Hg    6.22758  * Hg_1       72
+   -3.30645   -5.52080    0.03099  2   Hg    6.43528  * Hg_1       73
+   -3.30645    5.52080    0.03099  2   Hg    6.43528  * Hg_1       74
+    3.30645   -5.52080    0.03099  2   Hg    6.43528  * Hg_1       75
+    3.30645    5.52080    0.03099  2   Hg    6.43528  * Hg_1       76
+    0.00000   -5.52080    3.52190  2   Hg    6.54851  * Hg_1       77
+   -0.00000    5.52080   -3.52190  2   Hg    6.54851  * Hg_1       78
+    0.00000   -5.52080   -3.52190  2   Hg    6.54851  * Hg_1       79
+   -0.00000    5.52080    3.52190  2   Hg    6.54851  * Hg_1       80
+   -6.61290    0.00000   -0.00000  2   Hg    6.61290  * Hg_1       81
+    6.61290    0.00000    0.00000  2   Hg    6.61290  * Hg_1       82
+    4.93058    0.00000   -4.72322  1   O     6.82784  * O_2        83
+   -4.98877    0.00000    4.75421  1   O     6.89133  * O_2        84
+
+* END

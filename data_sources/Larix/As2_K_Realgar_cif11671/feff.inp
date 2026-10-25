@@ -1,0 +1,147 @@
+* FEFF8 input file generated 2026-10-23 14:29:01
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: AsS
+TITLE SpaceGroup: P2_1/c
+TITLE CIF Source: Am Min Crystal Structure Database ID 11671
+TITLE Mineral Name: realgar
+TITLE Publication: Crystal Structures 1 [85:237] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=9.27, b=13.5, c=6.56, alpha=90.0, beta=106.62, gamma=90.0
+TITLE Cell Volume (A^3): 786.65400
+TITLE Crystal Density (gr/cm^3): 3.613
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.11800 0.02400 0.75900     4e   As 
+*   2   0.42500 0.86000 0.85800     4e   As   <- absorber
+*   3   0.31800 0.87300 0.18100     4e   As 
+*   4   0.03800 0.83900 0.71000     4e   As 
+*   5   0.34600 0.00800 0.70500     4e   S 
+*   6   0.21300 0.02400 0.12000     4e   S 
+*   7   0.24500 0.77500 0.63700     4e   S 
+*   8   0.11500 0.78500 0.04800     4e   S 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    33    As      -1     -1       0.01
+     1    16     S      -1     -1
+     2    33    As      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   As    0.00000  * As_2        0
+   -1.59889   -1.14750   -0.97250  1   S     2.19521  * S_7         1
+   -0.70174    1.99800   -0.79422  1   S     2.26168  * S_5         2
+   -0.95045    0.17550    2.40258  2   As    2.58970  * As_3        3
+   -3.43761   -0.28350    0.05522  2   As    3.44973  * As_4        4
+    1.00375   -2.68650    2.00951  2   As    3.50184  * As_4        5
+    2.84247   -1.82250    0.98178  1   S     3.51640  * S_7         6
+   -2.72700    2.21400    0.16455  2   As    3.51644  * As_1        7
+    2.03414    1.78200    2.25954  1   S     3.52403  * S_5         8
+   -2.75364   -1.01250    2.06834  1   S     3.58967  * S_8         9
+    1.68772   -1.95750   -2.53737  1   S     3.62194  * S_8        10
+    3.21555    1.56600   -0.81550  1   S     3.66840  * S_6        11
+   -1.88314    2.21400    2.28082  1   S     3.69461  * S_6        12
+    1.33241    3.78000    1.46533  2   As    4.26742  * As_2       13
+   -0.95045    0.17550   -4.15742  2   As    4.26829  * As_3       14
+    2.28286    3.60450   -0.93726  2   As    4.36833  * As_3       15
+    4.05941    1.56600    1.30078  2   As    4.54127  * As_1       16
+   -0.38196   -4.53600   -0.65351  2   As    4.59872  * As_1       17
+    1.68772   -1.95750    4.02263  1   S     4.78139  * S_8        18
+    2.03414    1.78200   -4.30046  1   S     5.08008  * S_5        19
+   -1.88314    2.21400   -4.27918  1   S     5.17294  * S_6        20
+    3.49091   -3.14550   -2.20313  2   As    5.18984  * As_3       21
+   -2.40722   -4.75200    0.30526  1   S     5.33567  * S_5        22
+   -2.75364   -1.01250   -4.49166  1   S     5.36495  * S_8        23
+    1.00375   -2.68650   -4.55049  2   As    5.37883  * As_4       24
+   -1.22582   -4.53600   -2.76978  1   S     5.45432  * S_6        25
+   -4.44136   -2.97000   -1.95428  2   As    5.68910  * As_2       26
+    4.44136   -2.97000    1.95428  2   As    5.68910  * As_2       27
+   -4.82332    1.56600   -2.60779  2   As    5.70240  * As_1       28
+   -1.51006    5.60250    0.48354  1   S     5.82255  * S_7        29
+    1.71437   -5.18400    2.11883  2   As    5.85682  * As_1       30
+   -1.59889   -1.14750    5.58750  1   S     5.92396  * S_7        31
+   -1.22582   -4.53600    3.79022  1   S     6.03686  * S_6        32
+    5.44511   -0.28350   -2.59621  2   As    6.03903  * As_4       33
+   -0.70174    1.99800    5.76578  1   S     6.14237  * S_5        34
+   -5.66718    1.56600    1.83593  1   S     6.15954  * S_6        35
+    2.93130    4.92750    2.43783  1   S     6.23023  * S_7        36
+    2.55822   -5.18400   -2.32489  1   S     6.23085  * S_6        37
+    6.12908   -1.01250   -0.58309  1   S     6.23945  * S_8        38
+   -5.39181   -3.14550    0.44830  2   As    6.25834  * As_3       39
+   -0.35531    5.73750   -2.55730  1   S     6.29166  * S_8        40
+   -4.11270    4.06350   -2.49847  2   As    6.29831  * As_4       41
+    3.73963   -4.96800    1.16007  1   S     6.32547  * S_5        42
+    4.08605    4.79250   -0.60302  1   S     6.32673  * S_8        43
+    3.49091   -3.14550    4.35687  2   As    6.40804  * As_3       44
+    4.77002    4.06350    1.41010  2   As    6.42289  * As_4       45
+   -4.82332    1.56600    3.95221  2   As    6.42936  * As_1       46
+    1.33241    3.78000   -5.09467  2   As    6.48224  * As_2       47
+    0.32866    6.46650   -0.54418  2   As    6.49767  * As_4       48
+    2.84247   -1.82250   -5.57822  1   S     6.52056  * S_7        49
+    0.00000    0.00000   -6.56000  2   As    6.56000  * As_2       50
+    0.00000    0.00000    6.56000  2   As    6.56000  * As_2       51
+    5.44511   -0.28350    3.96379  2   As    6.74101  * As_4       52
+    3.21555    1.56600    5.74450  1   S     6.76693  * S_6        53
+    4.05941    1.56600   -5.25922  2   As    6.82573  * As_1       54
+   -6.04025   -1.82250   -2.92679  1   S     6.95502  * S_7        55
+    6.15573    2.21400   -2.48688  2   As    6.99853  * As_1       56
+
+* END

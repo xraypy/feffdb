@@ -1,0 +1,69 @@
+data_global
+_chemical_name_mineral 'Maghemite'
+loop_
+_publ_author_name
+'Pecharroman C'
+'Gonzalez-Carreno T'
+'Iglesias J E'
+_journal_name_full 'Physics and Chemistry of Minerals'
+_journal_volume 22
+_journal_year 1995
+_journal_page_first 21
+_journal_page_last 29
+_publ_section_title
+;
+ The infrared dielectric properties of maghemite, gamma-Fe2O3,
+ from reflectance measurement on pressed powders
+ Sample: c) idealized, either one of Fe-oct 1-6,
+ or both Fe-oct 6-7 have zero occupancy
+;
+_database_code_amcsd 7900
+_chemical_formula_sum 'Fe3 O4'
+_cell_length_a 8.33
+_cell_length_b 8.33
+_cell_length_c 24.99
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 1734.029
+_exptl_crystal_density_diffrn  5.321
+_symmetry_space_group_name_H-M 'P 43 21 2'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'y,x,-z'
+  '1/2-y,1/2+x,3/4+z'
+  '1/2-x,1/2+y,3/4-z'
+  '-x,-y,1/2+z'
+  '-y,-x,1/2-z'
+  '1/2+y,1/2-x,1/4+z'
+  '1/2+x,1/2-y,1/4-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Fe-oct1   0.625  0.375  0.08333  1.0
+Fe-oct2   0.125  0.625  0.0  1.0
+Fe-oct3   0.375  0.125  0.08333  1.0
+Fe-oct4   0.125  0.875  0.08333  1.0
+Fe-oct5   0.875  0.625  0.08333  1.0
+Fe-oct6   0.375  0.375  0.0  1.0
+Fe-oct7   0.875  0.875  0.0  1.0
+Fe-tet1   0.5  0.75  0.04167  1.0
+Fe-tet2   0.0  0.25  0.04167  1.0
+Fe-tet3   0.25  0.5  0.125  1.0
+O1   0.125  0.125  0.08333  1.0
+O2   0.625  0.625  0.08333  1.0
+O3   0.625  0.375  0.0  1.0
+O4   0.375  0.125  0.0  1.0
+O5   0.625  0.875  0.0  1.0
+O6   0.125  0.875  0.0  1.0
+O7   0.625  0.125  0.08333  1.0
+O8   0.375  0.375  0.08333  1.0
+O9   0.375  0.875  0.08333  1.0
+O10   0.875  0.375  0.08333  1.0
+O11   0.875  0.875  0.08333  1.0
+O12   0.125  0.625  0.08333  1.0
+

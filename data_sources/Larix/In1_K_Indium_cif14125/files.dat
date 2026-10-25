@@ -1,0 +1,40 @@
+ Formula: In                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: I4/mmm
+ CIF Source: Am Min Crystal Structure Database ID 14125
+ Mineral Name: indium
+ Publication: Journal of the Less-Common Metals 7 [17:22] (1964)
+ Authors: Smith J F, Schneider V L
+ Cell Parameters (A, degrees): a=3.253, b=3.253, c=4.9455, alpha=90.0, beta=90.0
+ Cell Volume (A^3): 52.33300
+ Crystal Density (gr/cm^3): 7.286
+ Compound: Synthetic
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=49 Rmt= 1.791 Rnm= 1.844 K  shell
+ Pot 1 Z=49 Rmt= 1.773 Rnm= 1.824
+ Gam_ch=9.709E+00 H-L exch
+ Mu=-3.294E+00 kf=1.521E+00 Vint=-1.211E+01 Rs_int= 2.384
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   3.2530
+ feff0002.dat 0.00000   178.600     8.000     2   3.3772
+ feff0003.dat 0.00000    33.670     4.000     2   4.6004
+ feff0004.dat 0.00000    13.200     2.000     2   4.9455
+ feff0005.dat 0.00000    12.760    32.000     3   5.0037
+ feff0006.dat 0.00000     7.514    16.000     3   5.0037
+ feff0007.dat 0.00000    64.100    16.000     2   5.7070
+ feff0008.dat 0.00000    28.120     8.000     2   5.9195
+ feff0009.dat 0.00000     5.345    32.000     3   6.1686
+ feff0010.dat 0.00000     7.473    32.000     3   6.1686
+ feff0011.dat 0.00000     7.416    32.000     3   6.1686
+ feff0012.dat 0.00000     7.797    32.000     3   6.3369
+ feff0013.dat 0.00000     9.979     4.000     2   6.5060
+ feff0014.dat 0.00000     3.802     4.000     3   6.5060
+ feff0015.dat 0.00000    39.540     8.000     3   6.5060
+ feff0016.dat 0.00000     6.801     4.000     4   6.5060
+ feff0017.dat 0.00000    42.780     4.000     4   6.5060
+ feff0019.dat 0.00000    17.400     8.000     2   6.7544
+ feff0020.dat 0.00000     6.356     8.000     3   6.7544
+ feff0021.dat 0.00000    67.690    16.000     3   6.7544
+ feff0022.dat 0.00000    11.440     8.000     4   6.7544
+ feff0024.dat 0.00000    70.700     8.000     4   6.7544

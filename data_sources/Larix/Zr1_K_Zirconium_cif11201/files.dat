@@ -1,0 +1,46 @@
+ Formula: Zr                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: P6_3/mmc
+ CIF Source: Am Min Crystal Structure Database ID 11201
+ Mineral Name: zirconium
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=3.232, b=3.232, c=5.147, alpha=90.0, beta=90.0,
+ Cell Volume (A^3): 46.56200
+ Crystal Density (gr/cm^3): 6.507
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=40 Rmt= 1.696 Rnm= 1.742 K  shell
+ Pot 1 Z=40 Rmt= 1.717 Rnm= 1.766
+ Gam_ch=4.800E+00 H-L exch
+ Mu=-6.594E+00 kf=1.709E+00 Vint=-1.772E+01 Rs_int= 2.123
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   3.1788
+ feff0002.dat 0.00000    96.050     6.000     2   3.2320
+ feff0003.dat 0.00000    38.240     6.000     2   4.5333
+ feff0004.dat 0.00000     4.087    12.000     3   4.7948
+ feff0005.dat 0.00000     9.195    24.000     3   4.7948
+ feff0006.dat 0.00000     4.212    12.000     3   4.8480
+ feff0007.dat 0.00000     8.646     2.000     2   5.1470
+ feff0008.dat 0.00000     7.027    24.000     3   5.4721
+ feff0009.dat 0.00000     7.040    24.000     3   5.4720
+ feff0010.dat 0.00000    40.500    12.000     2   5.5674
+ feff0011.dat 0.00000    19.900     6.000     2   5.5980
+ feff0012.dat 0.00000     6.497    24.000     3   5.9891
+ feff0013.dat 0.00000    15.210    24.000     3   5.9891
+ feff0014.dat 0.00000    15.410    24.000     3   5.9891
+ feff0015.dat 0.00000     3.085    12.000     3   6.0310
+ feff0016.dat 0.00000    14.440    24.000     3   6.0310
+ feff0017.dat 0.00000    30.530    12.000     2   6.0776
+ feff0018.dat 0.00000     7.397    12.000     3   6.2176
+ feff0019.dat 0.00000    38.310    24.000     3   6.2176
+ feff0020.dat 0.00000     5.215    12.000     4   6.3576
+ feff0022.dat 0.00000    13.100    12.000     4   6.3576
+ feff0023.dat 0.00000     2.679    24.000     4   6.4108
+ feff0024.dat 0.00000     3.174    24.000     4   6.4108
+ feff0025.dat 0.00000    12.470     6.000     2   6.4640
+ feff0026.dat 0.00000     5.623     6.000     3   6.4640
+ feff0027.dat 0.00000    53.910    12.000     3   6.4640
+ feff0028.dat 0.00000    10.270     6.000     4   6.4640
+ feff0030.dat 0.00000    58.410     6.000     4   6.4640

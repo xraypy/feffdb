@@ -1,0 +1,151 @@
+* FEFF8 input file generated 2026-09-13 20:46:36
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Cd
+TITLE SpaceGroup: P6_3/mmc
+TITLE CIF Source: Am Min Crystal Structure Database ID 11167
+TITLE Mineral Name: cadmium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=2.97887, b=2.97887, c=5.61765, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 43.17100
+TITLE Crystal Density (gr/cm^3): 8.648
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.33333 0.66667 0.25000     2c   Cd   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    48    Cd      -1     -1       0.01
+     1    48    Cd      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Cd    0.00000  * Cd_1        0
+   -1.48943    2.57978    0.00000  1   Cd    2.97887  * Cd_1        1
+   -2.97887    0.00000   -0.00000  1   Cd    2.97887  * Cd_1        2
+    2.97887    0.00000    0.00000  1   Cd    2.97887  * Cd_1        3
+   -1.48944   -2.57978   -0.00000  1   Cd    2.97887  * Cd_1        4
+    1.48943   -2.57978   -0.00000  1   Cd    2.97887  * Cd_1        5
+    1.48944    2.57978    0.00000  1   Cd    2.97887  * Cd_1        6
+   -1.48944   -0.85993    2.80882  1   Cd    3.29354  * Cd_1        7
+    1.48944   -0.85993   -2.80883  1   Cd    3.29354  * Cd_1        8
+    1.48944   -0.85993    2.80882  1   Cd    3.29354  * Cd_1        9
+    0.00000    1.71985   -2.80882  1   Cd    3.29354  * Cd_1       10
+   -1.48944   -0.85993   -2.80883  1   Cd    3.29354  * Cd_1       11
+    0.00000    1.71985    2.80883  1   Cd    3.29354  * Cd_1       12
+   -2.97887    1.71985   -2.80883  1   Cd    4.44084  * Cd_1       13
+   -2.97887    1.71985    2.80882  1   Cd    4.44084  * Cd_1       14
+   -0.00000   -3.43970    2.80882  1   Cd    4.44084  * Cd_1       15
+   -0.00000   -3.43970   -2.80883  1   Cd    4.44084  * Cd_1       16
+    2.97887    1.71985   -2.80882  1   Cd    4.44084  * Cd_1       17
+    2.97887    1.71985    2.80883  1   Cd    4.44084  * Cd_1       18
+   -4.46830    2.57978    0.00000  1   Cd    5.15955  * Cd_1       19
+    4.46830   -2.57978    0.00000  1   Cd    5.15955  * Cd_1       20
+   -4.46831   -2.57978   -0.00000  1   Cd    5.15955  * Cd_1       21
+    4.46831    2.57978    0.00000  1   Cd    5.15955  * Cd_1       22
+    0.00000    5.15955    0.00000  1   Cd    5.15955  * Cd_1       23
+   -0.00000   -5.15955   -0.00000  1   Cd    5.15955  * Cd_1       24
+   -4.46830   -0.85993   -2.80883  1   Cd    5.34740  * Cd_1       25
+   -4.46830   -0.85993    2.80882  1   Cd    5.34740  * Cd_1       26
+   -2.97887   -3.43970    2.80882  1   Cd    5.34740  * Cd_1       27
+    4.46831   -0.85993   -2.80882  1   Cd    5.34740  * Cd_1       28
+    2.97887   -3.43970    2.80882  1   Cd    5.34740  * Cd_1       29
+   -2.97887   -3.43970   -2.80883  1   Cd    5.34740  * Cd_1       30
+   -1.48943    4.29963   -2.80882  1   Cd    5.34740  * Cd_1       31
+   -1.48943    4.29963    2.80883  1   Cd    5.34740  * Cd_1       32
+    2.97887   -3.43970   -2.80883  1   Cd    5.34740  * Cd_1       33
+    4.46831   -0.85993    2.80883  1   Cd    5.34740  * Cd_1       34
+    1.48944    4.29963   -2.80882  1   Cd    5.34740  * Cd_1       35
+    1.48944    4.29963    2.80883  1   Cd    5.34740  * Cd_1       36
+    0.00000    0.00000   -5.61765  1   Cd    5.61765  * Cd_1       37
+    0.00000    0.00000    5.61765  1   Cd    5.61765  * Cd_1       38
+   -5.95774    0.00000   -0.00000  1   Cd    5.95774  * Cd_1       39
+   -2.97887    5.15955    0.00000  1   Cd    5.95774  * Cd_1       40
+    2.97887   -5.15955   -0.00000  1   Cd    5.95774  * Cd_1       41
+    5.95774    0.00000    0.00000  1   Cd    5.95774  * Cd_1       42
+   -2.97887   -5.15955   -0.00000  1   Cd    5.95774  * Cd_1       43
+    2.97887    5.15955    0.00000  1   Cd    5.95774  * Cd_1       44
+   -1.48944   -2.57978   -5.61765  1   Cd    6.35859  * Cd_1       45
+   -1.48944   -2.57978    5.61765  1   Cd    6.35859  * Cd_1       46
+   -1.48943    2.57978   -5.61765  1   Cd    6.35859  * Cd_1       47
+   -2.97887    0.00000   -5.61765  1   Cd    6.35859  * Cd_1       48
+   -1.48943    2.57978    5.61765  1   Cd    6.35859  * Cd_1       49
+   -2.97887    0.00000    5.61765  1   Cd    6.35859  * Cd_1       50
+    1.48943   -2.57978   -5.61765  1   Cd    6.35859  * Cd_1       51
+    1.48943   -2.57978    5.61765  1   Cd    6.35859  * Cd_1       52
+    1.48944    2.57978   -5.61765  1   Cd    6.35859  * Cd_1       53
+    2.97887    0.00000   -5.61765  1   Cd    6.35859  * Cd_1       54
+    1.48944    2.57978    5.61765  1   Cd    6.35859  * Cd_1       55
+    2.97887    0.00000    5.61765  1   Cd    6.35859  * Cd_1       56
+   -4.46830    4.29963   -2.80882  1   Cd    6.80750  * Cd_1       57
+   -5.95774    1.71985   -2.80883  1   Cd    6.80750  * Cd_1       58
+   -4.46830    4.29963    2.80883  1   Cd    6.80750  * Cd_1       59
+   -5.95774    1.71985    2.80882  1   Cd    6.80750  * Cd_1       60
+    5.95774    1.71985   -2.80882  1   Cd    6.80750  * Cd_1       61
+    5.95774    1.71985    2.80883  1   Cd    6.80750  * Cd_1       62
+   -1.48944   -6.01948   -2.80883  1   Cd    6.80750  * Cd_1       63
+   -1.48944   -6.01948    2.80882  1   Cd    6.80750  * Cd_1       64
+    1.48943   -6.01948   -2.80883  1   Cd    6.80750  * Cd_1       65
+    1.48943   -6.01948    2.80882  1   Cd    6.80750  * Cd_1       66
+    4.46831    4.29963   -2.80882  1   Cd    6.80750  * Cd_1       67
+    4.46831    4.29963    2.80883  1   Cd    6.80750  * Cd_1       68
+
+* END

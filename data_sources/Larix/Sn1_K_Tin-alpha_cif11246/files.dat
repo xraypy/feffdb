@@ -1,0 +1,24 @@
+ Formula: Sn                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: Fd-3m
+ CIF Source: Am Min Crystal Structure Database ID 11246
+ Mineral Name: tin-alpha
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=6.4912, b=6.4912, c=6.4912, alpha=90.0, beta=90
+ Cell Volume (A^3): 273.51100
+ Crystal Density (gr/cm^3): 5.766
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=50 Rmt= 1.617 Rnm= 1.776 K  shell
+ Pot 1 Z=50 Rmt= 1.616 Rnm= 1.774
+ Gam_ch=1.050E+01 H-L exch
+ Mu=-1.310E+00 kf=1.654E+00 Vint=-1.173E+01 Rs_int= 2.193
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   2.8108
+ feff0002.dat 0.00000    65.150    12.000     2   4.5900
+ feff0003.dat 0.00000    12.820    24.000     3   5.1058
+ feff0004.dat 0.00000    36.760    12.000     2   5.3822
+ feff0006.dat 0.00000     3.560    48.000     3   6.3915
+ feff0007.dat 0.00000     9.163     6.000     2   6.4912

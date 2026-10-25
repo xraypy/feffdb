@@ -1,0 +1,39 @@
+ Formula: AgCl                                  Feff8L (EXAFS)       0.1
+ SpaceGroup: Fm-3m
+ CIF Source: Am Min Crystal Structure Database ID 11275
+ Mineral Name: chlorargyrite
+ Publication: Crystal Structures 1 [85:237] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=5.47, b=5.47, c=5.47, alpha=90.0, beta=90.0, ga
+ Cell Volume (A^3): 163.66700
+ Crystal Density (gr/cm^3): 5.816
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=47 Rmt= 1.619 Rnm= 1.697 K  shell
+ Pot 1 Z=17 Rmt= 1.466 Rnm= 1.532
+ Pot 2 Z=47 Rmt= 1.583 Rnm= 1.653
+ Gam_ch=8.302E+00 H-L exch
+ Mu=-3.347E-01 kf=1.663E+00 Vint=-1.087E+01 Rs_int= 2.181
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.7350
+ feff0002.dat 0.00000    98.590    12.000     2   3.8679
+ feff0003.dat 0.00000     4.940    24.000     3   4.6689
+ feff0004.dat 0.00000    17.760    48.000     3   4.6689
+ feff0005.dat 0.00000    21.140     8.000     2   4.7372
+ feff0006.dat 0.00000    15.940     6.000     2   5.4700
+ feff0007.dat 0.00000     4.195     6.000     3   5.4700
+ feff0008.dat 0.00000    60.570    12.000     3   5.4700
+ feff0009.dat 0.00000     8.200     6.000     4   5.4700
+ feff0011.dat 0.00000    58.000     6.000     4   5.4700
+ feff0012.dat 0.00000     3.687    24.000     4   5.4700
+ feff0013.dat 0.00000     4.986    48.000     3   5.6700
+ feff0014.dat 0.00000     6.392    48.000     3   5.6700
+ feff0015.dat 0.00000     4.200    48.000     3   5.8018
+ feff0016.dat 0.00000    23.130    24.000     2   6.1156
+ feff0017.dat 0.00000     7.624    48.000     3   6.3593
+ feff0018.dat 0.00000    12.040    48.000     3   6.3593
+ feff0019.dat 0.00000     7.761    48.000     3   6.3593
+ feff0022.dat 0.00000     3.710    48.000     4   6.6029
+ feff0023.dat 0.00000    31.110    24.000     2   6.6994

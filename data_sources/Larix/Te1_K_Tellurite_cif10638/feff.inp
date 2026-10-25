@@ -1,0 +1,179 @@
+* FEFF8 input file generated 2026-10-23 15:20:14
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: TeO2
+TITLE SpaceGroup: Pbca
+TITLE CIF Source: Am Min Crystal Structure Database ID 10638
+TITLE Mineral Name: tellurite
+TITLE Publication: Zeitschrift fur Kristallographie 124 [228:237] (1967)
+TITLE Authors: Beyer H
+TITLE Cell Parameters (A, degrees): a=12.035, b=5.464, c=5.607, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 368.71200
+TITLE Crystal Density (gr/cm^3): 5.75
+TITLE Compound: Moctezuma, Mexico
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.11820 0.02550 0.37810     8c   Te   <- absorber
+*   2   0.02700 0.63700 0.17800     8c   O 
+*   3   0.17400 0.22200 0.08600     8c   O 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    52    Te      -1     -1       0.01
+     1     8     O      -1     -1
+     2    52    Te      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Te    0.00000  * Te_1        0
+   -1.74748    0.60924   -0.31455  1   O     1.87718  * O_2         1
+    0.67155    1.37966    1.16570  1   O     1.92699  * O_3         2
+    0.67155    1.07368   -1.63780  1   O     2.07031  * O_3         3
+   -1.09759   -0.88790    1.68154  1   O     2.19560  * O_2         4
+   -1.09759   -2.12276   -1.12196  1   O     2.64001  * O_2         5
+    2.50087   -1.35234    1.16570  1   O     3.07279  * O_3         6
+   -2.84507   -0.27866    1.36699  2   Te    3.16871  * Te_1        7
+    2.50087   -1.65832   -1.63780  1   O     3.41860  * O_3         8
+   -1.74748    1.84410    2.48895  1   O     3.55658  * O_2         9
+   -1.09759    3.34124   -1.12196  1   O     3.69153  * O_2        10
+   -0.00000    2.45334   -2.80350  2   Te    3.72538  * Te_1       11
+   -0.00000    2.45334    2.80350  2   Te    3.72538  * Te_1       12
+   -3.51663   -1.65832    0.20129  1   O     3.89323  * O_3        13
+   -1.74748    1.84410   -3.11805  1   O     4.02202  * O_2        14
+    0.00000   -3.01066   -2.80350  2   Te    4.11384  * Te_1       15
+    0.00000   -3.01066    2.80350  2   Te    4.11384  * Te_1       16
+    0.67155    1.07368    3.96920  1   O     4.16633  * O_3        17
+   -1.09759   -0.88790   -3.92546  1   O     4.17161  * O_2        18
+    3.17243   -2.73200    0.00000  2   Te    4.18666  * Te_1       19
+    3.17243    2.73200    0.00000  2   Te    4.18666  * Te_1       20
+   -2.84507   -2.73200   -1.43651  2   Te    4.19784  * Te_1       21
+   -2.84507    2.73200   -1.43651  2   Te    4.19784  * Te_1       22
+    3.17243   -0.27866   -2.80350  2   Te    4.24282  * Te_1       23
+    3.17243   -0.27866    2.80350  2   Te    4.24282  * Te_1       24
+    0.67155   -4.08434    1.16570  1   O     4.30019  * O_3        25
+    4.27002    0.60924   -1.12196  1   O     4.45679  * O_2        26
+   -3.51663   -1.35234   -2.60221  1   O     4.57897  * O_3        27
+    0.67155    1.37966   -4.44130  1   O     4.69890  * O_3        28
+   -1.74748   -3.61990    2.48895  1   O     4.72781  * O_2        29
+    0.67155   -4.39032   -1.63780  1   O     4.73374  * O_3        30
+   -3.51663   -1.35234    3.00479  1   O     4.81916  * O_3        31
+    2.50087    3.80568   -1.63780  1   O     4.83942  * O_3        32
+    4.27002    1.84410    1.68154  1   O     4.94584  * O_2        33
+    2.50087    4.11166    1.16570  1   O     4.95166  * O_3        34
+    2.50087   -1.65832    3.96920  1   O     4.97583  * O_3        35
+   -1.09759    4.57610    1.68154  1   O     4.99730  * O_2        36
+   -1.09759   -2.12276    4.48504  1   O     5.08197  * O_2        37
+   -1.74748   -3.61990   -3.11805  1   O     5.08720  * O_2        38
+   -2.84507   -0.27866   -4.24001  2   Te    5.11369  * Te_1       39
+   -1.74748   -4.85476   -0.31455  1   O     5.16927  * O_2        40
+   -3.51663    3.80568    0.20129  1   O     5.18559  * O_3        41
+    2.50087   -1.35234   -4.44130  1   O     5.27336  * O_3        42
+    4.91991   -2.12276   -0.31455  1   O     5.36755  * O_2        43
+   -5.34595    1.07368    0.20129  1   O     5.45641  * O_3        44
+    0.00000   -5.46400   -0.00000  2   Te    5.46400  * Te_1       45
+   -0.00000    5.46400    0.00000  2   Te    5.46400  * Te_1       46
+    4.91991   -0.88790    2.48895  1   O     5.58469  * O_2        47
+   -1.74748    0.60924    5.29245  1   O     5.60668  * O_2        48
+    0.00000    0.00000    5.60700  2   Te    5.60700  * Te_1       49
+    0.00000    0.00000   -5.60700  2   Te    5.60700  * Te_1       50
+   -1.09759    3.34124    4.48504  1   O     5.69949  * O_2        51
+   -2.84507   -2.73200    4.17049  2   Te    5.74032  * Te_1       52
+   -2.84507    2.73200    4.17049  2   Te    5.74032  * Te_1       53
+    4.27002   -3.61990    1.68154  1   O     5.84502  * O_2        54
+    4.91991   -0.88790   -3.11805  1   O     5.89204  * O_2        55
+    4.91991    3.34124   -0.31455  1   O     5.95553  * O_2        56
+    0.67155   -4.39032    3.96920  1   O     5.95655  * O_3        57
+   -3.51663    4.11166   -2.60221  1   O     6.00366  * O_3        58
+    2.50087    3.80568    3.96920  1   O     6.04086  * O_3        59
+   -2.84507    5.18534    1.36699  2   Te    6.07049  * Te_1       60
+    0.67155   -4.08434   -4.44130  1   O     6.07108  * O_3        61
+    4.27002    1.84410   -3.92546  1   O     6.08630  * O_2        62
+   -5.34595    1.37966   -2.60221  1   O     6.10361  * O_3        63
+   -1.09759    4.57610   -3.92546  1   O     6.12818  * O_2        64
+    6.01750    0.00000   -1.43651  2   Te    6.18659  * Te_1       65
+   -6.01750    0.00000   -1.43651  2   Te    6.18659  * Te_1       66
+   -3.51663    4.11166    3.00479  1   O     6.18880  * O_3        67
+   -1.74748    0.60924   -5.92155  1   O     6.20400  * O_2        68
+    4.27002    0.60924    4.48504  1   O     6.22252  * O_2        69
+   -5.34595    1.37966    3.00479  1   O     6.28581  * O_3        70
+   -1.74748    6.07324   -0.31455  1   O     6.32747  * O_2        71
+    2.50087    4.11166   -4.44130  1   O     6.54869  * O_3        72
+   -2.84507   -5.74266    1.36699  2   Te    6.55296  * Te_1       73
+    4.27002   -4.85476   -1.12196  1   O     6.56206  * O_2        74
+    6.01750    2.45334    1.36699  2   Te    6.64062  * Te_1       75
+   -6.01750    2.45334    1.36699  2   Te    6.64062  * Te_1       76
+   -3.51663   -1.65832   -5.40571  1   O     6.65871  * O_3        77
+   -1.09759   -6.35190    1.68154  1   O     6.66175  * O_2        78
+    3.17243    5.18534   -2.80350  2   Te    6.69415  * Te_1       79
+    3.17243    5.18534    2.80350  2   Te    6.69415  * Te_1       80
+    0.67155    6.53768   -1.63780  1   O     6.77308  * O_3        81
+    6.68905    1.07368    0.20129  1   O     6.77766  * O_3        82
+    4.27002   -3.61990   -3.92546  1   O     6.83710  * O_2        83
+    6.01750   -3.01066    1.36699  2   Te    6.86608  * Te_1       84
+   -6.01750   -3.01066    1.36699  2   Te    6.86608  * Te_1       85
+   -5.34595   -4.39032    0.20129  1   O     6.92059  * O_3        86
+    0.67155    1.37966    6.77270  1   O     6.94434  * O_3        87
+    0.67155    6.84366    1.16570  1   O     6.97463  * O_3        88
+   -3.51663   -1.65832    5.80829  1   O     6.98949  * O_3        89
+    3.17243   -2.73200    5.60700  2   Te    6.99761  * Te_1       90
+    3.17243    2.73200   -5.60700  2   Te    6.99761  * Te_1       91
+    3.17243   -2.73200   -5.60700  2   Te    6.99761  * Te_1       92
+    3.17243    2.73200    5.60700  2   Te    6.99761  * Te_1       93
+
+* END

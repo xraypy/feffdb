@@ -1,0 +1,68 @@
+data_global
+_chemical_name_mineral 'Downeyite'
+loop_
+_publ_author_name
+'Stahl K'
+'Legros J P'
+'Galy J'
+_journal_name_full 'Zeitschrift fur Kristallographie'
+_journal_volume 202
+_journal_year 1992
+_journal_page_first 99
+_journal_page_last 107
+_publ_section_title
+;
+ The crystal structure of SeO2 at 139 and 286 K
+ Note: T = 286 K
+;
+_database_code_amcsd 11028
+_chemical_compound_source 'Synthetic'
+_chemical_formula_sum 'Se O2'
+_cell_length_a 8.3622
+_cell_length_b 8.3622
+_cell_length_c 5.0612
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 353.911
+_exptl_crystal_density_diffrn  4.165
+_symmetry_space_group_name_H-M 'P 42/m b c'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2-y,1/2-x,1/2+z'
+  '1/2+y,1/2+x,1/2-z'
+  'y,-x,1/2-z'
+  '-y,x,1/2+z'
+  '1/2+x,1/2-y,z'
+  '1/2-x,1/2+y,-z'
+  'x,y,-z'
+  '-x,-y,z'
+  '1/2+y,1/2+x,1/2+z'
+  '1/2-y,1/2-x,1/2-z'
+  '-y,x,1/2-z'
+  'y,-x,1/2+z'
+  '1/2-x,1/2+y,z'
+  '1/2+x,1/2-y,-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+Se   0.13374  0.21019  0.0  0.01203
+O1   0.13802  0.36198  0.25  0.0171
+O2   -0.0571  0.17507  0.0  0.02064
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Se   0.01197  0.01417  0.00999  0.00046  0.0  0.0
+O1   0.02037  0.02037  0.01049  0.00595  0.00279  0.00279
+O2   0.0135  0.02568  0.02263  -0.0034  0.0  0.0
+

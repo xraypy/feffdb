@@ -1,0 +1,155 @@
+* FEFF8 input file generated 2026-10-23 14:24:03
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: GaAs
+TITLE SpaceGroup: F-43m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11523
+TITLE Mineral Name: <missing>
+TITLE Publication: Crystal Structures 1 [85:237] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=5.6537, b=5.6537, c=5.6537, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 180.71700
+TITLE Crystal Density (gr/cm^3): 5.316
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     4a   Ga 
+*   2   0.25000 0.25000 0.25000     4c   As   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for ___auto___
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for ___auto___
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    33    As      -1     -1       0.01
+     1    31    Ga      -1     -1
+     2    33    As      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   As    0.00000  * As_2        0
+   -1.41343    1.41342    1.41342  1   Ga    2.44812  * Ga_1        1
+    1.41342   -1.41342    1.41342  1   Ga    2.44812  * Ga_1        2
+    1.41342    1.41342   -1.41342  1   Ga    2.44812  * Ga_1        3
+   -1.41342   -1.41342   -1.41343  1   Ga    2.44812  * Ga_1        4
+    2.82685    0.00000   -2.82685  2   As    3.99777  * As_2        5
+   -0.00000    2.82685   -2.82685  2   As    3.99777  * As_2        6
+    2.82685    2.82685    0.00000  2   As    3.99777  * As_2        7
+   -2.82685    0.00000    2.82685  2   As    3.99777  * As_2        8
+    2.82685   -2.82685    0.00000  2   As    3.99777  * As_2        9
+    0.00000   -2.82685    2.82685  2   As    3.99777  * As_2       10
+   -2.82685   -2.82685   -0.00000  2   As    3.99777  * As_2       11
+   -2.82685    0.00000   -2.82685  2   As    3.99777  * As_2       12
+   -2.82685    2.82685    0.00000  2   As    3.99777  * As_2       13
+    0.00000   -2.82685   -2.82685  2   As    3.99777  * As_2       14
+    2.82685    0.00000    2.82685  2   As    3.99777  * As_2       15
+   -0.00000    2.82685    2.82685  2   As    3.99777  * As_2       16
+   -1.41342   -1.41342    4.24027  1   Ga    4.68780  * Ga_1       17
+   -4.24027   -1.41342    1.41342  1   Ga    4.68780  * Ga_1       18
+   -1.41342   -4.24027    1.41342  1   Ga    4.68780  * Ga_1       19
+   -1.41343    4.24027   -1.41342  1   Ga    4.68780  * Ga_1       20
+   -4.24027    1.41342   -1.41343  1   Ga    4.68780  * Ga_1       21
+    4.24027   -1.41342   -1.41342  1   Ga    4.68780  * Ga_1       22
+    1.41342   -4.24027   -1.41343  1   Ga    4.68780  * Ga_1       23
+    1.41342    4.24027    1.41343  1   Ga    4.68780  * Ga_1       24
+    1.41342    1.41342    4.24027  1   Ga    4.68780  * Ga_1       25
+    4.24027    1.41342    1.41343  1   Ga    4.68780  * Ga_1       26
+   -1.41343    1.41342   -4.24028  1   Ga    4.68780  * Ga_1       27
+    1.41342   -1.41342   -4.24028  1   Ga    4.68780  * Ga_1       28
+   -5.65370    0.00000   -0.00000  2   As    5.65370  * As_2       29
+    0.00000   -5.65370   -0.00000  2   As    5.65370  * As_2       30
+    0.00000    0.00000   -5.65370  2   As    5.65370  * As_2       31
+    5.65370    0.00000    0.00000  2   As    5.65370  * As_2       32
+   -0.00000    5.65370    0.00000  2   As    5.65370  * As_2       33
+    0.00000    0.00000    5.65370  2   As    5.65370  * As_2       34
+   -4.24027   -4.24027   -1.41343  1   Ga    6.16098  * Ga_1       35
+   -1.41342   -4.24027   -4.24028  1   Ga    6.16098  * Ga_1       36
+   -1.41343    4.24027    4.24027  1   Ga    6.16098  * Ga_1       37
+   -4.24027    1.41342    4.24027  1   Ga    6.16098  * Ga_1       38
+    4.24027   -1.41342    4.24027  1   Ga    6.16098  * Ga_1       39
+    1.41342   -4.24027    4.24027  1   Ga    6.16098  * Ga_1       40
+    4.24027   -4.24027    1.41342  1   Ga    6.16098  * Ga_1       41
+    4.24027    4.24027   -1.41342  1   Ga    6.16098  * Ga_1       42
+    1.41342    4.24027   -4.24027  1   Ga    6.16098  * Ga_1       43
+    4.24027    1.41342   -4.24027  1   Ga    6.16098  * Ga_1       44
+   -4.24027   -1.41342   -4.24028  1   Ga    6.16098  * Ga_1       45
+   -4.24028    4.24027    1.41342  1   Ga    6.16098  * Ga_1       46
+   -2.82685   -5.65370    2.82685  2   As    6.92434  * As_2       47
+   -5.65370    2.82685    2.82685  2   As    6.92434  * As_2       48
+    2.82685   -5.65370    2.82685  2   As    6.92434  * As_2       49
+    5.65370    2.82685   -2.82685  2   As    6.92434  * As_2       50
+    2.82685    5.65370   -2.82685  2   As    6.92434  * As_2       51
+   -2.82685   -2.82685   -5.65370  2   As    6.92434  * As_2       52
+   -2.82685   -5.65370   -2.82685  2   As    6.92434  * As_2       53
+   -5.65370   -2.82685   -2.82685  2   As    6.92434  * As_2       54
+   -2.82685   -2.82685    5.65370  2   As    6.92434  * As_2       55
+   -5.65370   -2.82685    2.82685  2   As    6.92434  * As_2       56
+   -2.82685    5.65370   -2.82685  2   As    6.92434  * As_2       57
+   -2.82685    2.82685   -5.65370  2   As    6.92434  * As_2       58
+   -5.65370    2.82685   -2.82685  2   As    6.92434  * As_2       59
+   -2.82685    5.65370    2.82685  2   As    6.92434  * As_2       60
+   -2.82685    2.82685    5.65370  2   As    6.92434  * As_2       61
+    5.65370   -2.82685   -2.82685  2   As    6.92434  * As_2       62
+    2.82685   -2.82685   -5.65370  2   As    6.92434  * As_2       63
+    2.82685   -5.65370   -2.82685  2   As    6.92434  * As_2       64
+    5.65370   -2.82685    2.82685  2   As    6.92434  * As_2       65
+    2.82685   -2.82685    5.65370  2   As    6.92434  * As_2       66
+    2.82685    2.82685   -5.65370  2   As    6.92434  * As_2       67
+    5.65370    2.82685    2.82685  2   As    6.92434  * As_2       68
+    2.82685    5.65370    2.82685  2   As    6.92434  * As_2       69
+    2.82685    2.82685    5.65370  2   As    6.92434  * As_2       70
+
+* END

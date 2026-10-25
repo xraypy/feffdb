@@ -1,0 +1,61 @@
+ Formula: HgS                                   Feff8L (EXAFS)       0.1
+ SpaceGroup: P3_221
+ CIF Source: Am Min Crystal Structure Database ID 12137
+ Mineral Name: cinnabar
+ Publication: Bulletin de la Societe Francaise de Mineralogie et de Cristallogra
+ Authors: Auvray P, Genet F
+ Cell Parameters (A, degrees): a=4.145, b=4.145, c=9.496, alpha=90.0, beta=90.0,
+ Cell Volume (A^3): 141.29300
+ Crystal Density (gr/cm^3): 8.203
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=80 Rmt= 1.445 Rnm= 1.678 L3 shell
+ Pot 1 Z=80 Rmt= 1.419 Rnm= 1.625
+ Pot 2 Z=16 Rmt= 1.294 Rnm= 1.495
+ Gam_ch=5.400E+00 H-L exch
+ Mu= 6.690E-01 kf=1.814E+00 Vint=-1.187E+01 Rs_int= 1.999
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   2.3679
+ feff0002.dat 0.00000    41.710     2.000     2   3.0942
+ feff0003.dat 0.00000    34.460     2.000     2   3.2867
+ feff0004.dat 0.00000    27.990     2.000     2   3.7505
+ feff0005.dat 0.00000    44.830     4.000     2   4.0994
+ feff0006.dat 0.00000    65.330     6.000     2   4.1450
+ feff0007.dat 0.00000    10.080     4.000     3   4.2431
+ feff0008.dat 0.00000    11.280     2.000     2   4.6432
+ feff0009.dat 0.00000     6.193     2.000     3   4.7311
+ feff0010.dat 0.00000    15.000     2.000     4   4.7357
+ feff0011.dat 0.00000     3.798     2.000     4   4.7358
+ feff0012.dat 0.00000     4.888     1.000     2   4.8435
+ feff0013.dat 0.00000     4.888     1.000     2   4.8435
+ feff0014.dat 0.00000     9.391     2.000     2   4.9006
+ feff0015.dat 0.00000    18.650     4.000     2   5.5899
+ feff0016.dat 0.00000    10.940     2.000     3   5.6222
+ feff0017.dat 0.00000    10.940     2.000     3   5.6222
+ feff0018.dat 0.00000    10.610     2.000     3   5.6222
+ feff0019.dat 0.00000    10.610     2.000     3   5.6222
+ feff0020.dat 0.00000     5.671     2.000     2   5.6525
+ feff0021.dat 0.00000    13.410     2.000     4   5.6546
+ feff0022.dat 0.00000    13.080     2.000     4   5.6546
+ feff0023.dat 0.00000     5.436     2.000     2   5.7190
+ feff0024.dat 0.00000     4.860     2.000     2   5.8969
+ feff0025.dat 0.00000     3.328     4.000     3   5.9186
+ feff0026.dat 0.00000     4.559     2.000     2   6.0002
+ feff0027.dat 0.00000     8.813     4.000     2   6.0558
+ feff0028.dat 0.00000     7.280     2.000     2   6.0601
+ feff0029.dat 0.00000     9.657     4.000     3   6.1040
+ feff0030.dat 0.00000     9.928     4.000     3   6.1242
+ feff0031.dat 0.00000     5.666     2.000     4   6.1521
+ feff0032.dat 0.00000     5.238     2.000     4   6.1883
+ feff0033.dat 0.00000     2.849     4.000     3   6.2565
+ feff0034.dat 0.00000     2.830     2.000     4   6.3809
+ feff0035.dat 0.00000     2.830     2.000     4   6.3809
+ feff0036.dat 0.00000     3.315     2.000     2   6.5351
+ feff0037.dat 0.00000     5.452     2.000     2   6.6426
+ feff0038.dat 0.00000     6.105     4.000     2   6.6789
+ feff0039.dat 0.00000    10.310     4.000     2   6.7594
+ feff0040.dat 0.00000     3.522     4.000     3   6.7787
+ feff0041.dat 0.00000     2.832     2.000     2   6.8112
+ feff0042.dat 0.00000     9.900     4.000     2   6.8456

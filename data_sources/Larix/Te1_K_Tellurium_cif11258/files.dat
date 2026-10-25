@@ -1,0 +1,38 @@
+ Formula: Te                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: P3_221
+ CIF Source: Am Min Crystal Structure Database ID 11258
+ Mineral Name: tellurium
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=4.44693, b=4.44693, c=5.91492, alpha=90.0, beta
+ Cell Volume (A^3): 101.29800
+ Crystal Density (gr/cm^3): 6.275
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=52 Rmt= 1.671 Rnm= 1.814 K  shell
+ Pot 1 Z=52 Rmt= 1.692 Rnm= 1.836
+ Gam_ch=1.206E+01 H-L exch
+ Mu=-4.298E-01 kf=1.608E+00 Vint=-1.028E+01 Rs_int= 2.255
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     2.000     2   2.8601
+ feff0002.dat 0.00000   110.600     4.000     2   3.4636
+ feff0003.dat 0.00000    70.810     6.000     2   4.4469
+ feff0004.dat 0.00000    11.730     1.000     2   4.4544
+ feff0005.dat 0.00000    11.730     1.000     2   4.4545
+ feff0006.dat 0.00000    34.660     4.000     2   4.8640
+ feff0007.dat 0.00000    25.940     4.000     2   5.2873
+ feff0008.dat 0.00000     8.721     2.000     2   5.9149
+ feff0009.dat 0.00000     8.459     2.000     2   5.9656
+ feff0010.dat 0.00000    13.940     4.000     2   6.2942
+ feff0011.dat 0.00000     5.113     4.000     3   6.3090
+ feff0012.dat 0.00000    21.120     4.000     3   6.3090
+ feff0013.dat 0.00000    19.360     4.000     3   6.3090
+ feff0014.dat 0.00000     6.919     4.000     4   6.3237
+ feff0015.dat 0.00000    14.630     2.000     4   6.3238
+ feff0016.dat 0.00000    14.390     2.000     4   6.3238
+ feff0017.dat 0.00000    11.540     4.000     2   6.6268
+ feff0018.dat 0.00000     5.038     2.000     2   6.8739
+ feff0019.dat 0.00000    11.050     4.000     3   6.9006
+ feff0020.dat 0.00000     5.042     2.000     4   6.9273

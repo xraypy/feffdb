@@ -1,0 +1,119 @@
+* FEFF8 input file generated 2026-09-13 20:51:54
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Te
+TITLE SpaceGroup: P3_221
+TITLE CIF Source: Am Min Crystal Structure Database ID 11258
+TITLE Mineral Name: tellurium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=4.44693, b=4.44693, c=5.91492, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 101.29800
+TITLE Crystal Density (gr/cm^3): 6.275
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.26900 0.00000 0.16667     3b   Te   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for ___auto___
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for ___auto___
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    52    Te      -1     -1       0.01
+     1    52    Te      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Te    0.00000  * Te_1        0
+   -1.79434   -1.03596    1.97160  1   Te    2.86008  * Te_1        1
+   -1.79434    1.03596   -1.97168  1   Te    2.86014  * Te_1        2
+    2.65259   -1.03596    1.97160  1   Te    3.46362  * Te_1        3
+    0.42913    2.81519    1.97160  1   Te    3.46362  * Te_1        4
+    2.65259    1.03596   -1.97168  1   Te    3.46367  * Te_1        5
+    0.42913   -2.81519   -1.97168  1   Te    3.46367  * Te_1        6
+   -2.22347   -3.85115   -0.00000  1   Te    4.44693  * Te_1        7
+   -2.22346    3.85115    0.00000  1   Te    4.44693  * Te_1        8
+   -4.44693    0.00000   -0.00000  1   Te    4.44693  * Te_1        9
+    2.22347   -3.85115   -0.00000  1   Te    4.44693  * Te_1       10
+    2.22347    3.85115    0.00000  1   Te    4.44693  * Te_1       11
+    4.44693    0.00000    0.00000  1   Te    4.44693  * Te_1       12
+   -1.79434    1.03596    3.94324  1   Te    4.45444  * Te_1       13
+   -1.79434   -1.03596   -3.94332  1   Te    4.45451  * Te_1       14
+    0.42913   -2.81519    3.94324  1   Te    4.86401  * Te_1       15
+    2.65259    1.03596    3.94324  1   Te    4.86401  * Te_1       16
+    2.65259   -1.03596   -3.94332  1   Te    4.86408  * Te_1       17
+    0.42913    2.81519   -3.94332  1   Te    4.86408  * Te_1       18
+   -4.01780    2.81519    1.97160  1   Te    5.28727  * Te_1       19
+    0.42913   -4.88711    1.97160  1   Te    5.28727  * Te_1       20
+   -4.01780   -2.81519   -1.97168  1   Te    5.28730  * Te_1       21
+    0.42913    4.88711   -1.97168  1   Te    5.28730  * Te_1       22
+    0.00000    0.00000   -5.91492  1   Te    5.91492  * Te_1       23
+    0.00000    0.00000    5.91492  1   Te    5.91492  * Te_1       24
+    4.87606    2.81519    1.97160  1   Te    5.96561  * Te_1       25
+    4.87606   -2.81519   -1.97168  1   Te    5.96563  * Te_1       26
+   -4.01780   -2.81519    3.94324  1   Te    6.29422  * Te_1       27
+    0.42913    4.88711    3.94324  1   Te    6.29422  * Te_1       28
+   -4.01780    2.81519   -3.94332  1   Te    6.29427  * Te_1       29
+    0.42913   -4.88711   -3.94332  1   Te    6.29427  * Te_1       30
+   -6.24127   -1.03596    1.97160  1   Te    6.62675  * Te_1       31
+   -4.01780   -4.88711    1.97160  1   Te    6.62675  * Te_1       32
+   -6.24127    1.03596   -1.97168  1   Te    6.62677  * Te_1       33
+   -4.01780    4.88711   -1.97168  1   Te    6.62677  * Te_1       34
+    4.87606   -2.81519    3.94324  1   Te    6.87389  * Te_1       35
+    4.87606    2.81519   -3.94332  1   Te    6.87394  * Te_1       36
+
+* END

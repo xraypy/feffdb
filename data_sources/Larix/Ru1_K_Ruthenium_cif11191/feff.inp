@@ -1,0 +1,187 @@
+* FEFF8 input file generated 2026-09-13 20:43:17
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Ru
+TITLE SpaceGroup: P6_3/mmc
+TITLE CIF Source: Am Min Crystal Structure Database ID 11191
+TITLE Mineral Name: ruthenium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=2.70389, b=2.70389, c=4.28168, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 27.11000
+TITLE Crystal Density (gr/cm^3): 12.382
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.33333 0.66667 0.25000     2c   Ru   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for ___auto___
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for ___auto___
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    44    Ru      -1     -1       0.01
+     1    44    Ru      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Ru    0.00000  * Ru_1        0
+   -1.35194   -0.78055   -2.14084  1   Ru    2.64957  * Ru_1        1
+   -1.35194   -0.78055    2.14084  1   Ru    2.64957  * Ru_1        2
+    1.35194   -0.78055   -2.14084  1   Ru    2.64957  * Ru_1        3
+    1.35194   -0.78055    2.14084  1   Ru    2.64957  * Ru_1        4
+    0.00000    1.56109   -2.14084  1   Ru    2.64957  * Ru_1        5
+    0.00000    1.56109    2.14084  1   Ru    2.64957  * Ru_1        6
+   -1.35195   -2.34164   -0.00000  1   Ru    2.70389  * Ru_1        7
+   -1.35194    2.34164    0.00000  1   Ru    2.70389  * Ru_1        8
+   -2.70389    0.00000   -0.00000  1   Ru    2.70389  * Ru_1        9
+    1.35194   -2.34164   -0.00000  1   Ru    2.70389  * Ru_1       10
+    1.35195    2.34164    0.00000  1   Ru    2.70389  * Ru_1       11
+    2.70389    0.00000    0.00000  1   Ru    2.70389  * Ru_1       12
+   -2.70389    1.56109   -2.14084  1   Ru    3.78566  * Ru_1       13
+   -2.70389    1.56109    2.14084  1   Ru    3.78566  * Ru_1       14
+   -0.00000   -3.12218   -2.14084  1   Ru    3.78566  * Ru_1       15
+   -0.00000   -3.12218    2.14084  1   Ru    3.78566  * Ru_1       16
+    2.70389    1.56109   -2.14084  1   Ru    3.78566  * Ru_1       17
+    2.70389    1.56109    2.14084  1   Ru    3.78566  * Ru_1       18
+    0.00000    0.00000   -4.28168  1   Ru    4.28168  * Ru_1       19
+    0.00000    0.00000    4.28168  1   Ru    4.28168  * Ru_1       20
+   -4.05584   -0.78055   -2.14084  1   Ru    4.65212  * Ru_1       21
+   -2.70389   -3.12218   -2.14084  1   Ru    4.65212  * Ru_1       22
+   -4.05584   -0.78055    2.14084  1   Ru    4.65212  * Ru_1       23
+   -2.70389   -3.12218    2.14084  1   Ru    4.65212  * Ru_1       24
+    4.05584   -0.78055   -2.14084  1   Ru    4.65212  * Ru_1       25
+    2.70389   -3.12218   -2.14084  1   Ru    4.65212  * Ru_1       26
+    4.05584   -0.78055    2.14084  1   Ru    4.65212  * Ru_1       27
+    2.70389   -3.12218    2.14084  1   Ru    4.65212  * Ru_1       28
+    1.35195    3.90273   -2.14084  1   Ru    4.65212  * Ru_1       29
+   -1.35194    3.90273   -2.14084  1   Ru    4.65212  * Ru_1       30
+   -1.35194    3.90273    2.14084  1   Ru    4.65212  * Ru_1       31
+    1.35195    3.90273    2.14084  1   Ru    4.65212  * Ru_1       32
+   -4.05583    2.34164    0.00000  1   Ru    4.68327  * Ru_1       33
+    0.00000    4.68327    0.00000  1   Ru    4.68327  * Ru_1       34
+   -4.05584   -2.34164   -0.00000  1   Ru    4.68327  * Ru_1       35
+    4.05584   -2.34164    0.00000  1   Ru    4.68327  * Ru_1       36
+   -0.00000   -4.68327   -0.00000  1   Ru    4.68327  * Ru_1       37
+    4.05584    2.34164    0.00000  1   Ru    4.68327  * Ru_1       38
+   -1.35195   -2.34164   -4.28168  1   Ru    5.06397  * Ru_1       39
+   -1.35195   -2.34164    4.28168  1   Ru    5.06397  * Ru_1       40
+   -1.35194    2.34164   -4.28168  1   Ru    5.06397  * Ru_1       41
+   -2.70389    0.00000   -4.28168  1   Ru    5.06397  * Ru_1       42
+   -1.35194    2.34164    4.28168  1   Ru    5.06397  * Ru_1       43
+   -2.70389    0.00000    4.28168  1   Ru    5.06397  * Ru_1       44
+    1.35194   -2.34164   -4.28168  1   Ru    5.06397  * Ru_1       45
+    1.35194   -2.34164    4.28168  1   Ru    5.06397  * Ru_1       46
+    1.35195    2.34164   -4.28168  1   Ru    5.06397  * Ru_1       47
+    2.70389    0.00000   -4.28168  1   Ru    5.06397  * Ru_1       48
+    1.35195    2.34164    4.28168  1   Ru    5.06397  * Ru_1       49
+    2.70389    0.00000    4.28168  1   Ru    5.06397  * Ru_1       50
+   -2.70389    4.68327    0.00000  1   Ru    5.40778  * Ru_1       51
+   -2.70389   -4.68327   -0.00000  1   Ru    5.40778  * Ru_1       52
+   -5.40778    0.00000   -0.00000  1   Ru    5.40778  * Ru_1       53
+    2.70389   -4.68327   -0.00000  1   Ru    5.40778  * Ru_1       54
+    2.70389    4.68327    0.00000  1   Ru    5.40778  * Ru_1       55
+    5.40778    0.00000    0.00000  1   Ru    5.40778  * Ru_1       56
+   -1.35195   -5.46382    2.14084  1   Ru    6.02198  * Ru_1       57
+   -4.05583    3.90273   -2.14084  1   Ru    6.02198  * Ru_1       58
+   -5.40778    1.56109   -2.14084  1   Ru    6.02198  * Ru_1       59
+   -4.05583    3.90273    2.14084  1   Ru    6.02198  * Ru_1       60
+   -5.40778    1.56109    2.14084  1   Ru    6.02198  * Ru_1       61
+    1.35194   -5.46382    2.14084  1   Ru    6.02198  * Ru_1       62
+   -1.35195   -5.46382   -2.14084  1   Ru    6.02198  * Ru_1       63
+    1.35194   -5.46382   -2.14084  1   Ru    6.02198  * Ru_1       64
+    4.05584    3.90273   -2.14084  1   Ru    6.02198  * Ru_1       65
+    5.40778    1.56109   -2.14084  1   Ru    6.02198  * Ru_1       66
+    5.40778    1.56109    2.14084  1   Ru    6.02198  * Ru_1       67
+    4.05584    3.90273    2.14084  1   Ru    6.02198  * Ru_1       68
+   -4.05584   -2.34164    4.28168  1   Ru    6.34554  * Ru_1       69
+   -4.05583    2.34164   -4.28168  1   Ru    6.34554  * Ru_1       70
+   -4.05583    2.34164    4.28168  1   Ru    6.34554  * Ru_1       71
+   -0.00000   -4.68327    4.28168  1   Ru    6.34554  * Ru_1       72
+    0.00000    4.68327   -4.28168  1   Ru    6.34554  * Ru_1       73
+    0.00000    4.68327    4.28168  1   Ru    6.34554  * Ru_1       74
+   -4.05584   -2.34164   -4.28168  1   Ru    6.34554  * Ru_1       75
+    4.05584   -2.34164   -4.28168  1   Ru    6.34554  * Ru_1       76
+   -0.00000   -4.68327   -4.28168  1   Ru    6.34554  * Ru_1       77
+    4.05584   -2.34164    4.28168  1   Ru    6.34554  * Ru_1       78
+    4.05584    2.34164   -4.28168  1   Ru    6.34554  * Ru_1       79
+    4.05584    2.34164    4.28168  1   Ru    6.34554  * Ru_1       80
+   -5.40778   -3.12218   -2.14084  1   Ru    6.60116  * Ru_1       81
+   -5.40778   -3.12218    2.14084  1   Ru    6.60116  * Ru_1       82
+    5.40778   -3.12218   -2.14084  1   Ru    6.60116  * Ru_1       83
+    5.40778   -3.12218    2.14084  1   Ru    6.60116  * Ru_1       84
+    0.00000    6.24437   -2.14084  1   Ru    6.60116  * Ru_1       85
+    0.00000    6.24437    2.14084  1   Ru    6.60116  * Ru_1       86
+   -1.35194   -0.78055   -6.42252  1   Ru    6.60952  * Ru_1       87
+   -1.35194   -0.78055    6.42252  1   Ru    6.60952  * Ru_1       88
+    1.35194   -0.78055   -6.42252  1   Ru    6.60952  * Ru_1       89
+    1.35194   -0.78055    6.42252  1   Ru    6.60952  * Ru_1       90
+    0.00000    1.56109   -6.42252  1   Ru    6.60952  * Ru_1       91
+    0.00000    1.56109    6.42252  1   Ru    6.60952  * Ru_1       92
+   -2.70389    4.68327   -4.28168  1   Ru    6.89760  * Ru_1       93
+   -2.70389    4.68327    4.28168  1   Ru    6.89760  * Ru_1       94
+   -2.70389   -4.68327    4.28168  1   Ru    6.89760  * Ru_1       95
+   -5.40778    0.00000   -4.28168  1   Ru    6.89760  * Ru_1       96
+   -5.40778    0.00000    4.28168  1   Ru    6.89760  * Ru_1       97
+    2.70389   -4.68327   -4.28168  1   Ru    6.89760  * Ru_1       98
+    2.70389   -4.68327    4.28168  1   Ru    6.89760  * Ru_1       99
+    2.70389    4.68327   -4.28168  1   Ru    6.89760  * Ru_1      100
+    2.70389    4.68327    4.28168  1   Ru    6.89760  * Ru_1      101
+   -2.70389   -4.68327   -4.28168  1   Ru    6.89760  * Ru_1      102
+    5.40778    0.00000   -4.28168  1   Ru    6.89760  * Ru_1      103
+    5.40778    0.00000    4.28168  1   Ru    6.89760  * Ru_1      104
+
+* END

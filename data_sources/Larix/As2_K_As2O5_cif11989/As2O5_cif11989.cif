@@ -1,0 +1,59 @@
+data_global
+_amcsd_formula_title 'As2O5'
+loop_
+_publ_author_name
+'Jansen M'
+_journal_name_full 'Angewandte Chemie'
+_journal_volume 89
+_journal_year 1977
+_journal_page_first 326
+_journal_page_last 327
+_publ_section_title
+;
+ Kristallstruktur von As2O5
+;
+_database_code_amcsd 11989
+_chemical_formula_sum 'As2 O5'
+_cell_length_a 8.646
+_cell_length_b 8.45
+_cell_length_c 4.626
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 337.97
+_exptl_crystal_density_diffrn  4.517
+_symmetry_space_group_name_H-M 'P 21 21 21'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '-x,1/2+y,1/2-z'
+  '1/2+x,1/2-y,-z'
+  '1/2-x,-y,1/2+z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+As1   0.1515  0.4025  0.1284
+As2   0.5336  0.7826  0.134
+O1   0.2903  0.4334  0.8451
+O2   0.4953  0.1439  0.6171
+O3   0.5824  0.2655  0.0817
+O4   0.499  0.4757  0.4612
+O5   0.2757  0.2561  0.3
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+As1   0.0167  0.0185  0.0163  -0.0007  0.0009  -0.0003
+As2   0.0172  0.0181  0.0167  -0.0003  0.0005  0.0004
+O1   0.0116  0.0066  0.0382  0.0047  0.0166  0.0134
+O2   0.015  0.0085  0.0236  -0.0013  -0.0073  0.0096
+O3   0.0158  0.0116  0.013  -0.0004  0.0103  0.0018
+O4   0.0141  0.0041  0.0103  0.0042  0.0  -0.0041
+O5   0.0092  0.0132  0.0032  0.0003  -0.0003  0.0016
+

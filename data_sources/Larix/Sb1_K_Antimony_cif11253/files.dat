@@ -1,0 +1,38 @@
+ Formula: Sb                                    Feff8L (EXAFS)       0.1
+ SpaceGroup: R-3m
+ CIF Source: Am Min Crystal Structure Database ID 11253
+ Mineral Name: antimony
+ Publication: Crystal Structures 1 [7:83] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=4.50661, b=4.50661, c=4.50661, alpha=57.108, be
+ Cell Volume (A^3): 60.40600
+ Crystal Density (gr/cm^3): 6.694
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=51 Rmt= 1.692 Rnm= 1.794 K  shell
+ Pot 1 Z=51 Rmt= 1.701 Rnm= 1.807
+ Gam_ch=1.125E+01 H-L exch
+ Mu=-6.797E-01 kf=1.674E+00 Vint=-1.135E+01 Rs_int= 2.167
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     3.000     2   2.9024
+ feff0002.dat 0.00000    64.120     3.000     2   3.3623
+ feff0003.dat 0.00000    55.960     6.000     2   4.3082
+ feff0004.dat 0.00000    47.970     6.000     2   4.5066
+ feff0005.dat 0.00000     7.595    12.000     3   5.0565
+ feff0006.dat 0.00000    14.710     3.000     2   5.1947
+ feff0007.dat 0.00000     4.716     1.000     2   5.2537
+ feff0008.dat 0.00000    12.330     3.000     2   5.4649
+ feff0009.dat 0.00000     2.919     1.000     2   6.0203
+ feff0010.dat 0.00000    15.450     6.000     2   6.2346
+ feff0011.dat 0.00000     5.740     6.000     3   6.2496
+ feff0012.dat 0.00000    22.530     6.000     3   6.2496
+ feff0013.dat 0.00000    21.090     6.000     3   6.2496
+ feff0014.dat 0.00000     7.389     6.000     4   6.2647
+ feff0015.dat 0.00000    15.230     3.000     4   6.2647
+ feff0016.dat 0.00000    15.270     3.000     4   6.2647
+ feff0017.dat 0.00000    11.570     6.000     2   6.7487
+ feff0018.dat 0.00000    11.290     6.000     2   6.7943
+ feff0019.dat 0.00000    10.330     6.000     2   6.9589
+ feff0020.dat 0.00000     3.624    12.000     3   6.9797

@@ -1,0 +1,141 @@
+* FEFF8 input file generated 2026-10-23 15:13:05
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: CdCl2
+TITLE SpaceGroup: R-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11804
+TITLE Mineral Name: <missing>
+TITLE Publication: Crystal Structures 1 [239:444] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=3.85, b=3.85, c=17.46, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 224.12800
+TITLE Crystal Density (gr/cm^3): 4.075
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     3a   Cd   <- absorber
+*   2   0.00000 0.00000 0.25000     6c   Cl 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    48    Cd      -1     -1       0.01
+     1    17    Cl      -1     -1
+     2    48    Cd      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Cd    0.00000  * Cd_1        0
+   -1.92500    1.11140    1.45500  1   Cl    2.65666  * Cl_2        1
+    1.92500   -1.11140   -1.45500  1   Cl    2.65666  * Cl_2        2
+   -0.00000   -2.22280    1.45500  1   Cl    2.65666  * Cl_2        3
+    1.92500    1.11140    1.45500  1   Cl    2.65666  * Cl_2        4
+   -1.92500   -1.11140   -1.45500  1   Cl    2.65666  * Cl_2        5
+    0.00000    2.22280   -1.45500  1   Cl    2.65666  * Cl_2        6
+   -1.92500    3.33420    0.00000  2   Cd    3.85000  * Cd_1        7
+   -3.85000    0.00000   -0.00000  2   Cd    3.85000  * Cd_1        8
+    1.92500   -3.33420   -0.00000  2   Cd    3.85000  * Cd_1        9
+    3.85000    0.00000    0.00000  2   Cd    3.85000  * Cd_1       10
+   -1.92500   -3.33420   -0.00000  2   Cd    3.85000  * Cd_1       11
+    1.92500    3.33420    0.00000  2   Cd    3.85000  * Cd_1       12
+    0.00000    0.00000   -4.36500  1   Cl    4.36500  * Cl_2       13
+    0.00000    0.00000    4.36500  1   Cl    4.36500  * Cl_2       14
+   -3.85000   -2.22280    1.45500  1   Cl    4.67764  * Cl_2       15
+   -3.85000    2.22280   -1.45500  1   Cl    4.67764  * Cl_2       16
+    3.85000   -2.22280    1.45500  1   Cl    4.67764  * Cl_2       17
+    3.85000    2.22280   -1.45500  1   Cl    4.67764  * Cl_2       18
+    0.00000    4.44560    1.45500  1   Cl    4.67764  * Cl_2       19
+   -0.00000   -4.44560   -1.45500  1   Cl    4.67764  * Cl_2       20
+   -1.92500   -3.33420    4.36500  1   Cl    5.82029  * Cl_2       21
+   -1.92500    3.33420   -4.36500  1   Cl    5.82029  * Cl_2       22
+   -3.85000    0.00000   -4.36500  1   Cl    5.82029  * Cl_2       23
+   -1.92500    3.33420    4.36500  1   Cl    5.82029  * Cl_2       24
+   -3.85000    0.00000    4.36500  1   Cl    5.82029  * Cl_2       25
+    1.92500   -3.33420   -4.36500  1   Cl    5.82029  * Cl_2       26
+    1.92500   -3.33420    4.36500  1   Cl    5.82029  * Cl_2       27
+    1.92500    3.33420   -4.36500  1   Cl    5.82029  * Cl_2       28
+    3.85000    0.00000   -4.36500  1   Cl    5.82029  * Cl_2       29
+    3.85000    0.00000    4.36500  1   Cl    5.82029  * Cl_2       30
+   -1.92500   -3.33420   -4.36500  1   Cl    5.82029  * Cl_2       31
+    1.92500    3.33420    4.36500  1   Cl    5.82029  * Cl_2       32
+   -1.92500    5.55700   -1.45500  1   Cl    6.05829  * Cl_2       33
+    5.77500   -1.11140   -1.45500  1   Cl    6.05829  * Cl_2       34
+    5.77500    1.11140    1.45500  1   Cl    6.05829  * Cl_2       35
+   -5.77500    1.11140    1.45500  1   Cl    6.05829  * Cl_2       36
+    1.92500    5.55700   -1.45500  1   Cl    6.05829  * Cl_2       37
+   -5.77500   -1.11140   -1.45500  1   Cl    6.05829  * Cl_2       38
+   -1.92500   -5.55700    1.45500  1   Cl    6.05829  * Cl_2       39
+   -3.85000    4.44560    1.45500  1   Cl    6.05829  * Cl_2       40
+    3.85000   -4.44560   -1.45500  1   Cl    6.05829  * Cl_2       41
+    1.92500   -5.55700    1.45500  1   Cl    6.05829  * Cl_2       42
+    3.85000    4.44560    1.45500  1   Cl    6.05829  * Cl_2       43
+   -3.85000   -4.44560   -1.45500  1   Cl    6.05829  * Cl_2       44
+   -0.00000   -2.22280    5.82000  2   Cd    6.23003  * Cd_1       45
+   -1.92500    1.11140    5.82000  2   Cd    6.23003  * Cd_1       46
+    1.92500   -1.11140   -5.82000  2   Cd    6.23003  * Cd_1       47
+    0.00000    2.22280   -5.82000  2   Cd    6.23003  * Cd_1       48
+    1.92500    1.11140    5.82000  2   Cd    6.23003  * Cd_1       49
+   -1.92500   -1.11140   -5.82000  2   Cd    6.23003  * Cd_1       50
+   -5.77500   -3.33420   -0.00000  2   Cd    6.66840  * Cd_1       51
+   -5.77500    3.33420    0.00000  2   Cd    6.66840  * Cd_1       52
+    5.77500   -3.33420    0.00000  2   Cd    6.66840  * Cd_1       53
+    5.77500    3.33420    0.00000  2   Cd    6.66840  * Cd_1       54
+   -0.00000   -6.66840   -0.00000  2   Cd    6.66840  * Cd_1       55
+    0.00000    6.66840    0.00000  2   Cd    6.66840  * Cd_1       56
+
+* END

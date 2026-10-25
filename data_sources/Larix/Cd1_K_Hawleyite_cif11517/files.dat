@@ -1,0 +1,33 @@
+ Formula: CdS                                   Feff8L (EXAFS)       0.1
+ SpaceGroup: F-43m
+ CIF Source: Am Min Crystal Structure Database ID 11517
+ Mineral Name: hawleyite
+ Publication: Crystal Structures 1 [85:237] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=5.818, b=5.818, c=5.818, alpha=90.0, beta=90.0,
+ Cell Volume (A^3): 196.93400
+ Crystal Density (gr/cm^3): 4.873
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=48 Rmt= 1.520 Rnm= 1.671 K  shell
+ Pot 1 Z=16 Rmt= 1.393 Rnm= 1.515
+ Pot 2 Z=48 Rmt= 1.497 Rnm= 1.621
+ Gam_ch=8.978E+00 H-L exch
+ Mu= 2.752E-01 kf=1.792E+00 Vint=-1.196E+01 Rs_int= 2.023
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   2.5193
+ feff0002.dat 0.00000    92.760    12.000     2   4.1139
+ feff0003.dat 0.00000     4.650    12.000     3   4.5762
+ feff0004.dat 0.00000    25.130    24.000     3   4.5762
+ feff0005.dat 0.00000    30.660    12.000     2   4.8240
+ feff0006.dat 0.00000     3.109     4.000     4   5.0385
+ feff0008.dat 0.00000     4.928    48.000     3   5.7286
+ feff0009.dat 0.00000     6.990    48.000     3   5.7286
+ feff0010.dat 0.00000    14.150     6.000     2   5.8180
+ feff0011.dat 0.00000     3.524    48.000     3   6.1709
+ feff0012.dat 0.00000    10.530    12.000     2   6.3400
+ feff0013.dat 0.00000     5.130    24.000     3   6.4866
+ feff0014.dat 0.00000     6.929    24.000     3   6.4866
+ feff0015.dat 0.00000     4.990    24.000     3   6.4866

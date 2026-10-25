@@ -1,0 +1,159 @@
+* FEFF8 input file generated 2026-10-23 15:52:32
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: PbO
+TITLE SpaceGroup: P4/nmm
+TITLE CIF Source: Am Min Crystal Structure Database ID 11633
+TITLE Mineral Name: <missing>
+TITLE Publication: Crystal Structures 1 [85:237] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=3.975, b=3.975, c=5.023, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 79.36700
+TITLE Crystal Density (gr/cm^3): 9.34
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.50000 0.23850     2c   Pb   <- absorber
+*   2   0.00000 0.00000 0.00000     2a   O 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    82    Pb      -1     -1       0.01
+     1     8     O      -1     -1
+     2    82    Pb      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Pb    0.00000  * Pb_1        0
+   -0.00000    1.98750   -1.19799  1   O     2.32063  * O_2         1
+    1.98750    0.00000   -1.19799  1   O     2.32063  * O_2         2
+   -1.98750    0.00000   -1.19799  1   O     2.32063  * O_2         3
+    0.00000   -1.98750   -1.19799  1   O     2.32063  * O_2         4
+   -1.98750   -1.98750   -2.39597  2   Pb    3.69337  * Pb_1        5
+   -1.98750    1.98750   -2.39597  2   Pb    3.69337  * Pb_1        6
+    1.98750   -1.98750   -2.39597  2   Pb    3.69337  * Pb_1        7
+    1.98750    1.98750   -2.39597  2   Pb    3.69337  * Pb_1        8
+   -1.98750   -1.98750    2.62703  2   Pb    3.84728  * Pb_1        9
+   -1.98750    1.98750    2.62703  2   Pb    3.84728  * Pb_1       10
+    1.98750    1.98750    2.62703  2   Pb    3.84728  * Pb_1       11
+    1.98750   -1.98750    2.62703  2   Pb    3.84728  * Pb_1       12
+   -3.97500    0.00000   -0.00000  2   Pb    3.97500  * Pb_1       13
+    0.00000   -3.97500   -0.00000  2   Pb    3.97500  * Pb_1       14
+    3.97500    0.00000    0.00000  2   Pb    3.97500  * Pb_1       15
+   -0.00000    3.97500    0.00000  2   Pb    3.97500  * Pb_1       16
+   -1.98750    0.00000    3.82501  1   O     4.31056  * O_2        17
+    0.00000   -1.98750    3.82501  1   O     4.31056  * O_2        18
+   -0.00000    1.98750    3.82501  1   O     4.31056  * O_2        19
+    1.98750    0.00000    3.82501  1   O     4.31056  * O_2        20
+    3.97500    1.98750   -1.19799  1   O     4.60282  * O_2        21
+   -3.97500   -1.98750   -1.19799  1   O     4.60282  * O_2        22
+   -1.98750   -3.97500   -1.19799  1   O     4.60282  * O_2        23
+   -3.97500    1.98750   -1.19799  1   O     4.60282  * O_2        24
+   -1.98750    3.97500   -1.19799  1   O     4.60282  * O_2        25
+    3.97500   -1.98750   -1.19799  1   O     4.60282  * O_2        26
+    1.98750   -3.97500   -1.19799  1   O     4.60282  * O_2        27
+    1.98750    3.97500   -1.19799  1   O     4.60282  * O_2        28
+    0.00000    0.00000   -5.02300  2   Pb    5.02300  * Pb_1       29
+    0.00000    0.00000    5.02300  2   Pb    5.02300  * Pb_1       30
+   -3.97500   -3.97500   -0.00000  2   Pb    5.62150  * Pb_1       31
+   -3.97500    3.97500    0.00000  2   Pb    5.62150  * Pb_1       32
+    3.97500   -3.97500    0.00000  2   Pb    5.62150  * Pb_1       33
+    3.97500    3.97500    0.00000  2   Pb    5.62150  * Pb_1       34
+   -3.97500   -1.98750    3.82501  1   O     5.86358  * O_2        35
+   -1.98750   -3.97500    3.82501  1   O     5.86358  * O_2        36
+   -3.97500    1.98750    3.82501  1   O     5.86358  * O_2        37
+   -1.98750    3.97500    3.82501  1   O     5.86358  * O_2        38
+    3.97500   -1.98750    3.82501  1   O     5.86358  * O_2        39
+    1.98750   -3.97500    3.82501  1   O     5.86358  * O_2        40
+    3.97500    1.98750    3.82501  1   O     5.86358  * O_2        41
+    1.98750    3.97500    3.82501  1   O     5.86358  * O_2        42
+   -5.96250    0.00000   -1.19799  1   O     6.08166  * O_2        43
+    0.00000   -5.96250   -1.19799  1   O     6.08166  * O_2        44
+    5.96250    0.00000   -1.19799  1   O     6.08166  * O_2        45
+   -0.00000    5.96250   -1.19799  1   O     6.08166  * O_2        46
+   -3.97500    0.00000   -5.02300  2   Pb    6.40556  * Pb_1       47
+   -3.97500    0.00000    5.02300  2   Pb    6.40556  * Pb_1       48
+    0.00000   -3.97500   -5.02300  2   Pb    6.40556  * Pb_1       49
+    0.00000   -3.97500    5.02300  2   Pb    6.40556  * Pb_1       50
+    3.97500    0.00000   -5.02300  2   Pb    6.40556  * Pb_1       51
+   -0.00000    3.97500   -5.02300  2   Pb    6.40556  * Pb_1       52
+    3.97500    0.00000    5.02300  2   Pb    6.40556  * Pb_1       53
+   -0.00000    3.97500    5.02300  2   Pb    6.40556  * Pb_1       54
+   -1.98750    0.00000   -6.22099  1   O     6.53076  * O_2        55
+    0.00000   -1.98750   -6.22099  1   O     6.53076  * O_2        56
+   -0.00000    1.98750   -6.22099  1   O     6.53076  * O_2        57
+    1.98750    0.00000   -6.22099  1   O     6.53076  * O_2        58
+   -1.98750   -5.96250   -2.39597  2   Pb    6.72624  * Pb_1       59
+   -5.96250   -1.98750   -2.39597  2   Pb    6.72624  * Pb_1       60
+   -1.98750    5.96250   -2.39597  2   Pb    6.72624  * Pb_1       61
+   -5.96250    1.98750   -2.39597  2   Pb    6.72624  * Pb_1       62
+    5.96250   -1.98750   -2.39597  2   Pb    6.72624  * Pb_1       63
+    1.98750   -5.96250   -2.39597  2   Pb    6.72624  * Pb_1       64
+    5.96250    1.98750   -2.39597  2   Pb    6.72624  * Pb_1       65
+    1.98750    5.96250   -2.39597  2   Pb    6.72624  * Pb_1       66
+   -1.98750   -5.96250    2.62703  2   Pb    6.81196  * Pb_1       67
+   -5.96250   -1.98750    2.62703  2   Pb    6.81196  * Pb_1       68
+   -1.98750    5.96250    2.62703  2   Pb    6.81196  * Pb_1       69
+   -5.96250    1.98750    2.62703  2   Pb    6.81196  * Pb_1       70
+    5.96250   -1.98750    2.62703  2   Pb    6.81196  * Pb_1       71
+    1.98750   -5.96250    2.62703  2   Pb    6.81196  * Pb_1       72
+    5.96250    1.98750    2.62703  2   Pb    6.81196  * Pb_1       73
+    1.98750    5.96250    2.62703  2   Pb    6.81196  * Pb_1       74
+
+* END

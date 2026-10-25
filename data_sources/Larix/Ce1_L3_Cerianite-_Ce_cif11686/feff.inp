@@ -1,0 +1,183 @@
+* FEFF8 input file generated 2026-10-23 14:34:30
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: CeO2
+TITLE SpaceGroup: Fm-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11686
+TITLE Mineral Name: cerianite-(ce)
+TITLE Publication: Crystal Structures 1 [239:444] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=5.411, b=5.411, c=5.411, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 158.42800
+TITLE Crystal Density (gr/cm^3): 7.216
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     4a   Ce   <- absorber
+*   2   0.25000 0.25000 0.25000     8c   O 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    58    Ce      -1     -1       0.01
+     1     8     O      -1     -1
+     2    58    Ce      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Ce    0.00000  * Ce_1        0
+   -1.35275   -1.35275   -1.35275  1   O     2.34303  * O_2         1
+   -1.35275   -1.35275    1.35275  1   O     2.34303  * O_2         2
+   -1.35275    1.35275   -1.35275  1   O     2.34303  * O_2         3
+   -1.35275    1.35275    1.35275  1   O     2.34303  * O_2         4
+    1.35275   -1.35275   -1.35275  1   O     2.34303  * O_2         5
+    1.35275   -1.35275    1.35275  1   O     2.34303  * O_2         6
+    1.35275    1.35275   -1.35275  1   O     2.34303  * O_2         7
+    1.35275    1.35275    1.35275  1   O     2.34303  * O_2         8
+   -2.70550   -2.70550   -0.00000  2   Ce    3.82615  * Ce_1        9
+   -2.70550    0.00000   -2.70550  2   Ce    3.82615  * Ce_1       10
+   -2.70550    0.00000    2.70550  2   Ce    3.82615  * Ce_1       11
+   -2.70550    2.70550    0.00000  2   Ce    3.82615  * Ce_1       12
+    0.00000   -2.70550   -2.70550  2   Ce    3.82615  * Ce_1       13
+    0.00000   -2.70550    2.70550  2   Ce    3.82615  * Ce_1       14
+    2.70550   -2.70550    0.00000  2   Ce    3.82615  * Ce_1       15
+    2.70550    0.00000   -2.70550  2   Ce    3.82615  * Ce_1       16
+   -0.00000    2.70550   -2.70550  2   Ce    3.82615  * Ce_1       17
+    2.70550    0.00000    2.70550  2   Ce    3.82615  * Ce_1       18
+   -0.00000    2.70550    2.70550  2   Ce    3.82615  * Ce_1       19
+    2.70550    2.70550    0.00000  2   Ce    3.82615  * Ce_1       20
+   -1.35275   -4.05825    1.35275  1   O     4.48656  * O_2        21
+    1.35275    4.05825   -1.35275  1   O     4.48656  * O_2        22
+   -1.35275   -4.05825   -1.35275  1   O     4.48656  * O_2        23
+   -4.05825   -1.35275   -1.35275  1   O     4.48656  * O_2        24
+   -1.35275   -1.35275    4.05825  1   O     4.48656  * O_2        25
+   -4.05825   -1.35275    1.35275  1   O     4.48656  * O_2        26
+   -1.35275    1.35275   -4.05825  1   O     4.48656  * O_2        27
+   -1.35275    4.05825   -1.35275  1   O     4.48656  * O_2        28
+   -4.05825    1.35275   -1.35275  1   O     4.48656  * O_2        29
+   -1.35275    4.05825    1.35275  1   O     4.48656  * O_2        30
+   -1.35275    1.35275    4.05825  1   O     4.48656  * O_2        31
+   -4.05825    1.35275    1.35275  1   O     4.48656  * O_2        32
+    4.05825   -1.35275   -1.35275  1   O     4.48656  * O_2        33
+    1.35275   -4.05825   -1.35275  1   O     4.48656  * O_2        34
+    1.35275   -1.35275   -4.05825  1   O     4.48656  * O_2        35
+    4.05825   -1.35275    1.35275  1   O     4.48656  * O_2        36
+    1.35275   -1.35275    4.05825  1   O     4.48656  * O_2        37
+    1.35275   -4.05825    1.35275  1   O     4.48656  * O_2        38
+    4.05825    1.35275   -1.35275  1   O     4.48656  * O_2        39
+    1.35275    1.35275   -4.05825  1   O     4.48656  * O_2        40
+    4.05825    1.35275    1.35275  1   O     4.48656  * O_2        41
+    1.35275    4.05825    1.35275  1   O     4.48656  * O_2        42
+   -1.35275   -1.35275   -4.05825  1   O     4.48656  * O_2        43
+    1.35275    1.35275    4.05825  1   O     4.48656  * O_2        44
+   -5.41100    0.00000   -0.00000  2   Ce    5.41100  * Ce_1       45
+    0.00000   -5.41100   -0.00000  2   Ce    5.41100  * Ce_1       46
+    0.00000    0.00000   -5.41100  2   Ce    5.41100  * Ce_1       47
+    5.41100    0.00000    0.00000  2   Ce    5.41100  * Ce_1       48
+   -0.00000    5.41100    0.00000  2   Ce    5.41100  * Ce_1       49
+    0.00000    0.00000    5.41100  2   Ce    5.41100  * Ce_1       50
+   -4.05825   -4.05825   -1.35275  1   O     5.89650  * O_2        51
+   -1.35275   -4.05825    4.05825  1   O     5.89650  * O_2        52
+   -4.05825   -1.35275    4.05825  1   O     5.89650  * O_2        53
+   -4.05825   -4.05825    1.35275  1   O     5.89650  * O_2        54
+   -1.35275    4.05825   -4.05825  1   O     5.89650  * O_2        55
+   -4.05825    4.05825   -1.35275  1   O     5.89650  * O_2        56
+   -4.05825    1.35275    4.05825  1   O     5.89650  * O_2        57
+   -4.05825    4.05825    1.35275  1   O     5.89650  * O_2        58
+    4.05825   -1.35275   -4.05825  1   O     5.89650  * O_2        59
+    4.05825   -4.05825   -1.35275  1   O     5.89650  * O_2        60
+    4.05825   -4.05825    1.35275  1   O     5.89650  * O_2        61
+    1.35275   -4.05825    4.05825  1   O     5.89650  * O_2        62
+    4.05825    1.35275   -4.05825  1   O     5.89650  * O_2        63
+    4.05825    4.05825   -1.35275  1   O     5.89650  * O_2        64
+    1.35275    4.05825   -4.05825  1   O     5.89650  * O_2        65
+    4.05825    4.05825    1.35275  1   O     5.89650  * O_2        66
+   -1.35275   -4.05825   -4.05825  1   O     5.89650  * O_2        67
+   -4.05825   -1.35275   -4.05825  1   O     5.89650  * O_2        68
+   -4.05825    1.35275   -4.05825  1   O     5.89650  * O_2        69
+   -1.35275    4.05825    4.05825  1   O     5.89650  * O_2        70
+    1.35275   -4.05825   -4.05825  1   O     5.89650  * O_2        71
+    4.05825   -1.35275    4.05825  1   O     5.89650  * O_2        72
+    4.05825    1.35275    4.05825  1   O     5.89650  * O_2        73
+    1.35275    4.05825    4.05825  1   O     5.89650  * O_2        74
+   -2.70550   -5.41100   -2.70550  2   Ce    6.62709  * Ce_1       75
+   -5.41100   -2.70550   -2.70550  2   Ce    6.62709  * Ce_1       76
+   -2.70550   -2.70550   -5.41100  2   Ce    6.62709  * Ce_1       77
+   -2.70550   -2.70550    5.41100  2   Ce    6.62709  * Ce_1       78
+   -2.70550   -5.41100    2.70550  2   Ce    6.62709  * Ce_1       79
+   -5.41100   -2.70550    2.70550  2   Ce    6.62709  * Ce_1       80
+   -2.70550    5.41100   -2.70550  2   Ce    6.62709  * Ce_1       81
+   -5.41100    2.70550   -2.70550  2   Ce    6.62709  * Ce_1       82
+   -2.70550    2.70550   -5.41100  2   Ce    6.62709  * Ce_1       83
+   -2.70550    5.41100    2.70550  2   Ce    6.62709  * Ce_1       84
+   -2.70550    2.70550    5.41100  2   Ce    6.62709  * Ce_1       85
+   -5.41100    2.70550    2.70550  2   Ce    6.62709  * Ce_1       86
+    5.41100   -2.70550   -2.70550  2   Ce    6.62709  * Ce_1       87
+    2.70550   -5.41100   -2.70550  2   Ce    6.62709  * Ce_1       88
+    2.70550   -2.70550   -5.41100  2   Ce    6.62709  * Ce_1       89
+    5.41100   -2.70550    2.70550  2   Ce    6.62709  * Ce_1       90
+    2.70550   -2.70550    5.41100  2   Ce    6.62709  * Ce_1       91
+    2.70550   -5.41100    2.70550  2   Ce    6.62709  * Ce_1       92
+    5.41100    2.70550   -2.70550  2   Ce    6.62709  * Ce_1       93
+    2.70550    5.41100   -2.70550  2   Ce    6.62709  * Ce_1       94
+    2.70550    2.70550   -5.41100  2   Ce    6.62709  * Ce_1       95
+    5.41100    2.70550    2.70550  2   Ce    6.62709  * Ce_1       96
+    2.70550    5.41100    2.70550  2   Ce    6.62709  * Ce_1       97
+    2.70550    2.70550    5.41100  2   Ce    6.62709  * Ce_1       98
+
+* END

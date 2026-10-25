@@ -1,0 +1,54 @@
+data_global
+_amcsd_formula_title 'RuO2'
+loop_
+_publ_author_name
+'Baur W H'
+'Khan A A'
+_journal_name_full 'Acta Crystallographica, Section B'
+_journal_volume 27
+_journal_year 1971
+_journal_page_first 2133
+_journal_page_last 2139
+_publ_section_title
+;
+ Rutile-type compounds. VI.
+ SiO2, GeO2 and a comparison with other rutile-type structures
+ Note: data from Boman (1970)
+;
+_database_code_amcsd 9414
+_chemical_formula_sum 'Ru O2'
+_cell_length_a 4.4919
+_cell_length_b 4.4919
+_cell_length_c 3.1066
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+_cell_volume 62.682
+_exptl_crystal_density_diffrn  7.05
+_symmetry_space_group_name_H-M 'P 42/m n m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '-y,-x,z'
+  'y,x,-z'
+  '1/2+y,1/2-x,1/2-z'
+  '1/2-y,1/2+x,1/2+z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  'x,y,-z'
+  '-x,-y,z'
+  'y,x,z'
+  '-y,-x,-z'
+  '1/2-y,1/2+x,1/2-z'
+  '1/2+y,1/2-x,1/2+z'
+  '1/2-x,1/2+y,1/2+z'
+  '1/2+x,1/2-y,1/2-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ru   0.0  0.0  0.0
+O   0.3058  0.3058  0.0
+

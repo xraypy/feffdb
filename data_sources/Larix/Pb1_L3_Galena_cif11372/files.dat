@@ -1,0 +1,37 @@
+ Formula: PbS                                   Feff8L (EXAFS)       0.1
+ SpaceGroup: Fm-3m
+ CIF Source: Am Min Crystal Structure Database ID 11372
+ Mineral Name: galena
+ Publication: Crystal Structures 1 [85:237] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=5.9362, b=5.9362, c=5.9362, alpha=90.0, beta=90
+ Cell Volume (A^3): 209.18300
+ Crystal Density (gr/cm^3): 7.597
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=82 Rmt= 1.794 Rnm= 1.877 L3 shell
+ Pot 1 Z=16 Rmt= 1.532 Rnm= 1.601
+ Pot 2 Z=82 Rmt= 1.787 Rnm= 1.868
+ Gam_ch=5.778E+00 H-L exch
+ Mu=-6.047E-01 kf=1.604E+00 Vint=-1.041E+01 Rs_int= 2.261
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     6.000     2   2.9681
+ feff0002.dat 0.00000    92.400    12.000     2   4.1975
+ feff0003.dat 0.00000     7.994    24.000     3   5.0669
+ feff0004.dat 0.00000    13.500    48.000     3   5.0669
+ feff0005.dat 0.00000    22.240     8.000     2   5.1409
+ feff0006.dat 0.00000    16.850     6.000     2   5.9362
+ feff0007.dat 0.00000     4.259     6.000     3   5.9362
+ feff0008.dat 0.00000    60.610    12.000     3   5.9362
+ feff0009.dat 0.00000     9.758     6.000     4   5.9362
+ feff0011.dat 0.00000    54.190     6.000     4   5.9362
+ feff0012.dat 0.00000     6.115    24.000     4   5.9362
+ feff0013.dat 0.00000     3.282    48.000     3   6.1533
+ feff0014.dat 0.00000     5.502    48.000     3   6.1533
+ feff0015.dat 0.00000     3.267    48.000     3   6.2963
+ feff0016.dat 0.00000    26.640    24.000     2   6.6369
+ feff0017.dat 0.00000     4.641    48.000     3   6.9013
+ feff0018.dat 0.00000    13.390    48.000     3   6.9013
+ feff0019.dat 0.00000    11.800    48.000     3   6.9013

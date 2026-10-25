@@ -1,0 +1,35 @@
+ Formula: CeO2                                  Feff8L (EXAFS)       0.1
+ SpaceGroup: Fm-3m
+ CIF Source: Am Min Crystal Structure Database ID 11686
+ Mineral Name: cerianite-(ce)
+ Publication: Crystal Structures 1 [239:444] (1963)
+ Authors: Wyckoff R W G
+ Cell Parameters (A, degrees): a=5.411, b=5.411, c=5.411, alpha=90.0, beta=90.0,
+ Cell Volume (A^3): 158.42800
+ Crystal Density (gr/cm^3): 7.216
+ Compound: <missing>
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=58 Rmt= 1.601 Rnm= 1.681 K  shell
+ Pot 1 Z= 8 Rmt= 1.050 Rnm= 1.103
+ Pot 2 Z=58 Rmt= 1.609 Rnm= 1.691
+ Gam_ch=1.828E+01 H-L exch
+ Mu=-1.091E+00 kf=2.212E+00 Vint=-1.973E+01 Rs_int= 1.640
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     8.000     2   2.3430
+ feff0002.dat 0.00000     4.543    24.000     3   3.6958
+ feff0003.dat 0.00000    65.270    12.000     2   3.8262
+ feff0004.dat 0.00000     2.939    24.000     3   4.2561
+ feff0005.dat 0.00000     7.731    48.000     3   4.2561
+ feff0006.dat 0.00000    19.590    24.000     2   4.4866
+ feff0007.dat 0.00000     6.773     8.000     4   4.6861
+ feff0008.dat 0.00000     5.595    48.000     3   4.7675
+ feff0009.dat 0.00000     7.679    96.000     3   5.3279
+ feff0010.dat 0.00000     8.919     6.000     2   5.4110
+ feff0012.dat 0.00000     4.940    24.000     2   5.8965
+ feff0014.dat 0.00000     2.894    48.000     3   6.0328
+ feff0015.dat 0.00000     7.444    48.000     3   6.0328
+ feff0016.dat 0.00000    16.510    24.000     2   6.6271
+ feff0017.dat 0.00000     5.880    48.000     3   6.7283
+ feff0018.dat 0.00000     4.998    48.000     3   6.7283

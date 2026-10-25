@@ -1,0 +1,147 @@
+* FEFF8 input file generated 2026-09-14 06:39:18
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Ta
+TITLE SpaceGroup: Im-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11230
+TITLE Mineral Name: tantalum
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=3.3058, b=3.3058, c=3.3058, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 36.12700
+TITLE Crystal Density (gr/cm^3): 16.634
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     2a   Ta   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    73    Ta      -1     -1       0.01
+     1    73    Ta      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Ta    0.00000  * Ta_1        0
+   -1.65290   -1.65290    1.65290  1   Ta    2.86291  * Ta_1        1
+    1.65290    1.65290   -1.65290  1   Ta    2.86291  * Ta_1        2
+   -1.65290   -1.65290   -1.65290  1   Ta    2.86291  * Ta_1        3
+   -1.65290    1.65290   -1.65290  1   Ta    2.86291  * Ta_1        4
+   -1.65290    1.65290    1.65290  1   Ta    2.86291  * Ta_1        5
+    1.65290   -1.65290   -1.65290  1   Ta    2.86291  * Ta_1        6
+    1.65290   -1.65290    1.65290  1   Ta    2.86291  * Ta_1        7
+    1.65290    1.65290    1.65290  1   Ta    2.86291  * Ta_1        8
+   -3.30580    0.00000   -0.00000  1   Ta    3.30580  * Ta_1        9
+    0.00000   -3.30580   -0.00000  1   Ta    3.30580  * Ta_1       10
+    0.00000    0.00000   -3.30580  1   Ta    3.30580  * Ta_1       11
+    3.30580    0.00000    0.00000  1   Ta    3.30580  * Ta_1       12
+   -0.00000    3.30580    0.00000  1   Ta    3.30580  * Ta_1       13
+    0.00000    0.00000    3.30580  1   Ta    3.30580  * Ta_1       14
+   -3.30580   -3.30580   -0.00000  1   Ta    4.67511  * Ta_1       15
+   -3.30580    0.00000   -3.30580  1   Ta    4.67511  * Ta_1       16
+   -3.30580    3.30580    0.00000  1   Ta    4.67511  * Ta_1       17
+   -3.30580    0.00000    3.30580  1   Ta    4.67511  * Ta_1       18
+    0.00000   -3.30580   -3.30580  1   Ta    4.67511  * Ta_1       19
+    3.30580   -3.30580    0.00000  1   Ta    4.67511  * Ta_1       20
+    0.00000   -3.30580    3.30580  1   Ta    4.67511  * Ta_1       21
+    3.30580    0.00000   -3.30580  1   Ta    4.67511  * Ta_1       22
+   -0.00000    3.30580   -3.30580  1   Ta    4.67511  * Ta_1       23
+    3.30580    3.30580    0.00000  1   Ta    4.67511  * Ta_1       24
+    3.30580    0.00000    3.30580  1   Ta    4.67511  * Ta_1       25
+   -0.00000    3.30580    3.30580  1   Ta    4.67511  * Ta_1       26
+   -1.65290   -1.65290   -4.95870  1   Ta    5.48205  * Ta_1       27
+   -1.65290   -4.95870   -1.65290  1   Ta    5.48205  * Ta_1       28
+   -4.95870   -1.65290   -1.65290  1   Ta    5.48205  * Ta_1       29
+   -1.65290   -1.65290    4.95870  1   Ta    5.48205  * Ta_1       30
+   -1.65290   -4.95870    1.65290  1   Ta    5.48205  * Ta_1       31
+   -4.95870   -1.65290    1.65290  1   Ta    5.48205  * Ta_1       32
+   -1.65290    4.95870   -1.65290  1   Ta    5.48205  * Ta_1       33
+   -1.65290    1.65290   -4.95870  1   Ta    5.48205  * Ta_1       34
+   -4.95870    1.65290   -1.65290  1   Ta    5.48205  * Ta_1       35
+   -1.65290    4.95870    1.65290  1   Ta    5.48205  * Ta_1       36
+   -1.65290    1.65290    4.95870  1   Ta    5.48205  * Ta_1       37
+   -4.95870    1.65290    1.65290  1   Ta    5.48205  * Ta_1       38
+    4.95870   -1.65290   -1.65290  1   Ta    5.48205  * Ta_1       39
+    1.65290   -1.65290   -4.95870  1   Ta    5.48205  * Ta_1       40
+    1.65290   -4.95870   -1.65290  1   Ta    5.48205  * Ta_1       41
+    4.95870   -1.65290    1.65290  1   Ta    5.48205  * Ta_1       42
+    1.65290   -1.65290    4.95870  1   Ta    5.48205  * Ta_1       43
+    1.65290   -4.95870    1.65290  1   Ta    5.48205  * Ta_1       44
+    4.95870    1.65290   -1.65290  1   Ta    5.48205  * Ta_1       45
+    1.65290    4.95870   -1.65290  1   Ta    5.48205  * Ta_1       46
+    1.65290    1.65290   -4.95870  1   Ta    5.48205  * Ta_1       47
+    4.95870    1.65290    1.65290  1   Ta    5.48205  * Ta_1       48
+    1.65290    4.95870    1.65290  1   Ta    5.48205  * Ta_1       49
+    1.65290    1.65290    4.95870  1   Ta    5.48205  * Ta_1       50
+   -3.30580   -3.30580    3.30580  1   Ta    5.72581  * Ta_1       51
+    3.30580    3.30580   -3.30580  1   Ta    5.72581  * Ta_1       52
+   -3.30580   -3.30580   -3.30580  1   Ta    5.72581  * Ta_1       53
+   -3.30580    3.30580   -3.30580  1   Ta    5.72581  * Ta_1       54
+   -3.30580    3.30580    3.30580  1   Ta    5.72581  * Ta_1       55
+    3.30580   -3.30580   -3.30580  1   Ta    5.72581  * Ta_1       56
+    3.30580   -3.30580    3.30580  1   Ta    5.72581  * Ta_1       57
+    3.30580    3.30580    3.30580  1   Ta    5.72581  * Ta_1       58
+   -6.61160    0.00000   -0.00000  1   Ta    6.61160  * Ta_1       59
+    0.00000   -6.61160   -0.00000  1   Ta    6.61160  * Ta_1       60
+    0.00000    0.00000   -6.61160  1   Ta    6.61160  * Ta_1       61
+    6.61160    0.00000    0.00000  1   Ta    6.61160  * Ta_1       62
+   -0.00000    6.61160    0.00000  1   Ta    6.61160  * Ta_1       63
+    0.00000    0.00000    6.61160  1   Ta    6.61160  * Ta_1       64
+
+* END

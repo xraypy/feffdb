@@ -1,0 +1,153 @@
+* FEFF8 input file generated 2026-09-13 20:19:37
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Ge
+TITLE SpaceGroup: Fd-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11245
+TITLE Mineral Name: germanium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=5.65735, b=5.65735, c=5.65735, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 181.06700
+TITLE Crystal Density (gr/cm^3): 5.327
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     8a   Ge   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for ___auto___
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for ___auto___
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    32    Ge      -1     -1       0.01
+     1    32    Ge      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Ge    0.00000  * Ge_1        0
+   -1.41434   -1.41434    1.41434  1   Ge    2.44970  * Ge_1        1
+   -1.41434    1.41434   -1.41434  1   Ge    2.44970  * Ge_1        2
+    1.41434   -1.41434   -1.41434  1   Ge    2.44970  * Ge_1        3
+    1.41434    1.41434    1.41434  1   Ge    2.44970  * Ge_1        4
+   -2.82868   -2.82868   -0.00000  1   Ge    4.00035  * Ge_1        5
+   -2.82868    0.00000   -2.82868  1   Ge    4.00035  * Ge_1        6
+   -2.82868    0.00000    2.82868  1   Ge    4.00035  * Ge_1        7
+   -2.82868    2.82868    0.00000  1   Ge    4.00035  * Ge_1        8
+    0.00000   -2.82868   -2.82868  1   Ge    4.00035  * Ge_1        9
+    0.00000   -2.82868    2.82868  1   Ge    4.00035  * Ge_1       10
+    2.82868   -2.82868    0.00000  1   Ge    4.00035  * Ge_1       11
+    2.82868    0.00000   -2.82868  1   Ge    4.00035  * Ge_1       12
+   -0.00000    2.82868   -2.82868  1   Ge    4.00035  * Ge_1       13
+    2.82868    0.00000    2.82868  1   Ge    4.00035  * Ge_1       14
+   -0.00000    2.82868    2.82868  1   Ge    4.00035  * Ge_1       15
+    2.82868    2.82868    0.00000  1   Ge    4.00035  * Ge_1       16
+   -4.24301   -1.41434   -1.41434  1   Ge    4.69083  * Ge_1       17
+   -1.41434   -4.24301   -1.41434  1   Ge    4.69083  * Ge_1       18
+   -1.41434   -1.41434   -4.24301  1   Ge    4.69083  * Ge_1       19
+   -4.24301    1.41434    1.41434  1   Ge    4.69083  * Ge_1       20
+   -1.41434    1.41434    4.24301  1   Ge    4.69083  * Ge_1       21
+   -1.41434    4.24301    1.41434  1   Ge    4.69083  * Ge_1       22
+    1.41434   -4.24301    1.41434  1   Ge    4.69083  * Ge_1       23
+    1.41434   -1.41434    4.24301  1   Ge    4.69083  * Ge_1       24
+    4.24301   -1.41434    1.41434  1   Ge    4.69083  * Ge_1       25
+    1.41434    1.41434   -4.24301  1   Ge    4.69083  * Ge_1       26
+    1.41434    4.24301   -1.41434  1   Ge    4.69083  * Ge_1       27
+    4.24301    1.41434   -1.41434  1   Ge    4.69083  * Ge_1       28
+   -5.65735    0.00000   -0.00000  1   Ge    5.65735  * Ge_1       29
+    0.00000   -5.65735   -0.00000  1   Ge    5.65735  * Ge_1       30
+    0.00000    0.00000   -5.65735  1   Ge    5.65735  * Ge_1       31
+    5.65735    0.00000    0.00000  1   Ge    5.65735  * Ge_1       32
+   -0.00000    5.65735    0.00000  1   Ge    5.65735  * Ge_1       33
+    0.00000    0.00000    5.65735  1   Ge    5.65735  * Ge_1       34
+   -4.24301   -4.24301    1.41434  1   Ge    6.16495  * Ge_1       35
+   -4.24301   -1.41434    4.24301  1   Ge    6.16495  * Ge_1       36
+   -1.41434   -4.24301    4.24301  1   Ge    6.16495  * Ge_1       37
+   -4.24301    1.41434   -4.24301  1   Ge    6.16495  * Ge_1       38
+   -1.41434    4.24301   -4.24301  1   Ge    6.16495  * Ge_1       39
+    1.41434   -4.24301   -4.24301  1   Ge    6.16495  * Ge_1       40
+    4.24301   -1.41434   -4.24301  1   Ge    6.16495  * Ge_1       41
+   -4.24301    4.24301   -1.41434  1   Ge    6.16495  * Ge_1       42
+    4.24301   -4.24301   -1.41434  1   Ge    6.16495  * Ge_1       43
+    4.24301    4.24301    1.41434  1   Ge    6.16495  * Ge_1       44
+    1.41434    4.24301    4.24301  1   Ge    6.16495  * Ge_1       45
+    4.24301    1.41434    4.24301  1   Ge    6.16495  * Ge_1       46
+   -2.82867   -5.65735   -2.82868  1   Ge    6.92881  * Ge_1       47
+   -2.82868   -2.82868   -5.65735  1   Ge    6.92881  * Ge_1       48
+   -2.82868   -2.82868    5.65735  1   Ge    6.92881  * Ge_1       49
+   -2.82867   -5.65735    2.82867  1   Ge    6.92881  * Ge_1       50
+   -5.65735   -2.82868    2.82867  1   Ge    6.92881  * Ge_1       51
+   -2.82868    2.82868   -5.65735  1   Ge    6.92881  * Ge_1       52
+   -2.82868    2.82868    5.65735  1   Ge    6.92881  * Ge_1       53
+    2.82868   -2.82868   -5.65735  1   Ge    6.92881  * Ge_1       54
+    2.82868   -2.82868    5.65735  1   Ge    6.92881  * Ge_1       55
+    5.65735    2.82868   -2.82867  1   Ge    6.92881  * Ge_1       56
+    2.82867    5.65735   -2.82867  1   Ge    6.92881  * Ge_1       57
+    2.82868    2.82868   -5.65735  1   Ge    6.92881  * Ge_1       58
+    2.82867    5.65735    2.82868  1   Ge    6.92881  * Ge_1       59
+    2.82868    2.82868    5.65735  1   Ge    6.92881  * Ge_1       60
+   -5.65735   -2.82868   -2.82868  1   Ge    6.92881  * Ge_1       61
+   -2.82868    5.65735   -2.82868  1   Ge    6.92881  * Ge_1       62
+   -5.65735    2.82868   -2.82868  1   Ge    6.92881  * Ge_1       63
+   -2.82868    5.65735    2.82868  1   Ge    6.92881  * Ge_1       64
+   -5.65735    2.82868    2.82868  1   Ge    6.92881  * Ge_1       65
+    5.65735   -2.82868   -2.82868  1   Ge    6.92881  * Ge_1       66
+    2.82868   -5.65735   -2.82868  1   Ge    6.92881  * Ge_1       67
+    5.65735   -2.82868    2.82868  1   Ge    6.92881  * Ge_1       68
+    2.82868   -5.65735    2.82868  1   Ge    6.92881  * Ge_1       69
+    5.65735    2.82868    2.82868  1   Ge    6.92881  * Ge_1       70
+
+* END

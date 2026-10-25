@@ -1,0 +1,64 @@
+data_global
+_amcsd_formula_title 'O3 W'
+loop_
+_publ_author_name
+'Gerand B'
+'Nowogrocki G'
+'Guenot J'
+'Figlarz M'
+_journal_name_full 'Journal of Solid State Chemistry'
+_journal_volume 29
+_journal_year 1979
+_journal_page_first 429
+_journal_page_last 434
+_publ_section_title
+;
+ Structural study of a new hexagonal form of tungsten trioxide
+ _cod_database_code 1004057
+;
+_database_code_amcsd 13370
+_chemical_formula_sum 'W O3'
+_cell_length_a 7.298
+_cell_length_b 7.298
+_cell_length_c 3.899
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 120.0
+_cell_volume 179.842
+_exptl_crystal_density_diffrn  6.422
+_symmetry_space_group_name_H-M 'P 6/m m m'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '-x,-x+y,z'
+  'x,x-y,-z'
+  '-x+y,-x,-z'
+  'x-y,x,z'
+  '-y,-x,z'
+  'y,x,-z'
+  'y,-x+y,-z'
+  '-y,x-y,z'
+  'x-y,-y,z'
+  '-x+y,y,-z'
+  'x,y,-z'
+  '-x,-y,z'
+  'x,x-y,z'
+  '-x,-x+y,-z'
+  'x-y,x,-z'
+  '-x+y,-x,z'
+  'y,x,z'
+  '-y,-x,-z'
+  '-y,x-y,-z'
+  'y,-x+y,z'
+  '-x+y,y,z'
+  'x-y,-y,-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+W1   0.5  0.0  0.0
+O1   0.5  0.0  0.5
+O2   0.212  0.424  0.0
+

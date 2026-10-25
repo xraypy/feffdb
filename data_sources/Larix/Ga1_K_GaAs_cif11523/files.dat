@@ -1,0 +1,46 @@
+ Structure from AMSCIFDB, AMS_ID: 11523         Feff8L (EXAFS)       0.1
+ Mineral Name: <missing>
+ Formula Title: GaAs
+ Journal: Crystal Structures 1, pp. 85-237 (1963)
+ Authors: Wyckoff R W G
+ Title1:  Second edition. Interscience Publishers, New York, New York
+ Title2:  Note: ZnS structure, sphalerite structure
+ Formula:    GaAs
+ SpaceGroup: F-43m
+ # sites:    2
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=31 Rmt= 1.396 Rnm= 1.553 K  shell
+ Pot 1 Z=31 Rmt= 1.388 Rnm= 1.537
+ Pot 2 Z=33 Rmt= 1.425 Rnm= 1.580
+ Gam_ch=2.082E+00 H-L exch
+ Mu=-6.791E-01 kf=1.833E+00 Vint=-1.349E+01 Rs_int= 1.978
+ PATH  Rmax= 7.000,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     4.000     2   2.4481
+ feff0002.dat 0.00000    96.330    12.000     2   3.9978
+ feff0003.dat 0.00000     7.634    12.000     3   4.4470
+ feff0004.dat 0.00000    35.410    24.000     3   4.4470
+ feff0005.dat 0.00000    61.540    12.000     2   4.6878
+ feff0006.dat 0.00000     4.596     4.000     4   4.8962
+ feff0007.dat 0.00000     5.362    12.000     4   4.8962
+ feff0008.dat 0.00000     4.496    48.000     3   5.5668
+ feff0009.dat 0.00000    16.490    48.000     3   5.5668
+ feff0010.dat 0.00000    13.400    48.000     3   5.5668
+ feff0011.dat 0.00000    18.500     6.000     2   5.6537
+ feff0012.dat 0.00000     5.836    48.000     3   5.9967
+ feff0013.dat 0.00000    28.670    12.000     2   6.1610
+ feff0014.dat 0.00000    13.120    24.000     3   6.3034
+ feff0015.dat 0.00000    29.400    24.000     3   6.3034
+ feff0016.dat 0.00000    19.150    24.000     3   6.3034
+ feff0017.dat 0.00000     5.758    24.000     3   6.3948
+ feff0018.dat 0.00000     5.627    24.000     3   6.3948
+ feff0019.dat 0.00000     6.265    24.000     4   6.4459
+ feff0020.dat 0.00000     8.305    24.000     4   6.4459
+ feff0021.dat 0.00000    10.970    12.000     4   6.4459
+ feff0022.dat 0.00000     5.807    12.000     4   6.4459
+ feff0023.dat 0.00000     4.130    24.000     4   6.4459
+ feff0024.dat 0.00000    13.710    24.000     4   6.4459
+ feff0025.dat 0.00000     4.902    72.000     3   6.6867
+ feff0026.dat 0.00000     4.666    36.000     3   6.6867
+ feff0027.dat 0.00000    40.760    24.000     2   6.9243

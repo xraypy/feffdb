@@ -1,0 +1,165 @@
+* FEFF8 input file generated 2026-10-23 15:41:14
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: BaO
+TITLE SpaceGroup: Fm-3m
+TITLE CIF Source: Am Min Crystal Structure Database ID 11277
+TITLE Mineral Name: <missing>
+TITLE Publication: Crystal Structures 1 [85:237] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=5.523, b=5.523, c=5.523, alpha=90.0, beta=90.0, gamma=90.0
+TITLE Cell Volume (A^3): 168.47100
+TITLE Crystal Density (gr/cm^3): 6.045
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.00000 0.00000 0.00000     4a   Ba   <- absorber
+*   2   0.50000 0.50000 0.50000     4b   O 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    56    Ba      -1     -1       0.01
+     1     8     O      -1     -1
+     2    56    Ba      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Ba    0.00000  * Ba_1        0
+   -2.76150    0.00000   -0.00000  1   O     2.76150  * O_2         1
+    0.00000   -2.76150   -0.00000  1   O     2.76150  * O_2         2
+    0.00000    0.00000   -2.76150  1   O     2.76150  * O_2         3
+    0.00000    0.00000    2.76150  1   O     2.76150  * O_2         4
+   -0.00000    2.76150    0.00000  1   O     2.76150  * O_2         5
+    2.76150    0.00000    0.00000  1   O     2.76150  * O_2         6
+   -2.76150   -2.76150   -0.00000  2   Ba    3.90535  * Ba_1        7
+   -2.76150    0.00000   -2.76150  2   Ba    3.90535  * Ba_1        8
+   -2.76150    0.00000    2.76150  2   Ba    3.90535  * Ba_1        9
+   -2.76150    2.76150    0.00000  2   Ba    3.90535  * Ba_1       10
+    0.00000   -2.76150   -2.76150  2   Ba    3.90535  * Ba_1       11
+    0.00000   -2.76150    2.76150  2   Ba    3.90535  * Ba_1       12
+    2.76150   -2.76150    0.00000  2   Ba    3.90535  * Ba_1       13
+    2.76150    0.00000   -2.76150  2   Ba    3.90535  * Ba_1       14
+   -0.00000    2.76150   -2.76150  2   Ba    3.90535  * Ba_1       15
+    2.76150    0.00000    2.76150  2   Ba    3.90535  * Ba_1       16
+   -0.00000    2.76150    2.76150  2   Ba    3.90535  * Ba_1       17
+    2.76150    2.76150    0.00000  2   Ba    3.90535  * Ba_1       18
+   -2.76150   -2.76150    2.76150  1   O     4.78306  * O_2        19
+   -2.76150    2.76150   -2.76150  1   O     4.78306  * O_2        20
+   -2.76150    2.76150    2.76150  1   O     4.78306  * O_2        21
+    2.76150   -2.76150   -2.76150  1   O     4.78306  * O_2        22
+    2.76150   -2.76150    2.76150  1   O     4.78306  * O_2        23
+    2.76150    2.76150   -2.76150  1   O     4.78306  * O_2        24
+   -2.76150   -2.76150   -2.76150  1   O     4.78306  * O_2        25
+    2.76150    2.76150    2.76150  1   O     4.78306  * O_2        26
+   -5.52300    0.00000   -0.00000  2   Ba    5.52300  * Ba_1       27
+    0.00000   -5.52300   -0.00000  2   Ba    5.52300  * Ba_1       28
+    0.00000    0.00000   -5.52300  2   Ba    5.52300  * Ba_1       29
+    5.52300    0.00000    0.00000  2   Ba    5.52300  * Ba_1       30
+   -0.00000    5.52300    0.00000  2   Ba    5.52300  * Ba_1       31
+    0.00000    0.00000    5.52300  2   Ba    5.52300  * Ba_1       32
+   -5.52300   -2.76150   -0.00000  1   O     6.17490  * O_2        33
+   -2.76150   -5.52300   -0.00000  1   O     6.17490  * O_2        34
+   -5.52300    0.00000   -2.76150  1   O     6.17490  * O_2        35
+   -2.76150    0.00000   -5.52300  1   O     6.17490  * O_2        36
+   -2.76150    5.52300    0.00000  1   O     6.17490  * O_2        37
+   -5.52300    0.00000    2.76150  1   O     6.17490  * O_2        38
+   -2.76150    0.00000    5.52300  1   O     6.17490  * O_2        39
+   -5.52300    2.76150   -0.00000  1   O     6.17490  * O_2        40
+    0.00000   -5.52300   -2.76150  1   O     6.17490  * O_2        41
+    0.00000   -2.76150   -5.52300  1   O     6.17490  * O_2        42
+    5.52300   -2.76150    0.00000  1   O     6.17490  * O_2        43
+    0.00000   -5.52300    2.76150  1   O     6.17490  * O_2        44
+    0.00000   -2.76150    5.52300  1   O     6.17490  * O_2        45
+    2.76150   -5.52300   -0.00000  1   O     6.17490  * O_2        46
+    5.52300    0.00000   -2.76150  1   O     6.17490  * O_2        47
+   -0.00000    5.52300   -2.76150  1   O     6.17490  * O_2        48
+   -0.00000    2.76150   -5.52300  1   O     6.17490  * O_2        49
+    2.76150    0.00000   -5.52300  1   O     6.17490  * O_2        50
+    5.52300    0.00000    2.76150  1   O     6.17490  * O_2        51
+    5.52300    2.76150    0.00000  1   O     6.17490  * O_2        52
+   -0.00000    5.52300    2.76150  1   O     6.17490  * O_2        53
+    2.76150    5.52300    0.00000  1   O     6.17490  * O_2        54
+   -0.00000    2.76150    5.52300  1   O     6.17490  * O_2        55
+    2.76150    0.00000    5.52300  1   O     6.17490  * O_2        56
+   -2.76150   -5.52300   -2.76150  2   Ba    6.76427  * Ba_1       57
+   -2.76150   -2.76150   -5.52300  2   Ba    6.76427  * Ba_1       58
+   -2.76150   -2.76150    5.52300  2   Ba    6.76427  * Ba_1       59
+   -2.76150   -5.52300    2.76150  2   Ba    6.76427  * Ba_1       60
+   -5.52300   -2.76150    2.76150  2   Ba    6.76427  * Ba_1       61
+   -2.76150    5.52300   -2.76150  2   Ba    6.76427  * Ba_1       62
+   -5.52300    2.76150   -2.76150  2   Ba    6.76427  * Ba_1       63
+   -2.76150    2.76150   -5.52300  2   Ba    6.76427  * Ba_1       64
+   -2.76150    5.52300    2.76150  2   Ba    6.76427  * Ba_1       65
+   -2.76150    2.76150    5.52300  2   Ba    6.76427  * Ba_1       66
+   -5.52300    2.76150    2.76150  2   Ba    6.76427  * Ba_1       67
+    5.52300   -2.76150   -2.76150  2   Ba    6.76427  * Ba_1       68
+    2.76150   -5.52300   -2.76150  2   Ba    6.76427  * Ba_1       69
+    2.76150   -2.76150   -5.52300  2   Ba    6.76427  * Ba_1       70
+    5.52300   -2.76150    2.76150  2   Ba    6.76427  * Ba_1       71
+    2.76150   -2.76150    5.52300  2   Ba    6.76427  * Ba_1       72
+    2.76150   -5.52300    2.76150  2   Ba    6.76427  * Ba_1       73
+    5.52300    2.76150   -2.76150  2   Ba    6.76427  * Ba_1       74
+    2.76150    5.52300   -2.76150  2   Ba    6.76427  * Ba_1       75
+    2.76150    2.76150   -5.52300  2   Ba    6.76427  * Ba_1       76
+    2.76150    5.52300    2.76150  2   Ba    6.76427  * Ba_1       77
+    2.76150    2.76150    5.52300  2   Ba    6.76427  * Ba_1       78
+   -5.52300   -2.76150   -2.76150  2   Ba    6.76427  * Ba_1       79
+    5.52300    2.76150    2.76150  2   Ba    6.76427  * Ba_1       80
+
+* END

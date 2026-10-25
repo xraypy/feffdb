@@ -1,0 +1,45 @@
+data_global
+_chemical_name_mineral 'Realgar'
+loop_
+_publ_author_name
+'Wyckoff R W G'
+_journal_name_full 'Crystal Structures'
+_journal_volume 1
+_journal_year 1963
+_journal_page_first 85
+_journal_page_last 237
+_publ_section_title
+;
+ Second edition. Interscience Publishers, New York, New York
+;
+_database_code_amcsd 11671
+_chemical_formula_sum 'As S'
+_cell_length_a 9.27
+_cell_length_b 13.5
+_cell_length_c 6.56
+_cell_angle_alpha 90.0
+_cell_angle_beta 106.62
+_cell_angle_gamma 90.0
+_cell_volume 786.654
+_exptl_crystal_density_diffrn  3.613
+_symmetry_space_group_name_H-M 'P 1 21/n 1'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  '1/2+x,1/2-y,1/2+z'
+  '1/2-x,1/2+y,1/2-z'
+  '-x,-y,-z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+As1   0.118  0.024  -0.241
+As2   0.425  -0.14  -0.142
+As3   0.318  -0.127  0.181
+As4   0.038  -0.161  -0.29
+S1   0.346  0.008  -0.295
+S2   0.213  0.024  0.12
+S3   0.245  -0.225  -0.363
+S4   0.115  -0.215  0.048
+

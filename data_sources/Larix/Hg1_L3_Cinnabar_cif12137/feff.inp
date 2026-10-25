@@ -1,0 +1,149 @@
+* FEFF8 input file generated 2026-10-23 15:47:25
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: HgS
+TITLE SpaceGroup: P3_221
+TITLE CIF Source: Am Min Crystal Structure Database ID 12137
+TITLE Mineral Name: cinnabar
+TITLE Publication: Bulletin de la Societe Francaise de Mineralogie et de Cristallographie 96 [218:219] (1973)
+TITLE Authors: Auvray P, Genet F
+TITLE Cell Parameters (A, degrees): a=4.145, b=4.145, c=9.496, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 141.29300
+TITLE Crystal Density (gr/cm^3): 8.203
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.71980 0.00000 0.66667     3a   Hg   <- absorber
+*   2   0.48890 0.00000 0.16667     3b   S 
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      L3
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    80    Hg      -1     -1       0.01
+     1    80    Hg      -1     -1
+     2    16     S      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Hg    0.00000  * Hg_1        0
+    0.14818    1.75499    1.58264  2   S     2.36784  * S_2         1
+    0.14818   -1.75499   -1.58270  2   S     2.36789  * S_2         2
+   -1.92432   -1.83468    1.58264  2   S     3.09415  * S_2         3
+   -1.92432    1.83468   -1.58270  2   S     3.09419  * S_2         4
+    2.22068   -1.83468    1.58264  2   S     3.28667  * S_2         5
+    2.22068    1.83468   -1.58270  2   S     3.28671  * S_2         6
+    1.74214   -1.00583   -3.16533  1   Hg    3.75048  * Hg_1        7
+    1.74214    1.00583    3.16533  1   Hg    3.75048  * Hg_1        8
+   -2.40286   -1.00583   -3.16533  1   Hg    4.09936  * Hg_1        9
+   -0.33036    2.58385   -3.16533  1   Hg    4.09936  * Hg_1       10
+   -0.33036   -2.58385    3.16533  1   Hg    4.09936  * Hg_1       11
+   -2.40286    1.00583    3.16533  1   Hg    4.09936  * Hg_1       12
+   -2.07250   -3.58968    0.00000  1   Hg    4.14500  * Hg_1       13
+   -2.07250    3.58968    0.00000  1   Hg    4.14500  * Hg_1       14
+   -4.14500    0.00000    0.00000  1   Hg    4.14500  * Hg_1       15
+    2.07250   -3.58968    0.00000  1   Hg    4.14500  * Hg_1       16
+    2.07250    3.58968    0.00000  1   Hg    4.14500  * Hg_1       17
+    4.14500    0.00000    0.00000  1   Hg    4.14500  * Hg_1       18
+   -3.99682    1.75499    1.58264  2   S     4.64320  * S_2        19
+   -3.99682   -1.75499   -1.58270  2   S     4.64322  * S_2        20
+   -0.95708    0.00000   -4.74797  2   S     4.84347  * S_2        21
+   -0.95708    0.00000    4.74803  2   S     4.84353  * S_2        22
+    4.29318    1.75499    1.58264  2   S     4.90063  * S_2        23
+    4.29318   -1.75499   -1.58270  2   S     4.90065  * S_2        24
+    3.81464   -2.58385    3.16533  1   Hg    5.58991  * Hg_1       25
+    3.81464    2.58385   -3.16533  1   Hg    5.58991  * Hg_1       26
+   -0.33036   -4.59550   -3.16533  1   Hg    5.58991  * Hg_1       27
+   -0.33036    4.59550    3.16533  1   Hg    5.58991  * Hg_1       28
+    0.14818   -5.42436    1.58264  2   S     5.65246  * S_2        29
+    0.14818    5.42436   -1.58270  2   S     5.65248  * S_2        30
+    3.18792    0.00000   -4.74797  2   S     5.71892  * S_2        31
+    3.18792    0.00000    4.74803  2   S     5.71897  * S_2        32
+   -1.92432    5.34467    1.58264  2   S     5.89688  * S_2        33
+   -1.92432   -5.34467   -1.58270  2   S     5.89690  * S_2        34
+    2.22068    5.34467    1.58264  2   S     6.00014  * S_2        35
+    2.22068   -5.34467   -1.58270  2   S     6.00015  * S_2        36
+    1.11542    3.58968   -4.74797  2   S     6.05583  * S_2        37
+    1.11542   -3.58968   -4.74797  2   S     6.05583  * S_2        38
+    1.11542   -3.58968    4.74803  2   S     6.05588  * S_2        39
+    1.11542    3.58968    4.74803  2   S     6.05588  * S_2        40
+   -4.47536    2.58385   -3.16533  1   Hg    6.06007  * Hg_1       41
+   -4.47536   -2.58385    3.16533  1   Hg    6.06007  * Hg_1       42
+   -6.06932   -1.83468    1.58264  2   S     6.53509  * S_2        43
+   -6.06932    1.83468   -1.58270  2   S     6.53510  * S_2        44
+    1.74214    1.00583   -6.33067  1   Hg    6.64260  * Hg_1       45
+    1.74214   -1.00583    6.33067  1   Hg    6.64260  * Hg_1       46
+   -3.02958    3.58968   -4.74797  2   S     6.67887  * S_2        47
+   -3.02958   -3.58968   -4.74797  2   S     6.67887  * S_2        48
+   -3.02958   -3.58968    4.74803  2   S     6.67892  * S_2        49
+   -3.02958    3.58968    4.74803  2   S     6.67892  * S_2        50
+    5.88714   -1.00583   -3.16533  1   Hg    6.75940  * Hg_1       51
+    3.81464   -4.59550   -3.16533  1   Hg    6.75940  * Hg_1       52
+    5.88714    1.00583    3.16533  1   Hg    6.75940  * Hg_1       53
+    3.81464    4.59550    3.16533  1   Hg    6.75940  * Hg_1       54
+    6.36568   -1.83468    1.58264  2   S     6.81122  * S_2        55
+    6.36568    1.83468   -1.58270  2   S     6.81124  * S_2        56
+   -0.33036   -2.58385   -6.33067  1   Hg    6.84564  * Hg_1       57
+   -2.40286    1.00583   -6.33067  1   Hg    6.84564  * Hg_1       58
+   -2.40286   -1.00583    6.33067  1   Hg    6.84564  * Hg_1       59
+   -0.33036    2.58385    6.33067  1   Hg    6.84564  * Hg_1       60
+   -3.99682   -5.42436    1.58264  2   S     6.92119  * S_2        61
+   -3.99682    5.42436   -1.58270  2   S     6.92121  * S_2        62
+   -5.10208    0.00000   -4.74797  2   S     6.96954  * S_2        63
+   -5.10208    0.00000    4.74803  2   S     6.96958  * S_2        64
+
+* END

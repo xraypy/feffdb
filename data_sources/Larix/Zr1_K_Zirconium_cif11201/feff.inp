@@ -1,0 +1,139 @@
+* FEFF8 input file generated 2026-10-23 14:39:02
+*   larixite  2026.1.0
+*   pymatgetn 2026.7.31
+
+TITLE Formula: Zr
+TITLE SpaceGroup: P6_3/mmc
+TITLE CIF Source: Am Min Crystal Structure Database ID 11201
+TITLE Mineral Name: zirconium
+TITLE Publication: Crystal Structures 1 [7:83] (1963)
+TITLE Authors: Wyckoff R W G
+TITLE Cell Parameters (A, degrees): a=3.232, b=3.232, c=5.147, alpha=90.0, beta=90.0, gamma=120.0
+TITLE Cell Volume (A^3): 46.56200
+TITLE Crystal Density (gr/cm^3): 6.507
+TITLE Compound: <missing>
+
+*
+* crystallographic sites:
+*    To change the absorber site, re-run using `absorber_site`
+*    with the corresponding site index (counting from 1)
+* site    X       Y       Z     Wyckoff  species
+*   1   0.33333 0.66667 0.25000     2c   Zr   <- absorber
+*
+
+*  <central> <edge> edge energy = <eedge> eV
+EDGE      K
+S02       1.0
+
+*         pot    xsph   fms    paths  genfmt ff2chi
+CONTROL   1      1     1     1     1      1
+PRINT     1      0     0     0     0      3
+
+** Exchange: energy-dependent exchange correlation potential
+** ixc = 0 means to use Hedin-Lundqvist, 1 to use Dirac-Hara
+** vr = added (real) energy shift
+** vi = added imaginary energy shift (broadening)
+*         ixc   vr  vi
+EXCHANGE  0     0.0  0.0
+
+RPATH     7.00
+EXAFS     20
+NLEG      6
+
+*  POLARIZATION  0 0 0
+
+** SCF: self-consisent field for atomic potentials
+** r_scf = radius for self-consistent pots (2 shells is a good choice)
+** l_scf = 0 for a solid, 1 for a molecule
+** n_scf = max number of iterations to run. 0 for non-SCF, usually 10 is sufficient
+** ca = convergence factor (between 0 and 1). 1 is unstable, 0.2 is typical, lower values are more stable.
+**         r_scf  [ l_scf   n_scf   ca ]
+*SCF       5.0
+
+** LDOS: local density of electronic states
+** emin, emax = energy range for DOS calculation, relative  to Ethreshold
+** eimag = imaginary energy for broadening
+*LDOS      -30   20     0.1
+
+** XANES: calculate XANES
+** kmax = upper limit of XANES calculation
+** delta_k = step in k [Ang^-1] to use
+** delta_e = step in energy [eV] to use.
+**         kmax   [ delta_k  delta_e ]
+* XANES     4.0
+
+** FMS: full multiple scattering
+** r_fms = radius for full multiple scattering
+** l_fms = 0 for a solid, 1 for a molecule
+**        r_fms  l_fms
+* FMS     4.0     0
+
+POTENTIALS
+** l_scf - max l (ang momentum number) for SCF calculation, -1 for 'auto'
+** l_fms - max l (ang momentum number) for FMS calculation, -1 for 'auto'
+** stoichiometry = number of atoms with this ipot in unit cell (use 0.01 for ipot 0)
+**  ipot    z    tag    l_scf  l_fms   stoichiometry
+     0    40    Zr      -1     -1       0.01
+     1    40    Zr      -1     -1
+
+ATOMS
+*     x          y          z     ipot tag   distance site_info  index
+    0.00000    0.00000    0.00000  0   Zr    0.00000  * Zr_1        0
+   -1.61600   -0.93300   -2.57350  1   Zr    3.17881  * Zr_1        1
+   -1.61600   -0.93300    2.57350  1   Zr    3.17881  * Zr_1        2
+    1.61600   -0.93300   -2.57350  1   Zr    3.17881  * Zr_1        3
+    1.61600   -0.93300    2.57350  1   Zr    3.17881  * Zr_1        4
+    0.00000    1.86600   -2.57350  1   Zr    3.17881  * Zr_1        5
+    0.00000    1.86600    2.57350  1   Zr    3.17881  * Zr_1        6
+   -1.61600    2.79899    0.00000  1   Zr    3.23200  * Zr_1        7
+    3.23200    0.00000    0.00000  1   Zr    3.23200  * Zr_1        8
+   -3.23200    0.00000   -0.00000  1   Zr    3.23200  * Zr_1        9
+    1.61600   -2.79899   -0.00000  1   Zr    3.23200  * Zr_1       10
+    1.61600    2.79899    0.00000  1   Zr    3.23200  * Zr_1       11
+   -1.61600   -2.79899   -0.00000  1   Zr    3.23200  * Zr_1       12
+   -3.23200    1.86600   -2.57350  1   Zr    4.53328  * Zr_1       13
+   -3.23200    1.86600    2.57350  1   Zr    4.53328  * Zr_1       14
+   -0.00000   -3.73199    2.57350  1   Zr    4.53328  * Zr_1       15
+   -0.00000   -3.73199   -2.57350  1   Zr    4.53328  * Zr_1       16
+    3.23200    1.86600   -2.57350  1   Zr    4.53328  * Zr_1       17
+    3.23200    1.86600    2.57350  1   Zr    4.53328  * Zr_1       18
+    0.00000    0.00000   -5.14700  1   Zr    5.14700  * Zr_1       19
+    0.00000    0.00000    5.14700  1   Zr    5.14700  * Zr_1       20
+   -3.23200   -3.73199    2.57350  1   Zr    5.56745  * Zr_1       21
+   -4.84800   -0.93300   -2.57350  1   Zr    5.56745  * Zr_1       22
+   -4.84800   -0.93300    2.57350  1   Zr    5.56745  * Zr_1       23
+   -3.23200   -3.73199   -2.57350  1   Zr    5.56745  * Zr_1       24
+   -1.61600    4.66499   -2.57350  1   Zr    5.56745  * Zr_1       25
+   -1.61600    4.66499    2.57350  1   Zr    5.56745  * Zr_1       26
+    4.84800   -0.93300   -2.57350  1   Zr    5.56745  * Zr_1       27
+    3.23200   -3.73199   -2.57350  1   Zr    5.56745  * Zr_1       28
+    4.84800   -0.93300    2.57350  1   Zr    5.56745  * Zr_1       29
+    3.23200   -3.73199    2.57350  1   Zr    5.56745  * Zr_1       30
+    1.61600    4.66499   -2.57350  1   Zr    5.56745  * Zr_1       31
+    1.61600    4.66499    2.57350  1   Zr    5.56745  * Zr_1       32
+   -4.84800    2.79899    0.00000  1   Zr    5.59799  * Zr_1       33
+    4.84800   -2.79899    0.00000  1   Zr    5.59799  * Zr_1       34
+   -4.84800   -2.79899   -0.00000  1   Zr    5.59799  * Zr_1       35
+    4.84800    2.79899    0.00000  1   Zr    5.59799  * Zr_1       36
+    0.00000    5.59799    0.00000  1   Zr    5.59799  * Zr_1       37
+   -0.00000   -5.59799   -0.00000  1   Zr    5.59799  * Zr_1       38
+   -1.61600   -2.79899    5.14700  1   Zr    6.07762  * Zr_1       39
+   -1.61600    2.79899   -5.14700  1   Zr    6.07762  * Zr_1       40
+   -3.23200    0.00000   -5.14700  1   Zr    6.07762  * Zr_1       41
+   -1.61600    2.79899    5.14700  1   Zr    6.07762  * Zr_1       42
+   -3.23200    0.00000    5.14700  1   Zr    6.07762  * Zr_1       43
+    1.61600   -2.79899   -5.14700  1   Zr    6.07762  * Zr_1       44
+    1.61600   -2.79899    5.14700  1   Zr    6.07762  * Zr_1       45
+    1.61600    2.79899   -5.14700  1   Zr    6.07762  * Zr_1       46
+    3.23200    0.00000   -5.14700  1   Zr    6.07762  * Zr_1       47
+    1.61600    2.79899    5.14700  1   Zr    6.07762  * Zr_1       48
+    3.23200    0.00000    5.14700  1   Zr    6.07762  * Zr_1       49
+   -1.61600   -2.79899   -5.14700  1   Zr    6.07762  * Zr_1       50
+   -3.23200    5.59799    0.00000  1   Zr    6.46400  * Zr_1       51
+   -6.46400    0.00000   -0.00000  1   Zr    6.46400  * Zr_1       52
+    3.23200   -5.59799   -0.00000  1   Zr    6.46400  * Zr_1       53
+    3.23200    5.59799    0.00000  1   Zr    6.46400  * Zr_1       54
+    6.46400    0.00000    0.00000  1   Zr    6.46400  * Zr_1       55
+   -3.23200   -5.59799   -0.00000  1   Zr    6.46400  * Zr_1       56
+
+* END

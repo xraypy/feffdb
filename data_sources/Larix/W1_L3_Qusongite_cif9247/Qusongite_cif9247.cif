@@ -1,0 +1,48 @@
+data_global
+_chemical_name_mineral 'Qusongite'
+loop_
+_publ_author_name
+'Leciejewicz J'
+_journal_name_full 'Acta Crystallographica'
+_journal_volume 14
+_journal_year 1961
+_journal_page_first 200
+_journal_page_last 200
+_publ_section_title
+;
+ A note on the structure of tungsten carbide
+;
+_database_code_amcsd 9247
+_chemical_formula_sum 'W C'
+_cell_length_a 2.9065
+_cell_length_b 2.9065
+_cell_length_c 2.8366
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 120.0
+_cell_volume 20.752
+_exptl_crystal_density_diffrn  15.672
+_symmetry_space_group_name_H-M 'P -6 m 2'
+loop_
+_space_group_symop_operation_xyz
+  'x,y,z'
+  'x,x-y,-z'
+  '-x+y,-x,-z'
+  '-y,-x,z'
+  '-y,x-y,z'
+  '-x+y,y,-z'
+  'x,y,-z'
+  'x,x-y,z'
+  '-x+y,-x,z'
+  '-y,-x,-z'
+  '-y,x-y,-z'
+  '-x+y,y,z'
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+W   0.0  0.0  0.0  0.01406
+C   0.666667  0.333333  0.5  0.01406
+
