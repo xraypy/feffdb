@@ -76,7 +76,7 @@ def Add_Liao_Calcs():
 
 
 def Add_Metals():
-    top_folder = 'Metals'
+    top_folder = 'Larix'
     for calc_dir in listdir(top_folder):
         cpath = Path(top_folder, calc_dir)
         cif_file = None
@@ -91,7 +91,7 @@ def Add_Metals():
             print(f'added {feff_dat}, {cif_file} ')
 ##
 if __name__ == '__main__':
-    feffdb = FeffDatabase('../feffdat.db')
+    feffdb = FeffDatabase('./feffdat.db', create_ok=True)
     Add_Liao_Calcs()
     Add_Metals()
     feffdb.close()
