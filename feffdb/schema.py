@@ -26,21 +26,15 @@ create table cif (id integer primary key autoincrement,
                   source_id text);
 
 create table feffinp (id integer primary key autoincrement,
+                      inptext blob not null,
                       absorber integer not null,
                       edge text not null,
                       scatterers text not null,
                       natoms integer not null,
                       cif_id integer,
-                      inpfile blob not null,
                       foreign key(cif_id) references cif(id),
                       foreign key(absorber) references element(z) );
 
-
-create table person (id integer primary key autoincrement,
-                     email text not null unique,
-                     name text, password text);
-
-insert into person (email, name) values ('feffdb@local', 'feffdb library');
 
 create table feffdat (id integer primary key autoincrement,
                       absorber integer not null,
@@ -59,6 +53,12 @@ create table feffdat (id integer primary key autoincrement,
                       foreign key(absorber) references element(z),
                       foreign key(scatterer) references element(z),
                       foreign key(donator_id) references person(id) );
+
+create table person (id integer primary key autoincrement,
+                     email text not null unique,
+                     name text, password text);
+
+insert into person (email, name) values ('feffdb@local', 'feffdb library');
 
 create table rating_enum (scoreval integer primary key not null, notes text);
 
