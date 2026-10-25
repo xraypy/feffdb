@@ -4,15 +4,19 @@ from argparse import ArgumentParser
 from pathlib import Path
 from pyshortcuts import uname, make_shortcut, ico_ext
 from tabulate import tabulate
+import xraydb
+from .utils import get_feffdb, create_feffdb
+from .feffdb import FeffDatabase
 
-from .utils import get_feffdb_path
-from .feffdb import create_feffdb, FeffDatabase
+
+VALID_ELEMS = [el.element for el in xraydb.get_xraydb().get_cache('elements')]
+VALID_ELEMS.extend(['None', 'none', 'All', 'all'])
 
 def feffdb_cli():
     """
     feffdb command-line app
     """
-    dbname_default = get_feffdb_path().absolute().as_posix()
+    dbname_default = get_feffdb().absolute().as_posix()
     parser = ArgumentParser(description='Feff Database')
     parser.add_argument('-n', '--name', dest='dbname',
                        default=None, help=f"database to use [{dbname_default}]" )
@@ -46,7 +50,13 @@ def feffdb_cli():
     feffdb = FeffDatabase(dbname)
 
     absorber = args.absorber
+    if absorber not in VALID_ELEMS:
+        print(f"Unknown absorber: {absorber}, Must be valid atomic symbol or 'All' or 'None'")
+
     scatterer = args.scatterer
+    if scatterer is not None and scatterer not in VALID_ELEMS:
+        print(f"Unknown scatterer: {scatterer} Must be valid atomic symbol or  empty or 'All' or 'None'")
+
     out = []
     if absorber is not None or scatterer is not None:
         if scatterer in ('All', 'all', 'None', 'none'):
