@@ -47,7 +47,13 @@ def feffdb_cli():
             print(f"database {dbname} does not exist, use '-c' to create")
             return
 
-    feffdb = FeffDatabase(dbname)
+    feffdb = FeffDatabase(dbname, create_ok=False)
+    npaths = feffdb.list_feffdat()
+    if npaths is None or len(npaths) < 1:
+        print(f"database {dbname} exists but is empty")
+        return
+
+
 
     absorber = args.absorber
     if absorber not in VALID_ELEMS:
