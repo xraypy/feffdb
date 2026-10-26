@@ -21,7 +21,7 @@ def decompress(val):
     return lzma.decompress(val).decode('utf-8')
 
 class FeffDatabase(SimpleDB):
-    def __init__(self, dbname=None, create_ok=False):
+    def __init__(self, dbname=None, create_ok=False, read_only=False):
         if dbname is not None:
            dbpath = Path(dbname)
         else:
@@ -34,7 +34,8 @@ class FeffDatabase(SimpleDB):
             create_feffdb(dbname=dbname)
 
         self.dbname = dbpath.absolute().as_posix()
-        SimpleDB.__init__(self, dbname=self.dbname, server='sqlite')
+        SimpleDB.__init__(self, dbname=self.dbname, server='sqlite',
+                          read_only=read_only)
 
     def __repr__(self):
         return f"FeffDatabase('{self.dbname}')"
