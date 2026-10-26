@@ -67,16 +67,19 @@ class SimpleDB(object):
 
     """
     def __init__(self, dbname=None, server='sqlite', user='',
-                 password='',  host='', port=5432, dialect=None, logfile=None):
+                 password='',  host='', port=5432, dialect=None, logfile=None,
+                 read_only=False):
         self.engine = None
         self.metadata = None
         self.logfile = logfile
         if dbname is not None:
             self.connect(dbname, server=server, user=user,
-                         password=password, port=port, host=host, dialect=dialect)
+                         password=password, port=port,
+                         host=host, dialect=dialect, read_only=read_only)
 
     def connect(self, dbname, server='sqlite', user='',
-                password='', port=None, host='localhost', dialect=None):
+                password='', port=None, host='localhost', dialect=None,
+                read_only=False):
         "connect to an existing database"
 
         self.dbname = dbname
@@ -107,7 +110,11 @@ class SimpleDB(object):
         else:
             connect_str = f'{server}+{dialect}://{connect_str}'
 
-        self.engine = create_engine(connect_str, connect_args=connect_args)
+        opts = {'connect_args': connect_args}
+        if read_only:
+            opts['execution_options'] = {"isolation_level": "AUTOCOMMIT"}
+
+        self.engine = create_engine(connect_str, **opts)
         self.metadata = MetaData()
         try:
             self.metadata.reflect(bind=self.engine)
