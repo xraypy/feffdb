@@ -12,7 +12,6 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 import numpy as np
-from copy import deepcopy
 
 
 import hashlib
@@ -21,7 +20,7 @@ from scipy import constants as consts
 from scipy.interpolate import UnivariateSpline
 
 from xraydb import atomic_mass, atomic_symbol
-from pyshortcuts import fix_varname, read_textfile, gformat
+from pyshortcuts import read_textfile, gformat
 
 from .feffdb import FeffDatabase
 
@@ -359,11 +358,6 @@ class FeffPath():
                 self.label = self.hashkey
 
 
-    def __repr__(self):
-        if self.filename is not None:
-            return 'feffpath((no_file)'
-        return f'feffpath({self.filename})'
-
     def __getstate__(self):
         _feffdat_state = self._feffdat.__getstate__()
         return (self.filename, self.label, self.feffrun, self.degen,
@@ -387,7 +381,6 @@ class FeffPath():
         self.geom  = self._feffdat.geom
         self.shell = self._feffdat.shell
         self.absorber = self._feffdat.absorber
-        def_degen  = self._feffdat.degen
 
         self.hashkey = self.__geom2label()
         if self.label in ('', None):

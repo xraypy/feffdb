@@ -3,7 +3,6 @@
 Simple database interface using SQLAlchemy 2.0
 """
 
-import os
 import logging
 import atexit
 from datetime import datetime

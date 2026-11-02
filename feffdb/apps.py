@@ -1,8 +1,6 @@
-import sys
 from argparse import ArgumentParser
 
 from pathlib import Path
-from pyshortcuts import uname, make_shortcut, ico_ext
 from tabulate import tabulate
 import xraydb
 from .utils import get_feffdb, create_feffdb

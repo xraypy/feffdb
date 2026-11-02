@@ -7,7 +7,7 @@ import json
 import re
 import sqlite3
 from pathlib import Path
-from io import StringIO, IOBase
+from io import IOBase
 from charset_normalizer import from_bytes
 
 from xraydb import XrayDB, atomic_mass, atomic_symbol

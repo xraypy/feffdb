@@ -2,12 +2,11 @@
 '''
 This script creates an SQLite3 database for Feff Data
 '''
-import sqlite3
 import json
 import lzma
 from pathlib import Path
-from xraydb import XrayDB, atomic_number, atomic_symbol
-from pyshortcuts import hash_password, test_password, check_password_rules
+from xraydb import atomic_number, atomic_symbol
+from pyshortcuts import hash_password, check_password_rules
 
 
 from .simpledb import SimpleDB
@@ -89,7 +88,7 @@ class FeffDatabase(SimpleDB):
             raise ValueError(f'error parsing feffinp : {feff_inp}')
 
         text = compress(finp.pop('text'))
-        fnam = finp.pop('filename')
+        finp.pop('filename')
         dbargs = {k:v for k, v in finp.items()}
         dbargs['inptext'] = text
         dbargs['cif_id'] = cif_id
@@ -245,7 +244,7 @@ class FeffDatabase(SimpleDB):
         out = []
         for row in rows:
             if row.reff > rmin and row.reff < rmax:
-                formula, structure = '?', '?'
+                formula = '?'
                 finp = self.get_rows('feffinp', where={'id': row.feffinp_id},
                                      limit_one=True, none_if_empty=True)
                 if finp is not None and finp.cif_id > 0:
@@ -284,16 +283,14 @@ class FeffDatabase(SimpleDB):
                 print(f"warning person {email} already exisis")
         else:
             if name is not None:
-                dbargs = {'name': name}
+                dbargs['name'] = name
             if password is None:
                 password = ''
             if len(password) > 1:
-                password_ok = check_password_rules(pasword)
+                password_ok = check_password_rules(password)
                 if not password_ok:
-                    raise ValueError(f'Password is invalid')
-                dbargs = {'password': hash_password(password)}
-
-
+                    raise ValueError('Password is invalid')
+                dbargs['password'] = hash_password(password)
 
             self.__addrow('person', dbargs)
 
@@ -304,8 +301,6 @@ class FeffDatabase(SimpleDB):
 
     def check_person_password(self, email, password):
         """check validity of a person's password"""
-        person = self.get_rows('person', where={'email': email},
-                               limit_one=True, none_if_empty=True)
         # if len(person
 
     def get_feffdat_ratings(self, feffdat_id=None, email=None):
