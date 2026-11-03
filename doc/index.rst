@@ -9,17 +9,14 @@ FeffDB: A database of EXAFS calculations
 
 FeffDB is an `SQLite3`_ database storing selected EXAFS calculations
 from the `Feff`_ program, and a Python library to read, write, and
-work with this database and the data it contains.  In principe, the
-database can be retrieved from languages other than Python, but there
-is not currently any library to work with the database.
+work with this database.  The motivation for Feff DB is to provide
+"first-shell EXAFS" calculations for many common ligands or atom pairs
+that these can be browsed and re-used without having to setup and run
+Feff. An important use-case for this is semi-automated analysis of
+EXAFS data.
 
-The main motivation for Feff DB is to provide "first-shell EXAFS"
-calculations for many common ligands or atom pairs that these can be
-browsed and re-used without having to setup and run Feff. An important
-use-case for this is semi-automated analysis of EXAFS data.
-
-FeffDB is still in active, pre-release development, and has been
-developed by;
+FeffDB is still in active, pre-release development. It is being
+developed by
 
   - Samantha Liao, Cornell University,   https://orcid.org/0009-0006-7803-4106
   - Juanjuan Huang, Argonne National Laboratory, https://orcid.org/0000-0002-5801-9754
@@ -28,6 +25,19 @@ developed by;
   - Matthew Newville, The University of Chicago, https://orcid.org/0000-0001-6938-1014
   - Shelly Kelly, Argonne National Laboratory, https://orcid.org/0000-0001-8996-628X
 
+In principe, the database could be used from languages other than
+Python. This is not currently supported here, but we welcome
+discussion of that possibility.
+
+
+A note on the name: We mean "FeffDB" to mean "The database (DB) of
+EXAFS calculations that come from the program Feff".  But "FEFFDB"
+also turns out to be a triple of hexidecimal numbers ((254, 255, 219)
+in decimal), which means "FEFFDB" can be used as a color, bright
+yellow. In the X11 color scheme, the closest color is "Corn Silk".
+According to https://colorkit.co/color/feffdb/, it can be called
+"Parmesan", and https://www.schemecolor.com/hex/feffdb calls it "Moon
+Glow".  We like all of these names as synonyms for FeffDB.
 
 
 
@@ -39,4 +49,7 @@ developed by;
    :maxdepth: 2
 
    install
+   usage
    motivation
+   contrib
+   dbschema

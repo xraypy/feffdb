@@ -8,12 +8,12 @@ Prerequisites
 ~~~~~~~~~~~~~~~
 
 The current version of FeffDB is |release|. This is a pre-release
-version, last updated in August, 2026.
+version, last updated in November, 2026.
 
-FeffDB requires Python 3.11 or higher and wxPython 4.2.4.  Other
-required packages and minimum versions are listed in the
-`pyproject.toml` file in the source code repository.  All of the
-required dependencies are available from `pip` or on `conda` channels.
+FeffDB requires Python 3.11 or higher.  Other required packages and
+minimum versions are listed in the `pyproject.toml` file in the source
+code repository.  All of the required dependencies are available from
+`pip` or on `conda` channels.
 
 Installation with pip
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,7 +21,7 @@ Installation with pip
 The latest version (|release|) is available from `PyPI`_ and can be
 installed with::
 
-   pip install fefdb
+   pip install feffdb
 
 
 Development Version
