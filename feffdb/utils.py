@@ -2,14 +2,16 @@
 """
 very simple interface to CIF file for Feff DB
 """
-import os
 import json
-import re
+import os
+import shutil
 import sqlite3
-from pathlib import Path
+import re
 from io import IOBase
 from charset_normalizer import from_bytes
-
+from pathlib import Path
+from platformdirs import user_data_dir
+from warnings import warn
 from xraydb import XrayDB, atomic_mass, atomic_symbol
 from xraydb.chemparser import chemparse
 
@@ -50,23 +52,32 @@ def get_feffdb(dbname:str|None=None) -> Path:
     1. if the passed dbname is a valid FeffDB, that will be used.
     2. if the Environmental Variable FEFFDAT_DB is set (and is a valid FeffDB),
        that will be used.
-    1. if LARCHDIR is set, that will be used as the parent folder,
-       (with the default '$HOME/.larch').  If the database file
-       LARCHDIR / 'feffdat.db' exists, that will be used.
+    4. Use `platformsdir.user_data_dir()` to find a `feffdb` folder.
+       if `feffdat.db` exists there, use that.
+    5. Try to create `platformsdir.user_data_dir('feffdb')` and copy
+       the feffdat.db there, and use that if it suceeeds.
 
-    If no valid FEFF DB can be found a ValueError will be raised.
-
+    Finally, if no valid FEFF DB can be found a ValueError will be raised.
     """
     if dbname is None:
         dbname = os.environ.get(FEFFDB_ENV, None)
     if is_feffdb(dbname):
         return Path(dbname)
 
-    parent = Path.home() / os.environ.get(LARCHDIR_ENV, LARCHDIR_DEF)
+    parent = Path(user_data_dir('feffdb'))
     parent.mkdir(mode=0o755, exist_ok=True)
     dbpath = parent / FEFFDB_NAME
     if is_feffdb(dbpath):
         return dbpath
+
+    else:
+        here = Path(__file__).parent / FEFFDB_NAME
+        try:
+            shutil.copy(here, dbpath)
+            if is_feffdb(dbpath):
+                return dbpath
+        except Exception:
+            warn(f'could not install {FEFFDB_NAME} to {parent}')
 
     raise ValueError("cannot find a valid Feff Database")
 
@@ -80,7 +91,6 @@ def create_feffdb(dbname=None):
         if dbpath.exists():
             raise IOError(f"file {dbname} already exists")
         dbpath.parent.mkdir(parents=True, mode=0o755, exist_ok=True)
-
 
     conn = sqlite3.connect(dbpath)
     c = conn.cursor()
