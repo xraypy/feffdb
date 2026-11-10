@@ -78,7 +78,7 @@ def get_feffdb(dbname:str|None=None) -> Path:
                 return dbpath
         except Exception:
             warn(f'could not install {FEFFDB_NAME} to {parent}')
-
+        return here
     raise ValueError("cannot find a valid Feff Database")
 
 
