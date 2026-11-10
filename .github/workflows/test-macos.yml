@@ -1,4 +1,4 @@
-name: test feffdb on ubuntu
+name: test feffdb on macos
 
 permissions:
   contents: read
