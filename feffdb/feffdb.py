@@ -5,8 +5,8 @@ This script creates an SQLite3 database for Feff Data
 import json
 import lzma
 from pathlib import Path
-from xraydb import atomic_number, atomic_symbol
 from pyshortcuts import hash_password, check_password_rules
+from xraydb import atomic_number, atomic_symbol
 
 
 from .simpledb import SimpleDB
@@ -213,7 +213,7 @@ class FeffDatabase(SimpleDB):
                 return decompress(trow.ciftext)
 
     def list_feffdat(self, absorber=None, scatterer=None, edge=None,
-                     rmin=0., rmax=20.0):
+                     rmin=0., rmax=20.0, with_geometry=True):
         """get a list of feff.dat files matching on one or more criteria:
 
         Arguments
@@ -223,7 +223,7 @@ class FeffDatabase(SimpleDB):
         edge       (None or str) string for absorption edge [None for all]
         rmin       float  minimum R value  [0.0]
         rmax       float  maximum R value  [20.0]
-
+        with_geometry bool  whether to include 'geometry'  [True]
         Returns
         --------
         list of path dictionaries
@@ -254,18 +254,19 @@ class FeffDatabase(SimpleDB):
                         formula  = cif.formula
                         compound = cif.compound.lower()
 
-                out.append({'id': row.id,
-                            'label': row.label,
-                            'absorber': atomic_symbol(row.absorber),
-                            'scatterer': atomic_symbol(row.scatterer),
-                            'edge': row.edge,
-                            'reff': row.reff,
-                            'degen': row.degen,
-                            'formula': formula,
-                            'compound': compound,
-                            'geometry': json.loads(row.geometry),
-                            'description': row.description})
-
+                rowdat = {'id': row.id,
+                          'label': row.label,
+                          'absorber': atomic_symbol(row.absorber),
+                          'scatterer': atomic_symbol(row.scatterer),
+                          'edge': row.edge,
+                          'reff': row.reff,
+                          'degen': row.degen,
+                          'formula': formula,
+                          'compound': compound,
+                          'description': row.description}
+                if with_geometry:
+                    rowdat['geometry'] = json.loads(row.geometry)
+                out.append(rowdat)
         return out
 
 

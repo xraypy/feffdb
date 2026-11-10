@@ -68,10 +68,9 @@ def feffdb_cli():
         if absorber in ('All', 'all', 'None', 'none'):
             absorber = None
         rows = feffdb.list_feffdat(absorber=absorber, scatterer=scatterer,
-                                   rmin=float(args.rmin), rmax=float(args.rmax))
-        for row in rows:
-            row.pop('geometry')
-            out.append(row)
+                                   rmin=float(args.rmin), rmax=float(args.rmax).
+                                   with_geometry=False)
+        out.append(row)
     if len(out) > 0:
         print(tabulate(out, headers='keys', tablefmt='psql'))
     else:
