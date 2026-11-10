@@ -31,9 +31,8 @@ jobs:
         python -m pip install setuptools codecov pytest pytest-cov coverage numpy scipy sqlalchemy
     - name: Install feffdb package
       run: |
-        cd python
         python -m pip install '.[all]'
     - name: Test with pytest
       run: |
-        cd python/tests
+        cd tests
         python -m pytest
