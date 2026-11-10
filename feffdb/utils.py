@@ -65,21 +65,23 @@ def get_feffdb(dbname:str|None=None) -> Path:
         return Path(dbname)
 
     parent = Path(user_data_dir('feffdb'))
-    parent.mkdir(mode=0o755, exist_ok=True)
+    try:
+        parent.mkdir(mode=0o755, exist_ok=True)
+    except FileNotFoundError:
+        pass
     dbpath = parent / FEFFDB_NAME
     if is_feffdb(dbpath):
         return dbpath
 
-    else:
-        here = Path(__file__).parent / FEFFDB_NAME
-        try:
-            shutil.copy(here, dbpath)
-            if is_feffdb(dbpath):
-                return dbpath
-        except Exception:
-            warn(f'could not install {FEFFDB_NAME} to {parent}')
-        return here
-    raise ValueError("cannot find a valid Feff Database")
+    installed = Path(__file__).parent / FEFFDB_NAME
+    try:
+        shutil.copy(installed, dbpath)
+        if is_feffdb(dbpath):
+            return dbpath
+    except Exception:
+        warn(f'could not install {FEFFDB_NAME} to {parent}')
+    return installed
+
 
 
 def create_feffdb(dbname=None):
