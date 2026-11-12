@@ -272,8 +272,8 @@ class SimpleDB(object):
                 if key is None:
                     self.table_error(f"no column '{keyname}'", tablename, funcname)
                 filters.append(key==val)
-
-        return and_(*filters)
+        if len(filters) > 0:
+            return and_(*filters)
 
     def get_rows(self, tablename, where=None, order_by=None, limit_one=False,
                 none_if_empty=False, **kws):
@@ -300,7 +300,10 @@ class SimpleDB(object):
             self.table_error("no table found", tablename, 'get_rows')
 
         where = self.handle_where(tablename, where=where, funcname='get_rows', **kws)
-        query = tab.select().where(where)
+        if where is None:
+            query = tab.select()
+        else:
+            query = tab.select().where(where)
 
         if order_by is None:
             if 'id' in tab.c:

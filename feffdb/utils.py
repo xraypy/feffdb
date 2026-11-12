@@ -43,6 +43,8 @@ def is_feffdb(db: str|sqlite3.Connection) -> bool:
     cursor = dbconn.cursor()
     cursor.execute("select name from sqlite_master where type='table';")
     tables = [row[0] for row in cursor.fetchall()]
+    dbconn.close()
+
     return all([tab in tables for tab in feffdb_tables])
 
 
