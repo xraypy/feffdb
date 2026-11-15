@@ -1,0 +1,5 @@
+Script that intakes FEFF input files for the following versions of FEFF: FEFF6L, FEFF8.5L, FEFF9, FEFF10
+and can convert the file to match the formatting of any other version. Due to licensing issues,
+this script can only change the FEFF input files but cannot run the calculations for FEFF9 or FEFF10, only 
+FEFF6L and FEFF8.5L because they are open-source. Users who want all their calculations to be in FEFF9 or 
+FEFF10 must have licenses and run the calculations on their own.
