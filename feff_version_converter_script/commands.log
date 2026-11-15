@@ -1,0 +1,38 @@
+# commands run, in order
+
+# --- environment ---
+which gfortran gcc make git cmake python3 pytest
+feff6l; feff8l                 # larch 2026.2.2 wrappers, /opt/homebrew/bin
+python3 -m pip install --user pytest
+
+# --- source used as evidence (BSD licensed, read only, never copied into the script) ---
+git clone --depth 1 https://github.com/xraypy/feff85exafs.git /tmp/f85src
+#   doc/feff6l_doc.txt            FEFF6L manual
+#   src/feff6l/rdinp.f            FEFF6L input parser
+#   src/RDINP/rdinp_l.f           FEFF8.5L input parser
+#   src/COMMON/itoken.f           FEFF8.5L keyword table
+#   src/COMMON/str.f              comment characters
+
+# --- native runs (hand-written fcc Cu, a = 3.615 A, K edge, 6 A cluster, 79 atoms) ---
+cd runs/cu_feff6_native    && feff6l       # exit 0, 22 feffNNNN.dat, no chi.dat
+cd runs/cu_feff85l_native  && feff8l       # exit 0, 20 feffNNNN.dat + chi.dat
+
+# --- failure variants ---
+cd runs/cu_feff85l_same_input   && feff8l  # FEFF6 input unchanged: runs, 0 feffNNNN.dat
+cd runs/fail_f6_control3        && feff6l  # CONTROL 1 1 1       -> fatal, exit 0
+cd runs/fail_f6_control6        && feff6l  # CONTROL 1 1 1 1 1 1 -> silent, output identical
+cd runs/fail_f6_control_semantics && feff6l  # CONTROL 1 1 0 1 1 1 -> silent, 0 feffNNNN.dat
+cd runs/fail_f6_print6          && feff6l  # PRINT 6 flags       -> silent, output identical
+cd runs/fail_f6_potcols6        && feff6l  # POTENTIALS 6 columns-> silent, output identical
+cd runs/fail_f6_edge_s02        && feff6l  # EDGE/S02            -> fatal "Unknown keyword"
+cd runs/fail_f85l_control3      && feff8l  # CONTROL 1 1 1       -> fatal, exit 0
+cd runs/fail_f85l_potplaceholder && feff8l # "-1 -1 1" columns   -> silent, Mu shifts 0.44 eV
+
+# --- converter round trips ---
+python3 feff_convert.py runs/cu_feff6_native/feff.inp   --to feff85l -o runs/conv_f6_to_f85l/feff.inp
+cd runs/conv_f6_to_f85l  && feff8l         # exit 0, 19 feffNNNN.dat
+python3 feff_convert.py runs/cu_feff85l_native/feff.inp --to feff6   -o runs/conv_f85l_to_f6/feff.inp
+cd runs/conv_f85l_to_f6  && feff6l         # exit 0, 25 feffNNNN.dat
+
+# --- tests ---
+python3 -m pytest tests -q                 # 38 passed
