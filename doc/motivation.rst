@@ -30,11 +30,14 @@ identify the absorbing atom and X-ray edge.  The atomic cluster does
 not need to be too big, or generated from a crystal structure, but
 this is an easy way to start, and the expectation for the calculations here.
 
-FeffDB is a collection of Feff EXAFS calculations -- currently, it is limited 
-to the feff0001 path up to feff0005 path for each bond type. When possible 
-(and for all current examples), the content of the ``feff.inp`` file used for
-the calculation, and the CIF file used to generate that ``feff.inp`` file are 
-also included in the database.
+FeffDB is a collection of Feff EXAFS calculations -- currently, up to five
+single-scattering paths are kept for each bond type. These are the first
+shell paths: they are taken in the order Feff lists them, out to 1.25 times
+the shortest path length, and paths within 0.03 Ang of the one before are
+skipped, so the five kept paths are not necessarily ``feff0001.dat`` through
+``feff0005.dat``. When possible (and for all current examples), the content
+of the ``feff.inp`` file used for the calculation, and the CIF file used to
+generate that ``feff.inp`` file are also included in the database.
 
 The data are stored in a single file (typically called `feffdat.db`)
 that is an SQLite3 database.  This stores data in a number of Tables,
