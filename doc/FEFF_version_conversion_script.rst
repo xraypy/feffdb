@@ -2,15 +2,16 @@
 Converting between Feff versions
 =========================================
 
-This script is to allow users who are working in one Feff verison to regenerate the database in another Feff version. The covered Feff versions are FEFF6L, FEFF8.5L, FEFF9, and FEFF10ok f
+This script is to allow users who are working in one Feff version to regenerate the database in another Feff version. The covered Feff versions are FEFF6L, FEFF8.5L, FEFF9, and FEFF10.
 The script lives in ``feff_version_converter_script/feff_convert.py`` and will only rewrite FEFF input files rather than running FEFF itself, which requires a license for FEFF9 and FEFF10. 
-The script itself was written by claude but a human checked that it gave the expected outputs.
+The script itself was written by Claude but a human checked that it gave the expected outputs.
 
   
 
-A worked example (fcc Cu, Feff8.5L --> Feff6L)::
+A worked example (fcc Cu, Feff8.5L --> Feff6L)
 -----------------------------------------------
-To run feff_convert.py, enter the following into the command line: 
+To run feff_convert.py, enter the following into the command line::
+
     python3 feff_version_converter_script/feff_convert.py \
         feff_version_converter_script/tests/inputs/cu_fcc_feff85l.inp \
         --to feff6 -o cu_fcc_converted.inp
