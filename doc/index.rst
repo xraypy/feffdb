@@ -53,3 +53,4 @@ Glow".  We like all of these names as synonyms for FeffDB.
    motivation
    contrib
    dbschema
+   FEFF_version_conversion_script
