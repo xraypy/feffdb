@@ -8,7 +8,6 @@ from pathlib import Path
 from pyshortcuts import hash_password, check_password_rules
 from xraydb import atomic_number, atomic_symbol
 
-
 from .simpledb import SimpleDB
 from .utils import (get_feffdb, create_feffdb,
                     parse_cif, parse_feffinp, parse_feffdat)
@@ -41,7 +40,7 @@ class FeffDatabase(SimpleDB):
 
 
     def __addrow(self, table, data):
-        """add row to tablle, or return existing row with data"""
+        """add row to table, or return existing row with data """
         # first look if this already exists
         row = self.get_rows(table, where=data,
                             limit_one=True, none_if_empty=True)
@@ -172,18 +171,70 @@ class FeffDatabase(SimpleDB):
         return this_id
 
     def get_feffdat(self, feffid):
-        """get text of feff.dat, either by table 'id' or
-        or by 'label' in feffdat table
         """
-        try:
-            where = {'id': int(feffid)}
-        except ValueError:
-            where = {'label': feffid}
+        get text of feff.dat, either by 'id' or by 'label' in feffdat table
 
-        row = self.get_rows('feffdat', where=where,
+        see also get_feffdat_full() which returns a dict wirh more complete data
+
+        """
+        key = 'id' if isinstance(feffid, int) else 'label'
+        row = self.get_rows('feffdat', where={key: feffid},
                             limit_one=True, none_if_empty=True)
         if row is not None:
             return decompress(row.feffdat)
+
+    def get_feffdat_full(self, feffid):
+        """
+        return dictionay with full data for a feffid ('id' or 'label' in feffdat table).
+        This will include the text Feff.inp and CIF source files, and the name of the
+        donator.
+
+        Arguments
+        ---------
+        feffid  (int or str)   id or label for Feff.inp
+
+        Returns
+        --------
+        dictionary with multiple keys:
+          'label', 'absorber', 'scatterer',
+          'nleg', 'reff', 'edge', 'degen', 'geometry', 'description',
+          'feffdat_id', 'feffdat'
+          'feffinp_id', 'feffinp'
+          'cif_id', 'cif',
+          'donator_id', 'donator_name' 'donator_email'
+        """
+        key = 'id' if isinstance(feffid, int) else 'label'
+        frow = self.get_rows('feffdat', where={key: feffid},
+                            limit_one=True, none_if_empty=True)
+
+        if frow is None:
+            raise ValueError(f'could not find feff data: {id_or_label}')
+        out = {}
+
+        for attr in ('label', 'absorber', 'scatterer', 'nleg', 'reff', 'edge', 'degen',
+                     'geometry', 'description'):
+            out[attr] = getattr(frow, attr)
+        out['feffdat_id'] = frow.id
+        out['feffdat'] = decompress(frow.feffdat)
+
+        finp = self.get_rows('feffinp', where={'id': frow.feffinp_id},
+                            limit_one=True, none_if_empty=True)
+        if finp is not None:
+            out['feffinp_id'] = frow.feffinp_id
+            out['feffinp'] = decompress(finp.inptext)
+            cifrow = self.get_rows('cif', where={'id': finp.cif_id},
+                            limit_one=True, none_if_empty=True)
+            if cifrow is not None:
+                out['cif_id'] = finp.cif_id
+                out['cif'] = decompress(cifrow.ciftext)
+
+        prow = self.get_rows('person', where={'id': frow.donator_id},
+                             limit_one=True, none_if_empty=True)
+        if prow is not None:
+            out['donator_id'] = frow.donator_id
+            out['donator_name'] = prow.name
+            out['donator_email'] = prow.email
+        return out
 
     def get_feffinp(self, feffinp_id):
         "get text of feff.inp by id in feffinp table"
@@ -192,15 +243,9 @@ class FeffDatabase(SimpleDB):
         if row is not None:
             return decompress(row.inptext)
 
-    def get_feffinp_for_feffdat(self, feffdat_id):
+    def get_feffinp_for_feffdat(self, feffid):
         "get text of feff.inp for a Feff.dat file"
-        row = self.get_rows('feffdat', where={'id': feffdat_id},
-                            limit_one=True, none_if_empty=True)
-        if row is not None:
-            trow = self.get_rows('feffinp', where={'id': row.feffinp_id},
-                                 limit_one=True, none_if_empty=True)
-            if trow is not None:
-                return decompress(trow.inptext)
+        return self.get_feffdat_full(feffid)['feffinp']
 
     def get_cifinp_for_feffinp(self, feffinp_id):
         "get text of CIF for a feff.inp file"
@@ -211,6 +256,7 @@ class FeffDatabase(SimpleDB):
                                  limit_one=True, none_if_empty=True)
             if trow is not None:
                 return decompress(trow.ciftext)
+
 
     def list_feffdat(self, absorber=None, scatterer=None, edge=None,
                      rmin=0., rmax=20.0, with_geometry=True):
