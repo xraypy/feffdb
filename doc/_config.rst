@@ -1,4 +1,5 @@
-.. _xraylarch:   https://xraypy.github.io/xraylarch/
+.. _xraylarch:  https://xraypy.github.io/xraylarch/
+.. _larixite:   https://xraypy.github.io/larxite/
 .. _scipy:    https://scipy.org/
 .. _numpy:    https://numpy.scipy.org/
 .. _matplotlib: https://matplotlib.org/
@@ -12,3 +13,4 @@
 .. _Feff:  https://feff.phys.washington.edu/
 .. _SQLite3:  https://sqlite.org
 .. _John Rehr: https://en.wikipedia.org/wiki/John_J._Rehr
+.. _feffdat.db:  https://github.com/xraypy/feffdb/raw/refs/heads/main/feffdb/feffdat.db

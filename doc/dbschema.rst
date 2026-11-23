@@ -8,7 +8,7 @@ The FeffDB Database
 `feffdb` is primarily an `SQLite3`_ database.  The schema
 is given in
 https://github.com/xraypy/feffdb/blob/main/feffdb/schema.py.
-The initial SQL code shown there:
+The initial SQL code shown there::
 
     PRAGMA journal_mode=WAL;
     PRAGMA foreign_keys=ON;
@@ -25,7 +25,8 @@ thought of as tables in a Spreadsheet, where the Columns have (more or
 less) predefined meaning and datatypes, and each Row in the Table
 would be a different data entry.  One main differences between a
 Spreadsheet and a database are that the data in any one Column could
-be very large in a database.  Another main difference is that a Column
+be very large in a database.  Another
+main difference is that a Column
 in one Table could be or "point to" the Column Index in another Table,
 and the SQL language makes it easy and efficient to get data from
 multiple tables that are related with these "pointing Columns" --

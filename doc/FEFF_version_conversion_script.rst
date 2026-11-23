@@ -1,12 +1,21 @@
-=========================================
-Converting between Feff versions
+.. include:: _config.rst
+
+.. _feffinp_convert_cli:
+
+`feffnp_convert` CLI
 =========================================
 
-This script is to allow users who are working in one Feff version to regenerate the database in another Feff version. The covered Feff versions are FEFF6L, FEFF8.5L, FEFF9, and FEFF10.
-The script lives in ``feff_version_converter_script/feff_convert.py`` and will only rewrite FEFF input files rather than running FEFF itself, which requires a license for FEFF9 and FEFF10. 
-The script itself was written by Claude but a human checked that it gave the expected outputs.
+: Converting Feff.inp
+This script is to allow users who are working in one Feff version to
+regenerate the database in another Feff version. The covered Feff
+versions are FEFF6L, FEFF8.5L, FEFF9, and FEFF10.  The script lives in
+``feff_version_converter_script/feff_convert.py`` and will only
+rewrite FEFF input files rather than running FEFF itself, which
+requires a license for FEFF9 and FEFF10.  The script itself was
+written by Claude but a human checked that it gave the expected
+outputs.
 
-  
+
 
 A worked example (fcc Cu, Feff8.5L --> Feff6L)
 -----------------------------------------------
@@ -56,6 +65,3 @@ Options
 A note on S02
 ----------------------
 S02 doesn't transfer between FEFF versions, so it must be refit after converting.
-
-
-
