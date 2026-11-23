@@ -5,7 +5,7 @@ from tabulate import tabulate
 import xraydb
 from .utils import get_feffdb, create_feffdb
 from .feffdb import FeffDatabase
-
+from .version import __version__
 
 VALID_ELEMS = [el.element for el in xraydb.get_xraydb().get_cache('elements')]
 VALID_ELEMS.extend(['None', 'none', 'All', 'all'])
@@ -20,6 +20,8 @@ def feffdb_cli():
                        default=None, help=f"database to use [{dbname_default}]" )
     parser.add_argument('-c', '--create', action='store_true', default=False,
                             help="create new database if it does not exist")
+    parser.add_argument('-v', '--version', action='store_true', default=False,
+                            help="print version information")
     parser.add_argument('--rmin',  default=0,
                         help='minimum distance (Ang)')
     parser.add_argument('--rmax',  default=10,
@@ -51,7 +53,14 @@ def feffdb_cli():
         print(f"database {dbname} exists but is empty")
         return
 
-
+    if args.version:
+        tag = feffdb.dbversion
+        date = feffdb.dbversion_full['date']
+        notes = feffdb.dbversion_full['notes']
+        print(f"FeffDB version: {tag=}, {date=}, {notes=}")
+        print(f"FeffDB file:    {feffdb.dbname}")
+        print(f"Python version: {__version__}")
+        return
 
     absorber = args.absorber
     if absorber not in VALID_ELEMS:
