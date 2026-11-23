@@ -15,11 +15,11 @@ def feffdb_cli():
     feffdb command-line app
     """
     dbname_default = get_feffdb().absolute().as_posix()
-    parser = ArgumentParser(description='Feff Database')
+    parser = ArgumentParser(description='Feff Database Utility')
     parser.add_argument('-n', '--name', dest='dbname',
                        default=None, help=f"database to use [{dbname_default}]" )
     parser.add_argument('-c', '--create', action='store_true', default=False,
-                            help="create new database")
+                            help="create new database if it does not exist")
     parser.add_argument('--rmin',  default=0,
                         help='minimum distance (Ang)')
     parser.add_argument('--rmax',  default=10,
