@@ -7,6 +7,7 @@ import os
 import shutil
 import sqlite3
 import re
+import lzma
 from io import IOBase
 from charset_normalizer import from_bytes
 from pathlib import Path
@@ -14,13 +15,13 @@ from platformdirs import user_data_dir
 from warnings import warn
 from xraydb import XrayDB, atomic_mass, atomic_symbol
 from xraydb.chemparser import chemparse
+from pyshortcuts import read_textfile
 
 from pymatgen.io.cif import CifParser
 
 from .schema import feffdb_schema, VERSIONS
 
 FEFFDB_NAME  = 'feffdat.db'
-FEFFDB_ENV   = 'FEFFDAT_DB'
 LARCHDIR_ENV = 'LARCHDIR '
 LARCHDIR_DEF = '.larch'
 
@@ -52,7 +53,7 @@ def get_feffdb(dbname:str|None=None) -> Path:
     """return Path to FEFF DB file
 
     1. if the passed dbname is a valid FeffDB, that will be used.
-    2. if the Environmental Variable FEFFDAT_DB is set (and is a valid FeffDB),
+    2. if the Environmental Variable FEFFDB_FILE is set (and is a valid FeffDB),
        that will be used.
     4. Use `platformsdir.user_data_dir()` to find a `feffdb` folder.
        if `feffdat.db` exists there, use that.
@@ -62,11 +63,11 @@ def get_feffdb(dbname:str|None=None) -> Path:
     Finally, if no valid FEFF DB can be found a ValueError will be raised.
     """
     if dbname is None:
-        dbname = os.environ.get(FEFFDB_ENV, None)
+        dbname = os.environ.get('FEFFDB_FILE', None)
     if is_feffdb(dbname):
         return Path(dbname)
 
-    parent = Path(user_data_dir('feffdb'))
+    parent = Path(user_data_dir('feffdb', appauthor=False))
     try:
         parent.mkdir(mode=0o755, exist_ok=True)
     except FileNotFoundError:
@@ -83,7 +84,6 @@ def get_feffdb(dbname:str|None=None) -> Path:
     except Exception:
         warn(f'could not install {FEFFDB_NAME} to {parent}')
     return installed
-
 
 
 def create_feffdb(dbname=None):
@@ -113,49 +113,38 @@ def create_feffdb(dbname=None):
     conn.commit()
 
 
-def read_textfile(filename):
-    """read text from a file as string
+def get_filename_and_text(input: str|Path, allow_text=True):
+    """given a filename or Path  returns absolute_pathname, text
 
-    Argument
-    --------
-    filename  (str or file): name of file to read or file-like object
+    input can either be a filename that resolves to an existing Path or
+    an existing Path. In both cases, the return value is
+        absolute_pathname, text
 
-    Returns
-    -------
-    text of file as string.
+    if `input` is not an existing file name or path, and `allow_text` is True,
+    then `patname` is set to `<unknown>` and the input text is returned as `text`
 
-    Notes
-    ------
-    1. the encoding is detected with charset_normalizer.from_bytes
-       which is then used to decode bytes read from file.
-    2. line endings are normalized to be '\n'.
     """
+    fpath, text = '<unknown>', None
+    if isinstance(input, str):
+        fpath = Path(input)
+        if fpath.exists():
+            input = fpath
 
-    text = ''
-    def decode(bytedata):
-        return str(from_bytes(bytedata).best())
+    if isinstance(input, Path) and input.exists():
+        fpath = input.absolute().resolve().as_posix()
+        text = read_textfile(fpath)
+    if text is None and isinstance(input, str) and allow_text:
+        fpath = '<unknown>'
+        text = input
+    return fpath, text
 
-    if isinstance(filename, IOBase):
-        text = filename.read()
-        if filename.mode == 'rb':
-            text = decode(text)
-    else:
-        with open(Path(filename), 'rb') as fh:
-            text = decode(fh.read())
-    return text.replace('\r\n', '\n').replace('\r', '\n')
+def compress(val, encoding='utf-8'):
+    "lzma compress text value"
+    return lzma.compress(val.encode(encoding))
 
-
-def get_filename_and_text(fname):
-    if isinstance(fname, Path):
-        fname = fname.absolute().resolve().as_posix()
-        text = read_textfile(fname)
-    elif isinstance(fname, str) and len(fname) < 255:
-        fname = Path(fname).absolute().resolve().as_posix()
-        text = read_textfile(fname)
-    else:
-        text = fname
-        fname = '<unknown>'
-    return fname, text
+def decompress(val, encoding='utf-8'):
+    "lzma decompress value to text"
+    return lzma.decompress(val).decode(encoding)
 
 def parse_cif(ciffile):
     ciffile, ciftext = get_filename_and_text(ciffile)
@@ -342,22 +331,3 @@ def parse_feffdat(feffdatfile):
             'absorber': absorber, 'scatterer': scatterer,
             'reff': reff,  'degen': degen, 'nleg': nleg,
             'edge': edge, 'geometry': json.dumps(geom)}
-
-
-
-if __name__ == '__main__':
-    print("CIF")
-    out = parse_cif('../fayalite.cif')
-    print(out.keys())
-    print(len(out['text']))
-    for key, val in out.items():
-        if key != 'text':
-            print(key, val)
-
-    print("FEFF:")
-    out = parse_feffdat('../feff0001.dat')
-    print(out.keys())
-    print(len(out['text']))
-    for key, val in out.items():
-        if key != 'text':
-            print(key, val)
