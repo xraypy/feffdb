@@ -1,4 +1,5 @@
 VERSIONS = [(1, 'beta1', '2026-August-30', 'pre-release'),
+            (2, '0.9.0', '2026-November-22', 'pre-release: add cluster table'),
             ]
 
 feffdb_schema = """
@@ -8,8 +9,8 @@ PRAGMA foreign_keys=ON;
 PRAGMA page_size=8192;
 
 create table version (id integer primary key,
-                      tag text not null,
-                      date text not null,
+                      tag text not null unique,
+                      date text not null unique,
                       notes text);
 
 create table info (key text primary key not null, value text not null);
@@ -18,22 +19,32 @@ create table element (z integer primary key not null, symbol text not null,
                       name text not null, mass float not null);
 
 create table cif (id integer primary key autoincrement,
-                  ciftext blob not null,
+                  text blob not null,
                   space_group text not null,
                   formula text,
                   compound text,
                   source_db text,
                   source_id text);
 
+create table cluster (id integer primary key autoincrement,
+                      text blob not null,
+                      type text not null,
+                      formula  text,
+                      compound text,
+                      source   text,
+                      notes    text);
+
 create table feffinp (id integer primary key autoincrement,
-                      inptext blob not null,
+                      text blob not null,
                       absorber integer not null,
                       edge text not null,
                       scatterers text not null,
                       natoms integer not null,
                       cif_id integer,
+                      cluster_id integer default 0,
+                      foreign key(absorber) references element(z),
                       foreign key(cif_id) references cif(id),
-                      foreign key(absorber) references element(z) );
+                      foreign key(cluster_id) references cluster(id));
 
 
 create table feffdat (id integer primary key autoincrement,
@@ -44,10 +55,10 @@ create table feffdat (id integer primary key autoincrement,
                       edge text not null,
                       degen integer not null,
                       geometry text not null,
-                      label text,
+                      label text not null unique,
                       description text,
                       feffinp_id integer,
-                      feffdat blob not null,
+                      text blob not null,
                       donator_id integer default 1,
                       foreign key(feffinp_id) references feffinp(id),
                       foreign key(absorber) references element(z),
