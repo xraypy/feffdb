@@ -37,15 +37,15 @@ def test_cif_table():
     for i in range(10, 200, 10):
         crow = cif_rows[i]
         fname = crow._fields
-        for cif_col in ('id', 'ciftext', 'space_group', 'formula',
+        for cif_col in ('id', 'text', 'space_group', 'formula',
                         'compound', 'source_db', 'source_id'):
             assert cif_col in crow._fields
         assert crow.id > 0
         assert len(crow.space_group) > 0
-        assert len(crow.ciftext) > 0
+        assert len(crow.text) > 0
 
-        text_a = decompress(crow.ciftext)
-        text_b = lzma.decompress(crow.ciftext).decode('utf-8')
+        text_a = decompress(crow.text)
+        text_b = lzma.decompress(crow.text).decode('utf-8')
 
         assert text_a == text_b
 
@@ -64,7 +64,7 @@ def test_feffdb_table():
         fname = fdrow._fields
         for fd_col in ('id', 'absorber', 'scatterer', 'nleg', 'reff',
                        'edge', 'degen', 'geometry', 'label', 'description',
-                       'feffinp_id', 'feffdat', 'donator_id'):
+                       'feffinp_id', 'text', 'donator_id'):
             assert fd_col in fdrow._fields
         assert fdrow.id > 0
         assert isinstance(fdrow.absorber, int)
@@ -83,10 +83,10 @@ def test_feffdb_table():
         assert fdrow.feffinp_id > 0
         assert fdrow.feffinp_id < 5000
 
-        assert len(fdrow.feffdat) > 50
+        assert len(fdrow.text) > 50
 
-        text_a = decompress(fdrow.feffdat)
-        text_b = lzma.decompress(fdrow.feffdat).decode('utf-8')
+        text_a = decompress(fdrow.text)
+        text_b = lzma.decompress(fdrow.text).decode('utf-8')
 
         assert text_a == text_b
         assert len(text_a) >  4000
