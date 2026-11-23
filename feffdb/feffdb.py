@@ -3,20 +3,14 @@
 This script creates an SQLite3 database for Feff Data
 '''
 import json
-import lzma
 from pathlib import Path
 from pyshortcuts import hash_password, check_password_rules
 from xraydb import atomic_number, atomic_symbol
 
 from .simpledb import SimpleDB
 from .utils import (get_feffdb, create_feffdb,
-                    parse_cif, parse_feffinp, parse_feffdat)
-
-def compress(val):
-    return lzma.compress(val.encode('utf-8'))
-
-def decompress(val):
-    return lzma.decompress(val).decode('utf-8')
+                    parse_cif, parse_feffinp, parse_feffdat,
+                    compress, decompress)
 
 class FeffDatabase(SimpleDB):
     def __init__(self, dbname=None, create_ok=False, read_only=False):
@@ -34,9 +28,12 @@ class FeffDatabase(SimpleDB):
         self.dbname = dbpath.absolute().as_posix()
         SimpleDB.__init__(self, dbname=self.dbname, server='sqlite',
                           read_only=read_only)
+        self.get_version()
+        if self.dbversion_full['id'] < 2:
+            raise ValueError('FeffDB version beta1 not supported, please upgrade FeffDB')
 
     def __repr__(self):
-        return f"FeffDatabase('{self.dbname}')"
+        return f"FeffDatabase('{self.dbname}') dbversion={self.dbversion}"
 
 
     def __addrow(self, table, data):
@@ -53,6 +50,10 @@ class FeffDatabase(SimpleDB):
             return None
         return row.id
 
+    def get_version(self):
+        vrows = self.get_rows('version')
+        self.dbversion_full = vrows[-1]._asdict()
+        self.dbversion = vrows[-1].tag
 
     def add_cif_file(self, cif_file):
         """add a CIF file to the database"""
@@ -65,7 +66,27 @@ class FeffDatabase(SimpleDB):
         text = compress(out.pop('text'))
         fname = out.pop('filename')
         dbargs = {k:v for k, v in out.items()}
-        dbargs['ciftext'] = text
+        dbargs['text'] = text
+        if dbargs['source_db'] is None and fname is not None:
+            dbargs['source_db'] = fname
+
+        this_id = self.__addrow('cif', dbargs)
+        if this_id is None:
+            raise ValueError(f'could not add CIF: {cif_file}')
+        return this_id
+
+    def add_cluster_file(self, cluster_file):
+        """add a cluster file (say, XYZ) to the database"""
+        try:
+            out = parse_cif(cluster_file)
+        except ValueError:
+            print(f"error parsing {cif_file}")
+            return None
+
+        text = compress(out.pop('text'))
+        fname = out.pop('filename')
+        dbargs = {k:v for k, v in out.items()}
+        dbargs['text'] = text
         if dbargs['source_db'] is None and fname is not None:
             dbargs['source_db'] = fname
 
@@ -75,11 +96,14 @@ class FeffDatabase(SimpleDB):
         return this_id
 
 
-    def add_feffinp(self, feff_inp, cif_file=None):
+    def add_feffinp(self, feff_inp, cif_file=None, cluster_file=None):
         """add a Feff input file to the database"""
         cif_id = 0
         if cif_file is not None:
             cif_id = self.add_cif_file(cif_file)
+        cluster_id = 0
+        if cluster_file is not None:
+            cluster_id = self.add_cluster_file(cluster_file)
 
         try:
             finp = parse_feffinp(feff_inp)
@@ -89,20 +113,22 @@ class FeffDatabase(SimpleDB):
         text = compress(finp.pop('text'))
         finp.pop('filename')
         dbargs = {k:v for k, v in finp.items()}
-        dbargs['inptext'] = text
+        dbargs['text'] = text
         dbargs['cif_id'] = cif_id
+        dbargs['cluster_id'] = cluster_id
 
         this_id = self.__addrow('feffinp', dbargs)
         if this_id is None:
             raise ValueError(f'could not add feffinp : {feff_inp}')
         return this_id
 
-    def add_feffdat(self, feffdat, feff_inp, cif_file=None,
+    def add_feffdat(self, feffdat, feff_inp, cif_file=None, cluster_file=None,
                     label=None, description=None,
                     avoid_duplicates=True, rtoler=0.015):
         """add a Feff.dat file to the database"""
 
-        finp_id = self.add_feffinp(feff_inp, cif_file=cif_file)
+        finp_id = self.add_feffinp(feff_inp, cif_file=cif_file,
+                                   cluster_file=cluster_file)
 
         try:
             dat = parse_feffdat(feffdat)
@@ -160,7 +186,7 @@ class FeffDatabase(SimpleDB):
 
 
         dbargs = {k:v for k, v in dat.items()}
-        dbargs['feffdat'] = text
+        dbargs['text'] = text
         dbargs['feffinp_id'] = finp_id
         dbargs['label'] = label
         dbargs['description'] = description
@@ -201,6 +227,7 @@ class FeffDatabase(SimpleDB):
           'feffdat_id', 'feffdat'
           'feffinp_id', 'feffinp'
           'cif_id', 'cif',
+          'cluster_id', 'cluster',
           'donator_id', 'donator_name' 'donator_email'
         """
         key = 'id' if isinstance(feffid, int) else 'label'
@@ -215,18 +242,24 @@ class FeffDatabase(SimpleDB):
                      'geometry', 'description'):
             out[attr] = getattr(frow, attr)
         out['feffdat_id'] = frow.id
-        out['feffdat'] = decompress(frow.feffdat)
+        out['feffdat'] = decompress(frow.text)
 
         finp = self.get_rows('feffinp', where={'id': frow.feffinp_id},
                             limit_one=True, none_if_empty=True)
         if finp is not None:
             out['feffinp_id'] = frow.feffinp_id
-            out['feffinp'] = decompress(finp.inptext)
+            out['feffinp'] = decompress(finp.text)
             cifrow = self.get_rows('cif', where={'id': finp.cif_id},
                             limit_one=True, none_if_empty=True)
             if cifrow is not None:
                 out['cif_id'] = finp.cif_id
-                out['cif'] = decompress(cifrow.ciftext)
+                out['cif'] = decompress(cifrow.text)
+            elif finp.cluster_id > 0:
+                clusterrow = self.get_rows('cluster', where={'id': finp.cluster_id},
+                            limit_one=True, none_if_empty=True)
+                if clusterrow is not None:
+                    out['cluster_id'] = finp.cluster_id
+                    out['cluster'] = decompress(clusterrow.text)
 
         prow = self.get_rows('person', where={'id': frow.donator_id},
                              limit_one=True, none_if_empty=True)
@@ -241,7 +274,7 @@ class FeffDatabase(SimpleDB):
         row = self.get_rows('feffinp', where={'id': feffinp_id},
                             limit_one=True, none_if_empty=True)
         if row is not None:
-            return decompress(row.inptext)
+            return decompress(row.text)
 
     def get_feffinp_for_feffdat(self, feffid):
         "get text of feff.inp for a Feff.dat file"
@@ -255,7 +288,7 @@ class FeffDatabase(SimpleDB):
             trow = self.get_rows('cif', where={'id': row.cif_id},
                                  limit_one=True, none_if_empty=True)
             if trow is not None:
-                return decompress(trow.ciftext)
+                return decompress(trow.text)
 
 
     def list_feffdat(self, absorber=None, scatterer=None, edge=None,
