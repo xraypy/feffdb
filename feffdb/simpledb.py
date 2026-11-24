@@ -114,8 +114,6 @@ class SimpleDB(object):
         if read_only:
             opts['execution_options'] = {"isolation_level": "AUTOCOMMIT"}
 
-        print(f"Connect {connect_str=} // ", opts)
-
         self.engine = create_engine(connect_str, **opts)
         self.metadata = MetaData()
         try:
