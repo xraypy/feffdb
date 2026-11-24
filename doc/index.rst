@@ -4,16 +4,17 @@
 
 
 ========================================================
-FeffDB: A database of EXAFS calculations
+FeffDB
 ========================================================
 
 FeffDB is an `SQLite3`_ database storing selected EXAFS calculations
 from the `Feff`_ program, and a Python library to read, write, and
-work with this database.  The motivation for Feff DB is to provide
+work with this database.  The main goal for FeffDB is to provide
 "first-shell EXAFS" calculations for many common ligands or atom pairs
 that these can be browsed and re-used without having to setup and run
-Feff. An important use-case for this is semi-automated analysis of
-EXAFS data.
+Feff.  An important motivations for this work are to make EXAFS
+analysis easier and less time-consuming and to better alllow
+semi-automated analysis of EXAFS data.
 
 
 FeffDB is still in active, pre-release development. It is being
@@ -26,9 +27,9 @@ developed by
   - Matthew Newville, The University of Chicago, https://orcid.org/0000-0001-6938-1014
   - Shelly Kelly, Argonne National Laboratory, https://orcid.org/0000-0001-8996-628X
 
-In principe, the database could be used from languages other than
-Python. This is not currently supported here, but we welcome
-discussion of that possibility.
+In principe, the SQLit3 database itself could be used from languages
+other than Python. While this is not currently supported here, we
+welcome discussion of that possibility.
 
 
 A note on the name: We mean "FeffDB" to mean "The database (DB) of
@@ -50,6 +51,7 @@ Glow".  We like all of these names as synonyms for FeffDB.
    :maxdepth: 2
 
    install
+   cli
    usage
    motivation
    contrib

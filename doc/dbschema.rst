@@ -2,7 +2,7 @@
 
 .. _database:
 
-The FeffDB Database
+Database Schema
 ============================================
 
 `feffdb` is primarily an `SQLite3`_ database.  The schema

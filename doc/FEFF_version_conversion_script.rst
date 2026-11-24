@@ -2,7 +2,7 @@
 
 .. _feffinp_convert_cli:
 
-`feffnp_convert` CLI
+`feffinp_convert`
 =========================================
 
 : Converting Feff.inp
