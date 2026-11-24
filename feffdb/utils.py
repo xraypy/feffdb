@@ -49,18 +49,29 @@ def is_feffdb(db: str|sqlite3.Connection) -> bool:
     return all([tab in tables for tab in feffdb_tables])
 
 
-def get_feffdb(dbname:str|None=None) -> Path:
+def get_feffdb(dbname:str|Path|None=None) -> Path:
     """return Path to FEFF DB file
 
-    1. if the passed dbname is a valid FeffDB, that will be used.
-    2. if the Environmental Variable FEFFDB_FILE is set (and is a valid FeffDB),
-       that will be used.
-    4. Use `platformsdir.user_data_dir()` to find a `feffdb` folder.
-       if `feffdat.db` exists there, use that.
-    5. Try to create `platformsdir.user_data_dir('feffdb')` and copy
-       the feffdat.db there, and use that if it suceeeds.
+    Parameters
+    ----------
+    dbname : str or None
+        name or Path of the Feff Database or None
 
-    Finally, if no valid FEFF DB can be found a ValueError will be raised.
+    Returns
+    --------
+    Path of Feff database to use.
+
+    Notes
+    ------
+    1. First, if the passed dbname is a valid FeffDB, that is used.
+    2. Then, if the Environmental Variable FEFFDB_FILE is set (and
+       is a valid FeffDB), that is used.
+    3. Then `platformsdir.user_data_dir()` is used to find a
+       `feffdb` folder. if `feffdat.db` exists, that is used.
+    4. Then, `platformsdir.user_data_dir('feffdb')` is created and
+       "feffdat.db" from the source directory is copied there, and
+       that copy is used.
+    5. Finally, "feffdat.db" from the source directory is used.
     """
     if dbname is None:
         dbname = os.environ.get('FEFFDB_FILE', None)
@@ -87,7 +98,14 @@ def get_feffdb(dbname:str|None=None) -> Path:
 
 
 def create_feffdb(dbname=None):
-    """create FeffData.DB"""
+    """create FeffData.DB
+
+    Parameters
+    ----------
+    dbname : str or None
+        name or Path of the Feff Database or None
+
+    """
     if dbname is None:
         dbpath = get_feffdb()
     else:
