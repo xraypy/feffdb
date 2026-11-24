@@ -77,8 +77,24 @@ file.  To recap, the order for deciding which FEFFDB to use are:
        installed FEFFDB is attempted to be copied to that location.
     5. finally, the installed FEFFDB is used.
 
-`FeffDatabase`
-~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. module:: feffdb
+.. currentmodule:: feffdb
+
+
+:mod:`feffdb` functions
+---------------------------------
+
+.. autofunction:: get_feffdb
+
+.. autofunction:: create_feffdb
+
+
+
+:class:`FefffDatabase` class
+---------------------------------
+
+.. autoclass:: FeffDatabase
 
 
 The main interface to `feffdb` is the :class:`FeffDatabase` class,
@@ -96,13 +112,24 @@ which can be used with:
     ...
     >>> feffdat_ZnO197 = fdb.get_feffdat('ZnO197')
 
-Here, `feffdat_ZnO211' will be the text of the Feff Datafile for that
-path.
+Here, "feffdat_ZnO211" will be the text of the Feff Datafile for that path.
 
-.. module:: feffdb
 
-.. autoclass:: FeffDatabase
 
-.. automethod:: FeffDatatabse.get_feffdat
+
+:class:`FefffDatabase` methods
+---------------------------------
+
+.. automethod:: FeffDatabase.get_feffdat
+
 
 .. automethod:: FeffDatabase.get_feffdat_full
+
+
+.. automethod:: FeffDatabase.list_feffdat
+
+.. automethod:: FeffDatabase.add_feffdat
+
+.. automethod:: FeffDatabase.add_feffinp
+
+.. automethod:: FeffDatabase.get_version
