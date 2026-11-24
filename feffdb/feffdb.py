@@ -207,7 +207,7 @@ class FeffDatabase(SimpleDB):
         row = self.get_rows('feffdat', where={key: feffid},
                             limit_one=True, none_if_empty=True)
         if row is not None:
-            return decompress(row.feffdat)
+            return decompress(row.text)
 
     def get_feffdat_full(self, feffid):
         """
