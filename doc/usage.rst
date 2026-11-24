@@ -76,3 +76,25 @@ file.  To recap, the order for deciding which FEFFDB to use are:
     4. if the 'user-installed FEFFDB file` does not exist, the
        installed FEFFDB is attempted to be copied to that location.
     5. finally, the installed FEFFDB is used.
+
+`FeffDatabase`
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+The main interface to `feffdb` is the :class:`FeffDatabase` class,
+which can be used with:
+
+    >>> from feffdb import FeffDatabase
+    >>> fdb = FeffDatabase()
+    >>> print(fdb)
+    FeffDatabase('/Users/UserName/Library/Application Support/feffdb/feffdat.db') dbversion=0.9.0
+    >>> for znpath in fdb.list_feffdat(absorber='Zn', scatterer='O'):
+    ...     print(znpath['label'], znpath['reff'], znpath['edge'], znpath['formula')
+    ZnO211 2.1105 K ZnCO3
+    ZnO197 1.9738 K ZnO
+    ZnO193 1.9335 K Zn3As2O6
+    ...
+    >>> feffdat_ZnO197 = fdb.get_feffdat('ZnO197')
+
+Here, `feffdat_ZnO211' will be the text of the Feff Datafile for that
+path.
