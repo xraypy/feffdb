@@ -98,3 +98,11 @@ which can be used with:
 
 Here, `feffdat_ZnO211' will be the text of the Feff Datafile for that
 path.
+
+.. module:: feffdb
+
+.. autoclass:: FeffDatabase
+
+.. automethod:: FeffDatatabse.get_feffdat
+
+.. automethod:: FeffDatabase.get_feffdat_full
