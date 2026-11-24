@@ -3,6 +3,7 @@ from packaging.version import parse as version_parse
 import feffdb
 
 extensions = ['sphinx.ext.autodoc',
+              'sphinx.ext.napoleon',
               'sphinx.ext.mathjax',
               'sphinxcontrib.video',
               'sphinx_copybutton',
@@ -28,11 +29,12 @@ add_module_names = True
 pygments_style = 'sphinx'
 
 html_theme = 'breeze'
+
 html_theme_options = {"external_links": ["https://github.com/xraypy/feffdb"]}
-html_static_path = ['_static']
+# html_static_path = ['_static']
 html_sidebars = {
-  'index': ["indexsidebar.html",  "sourcelink.html", "searchbox.html"],
-  "*": [ "localtoc.html",  "relations.html", "sourcelink.html", "searchbox.html"]
+    'index': ["sourcelink.html", "searchbox.html"],
+   "*": [ "localtoc.html",  "relations.html", "sourcelink.html", "searchbox.html"]
 }
 
 html_use_index = True
