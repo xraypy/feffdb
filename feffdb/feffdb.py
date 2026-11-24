@@ -8,11 +8,32 @@ from pyshortcuts import hash_password, check_password_rules
 from xraydb import atomic_number, atomic_symbol
 
 from .simpledb import SimpleDB
-from .utils import (get_feffdb, create_feffdb,
+from .utils import (get_feffdb, create_feffdb, read_textfile,
                     parse_cif, parse_feffinp, parse_feffdat,
                     compress, decompress)
 
 class FeffDatabase(SimpleDB):
+    """
+    create a FeffDB Database instance
+
+    Parameters
+    -----------
+    dbname: str or None
+      filename or Path to database file [None]
+    create_ok : bool
+      whether it is OK to create a new FeffDB [False]
+    read_only : bool
+      whether to try to open FeffDB as read-only [False]
+
+    Returns
+    --------
+    FeffDatabase instance
+
+    Notes
+    ------
+    1. if `dbname` is `None`, it will be found with the `get_feffdb` function.
+
+    """
     def __init__(self, dbname=None, create_ok=False, read_only=False):
         if dbname is not None:
            dbpath = Path(dbname)
@@ -37,7 +58,19 @@ class FeffDatabase(SimpleDB):
 
 
     def __addrow(self, table, data):
-        """add row to table, or return existing row with data """
+        """add row to table or return existing row with data
+
+        Parameters
+        -----------
+        table:  str
+           name of table
+        data: dict
+           dict of data for row
+
+        Returns
+        -------
+        integer id of added or existing row or None if not added.
+        """
         # first look if this already exists
         row = self.get_rows(table, where=data,
                             limit_one=True, none_if_empty=True)
@@ -51,12 +84,29 @@ class FeffDatabase(SimpleDB):
         return row.id
 
     def get_version(self):
+        """get version information
+
+        Returns
+        ---------
+        dict with version information
+
+        Notes
+        -----
+        sets `.dbversion` and `.dbversion_full` attributes
+        """
         vrows = self.get_rows('version')
         self.dbversion_full = vrows[-1]._asdict()
-        self.dbversion = vrows[-1].tag
+        self.dbversion = self.dbversion_full['tag']
+        return self.dbversion_full
 
     def add_cif_file(self, cif_file):
-        """add a CIF file to the database"""
+        """add a CIF file to the database
+
+        Parameters
+        ---------
+        cif_file : str or Path
+           name or Path of CIF file
+        """
         try:
             out = parse_cif(cif_file)
         except ValueError:
@@ -75,29 +125,55 @@ class FeffDatabase(SimpleDB):
             raise ValueError(f'could not add CIF: {cif_file}')
         return this_id
 
-    def add_cluster_file(self, cluster_file):
-        """add a cluster file (say, XYZ) to the database"""
+    def add_cluster_file(self, cluster_file, format='xyz',
+                         formula='unknown', compound='unknown',
+                         notes=''):
+        """add a cluster file (say, XYZ) to the database
+
+        Parameters
+        ---------
+        cluster_file: str or Path
+           name or Path of cluster file
+        format:  str
+           cluster format/type ['xyz']
+        formula: str
+           chemical formula ['unknown']
+        compound: str
+           compound name ['unknown']
+        notes: str
+           cluster notes ['']
+        """
+
         try:
-            out = parse_cif(cluster_file)
+            out = read_textfile(cluster_file)
         except ValueError:
-            print(f"error parsing {cif_file}")
+            print(f"error reading {cluster_file}")
             return None
 
-        text = compress(out.pop('text'))
-        fname = out.pop('filename')
-        dbargs = {k:v for k, v in out.items()}
-        dbargs['text'] = text
-        if dbargs['source_db'] is None and fname is not None:
-            dbargs['source_db'] = fname
+        text = compress(out)
+        source = cluster_file
+        dbargs = {'text': text, 'source': cluster_file,
+                  'format': format, 'formula': formula,
+                  'compount': compound, 'notes': notes}
 
-        this_id = self.__addrow('cif', dbargs)
+        this_id = self.__addrow('cluster', dbargs)
         if this_id is None:
-            raise ValueError(f'could not add CIF: {cif_file}')
+            raise ValueError(f'could not add cluster: {cluster_file}')
         return this_id
 
 
-    def add_feffinp(self, feff_inp, cif_file=None, cluster_file=None):
-        """add a Feff input file to the database"""
+    def add_feffinp(self, feffinp_file, cif_file=None, cluster_file=None):
+        """add a Feff input file to the database
+
+        Parameters
+        ---------
+        feffinp_file : str or Path
+           name or Path of Feff input file
+        cif_file : str or Path or None
+           name or Path of CIF file [None]
+        cluster_file: str or Path or None
+           name or Path of cluster file [None]
+        """
         cif_id = 0
         if cif_file is not None:
             cif_id = self.add_cif_file(cif_file)
@@ -106,9 +182,9 @@ class FeffDatabase(SimpleDB):
             cluster_id = self.add_cluster_file(cluster_file)
 
         try:
-            finp = parse_feffinp(feff_inp)
+            finp = parse_feffinp(feffinp_file)
         except ValueError:
-            raise ValueError(f'error parsing feffinp : {feff_inp}')
+            raise ValueError(f'error parsing feffinp : {feffinp_file}')
 
         text = compress(finp.pop('text'))
         finp.pop('filename')
@@ -119,15 +195,44 @@ class FeffDatabase(SimpleDB):
 
         this_id = self.__addrow('feffinp', dbargs)
         if this_id is None:
-            raise ValueError(f'could not add feffinp : {feff_inp}')
+            raise ValueError(f'could not add feffinp : {feffinp_file}')
         return this_id
 
-    def add_feffdat(self, feffdat, feff_inp, cif_file=None, cluster_file=None,
+    def add_feffdat(self, feffdat, feffinp_file,
+                    cif_file=None, cluster_file=None,
                     label=None, description=None,
-                    avoid_duplicates=True, rtoler=0.015):
-        """add a Feff.dat file to the database"""
+                    avoid_duplicates=True, rtoler=0.02):
+        """add a Feff.dat file to the database
 
-        finp_id = self.add_feffinp(feff_inp, cif_file=cif_file,
+        Parameters
+        ---------
+        feffdat: str or Path
+           name or Path of Feff data file
+        feffinp_file:  str or Path
+           name or Path of Feff input file (required!)
+        cif_file: str or Path or None
+           name or Path of CIF file [None]
+        cluster_file: str or Path or None
+           name or Path of cluster file [None]
+        label : str or None
+           path label, must be unique [None]
+        description: str on None
+           path description [None]
+        avoid_duplicates: bool
+           whether to avoid duplicates [True]
+        rtoler: float
+           distance tolerance when avoiding duplicates [0.02]
+
+        Notes
+        ------
+        1. if `label` is `None` it will be built from Absorber, Scatterer,
+           distance, and possibly edge.
+        2. `label` will be checked for uniqueness
+        3. if `description` is None, the Path name will be used.
+        4. `avoild duplicates` checks Absorber, Scatterer, distance, and edge
+        """
+
+        finp_id = self.add_feffinp(feffinp_file, cif_file=cif_file,
                                    cluster_file=cluster_file)
 
         try:
@@ -162,7 +267,6 @@ class FeffDatabase(SimpleDB):
                      atomic_symbol(dat['scatterer']),
                      str(round(100*dat['reff']))]
             label = ''.join(words)
-
 
         if label is not None:
             # check fie repeated rows
@@ -200,7 +304,18 @@ class FeffDatabase(SimpleDB):
         """
         get text of feff.dat, either by 'id' or by 'label' in feffdat table
 
-        see also get_feffdat_full() which returns a dict wirh more complete data
+        Parameters
+        ---------
+        feffid : int or str
+           id or label for Feff.inp
+
+        Returns
+        --------
+        text of Feff data file.
+
+        See Also
+        ---------
+        get_feffdat_full() which returns a dict wirh more complete data
 
         """
         key = 'id' if isinstance(feffid, int) else 'label'
@@ -215,20 +330,19 @@ class FeffDatabase(SimpleDB):
         This will include the text Feff.inp and CIF source files, and the name of the
         donator.
 
-        Arguments
+        Parameters
         ---------
-        feffid  (int or str)   id or label for Feff.inp
+        feffid : int or str
+           id or label for Feff.inp
 
         Returns
         --------
-        dictionary with multiple keys:
-          'label', 'absorber', 'scatterer',
-          'nleg', 'reff', 'edge', 'degen', 'geometry', 'description',
-          'feffdat_id', 'feffdat'
-          'feffinp_id', 'feffinp'
-          'cif_id', 'cif',
-          'cluster_id', 'cluster',
-          'donator_id', 'donator_name' 'donator_email'
+        dict with keys: 'label', 'absorber', 'scatterer', 'nleg',
+          'reff', 'edge', 'degen', 'geometry', 'description',
+          'feffdat_id', 'feffdat' 'feffinp_id', 'feffinp' 'cif_id',
+          'cif', 'cluster_id', 'cluster', 'donator_id', 'donator_name'
+          'donator_email'
+
         """
         key = 'id' if isinstance(feffid, int) else 'label'
         frow = self.get_rows('feffdat', where={key: feffid},
@@ -295,14 +409,20 @@ class FeffDatabase(SimpleDB):
                      rmin=0., rmax=20.0, with_geometry=True):
         """get a list of feff.dat files matching on one or more criteria:
 
-        Arguments
+        Parameters
         ------------
-        absorber   (None or str) symbol for absorber [None for all]
-        scatterer  (None or str) symbol for scatterer [None for all]
-        edge       (None or str) string for absorption edge [None for all]
-        rmin       float  minimum R value  [0.0]
-        rmax       float  maximum R value  [20.0]
-        with_geometry bool  whether to include 'geometry'  [True]
+        absorber:   str or None
+           symbol for absorber [None for all]
+        scatterer:  str or None
+           symbol for scatterer [None for all]
+        edge:   str or None
+           string for absorption edge [None for all]
+        rmin :   float
+           minimum R value  [0.0]
+        rmax :  float
+           maximum R value  [20.0]
+        with_geometry : bool
+           whether to include 'geometry'  [True]
         Returns
         --------
         list of path dictionaries
