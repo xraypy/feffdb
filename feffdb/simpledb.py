@@ -71,6 +71,7 @@ class SimpleDB(object):
         self.engine = None
         self.metadata = None
         self.logfile = logfile
+        self.read_only = read_only
         if dbname is not None:
             self.connect(dbname, server=server, user=user,
                          password=password, port=port,
@@ -112,6 +113,8 @@ class SimpleDB(object):
         opts = {'connect_args': connect_args}
         if read_only:
             opts['execution_options'] = {"isolation_level": "AUTOCOMMIT"}
+
+        print(f"Connect {connect_str=} // ", opts)
 
         self.engine = create_engine(connect_str, **opts)
         self.metadata = MetaData()
@@ -163,8 +166,13 @@ class SimpleDB(object):
             ivals['modify_time'] = isotime()
         if val is None:
             ivals['key'] = key
+            if self.read_only:
+                raise ValueError(f'cannot insert to read-only database {self.dbname}')
             query = tab.insert().values(**ivals)
         else:
+            if self.read_only:
+                raise ValueError(f'cannot update read-only database {self.dbname}')
+
             query = tab.update().where(tab.c.key==key).values(**ivals)
         if do_execute:
             self.execute(query, set_modify_time=True)
@@ -229,11 +237,15 @@ class SimpleDB(object):
 
     def add_row(self, tablename, **kws):
         """add row to a table with keyword/value pairs  == insert()"""
+        if self.read_only:
+            raise ValueError(f'cannot insert to read-only database {self.dbname}')
         return self.insert(tablename, **kws)
 
     def insert(self, tablename, **kws):
         """insert to a table with keyword/value pairs"""
         tab = self.tables[tablename]
+        if self.read_only:
+            raise ValueError(f'cannot insert to read-only database {self.dbname}')
         return self.execute(tab.insert().values(**kws), set_modify_time=True)
 
     def table_error(self, message, tablename, funcname):
@@ -354,7 +366,8 @@ class SimpleDB(object):
         tab = self.tables.get(tablename, None)
         if tab is None:
             self.table_error("no table found", tablename, 'update')
-
+        if self.read_only:
+            raise ValueError(f'cannot update read-only database {self.dbname}')
         where = self.handle_where(tablename, where=where, funcname='update')
         self.execute(tab.update().where(where).values(**kws), set_modify_time=True)
 
