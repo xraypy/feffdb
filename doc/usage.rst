@@ -115,10 +115,10 @@ which can be used with:
 Here, "feffdat_ZnO211" will be the text of the Feff Datafile for that path.
 
 
-
-
 :class:`FefffDatabase` methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. automethod:: FeffDatabase.get_version
 
 
 .. automethod:: FeffDatabase.get_feffdat
@@ -126,11 +126,41 @@ Here, "feffdat_ZnO211" will be the text of the Feff Datafile for that path.
 
 .. automethod:: FeffDatabase.get_feffdat_full
 
+The `geometry` value will be a list (of length 'nleg') of atoms in the
+scatterin path as taken from the Feff data file.  This will have the
+absorber first, and then each atom in the path.  Each item in the list
+will be a list of [AtomicSymbol, AtomicNumber, IPOT, AtomicMass, X, Y,
+Z], where IPOT is the potential number in the Feff calculation (=0
+always signifying the absorber) AtomicMass in AMU, and X, Y, Z in
+Angstroms.
+
+The values for the keywords ending with `_id` (so `feffdat_id`,
+`feffinp_id`, `cif_id`, `cluster_id`, and `donator_id`) are the
+integer row IDs for the corresponding tables.
+
+If a structure has no CIF of Cluster (and only one of these makes
+sense for any calculation) then those entries will be missing.
 
 .. automethod:: FeffDatabase.list_feffdat
+
+.. automethod:: FeffDatabase.get_feffinp
+
+.. automethod:: FeffDatabase.get_feffinp_for_feffdat
+
+.. automethod:: FeffDatabase.get_cifinp_for_feffinp
 
 .. automethod:: FeffDatabase.add_feffdat
 
 .. automethod:: FeffDatabase.add_feffinp
 
-.. automethod:: FeffDatabase.get_version
+.. automethod:: FeffDatabase.add_cif_file
+
+.. automethod:: FeffDatabase.add_cluster_file
+
+.. automethod:: FeffDatabase.add_person
+
+.. automethod:: FeffDatabase.get_person
+
+.. automethod:: FeffDatabase.check_person_password
+
+.. automethod:: FeffDatabase.get_feffdat_ratings

@@ -307,7 +307,7 @@ class FeffDatabase(SimpleDB):
         Parameters
         ---------
         feffid : int or str
-           id or label for Feff.inp
+           id or label for Feff data entry
 
         Returns
         --------
@@ -333,7 +333,7 @@ class FeffDatabase(SimpleDB):
         Parameters
         ---------
         feffid : int or str
-           id or label for Feff.inp
+           id or label for Feff data entry
 
         Returns
         --------
