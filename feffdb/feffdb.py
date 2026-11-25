@@ -337,11 +337,12 @@ class FeffDatabase(SimpleDB):
 
         Returns
         --------
-        dict with keys:  label, absorber, scatterer, reff, nleg, edge,
-                         degen, geometry, description,
-                         feffdat_id, feffdat feffinp_id, feffinp,
-                         cif_id, cif, cluster_id, cluster,
-                         donator_id, donator_name, donator_email
+        dict :
+          dict with keys: 'label', 'absorber', 'scatterer', 'reff',
+          'nleg', 'edge', 'degen', 'geometry', 'description',
+          'feffdat_id', 'feffdat', 'feffinp_id', 'feffinp',
+          'cif_id', 'cif', 'cluster_id', 'cluster',
+          'donator_id', 'donator_name', 'donator_email'
 
         """
         key = 'id' if isinstance(feffid, int) else 'label'
