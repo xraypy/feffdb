@@ -83,7 +83,7 @@ file.  To recap, the order for deciding which FEFFDB to use are:
 
 
 :mod:`feffdb` functions
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autofunction:: get_feffdb
 
@@ -91,8 +91,8 @@ file.  To recap, the order for deciding which FEFFDB to use are:
 
 
 
-:class:`FefffDatabase` class
----------------------------------
+:class:`FefffDatabase`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: FeffDatabase
 
@@ -118,7 +118,8 @@ Here, "feffdat_ZnO211" will be the text of the Feff Datafile for that path.
 
 
 :class:`FefffDatabase` methods
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. automethod:: FeffDatabase.get_feffdat
 
