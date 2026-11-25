@@ -349,7 +349,7 @@ class FeffDatabase(SimpleDB):
                             limit_one=True, none_if_empty=True)
 
         if frow is None:
-            raise ValueError(f'could not find feff data: {id_or_label}')
+            raise ValueError(f'could not find feff data: {feffid}')
         out = {}
 
         for attr in ('label', 'absorber', 'scatterer', 'nleg', 'reff', 'edge', 'degen',
