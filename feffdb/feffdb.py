@@ -337,11 +337,11 @@ class FeffDatabase(SimpleDB):
 
         Returns
         --------
-        dict with keys: 'label', 'absorber', 'scatterer', 'nleg',
-          'reff', 'edge', 'degen', 'geometry', 'description',
-          'feffdat_id', 'feffdat' 'feffinp_id', 'feffinp' 'cif_id',
-          'cif', 'cluster_id', 'cluster', 'donator_id', 'donator_name'
-          'donator_email'
+        dict with keys:  label, absorber, scatterer, reff, nleg, edge,
+                         degen, geometry, description,
+                         feffdat_id, feffdat feffinp_id, feffinp,
+                         cif_id, cif, cluster_id, cluster,
+                         donator_id, donator_name, donator_email
 
         """
         key = 'id' if isinstance(feffid, int) else 'label'
@@ -351,10 +351,12 @@ class FeffDatabase(SimpleDB):
         if frow is None:
             raise ValueError(f'could not find feff data: {feffid}')
         out = {}
-
-        for attr in ('label', 'absorber', 'scatterer', 'nleg', 'reff', 'edge', 'degen',
-                     'geometry', 'description'):
+        for attr in ('label', 'absorber', 'scatterer', 'reff', 'nleg',
+                     'edge', 'degen', 'description'):
             out[attr] = getattr(frow, attr)
+            if attr in ('absorber', 'scatterer'):
+                out[attr] = atomic_symbol(out[attr])
+        out['geometry'] = json.loads(frow.geometry)
         out['feffdat_id'] = frow.id
         out['feffdat'] = decompress(frow.text)
 
