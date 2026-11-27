@@ -26,16 +26,16 @@ END
 
 
 def warnings_for(text, target, mode="compatible"):
-    fi = fc.parse(text)
-    out = fc.convert(fi, target, mode)
+    fi = fc.parse_feff_input(text)
+    out = fc.convert_to_version(fi, target, mode)
     return out, fi.warnings
 
 
 # ----------------------------------------------------------------- parsing
 def test_parse_keeps_cards_potentials_and_atoms():
-    fi = fc.parse(MINIMAL)
-    assert fi.cards["HOLE"] == ["1 0.85"]
-    assert fi.cards["TITL"] == ["two atom test"]
+    fi = fc.parse_feff_input(MINIMAL)
+    assert fi.card_arguments["HOLE"] == ["1 0.85"]
+    assert fi.card_arguments["TITL"] == ["two atom test"]
     assert fi.potentials == [["0", "29", "Cu"], ["1", "8", "O"]]
     assert len(fi.atoms) == 2
     assert fi.atoms[1] == ["0.0", "0.0", "1.9", "1", "O"]
@@ -43,13 +43,13 @@ def test_parse_keeps_cards_potentials_and_atoms():
 
 @pytest.mark.parametrize("char", "*%#;")
 def test_all_four_comment_characters_are_stripped(char):
-    fi = fc.parse(f"{char} a whole comment line\nHOLE 1 1.0 {char} trailing\n")
-    assert fi.cards["HOLE"] == ["1 1.0"]
+    fi = fc.parse_feff_input(f"{char} a whole comment line\nHOLE 1 1.0 {char} trailing\n")
+    assert fi.card_arguments["HOLE"] == ["1 1.0"]
 
 
 def test_keywords_match_on_their_first_four_characters():
     # FEFF compares word(1:4) only, so POTENTIAL and POTENTIALS are one card.
-    fi = fc.parse("POTENTIAL\n  0 29 Cu\nATOM\n  0.0 0.0 0.0 0\n")
+    fi = fc.parse_feff_input("POTENTIAL\n  0 29 Cu\nATOM\n  0.0 0.0 0.0 0\n")
     assert fi.potentials == [["0", "29", "Cu"]]
     assert fi.atoms == [["0.0", "0.0", "0.0", "0"]]
 
@@ -184,10 +184,10 @@ def test_every_warning_is_written_into_the_file_in_order():
 
 
 def test_converting_twice_does_not_stack_up_warnings():
-    fi = fc.parse(MINIMAL)
-    fc.convert(fi, "feff85l")
+    fi = fc.parse_feff_input(MINIMAL)
+    fc.convert_to_version(fi, "feff85l")
     first = list(fi.warnings)
-    fc.convert(fi, "feff85l")
+    fc.convert_to_version(fi, "feff85l")
     assert fi.warnings == first
 
 
@@ -200,7 +200,7 @@ def test_an_unverified_profile_says_so():
 
 def test_converted_output_parses_back_to_the_same_structure():
     out, _ = warnings_for(MINIMAL, "feff85l")
-    again = fc.parse(out)
+    again = fc.parse_feff_input(out)
     assert again.potentials == [["0", "29", "Cu"], ["1", "8", "O"]]
     assert len(again.atoms) == 2
 
@@ -218,7 +218,7 @@ def test_the_hand_written_cu_input_converts_both_ways():
 def test_the_header_regex_matches_a_real_feff_dat_line():
     line = ("   2  12.000   2.5562    2.6412   -5.50118 "
             "nleg, deg, reff, rnrmav(bohr), edge")
-    m = fc.HDR.match(line)
+    m = fc.PATH_HEADER.match(line)
     assert m and (int(m.group(1)), float(m.group(2)), float(m.group(3))) == (
         2, 12.0, 2.5562)
 
@@ -227,14 +227,14 @@ def test_the_shape_of_a_triangle_does_not_depend_on_the_traversal_direction():
     # Same triangle, same absorber, scatterers visited the other way round.
     absorber = [0.0, 0.0, 0.0]
     s1, s2 = [0.0, 1.8075, 1.8075], [1.8075, 1.8075, 0.0]
-    assert fc._shape([absorber, s1, s2], [0, 1, 1]) == \
-           fc._shape([absorber, s2, s1], [0, 1, 1])
+    assert fc.path_shape([absorber, s1, s2], [0, 1, 1]) == \
+           fc.path_shape([absorber, s2, s1], [0, 1, 1])
 
 
 def test_two_paths_of_the_same_length_and_degeneracy_get_different_shapes():
     absorber = [0.0, 0.0, 0.0]
-    a = fc._shape([absorber, [0.0, 1.8075, 1.8075], [1.8075, 1.8075, 0.0]],
+    a = fc.path_shape([absorber, [0.0, 1.8075, 1.8075], [1.8075, 1.8075, 0.0]],
                   [0, 1, 1])
-    b = fc._shape([absorber, [0.0, 1.8075, 1.8075], [0.0, 3.615, 0.0]],
+    b = fc.path_shape([absorber, [0.0, 1.8075, 1.8075], [0.0, 3.615, 0.0]],
                   [0, 1, 1])
     assert a != b
